@@ -1,2 +1,0 @@
-# SquareFit
-Hello
