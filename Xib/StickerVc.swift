@@ -265,7 +265,7 @@ extension StickerVc: UICollectionViewDataSource,UICollectionViewDelegate,UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width:collectionView.frame.size.width, height:60.0)
+        return CGSize(width:collectionView.frame.size.width, height:50.0)
     }
     
     

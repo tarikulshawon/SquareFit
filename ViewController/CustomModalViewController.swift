@@ -52,7 +52,7 @@ class CustomModalViewController: UIViewController, sendSticker {
         super.viewDidLoad()
         setupView()
         
-        gesturreView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 10.0))
+        gesturreView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 20.0))
         smallView = UIView(frame: CGRect(x: (gesturreView.frame.width - 100)/2.0, y: 5  , width: 100, height: 7.0))
         smallView.layer.cornerRadius =  5.0
         smallView.backgroundColor = titleColor
