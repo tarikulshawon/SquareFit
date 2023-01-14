@@ -11,6 +11,8 @@ import AVKit
 
 class HomeVc: UIViewController, PHPickerViewControllerDelegate {
     
+    var isFromPhoto = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,6 +22,7 @@ class HomeVc: UIViewController, PHPickerViewControllerDelegate {
     
     @IBAction func gotoVideos(_ sender: Any) {
         
+        isFromPhoto = false
         let newFilter = PHPickerFilter.any(of: [.videos])
         let photoLibrary = PHPhotoLibrary.shared()
         var configuration = PHPickerConfiguration(photoLibrary: photoLibrary)
@@ -35,6 +38,23 @@ class HomeVc: UIViewController, PHPickerViewControllerDelegate {
     
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
         picker.dismiss(animated: true)
+        
+        let itemProviders = results.map(\.itemProvider)
+        for item in itemProviders {
+            if isFromPhoto {
+                if item.canLoadObject(ofClass: UIImage.self) {
+                    item.loadObject(ofClass: UIImage.self) { (image, error) in
+                        DispatchQueue.main.async {
+                            if let image = image as? UIImage {
+                                
+                                
+                            }
+                        }
+                    }
+                }
+            } else {
+            }
+        }
     }
     
     
