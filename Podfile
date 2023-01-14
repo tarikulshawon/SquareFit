@@ -15,5 +15,4 @@ target 'SquareFit' do
   target 'SquareFitUITests' do
     # Pods for testing
   end
-
 end
