@@ -6,17 +6,9 @@
 		<key>Name</key>
 		<string>Original</string>
 		<key>Width</key>
-		<integer>-1</integer>
+		<integer>1</integer>
 		<key>Height</key>
-		<integer>-1</integer>
-	</dict>
-	<dict>
-		<key>Name</key>
-		<string>Custom</string>
-		<key>Width</key>
-		<integer>-1</integer>
-		<key>Height</key>
-		<integer>-1</integer>
+		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>Name</key>
