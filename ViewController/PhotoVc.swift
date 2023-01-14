@@ -97,4 +97,19 @@ extension PhotoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollect
         
         return btnArray.count
     }
+    
+    public func collectionView(
+        _ collectionView: UICollectionView,
+        didSelectItemAt indexPath: IndexPath
+    ) {
+        let cell = collectionView.cellForItem(at: indexPath) as? RatioCell
+        
+        if let titleName = cell?.iconLabel.text {
+            let vc = CustomModalViewController()
+            vc.modalPresentationStyle = .overCurrentContext
+            vc.defaultHeight = 300
+            self.present(vc, animated: false)
+        }
+    }
+    
 }

@@ -11,6 +11,8 @@ class RatioCell: UICollectionViewCell {
     @IBOutlet weak var iconImv: UIImageView!
     @IBOutlet weak var iconLabel: UILabel!
     @IBOutlet weak var heightForLabel: NSLayoutConstraint!
+    
+    @IBOutlet weak var mainImv: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

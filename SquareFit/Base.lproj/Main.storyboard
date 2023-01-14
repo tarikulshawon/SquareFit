@@ -190,7 +190,7 @@
                                                     <constraint firstAttribute="width" secondItem="pRo-r6-D6J" secondAttribute="height" multiplier="1:1" id="pdw-Qf-tF7"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="camera"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="photos"/>
                                                 <connections>
                                                     <action selector="gotoPhotos:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t5i-qg-0gD"/>
                                                 </connections>
@@ -225,7 +225,7 @@
                                                             <constraint firstAttribute="width" secondItem="zLd-iX-Xxf" secondAttribute="height" multiplier="1:1" id="hnz-ht-RBj"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" image="photos"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="camera"/>
                                                         <connections>
                                                             <action selector="gotoVideos:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zCr-CA-Eue"/>
                                                         </connections>
