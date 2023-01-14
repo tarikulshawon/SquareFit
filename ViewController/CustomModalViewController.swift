@@ -18,6 +18,7 @@ class CustomModalViewController: UIViewController, sendSticker {
     
     let stickerVc = Bundle.main.loadNibNamed("StickerVc", owner: nil, options: nil)![0] as! StickerVc
     let typeName: String = ""
+    var gesturreView:UIView!
     
     lazy var containerView: UIView = {
         let view = UIView()
@@ -50,10 +51,6 @@ class CustomModalViewController: UIViewController, sendSticker {
         super.viewDidLoad()
         setupView()
         setupConstraints()
-        // tap gesture on dimmed view to dismiss
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.handleCloseAction))
-        dimmedView.addGestureRecognizer(tapGesture)
-        
         setupPanGesture()
     }
     
@@ -76,13 +73,16 @@ class CustomModalViewController: UIViewController, sendSticker {
     func setupConstraints() {
         // Add subviews
         
+        gesturreView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 30))
+        gesturreView.backgroundColor = UIColor.red
+        containerView.addSubview(gesturreView)
         
         view.addSubview(dimmedView)
         view.addSubview(containerView)
         dimmedView.translatesAutoresizingMaskIntoConstraints = false
         containerView.translatesAutoresizingMaskIntoConstraints = false
         
-        stickerVc.frame = CGRect(x: 0,y: 0,width: self.view.frame.size.width, height: maximumContainerHeight)
+        stickerVc.frame = CGRect(x: 0,y: gesturreView.frame.height,width: self.view.frame.size.width, height: maximumContainerHeight)
         stickerVc.delegateForSticker = self
         
         
@@ -125,7 +125,7 @@ class CustomModalViewController: UIViewController, sendSticker {
         // change to false to immediately listen on gesture movement
         panGesture.delaysTouchesBegan = false
         panGesture.delaysTouchesEnded = false
-        view.addGestureRecognizer(panGesture)
+        gesturreView.addGestureRecognizer(panGesture)
     }
     
     // MARK: Pan gesture handler

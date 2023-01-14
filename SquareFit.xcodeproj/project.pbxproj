@@ -43,6 +43,8 @@
 		010AEC9B2972FC4000A86316 /* StickerVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010AEC992972FC3F00A86316 /* StickerVc.swift */; };
 		010AEC9C2972FC4000A86316 /* StickerVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 010AEC9A2972FC4000A86316 /* StickerVc.xib */; };
 		010AEC9E2972FC8A00A86316 /* CustomModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010AEC9D2972FC8A00A86316 /* CustomModalViewController.swift */; };
+		010AECA1297313E000A86316 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 010AEC9F297313DF00A86316 /* HeaderView.xib */; };
+		010AECA2297313E000A86316 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010AECA0297313DF00A86316 /* HeaderView.swift */; };
 		01864AF129719B6B00598CEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01864AF029719B6B00598CEC /* AppDelegate.swift */; };
 		01864AF329719B6B00598CEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01864AF229719B6B00598CEC /* SceneDelegate.swift */; };
 		01864AF529719B6B00598CEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01864AF429719B6B00598CEC /* ViewController.swift */; };
@@ -114,6 +116,8 @@
 		010AEC992972FC3F00A86316 /* StickerVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerVc.swift; sourceTree = "<group>"; };
 		010AEC9A2972FC4000A86316 /* StickerVc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StickerVc.xib; sourceTree = "<group>"; };
 		010AEC9D2972FC8A00A86316 /* CustomModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomModalViewController.swift; sourceTree = "<group>"; };
+		010AEC9F297313DF00A86316 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		010AECA0297313DF00A86316 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		01864AED29719B6B00598CEC /* SquareFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SquareFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01864AF029719B6B00598CEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01864AF229719B6B00598CEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -208,6 +212,8 @@
 		010AEC982972FC3100A86316 /* Xib */ = {
 			isa = PBXGroup;
 			children = (
+				010AECA0297313DF00A86316 /* HeaderView.swift */,
+				010AEC9F297313DF00A86316 /* HeaderView.xib */,
 				010AEC992972FC3F00A86316 /* StickerVc.swift */,
 				010AEC9A2972FC4000A86316 /* StickerVc.xib */,
 			);
@@ -461,6 +467,7 @@
 				010AEC512972D82900A86316 /* Sale in Resources */,
 				010AEC552972D82900A86316 /* Draw in Resources */,
 				010AEC592972D82900A86316 /* Nature in Resources */,
+				010AECA1297313E000A86316 /* HeaderView.xib in Resources */,
 				010AEC482972D82900A86316 /* Shopping in Resources */,
 				01864AFA29719B6C00598CEC /* Assets.xcassets in Resources */,
 				010AEC542972D82900A86316 /* Cute in Resources */,
@@ -573,6 +580,7 @@
 				01AE3A002971BFCA00C2F652 /* HomeVc.swift in Sources */,
 				01864AF129719B6B00598CEC /* AppDelegate.swift in Sources */,
 				010AE8CD2972BCA400A86316 /* RatioCell.swift in Sources */,
+				010AECA2297313E000A86316 /* HeaderView.swift in Sources */,
 				010AEC9E2972FC8A00A86316 /* CustomModalViewController.swift in Sources */,
 				010AE8D12972BED900A86316 /* AppGlobal.swift in Sources */,
 				01A826992972972800DCCEF7 /* PhotoVc.swift in Sources */,

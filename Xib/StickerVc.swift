@@ -61,6 +61,10 @@ class StickerVc: UIView {
         collectionViewForSticker.showsHorizontalScrollIndicator = false
         
         
+        collectionViewForSticker.register(UINib.init(nibName: "HeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HeaderView")
+        
+        collectionViewForSticker.register(UINib.init(nibName: "HeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "HeaderView")
+        
         
         
         let path = Bundle.main.path(forResource: "sticker", ofType: "plist")
@@ -252,12 +256,43 @@ extension StickerVc: UICollectionViewDataSource,UICollectionViewDelegate,UIColle
         let tempArray = self.getStickerArray(indexF: indexPath.section)
         let filename = tempArray[indexPath.row]
         
-        if let value  = plistArray6[currentSelectedSticker] as? String, let path =  Bundle.main.path(forResource: value, ofType: nil) {
+        if let value  = plistArray6[currentSelectedSticker] as? String, let _ =  Bundle.main.path(forResource: value, ofType: nil) {
             let imagePath = "\(value)/\(filename)"
             self.delegateForSticker?.sendSticker(sticker: imagePath)
         }
         
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width:collectionView.frame.size.width, height:60.0)
+    }
+    
+    
+    
+    
+    func collectionView(_ collectionView: UICollectionView,
+                       viewForSupplementaryElementOfKind kind: String,
+                       at indexPath: IndexPath) -> UICollectionReusableView {
+
+       switch kind {
+
+       case UICollectionView.elementKindSectionHeader:
+           let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HeaderView", for: indexPath as IndexPath) as? HeaderView
+           if let value  = plistArray6[indexPath.section] as? String {
+               headerView?.lbl.text = value
+               headerView?.lbl.textColor = titleColor
+           }
+           return headerView!
+
+       case UICollectionView.elementKindSectionFooter:
+           let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HeaderView", for: indexPath as IndexPath)
+           footerView.backgroundColor = UIColor.black
+           return footerView
+
+       default:
+           assert(false, "Unexpected element kind")
+       }
+   }
     
     
 }
