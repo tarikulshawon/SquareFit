@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>AddText</string>
+	<string>Fonts</string>
+	<string>BackGround</string>
+	<string>Color</string>
+	<string>Gradient</string>
+	<string>Texture</string>
+	<string>Shadow</string>
+	<string>Opacity</string>
+	<string>Align</string>
+</array>
+</plist>

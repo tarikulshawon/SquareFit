@@ -45,10 +45,9 @@ class HomeVc: UIViewController, PHPickerViewControllerDelegate {
                 if item.canLoadObject(ofClass: UIImage.self) {
                     item.loadObject(ofClass: UIImage.self) { (image, error) in
                         DispatchQueue.main.async {
-                            if let image = image as? UIImage {
-                                
-                                
-                            }
+                            let vc = self.storyboard?.instantiateViewController(withIdentifier: "PhotoVc") as! PhotoVc
+                            vc.modalPresentationStyle = .fullScreen
+                            self.present(vc, animated: true, completion: nil)
                         }
                     }
                 }
