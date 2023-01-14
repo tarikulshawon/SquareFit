@@ -220,6 +220,7 @@ extension StickerVc: UICollectionViewDataSource,UICollectionViewDelegate,UIColle
         var tempArray = self.getStickerArray(indexF: indexPath.section)
         let filename = tempArray[indexPath.row]
         
+        
         if let value  = plistArray6[indexPath.section] as? String, let path =  Bundle.main.path(forResource: value, ofType: nil) {
             let imagePath = "\(value)/\(filename)"
             var image = UIImage(named: imagePath)

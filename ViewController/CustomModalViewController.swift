@@ -19,6 +19,7 @@ class CustomModalViewController: UIViewController, sendSticker {
     let stickerVc = Bundle.main.loadNibNamed("StickerVc", owner: nil, options: nil)![0] as! StickerVc
     let typeName: String = ""
     var gesturreView:UIView!
+    var smallView:UIView!
     
     lazy var containerView: UIView = {
         let view = UIView()
@@ -50,6 +51,13 @@ class CustomModalViewController: UIViewController, sendSticker {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        
+        gesturreView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 20.0))
+        smallView = UIView(frame: CGRect(x: (gesturreView.frame.width - 100)/2.0, y: 5  , width: 100, height: 7.0))
+        smallView.layer.cornerRadius =  5.0
+        smallView.backgroundColor = titleColor
+        gesturreView.addSubview(smallView)
+        containerView.addSubview(gesturreView)
         setupConstraints()
         setupPanGesture()
     }
@@ -60,7 +68,7 @@ class CustomModalViewController: UIViewController, sendSticker {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        animateShowDimmedView()
+       // animateShowDimmedView()
         animatePresentContainer()
     }
     
@@ -73,9 +81,6 @@ class CustomModalViewController: UIViewController, sendSticker {
     func setupConstraints() {
         // Add subviews
         
-        gesturreView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 30))
-        gesturreView.backgroundColor = UIColor.red
-        containerView.addSubview(gesturreView)
         
         view.addSubview(dimmedView)
         view.addSubview(containerView)
