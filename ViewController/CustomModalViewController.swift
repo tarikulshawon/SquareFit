@@ -31,6 +31,21 @@ class CustomModalViewController: UIViewController, sendSticker {
         return view
     }()
     
+    private let collectionView: UICollectionView = {
+        let viewLayout = UICollectionViewFlowLayout()
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: viewLayout)
+        collectionView.backgroundColor = .white
+        return collectionView
+    }()
+    
+    lazy var contentStackView: UIStackView = {
+        let spacer = UIView()
+        let stackView = UIStackView(arrangedSubviews: [spacer, overlayVc, spacer])
+        stackView.axis = .vertical
+        stackView.spacing = 12.0
+        return stackView
+    }()
+    
     let maxDimmedAlpha: CGFloat = 0.6
     lazy var dimmedView: UIView = {
         let view = UIView()
@@ -53,6 +68,7 @@ class CustomModalViewController: UIViewController, sendSticker {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        
         
         gesturreView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 20.0))
         smallView = UIView(frame: CGRect(x: (gesturreView.frame.width - 100)/2.0, y: 5  , width: 100, height: 7.0))
@@ -88,6 +104,9 @@ class CustomModalViewController: UIViewController, sendSticker {
         view.addSubview(containerView)
         dimmedView.translatesAutoresizingMaskIntoConstraints = false
         containerView.translatesAutoresizingMaskIntoConstraints = false
+
+        containerView.addSubview(contentStackView)
+        contentStackView.translatesAutoresizingMaskIntoConstraints = false
         
         stickerVc.frame = CGRect(x: 0,y: gesturreView.frame.height,width: self.view.frame.size.width, height: maximumContainerHeight)
         
@@ -109,11 +128,15 @@ class CustomModalViewController: UIViewController, sendSticker {
             containerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             containerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             // content stackView
+            contentStackView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 32),
+            contentStackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -20),
+            contentStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 8),
+            contentStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -8),
            
         ])
         
-        containerView.addSubview(stickerVc)
-        containerView.addSubview(overlayVc)
+        //containerView.addSubview(stickerVc)
+        //containerView.addSubview(overlayVc)
         
         stickerVc.isHidden = true
         

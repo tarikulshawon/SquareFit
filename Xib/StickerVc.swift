@@ -25,17 +25,10 @@ class StickerVc: UIView {
     var currentSelectedSticker = 0
     weak var delegateForSticker: sendSticker?
     
-    
-    
-    
-    
-    
     @IBOutlet weak var collectionViewForSticker: UICollectionView!
     
     
     func getStickerArray(indexF: Int) -> NSArray {
-        
-        
         var tempArray:NSArray!
         if let value  = plistArray6[indexF] as? String, let path =  Bundle.main.path(forResource: value, ofType: nil) {
             
