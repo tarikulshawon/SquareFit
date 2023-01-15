@@ -17,6 +17,8 @@ class CustomModalViewController: UIViewController, sendSticker {
      
     
     let stickerVc = Bundle.main.loadNibNamed("StickerVc", owner: nil, options: nil)![0] as! StickerVc
+    let overlayVc = Bundle.main.loadNibNamed("OverLayVc", owner: nil, options: nil)![0] as! OverLayVc
+
     let typeName: String = ""
     var gesturreView:UIView!
     var smallView:UIView!
@@ -88,6 +90,10 @@ class CustomModalViewController: UIViewController, sendSticker {
         containerView.translatesAutoresizingMaskIntoConstraints = false
         
         stickerVc.frame = CGRect(x: 0,y: gesturreView.frame.height,width: self.view.frame.size.width, height: maximumContainerHeight)
+        
+        overlayVc.frame = CGRect(x: 0,y: gesturreView.frame.height,width: self.view.frame.size.width, height: CGFloat(overLayHeight))
+        
+        
         stickerVc.delegateForSticker = self
         
         
@@ -107,6 +113,9 @@ class CustomModalViewController: UIViewController, sendSticker {
         ])
         
         containerView.addSubview(stickerVc)
+        containerView.addSubview(overlayVc)
+        
+        stickerVc.isHidden = true
         
         
         

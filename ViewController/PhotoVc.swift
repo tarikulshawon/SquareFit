@@ -105,9 +105,19 @@ extension PhotoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollect
         let cell = collectionView.cellForItem(at: indexPath) as? RatioCell
         
         if let titleName = cell?.iconLabel.text {
+            
+            
             let vc = CustomModalViewController()
             vc.modalPresentationStyle = .overCurrentContext
-            vc.defaultHeight = 300
+            
+            if titleName.contains("Overlay") {
+                vc.defaultHeight = CGFloat(overLayHeight)
+                vc.maximumContainerHeight = CGFloat(overLayHeight)
+            }
+            else {
+                vc.defaultHeight = 300
+            }
+            
             self.present(vc, animated: false)
         }
     }
