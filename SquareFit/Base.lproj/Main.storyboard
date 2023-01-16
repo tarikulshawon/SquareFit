@@ -50,7 +50,21 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ElY-L5-Wld">
                                 <rect key="frame" x="0.0" y="120" width="390" height="584"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WcV-O9-0Z4">
+                                        <rect key="frame" x="75" y="228" width="240" height="128"/>
+                                        <color key="backgroundColor" red="0.23137254900000001" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="7IZ-71-SSt"/>
+                                            <constraint firstAttribute="height" constant="128" id="COn-qx-AIR"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="WcV-O9-0Z4" firstAttribute="centerY" secondItem="ElY-L5-Wld" secondAttribute="centerY" id="8oe-j0-9Cr"/>
+                                    <constraint firstItem="WcV-O9-0Z4" firstAttribute="centerX" secondItem="ElY-L5-Wld" secondAttribute="centerX" id="lmn-yQ-Y6P"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oOc-UK-ti4">
                                 <rect key="frame" x="0.0" y="704" width="390" height="140"/>
@@ -127,7 +141,9 @@
                     <connections>
                         <outlet property="btnCollectionView" destination="xYu-Rg-AJQ" id="Iaq-eA-MI4"/>
                         <outlet property="btnView" destination="2go-XB-0SZ" id="VlX-yM-onm"/>
+                        <outlet property="heightForTempView" destination="COn-qx-AIR" id="rV3-it-4vb"/>
                         <outlet property="holderView" destination="ElY-L5-Wld" id="yNS-Dh-Orj"/>
+                        <outlet property="widthForTempView" destination="7IZ-71-SSt" id="dl1-B7-Xbu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kDg-gj-j8o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

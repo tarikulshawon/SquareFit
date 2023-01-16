@@ -7,19 +7,30 @@
 
 import UIKit
 
-class CustomModalViewController: UIViewController, sendSticker {
+
+protocol allDelegate: AnyObject {
+    func sendCanvasData(width:Int,height:Int)
+    func stickerData(sticker: String)
+}
+class CustomModalViewController: UIViewController, sendSticker, canvasSend {
     
+    weak var delegateForEditedView: allDelegate?
+    
+    func sendValue(width: Int, height: Int) {
+        delegateForEditedView?.sendCanvasData(width: width, height: height)
+    }
+
     func sendSticker(sticker: String) {
+        delegateForEditedView?.stickerData(sticker: sticker)
         
     }
-    
-    // define lazy views
-     
-    
+
     let stickerVc = Bundle.main.loadNibNamed("StickerVc", owner: nil, options: nil)![0] as! StickerVc
     let overlayVc = Bundle.main.loadNibNamed("OverLayVc", owner: nil, options: nil)![0] as! OverLayVc
+    let canVas = Bundle.main.loadNibNamed("CanVas", owner: nil, options: nil)![0] as! CanVas
 
-    let typeName: String = ""
+
+    var typeName: String = ""
     var gesturreView:UIView!
     var smallView:UIView!
     
@@ -34,22 +45,39 @@ class CustomModalViewController: UIViewController, sendSticker {
     private let collectionView: UICollectionView = {
         let viewLayout = UICollectionViewFlowLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: viewLayout)
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .clear
         return collectionView
     }()
     
     lazy var contentStackView: UIStackView = {
         let spacer = UIView()
-        let stackView = UIStackView(arrangedSubviews: [spacer, overlayVc, spacer])
-        stackView.axis = .vertical
+        
+        let stackView:UIStackView!
+        
+        if typeName.contains("Canvas") {
+            stackView = UIStackView(arrangedSubviews: [spacer, canVas, spacer])
+            canVas.delegateForSticker = self
+            stackView.axis = .vertical
+        }
+        
+        else if typeName.contains("Graphics") {
+            stackView = UIStackView(arrangedSubviews: [spacer, stickerVc, spacer])
+            stackView.axis = .vertical
+        }
+        else {
+            stackView = UIStackView(arrangedSubviews: [spacer, overlayVc, spacer])
+            stackView.axis = .vertical
+        }
+       
+        
         stackView.spacing = 12.0
         return stackView
     }()
     
-    let maxDimmedAlpha: CGFloat = 0.6
+    let maxDimmedAlpha: CGFloat = 0.1
     lazy var dimmedView: UIView = {
         let view = UIView()
-        view.backgroundColor = .black
+        view.backgroundColor = .clear
         view.alpha = maxDimmedAlpha
         return view
     }()
@@ -138,7 +166,7 @@ class CustomModalViewController: UIViewController, sendSticker {
         //containerView.addSubview(stickerVc)
         //containerView.addSubview(overlayVc)
         
-        stickerVc.isHidden = true
+      //  stickerVc.isHidden = true
         
         
         

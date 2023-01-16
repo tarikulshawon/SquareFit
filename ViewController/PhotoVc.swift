@@ -7,7 +7,39 @@
 
 import UIKit
 
-class PhotoVc: UIViewController {
+class PhotoVc: UIViewController, allDelegate {
+    
+    func sendCanvasData(width: Int, height: Int) {
+        let result = CGFloat(height*Int(holderView.frame.width))/CGFloat(width)
+        UIView.animate(withDuration: 0.4, animations: {
+            
+            if result > self.holderView.frame.height {
+                let result1 = CGFloat(width*Int(self.holderView.frame.height))/CGFloat(height)
+                self.widthForTempView.constant = result1
+                self.heightForTempView.constant =  self.holderView.frame.height
+                
+            } else {
+                
+                self.widthForTempView.constant = self.holderView.frame.width
+                self.heightForTempView.constant =  result
+            }
+            
+            self.view.layoutIfNeeded()
+             
+        }) { _ in
+            
+        }
+    }
+    
+    func stickerData(sticker: String) {
+        
+    }
+    
+    
+    
+    
+    @IBOutlet weak var widthForTempView: NSLayoutConstraint!
+    @IBOutlet weak var heightForTempView: NSLayoutConstraint!
     
     
     
@@ -31,6 +63,11 @@ class PhotoVc: UIViewController {
     }
     
     @objc func updateFrame() {
+        
+        widthForTempView.constant = holderView.frame.width
+        heightForTempView.constant = holderView.frame.width
+        
+        
         let totalCellWidth = cellWidth * CGFloat(btnArray.count)
         let totalSpacingWidth = cellGap * CGFloat((btnArray.count - 1))
         
@@ -108,15 +145,31 @@ extension PhotoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollect
             
             
             let vc = CustomModalViewController()
+            vc.delegateForEditedView = self
             vc.modalPresentationStyle = .overCurrentContext
+            vc.canVas.isHidden = true
+            vc.stickerVc.isHidden = true
+            vc.overlayVc.isHidden = true
             
-            if titleName.contains("Overlay") {
+            if titleName.contains("Canvas") {
+                vc.defaultHeight = CGFloat(canVasHeight)
+                vc.maximumContainerHeight  = CGFloat(canVasHeight)
+                vc.canVas.isHidden = false
+            }
+            
+            else if titleName.contains("Overlay") {
                 vc.defaultHeight = CGFloat(overLayHeight)
-                vc.maximumContainerHeight = CGFloat(overLayHeight)
+               // vc.maximumContainerHeight = CGFloat(overLayHeight)
+                vc.overlayVc.isHidden = false
+                
+               
             }
             else {
                 vc.defaultHeight = 300
+                vc.stickerVc.isHidden = false
+
             }
+            vc.typeName = titleName
             
             self.present(vc, animated: false)
         }

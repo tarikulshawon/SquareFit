@@ -12,89 +12,59 @@
 	</dict>
 	<dict>
 		<key>Name</key>
-		<string>Fb Post</string>
+		<string>9:16</string>
 		<key>Width</key>
-		<integer>1080</integer>
+		<integer>9</integer>
 		<key>Height</key>
-		<integer>1080</integer>
+		<integer>16</integer>
 	</dict>
 	<dict>
 		<key>Name</key>
-		<string>FB Cover
-</string>
+		<string>2:3</string>
 		<key>Width</key>
-		<integer>820</integer>
+		<integer>2</integer>
 		<key>Height</key>
-		<integer>832</integer>
-	</dict>
-	<dict>
-		<key>Name</key>
-		<string>IG Portrait
-
-</string>
-		<key>Width</key>
-		<real>1080</real>
-		<key>Height</key>
-		<integer>1350</integer>
-	</dict>
-	<dict>
-		<key>Name</key>
-		<string>Twitter Card
-</string>
-		<key>Width</key>
-		<integer>800</integer>
-		<key>Height</key>
-		<integer>418</integer>
-	</dict>
-	<dict>
-		<key>Name</key>
-		<string>Twitter Header
-</string>
-		<key>Width</key>
-		<integer>1500</integer>
-		<key>Height</key>
-		<integer>500</integer>
-	</dict>
-	<dict>
-		<key>Name</key>
-		<string>Youtube Thumbnail
-</string>
-		<key>Width</key>
-		<integer>1280</integer>
-		<key>Height</key>
-		<integer>720</integer>
-	</dict>
-	<dict>
-		<key>Name</key>
-		<string>A3</string>
-		<key>Width</key>
-		<integer>4961</integer>
-		<key>Height</key>
-		<integer>3508</integer>
-	</dict>
-	<dict>
-		<key>Name</key>
-		<string>A4</string>
-		<key>Width</key>
-		<real>3508</real>
-		<key>Height</key>
-		<integer>2480</integer>
-	</dict>
-	<dict>
-		<key>Name</key>
-		<string>16:9</string>
-		<key>Width</key>
-		<integer>1920</integer>
-		<key>Height</key>
-		<integer>1080</integer>
+		<integer>3</integer>
 	</dict>
 	<dict>
 		<key>Name</key>
 		<string>4:3</string>
 		<key>Width</key>
-		<integer>2048</integer>
+		<integer>4</integer>
 		<key>Height</key>
-		<integer>1536</integer>
+		<integer>3</integer>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>1:2</string>
+		<key>Width</key>
+		<integer>1</integer>
+		<key>Height</key>
+		<integer>2</integer>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>1:3</string>
+		<key>Width</key>
+		<integer>1</integer>
+		<key>Height</key>
+		<integer>3</integer>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>3:4</string>
+		<key>Width</key>
+		<integer>3</integer>
+		<key>Height</key>
+		<integer>4</integer>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>2:1</string>
+		<key>Width</key>
+		<integer>2</integer>
+		<key>Height</key>
+		<integer>1</integer>
 	</dict>
 </array>
 </plist>

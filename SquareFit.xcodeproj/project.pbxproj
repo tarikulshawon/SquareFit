@@ -114,6 +114,10 @@
 		01A826992972972800DCCEF7 /* PhotoVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A826982972972800DCCEF7 /* PhotoVc.swift */; };
 		01AE3A002971BFCA00C2F652 /* HomeVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AE39FF2971BFCA00C2F652 /* HomeVc.swift */; };
 		01AE3A032971C02000C2F652 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AE3A022971C02000C2F652 /* bg.png */; };
+		01CF1AD829757EC40003DFA4 /* CanVas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CF1AD629757EC30003DFA4 /* CanVas.swift */; };
+		01CF1AD929757EC40003DFA4 /* CanVas.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01CF1AD729757EC40003DFA4 /* CanVas.xib */; };
+		01CF1ADC29757ECD0003DFA4 /* CanvasRatioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CF1ADA29757ECD0003DFA4 /* CanvasRatioCell.swift */; };
+		01CF1ADD29757ECD0003DFA4 /* CanvasRatioCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01CF1ADB29757ECD0003DFA4 /* CanvasRatioCell.xib */; };
 		0238AF71532FD6A445E993DC /* Pods_SquareFit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A999C260D46CBD636DFF6C9A /* Pods_SquareFit.framework */; };
 		91BD9F27580A73FBC7D7A079 /* Pods_SquareFitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5063DC39055A1E627922144D /* Pods_SquareFitTests.framework */; };
 		F0811D6E44DDAC4F9554A845 /* Pods_SquareFit_SquareFitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A0D1D8DB93A296AD993A5AF /* Pods_SquareFit_SquareFitUITests.framework */; };
@@ -248,6 +252,10 @@
 		01A826982972972800DCCEF7 /* PhotoVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoVc.swift; sourceTree = "<group>"; };
 		01AE39FF2971BFCA00C2F652 /* HomeVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVc.swift; sourceTree = "<group>"; };
 		01AE3A022971C02000C2F652 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		01CF1AD629757EC30003DFA4 /* CanVas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanVas.swift; sourceTree = "<group>"; };
+		01CF1AD729757EC40003DFA4 /* CanVas.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CanVas.xib; sourceTree = "<group>"; };
+		01CF1ADA29757ECD0003DFA4 /* CanvasRatioCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanvasRatioCell.swift; sourceTree = "<group>"; };
+		01CF1ADB29757ECD0003DFA4 /* CanvasRatioCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CanvasRatioCell.xib; sourceTree = "<group>"; };
 		33DCA3D9E4555CEE76670315 /* Pods-SquareFitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SquareFitTests.debug.xcconfig"; path = "Target Support Files/Pods-SquareFitTests/Pods-SquareFitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3A237CDFD40E340FE5B7B9BE /* Pods-SquareFit-SquareFitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SquareFit-SquareFitUITests.debug.xcconfig"; path = "Target Support Files/Pods-SquareFit-SquareFitUITests/Pods-SquareFit-SquareFitUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		45E5460D1EDB2519231E6369 /* Pods-SquareFitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SquareFitTests.release.xcconfig"; path = "Target Support Files/Pods-SquareFitTests/Pods-SquareFitTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -309,6 +317,8 @@
 		010AE8CA2972BC8600A86316 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				01CF1ADA29757ECD0003DFA4 /* CanvasRatioCell.swift */,
+				01CF1ADB29757ECD0003DFA4 /* CanvasRatioCell.xib */,
 				01680B312973CC100088F915 /* ColorCell.swift */,
 				01680B322973CC100088F915 /* ColorCell.xib */,
 				010AE8CB2972BCA300A86316 /* RatioCell.swift */,
@@ -328,6 +338,8 @@
 		010AEC982972FC3100A86316 /* Xib */ = {
 			isa = PBXGroup;
 			children = (
+				01CF1AD629757EC30003DFA4 /* CanVas.swift */,
+				01CF1AD729757EC40003DFA4 /* CanVas.xib */,
 				01680B2B2973CA2E0088F915 /* OverLayVc.swift */,
 				01680B2C2973CA2E0088F915 /* OverLayVc.xib */,
 				010AECA329732A2900A86316 /* ShapeVc.swift */,
@@ -647,6 +659,7 @@
 				010AEC532972D82900A86316 /* Transport in Resources */,
 				01680B8D2973CFC70088F915 /* OverlayThumb33.png in Resources */,
 				01680B892973CFC70088F915 /* OverlayThumb18.png in Resources */,
+				01CF1AD929757EC40003DFA4 /* CanVas.xib in Resources */,
 				010AEC492972D82900A86316 /* Paper in Resources */,
 				01680B6F2973CFC70088F915 /* OverlayThumb43.png in Resources */,
 				01680B822973CFC70088F915 /* OverlayThumb35.png in Resources */,
@@ -699,6 +712,7 @@
 				010AE8C02972B56800A86316 /* textEditOption.plist in Resources */,
 				01680B2E2973CA2E0088F915 /* OverLayVc.xib in Resources */,
 				01680B6E2973CFC70088F915 /* OverlayThumb41.png in Resources */,
+				01CF1ADD29757ECD0003DFA4 /* CanvasRatioCell.xib in Resources */,
 				01680B902973CFC70088F915 /* OverlayThumb15.png in Resources */,
 				01680B782973CFC70088F915 /* OverlayThumb5.png in Resources */,
 				010AEC4A2972D82900A86316 /* Summer in Resources */,
@@ -820,7 +834,9 @@
 				01680B2D2973CA2E0088F915 /* OverLayVc.swift in Sources */,
 				01A826992972972800DCCEF7 /* PhotoVc.swift in Sources */,
 				01680B332973CC100088F915 /* ColorCell.swift in Sources */,
+				01CF1ADC29757ECD0003DFA4 /* CanvasRatioCell.swift in Sources */,
 				01864AF329719B6B00598CEC /* SceneDelegate.swift in Sources */,
+				01CF1AD829757EC40003DFA4 /* CanVas.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

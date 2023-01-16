@@ -80,7 +80,7 @@ class StickerVc: UIView {
         
         
         DispatchQueue.main.async {
-            self.collectionViewForSticker.reloadData()
+           // self.collectionViewForSticker.reloadData()
         }
         
         UIView.animate(withDuration: 0.2, animations: {
