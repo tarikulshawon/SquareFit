@@ -7,9 +7,15 @@
 
 import UIKit
 
-class PhotoVc: UIViewController, allDelegate {
+class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate {
+    
+    
+    @IBOutlet weak var intermediateview: UIView!
+    
     
     func sendCanvasData(width: Int, height: Int) {
+        imv.image = nil
+        imv.image = UIImage(named: "bg")
         let result = CGFloat(height*Int(holderView.frame.width))/CGFloat(width)
         UIView.animate(withDuration: 0.4, animations: {
             
@@ -50,23 +56,70 @@ class PhotoVc: UIViewController, allDelegate {
     let currentlyActiveIndex = 0
     var cellWidth:CGFloat = 60
     var cellGap:CGFloat =  0
+    
+    var panRecogniser:UIPanGestureRecognizer! = nil
+    var pinchRecogniser:UIPinchGestureRecognizer! = nil
+    var tapRecogniser: UITapGestureRecognizer! =  nil
+    
 
+    @IBOutlet weak var imv: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        panRecogniser = UIPanGestureRecognizer(target: self, action: #selector(didPan(_:)))
+        pinchRecogniser = UIPinchGestureRecognizer(target: self, action: #selector(didPinch(_:)))
+        tapRecogniser = UITapGestureRecognizer(target: self, action: #selector(didTap(_:)))
+        
+        
+        intermediateview.addGestureRecognizer(panRecogniser)
+        intermediateview.addGestureRecognizer(pinchRecogniser)
+        intermediateview.addGestureRecognizer(tapRecogniser)
+        
+        panRecogniser.delegate = self
+        pinchRecogniser.delegate = self
+        tapRecogniser.delegate = self
+        
         
         let path = Bundle.main.path(forResource: "btn", ofType: "plist")
         btnArray = NSArray(contentsOfFile: path!)
         initCollectionView()
         self.perform(#selector(self.updateFrame), with: self, afterDelay:0.1)
+       
 
+    }
+    
+    @objc private func didPan(_ recogniser: UIPanGestureRecognizer) {
+        
+        if recogniser.state == .began || recogniser.state == .changed {
+            let panTranslation = recogniser.translation(in: imv.superview)
+            let translatedCenter = CGPoint(x: imv.center.x + panTranslation.x, y: imv.center.y + panTranslation.y)
+            imv.center = translatedCenter
+            recogniser.setTranslation(.zero, in: imv)
+        }
+    }
+    
+    
+    @objc private func didPinch(_ recogniser: UIPinchGestureRecognizer) {
+        
+    
+        
+        imv.layer.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        imv.transform = CGAffineTransform(scaleX: recogniser.scale * CGFloat(1), y: recogniser.scale * CGFloat(1))
+        
+    }
+    
+    @objc private func didTap(_ recogniser: UITapGestureRecognizer) {
+        
+        
     }
     
     @objc func updateFrame() {
         
         widthForTempView.constant = holderView.frame.width
         heightForTempView.constant = holderView.frame.width
-        
+        imv.image = UIImage(named: "bg")
+        imv.contentMode = .scaleAspectFit
         
         let totalCellWidth = cellWidth * CGFloat(btnArray.count)
         let totalSpacingWidth = cellGap * CGFloat((btnArray.count - 1))

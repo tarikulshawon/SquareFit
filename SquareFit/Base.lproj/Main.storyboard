@@ -51,12 +51,19 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ElY-L5-Wld">
                                 <rect key="frame" x="0.0" y="120" width="390" height="584"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WcV-O9-0Z4">
-                                        <rect key="frame" x="75" y="228" width="240" height="128"/>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WcV-O9-0Z4">
+                                        <rect key="frame" x="7.6666666666666572" y="104.66666666666663" width="375" height="375"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x68-JV-Zab">
+                                                <rect key="frame" x="-8" y="-7" width="390" height="390"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </imageView>
+                                        </subviews>
                                         <color key="backgroundColor" red="0.23137254900000001" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="240" id="7IZ-71-SSt"/>
-                                            <constraint firstAttribute="height" constant="128" id="COn-qx-AIR"/>
+                                            <constraint firstAttribute="width" constant="375" id="7IZ-71-SSt"/>
+                                            <constraint firstAttribute="height" constant="375" id="COn-qx-AIR"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -143,6 +150,8 @@
                         <outlet property="btnView" destination="2go-XB-0SZ" id="VlX-yM-onm"/>
                         <outlet property="heightForTempView" destination="COn-qx-AIR" id="ryg-KF-dz8"/>
                         <outlet property="holderView" destination="ElY-L5-Wld" id="yNS-Dh-Orj"/>
+                        <outlet property="imv" destination="x68-JV-Zab" id="Pqx-X1-e5C"/>
+                        <outlet property="intermediateview" destination="WcV-O9-0Z4" id="xtf-Vo-o8z"/>
                         <outlet property="widthForTempView" destination="7IZ-71-SSt" id="HBJ-al-q2M"/>
                     </connections>
                 </viewController>
