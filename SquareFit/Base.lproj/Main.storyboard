@@ -141,9 +141,9 @@
                     <connections>
                         <outlet property="btnCollectionView" destination="xYu-Rg-AJQ" id="Iaq-eA-MI4"/>
                         <outlet property="btnView" destination="2go-XB-0SZ" id="VlX-yM-onm"/>
-                        <outlet property="heightForTempView" destination="COn-qx-AIR" id="rV3-it-4vb"/>
+                        <outlet property="heightForTempView" destination="COn-qx-AIR" id="ryg-KF-dz8"/>
                         <outlet property="holderView" destination="ElY-L5-Wld" id="yNS-Dh-Orj"/>
-                        <outlet property="widthForTempView" destination="7IZ-71-SSt" id="dl1-B7-Xbu"/>
+                        <outlet property="widthForTempView" destination="7IZ-71-SSt" id="HBJ-al-q2M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kDg-gj-j8o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
