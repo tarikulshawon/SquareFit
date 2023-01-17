@@ -14,8 +14,7 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate {
     
     
     func sendCanvasData(width: Int, height: Int) {
-        imv.image = nil
-        imv.image = UIImage(named: "bg")
+       
         let result = CGFloat(height*Int(holderView.frame.width))/CGFloat(width)
         UIView.animate(withDuration: 0.4, animations: {
             
