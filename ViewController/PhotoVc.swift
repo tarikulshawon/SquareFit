@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AudioToolbox
 
 class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate {
     
@@ -107,21 +108,21 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate {
             imv.center = translatedCenter
             recogniser.setTranslation(.zero, in: imv)
             
-            if (((imv.center.x >= (intermediateview.frame.size.width/2.0 - 5)) &&
-                 (imv.center.x <= (intermediateview.frame.size.width/2.0 + 5))))
+            if (((imv.center.x >= (intermediateview.frame.size.width/2.0 - 2)) &&
+                 (imv.center.x <= (intermediateview.frame.size.width/2.0 + 2))))
             {
                 center_vertical_img_view.isHidden = false
-    
+                makeHepticFeedback()
             }
             else {
                 center_vertical_img_view.isHidden = true
             }
             
-            if (((imv.center.y >= (intermediateview.frame.size.width/2.0 - 5)) &&
-                 (imv.center.y <= (intermediateview.frame.size.width/2.0 + 5))))
+            if (((imv.center.y >= (intermediateview.frame.size.width/2.0 - 2)) &&
+                 (imv.center.y <= (intermediateview.frame.size.width/2.0 + 2))))
             {
                 center_horizontal_img_view.isHidden = false
-             
+                makeHepticFeedback()
             }
             else {
                 center_horizontal_img_view.isHidden = true
@@ -133,8 +134,11 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate {
             center_vertical_img_view.isHidden = true
             center_horizontal_img_view.isHidden = true
         }
-        
-        
+    }
+    
+    private func makeHepticFeedback() {
+        let generator = UISelectionFeedbackGenerator()
+        generator.selectionChanged()
     }
     
     
