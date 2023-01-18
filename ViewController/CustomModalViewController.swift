@@ -11,13 +11,8 @@ import UIKit
 protocol allDelegate: AnyObject {
     func sendCanvasData(width:Int,height:Int)
     func stickerData(sticker: String)
-    func sendFrame(frames:String)
 }
-class CustomModalViewController: UIViewController, sendSticker, canvasSend, sendFrames {
-    func sendFramesIndex(frames: String) {
-        delegateForEditedView?.sendFrame(frames: frames)
-    }
-    
+class CustomModalViewController: UIViewController, sendSticker, canvasSend {
     
     weak var delegateForEditedView: allDelegate?
     
@@ -33,8 +28,7 @@ class CustomModalViewController: UIViewController, sendSticker, canvasSend, send
     let stickerVc = Bundle.main.loadNibNamed("StickerVc", owner: nil, options: nil)![0] as! StickerVc
     let overlayVc = Bundle.main.loadNibNamed("OverLayVc", owner: nil, options: nil)![0] as! OverLayVc
     let canVas = Bundle.main.loadNibNamed("CanVas", owner: nil, options: nil)![0] as! CanVas
-    let shapeVc = Bundle.main.loadNibNamed("ShapeVc", owner: nil, options: nil)![0] as! ShapeVc
-    let frameVc = Bundle.main.loadNibNamed("FrameVc", owner: nil, options: nil)![0] as! FrameVc
+
 
     var typeName: String = ""
     var gesturreView:UIView!
@@ -66,18 +60,8 @@ class CustomModalViewController: UIViewController, sendSticker, canvasSend, send
             stackView.axis = .vertical
         }
         
-        else if typeName.contains("Frames") {
-            stackView = UIStackView(arrangedSubviews: [spacer, frameVc, spacer])
-            frameVc.delegateForFramesr = self
-            stackView.axis = .vertical
-            
-        }
         else if typeName.contains("Graphics") {
             stackView = UIStackView(arrangedSubviews: [spacer, stickerVc, spacer])
-            stackView.axis = .vertical
-        }
-        else if typeName.contains("Shape") {
-            stackView = UIStackView(arrangedSubviews: [spacer, shapeVc, spacer])
             stackView.axis = .vertical
         }
         else {
