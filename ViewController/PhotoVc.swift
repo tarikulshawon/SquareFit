@@ -235,8 +235,8 @@ extension PhotoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollect
             
             
             let vc = CustomModalViewController()
+            
             vc.delegateForEditedView = self
-            vc.modalPresentationStyle = .overCurrentContext
             vc.canVas.isHidden = true
             vc.stickerVc.isHidden = true
             vc.overlayVc.isHidden = true
@@ -274,8 +274,28 @@ extension PhotoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollect
             }
             vc.typeName = titleName
             
-            self.present(vc, animated: false)
+            presentSheetViewController(with: vc, initialHeight: vc.defaultHeight, maxHeight: vc.maximumContainerHeight)
         }
     }
     
+}
+
+private extension PhotoVc {
+    func presentSheetViewController(with vc: UIViewController, initialHeight: CGFloat, maxHeight: CGFloat) {
+        if let sheet = vc.sheetPresentationController {
+            sheet.detents = [
+                .custom(identifier: .init("\(initialHeight)") ,resolver: { _ in initialHeight }),
+                .medium(),
+                .custom(identifier: .init("\(maxHeight)") ,resolver: { _ in maxHeight })
+            ]
+            
+            sheet.selectedDetentIdentifier = .none
+            sheet.largestUndimmedDetentIdentifier = .medium
+            sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+            sheet.prefersEdgeAttachedInCompactHeight = true
+            sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
+        }
+        
+        present(vc, animated: true, completion: nil)
+    }
 }

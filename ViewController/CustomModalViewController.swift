@@ -13,6 +13,7 @@ protocol allDelegate: AnyObject {
     func stickerData(sticker: String)
     func sendFrame(frames:String)
 }
+
 class CustomModalViewController: UIViewController, sendSticker, canvasSend, sendFrames {
     func sendFramesIndex(frames: String) {
         delegateForEditedView?.sendFrame(frames: frames)
@@ -121,7 +122,6 @@ class CustomModalViewController: UIViewController, sendSticker, canvasSend, send
         gesturreView.addSubview(smallView)
         containerView.addSubview(gesturreView)
         setupConstraints()
-        setupPanGesture()
     }
     
     @objc func handleCloseAction() {
@@ -163,12 +163,9 @@ class CustomModalViewController: UIViewController, sendSticker, canvasSend, send
         
         // Set static constraints
         NSLayoutConstraint.activate([
-            // set dimmedView edges to superview
-            dimmedView.topAnchor.constraint(equalTo: view.topAnchor),
-            dimmedView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            dimmedView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            dimmedView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             // set container static constraint (trailing & leading)
+            containerView.topAnchor.constraint(equalTo: view.topAnchor),
+            containerView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             containerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             containerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             // content stackView
@@ -198,63 +195,6 @@ class CustomModalViewController: UIViewController, sendSticker, canvasSend, send
         // Activate constraints
         containerViewHeightConstraint?.isActive = true
         containerViewBottomConstraint?.isActive = true
-    }
-    
-    func setupPanGesture() {
-        // add pan gesture recognizer to the view controller's view (the whole screen)
-        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(self.handlePanGesture(gesture:)))
-        // change to false to immediately listen on gesture movement
-        panGesture.delaysTouchesBegan = false
-        panGesture.delaysTouchesEnded = false
-        gesturreView.addGestureRecognizer(panGesture)
-    }
-    
-    // MARK: Pan gesture handler
-    @objc func handlePanGesture(gesture: UIPanGestureRecognizer) {
-        let translation = gesture.translation(in: view)
-        // Drag to top will be minus value and vice versa
-        print("Pan gesture y offset: \(translation.y)")
-        
-        // Get drag direction
-        let isDraggingDown = translation.y > 0
-        print("Dragging direction: \(isDraggingDown ? "going down" : "going up")")
-        
-        // New height is based on value of dragging plus current container height
-        let newHeight = currentContainerHeight - translation.y
-        
-        // Handle based on gesture state
-        switch gesture.state {
-        case .changed:
-            // This state will occur when user is dragging
-            if newHeight < maximumContainerHeight {
-                // Keep updating the height constraint
-                containerViewHeightConstraint?.constant = newHeight
-                // refresh layout
-                view.layoutIfNeeded()
-            }
-        case .ended:
-            // This happens when user stop drag,
-            // so we will get the last height of container
-            
-            // Condition 1: If new height is below min, dismiss controller
-            if newHeight < dismissibleHeight {
-                self.animateDismissView()
-            }
-            else if newHeight < defaultHeight {
-                // Condition 2: If new height is below default, animate back to default
-                animateContainerHeight(defaultHeight)
-            }
-            else if newHeight < maximumContainerHeight && isDraggingDown {
-                // Condition 3: If new height is below max and going down, set to default height
-                animateContainerHeight(defaultHeight)
-            }
-            else if newHeight > defaultHeight && !isDraggingDown {
-                // Condition 4: If new height is below max and going up, set to max height at top
-                animateContainerHeight(maximumContainerHeight)
-            }
-        default:
-            break
-        }
     }
     
     func animateContainerHeight(_ height: CGFloat) {
