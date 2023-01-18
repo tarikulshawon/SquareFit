@@ -9,9 +9,20 @@ import UIKit
 
 class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate {
     
+    @IBOutlet weak var center_horizontal_img_view: UIImageView!
+    
+    @IBOutlet weak var center_vertical_img_view: UIImageView!
+    func sendFrame(frames: String) {
+        let v = UIImage(named: frames)
+        frameVc.image = v
+        
+    }
+    
+    
     
     @IBOutlet weak var intermediateview: UIView!
     
+    @IBOutlet weak var frameVc: UIImageView!
     
     func sendCanvasData(width: Int, height: Int) {
        
@@ -95,16 +106,43 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate {
             let translatedCenter = CGPoint(x: imv.center.x + panTranslation.x, y: imv.center.y + panTranslation.y)
             imv.center = translatedCenter
             recogniser.setTranslation(.zero, in: imv)
+            
+            if (((imv.center.x >= (intermediateview.frame.size.width/2.0 - 5)) &&
+                 (imv.center.x <= (intermediateview.frame.size.width/2.0 + 5))))
+            {
+                center_vertical_img_view.isHidden = false
+    
+            }
+            else {
+                center_vertical_img_view.isHidden = true
+            }
+            
+            if (((imv.center.y >= (intermediateview.frame.size.width/2.0 - 5)) &&
+                 (imv.center.y <= (intermediateview.frame.size.width/2.0 + 5))))
+            {
+                center_horizontal_img_view.isHidden = false
+             
+            }
+            else {
+                center_horizontal_img_view.isHidden = true
+            }
         }
+        
+        else if (recogniser.state == .ended) {
+           
+            center_vertical_img_view.isHidden = true
+            center_horizontal_img_view.isHidden = true
+        }
+        
+        
     }
     
     
     @objc private func didPinch(_ recogniser: UIPinchGestureRecognizer) {
         
-    
         
-        imv.layer.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-        imv.transform = CGAffineTransform(scaleX: recogniser.scale * CGFloat(1), y: recogniser.scale * CGFloat(1))
+        imv.transform = CGAffineTransformScale(imv.transform, recogniser.scale * 1, recogniser.scale * 1);
+        recogniser.scale = 1;
         
     }
     
@@ -202,6 +240,13 @@ extension PhotoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollect
             vc.canVas.isHidden = true
             vc.stickerVc.isHidden = true
             vc.overlayVc.isHidden = true
+            vc.shapeVc.isHidden = true
+            vc.frameVc.isHidden = true
+            
+            if titleName.contains("Frames") {
+                vc.defaultHeight = CGFloat(framesVcHeight)
+                vc.frameVc.isHidden = false
+            }
             
             if titleName.contains("Canvas") {
                 vc.defaultHeight = CGFloat(canVasHeight)
@@ -215,6 +260,12 @@ extension PhotoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollect
                 vc.overlayVc.isHidden = false
                 
                
+            }
+            else if titleName.contains("Shape") {
+                vc.defaultHeight = CGFloat(shapeVcHeight)
+                vc.maximumContainerHeight = CGFloat(shapeVcHeight)
+                vc.shapeVc.isHidden = false
+                
             }
             else {
                 vc.defaultHeight = 300

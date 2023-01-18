@@ -59,18 +59,45 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6VJ-52-aok">
+                                                <rect key="frame" x="0.0" y="187.00000000000003" width="375" height="1"/>
+                                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="psF-NB-UO4"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Ap-L5-AlP">
+                                                <rect key="frame" x="187" y="0.0" width="1" height="375"/>
+                                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="1" id="8JH-8m-5Wq"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.23137254900000001" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="375" id="7IZ-71-SSt"/>
                                             <constraint firstAttribute="height" constant="375" id="COn-qx-AIR"/>
+                                            <constraint firstItem="1Ap-L5-AlP" firstAttribute="centerX" secondItem="WcV-O9-0Z4" secondAttribute="centerX" id="Qb4-Kc-DpT"/>
+                                            <constraint firstItem="6VJ-52-aok" firstAttribute="width" secondItem="WcV-O9-0Z4" secondAttribute="width" id="Uv8-yj-y6h"/>
+                                            <constraint firstItem="1Ap-L5-AlP" firstAttribute="height" secondItem="WcV-O9-0Z4" secondAttribute="height" id="cyh-Ko-uGk"/>
+                                            <constraint firstItem="6VJ-52-aok" firstAttribute="centerX" secondItem="WcV-O9-0Z4" secondAttribute="centerX" id="i9e-Ef-pYb"/>
+                                            <constraint firstItem="1Ap-L5-AlP" firstAttribute="centerY" secondItem="WcV-O9-0Z4" secondAttribute="centerY" id="k7e-fV-keU"/>
+                                            <constraint firstItem="6VJ-52-aok" firstAttribute="centerY" secondItem="WcV-O9-0Z4" secondAttribute="centerY" id="z7I-z9-8s3"/>
                                         </constraints>
                                     </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lg3-IE-39Q">
+                                        <rect key="frame" x="7.6666666666666572" y="104.66666666666663" width="375" height="375"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="lg3-IE-39Q" firstAttribute="centerY" secondItem="WcV-O9-0Z4" secondAttribute="centerY" id="38B-CT-g1Y"/>
+                                    <constraint firstItem="lg3-IE-39Q" firstAttribute="width" secondItem="WcV-O9-0Z4" secondAttribute="width" id="5JU-xl-esv"/>
                                     <constraint firstItem="WcV-O9-0Z4" firstAttribute="centerY" secondItem="ElY-L5-Wld" secondAttribute="centerY" id="8oe-j0-9Cr"/>
+                                    <constraint firstItem="lg3-IE-39Q" firstAttribute="height" secondItem="WcV-O9-0Z4" secondAttribute="height" id="ilT-kM-MtW"/>
                                     <constraint firstItem="WcV-O9-0Z4" firstAttribute="centerX" secondItem="ElY-L5-Wld" secondAttribute="centerX" id="lmn-yQ-Y6P"/>
+                                    <constraint firstItem="lg3-IE-39Q" firstAttribute="centerX" secondItem="WcV-O9-0Z4" secondAttribute="centerX" id="wQC-gE-drT"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oOc-UK-ti4">
@@ -148,6 +175,9 @@
                     <connections>
                         <outlet property="btnCollectionView" destination="xYu-Rg-AJQ" id="Iaq-eA-MI4"/>
                         <outlet property="btnView" destination="2go-XB-0SZ" id="VlX-yM-onm"/>
+                        <outlet property="center_horizontal_img_view" destination="6VJ-52-aok" id="Ora-nN-8eC"/>
+                        <outlet property="center_vertical_img_view" destination="1Ap-L5-AlP" id="792-bT-ObZ"/>
+                        <outlet property="frameVc" destination="lg3-IE-39Q" id="kQ3-Ig-1bk"/>
                         <outlet property="heightForTempView" destination="COn-qx-AIR" id="ryg-KF-dz8"/>
                         <outlet property="holderView" destination="ElY-L5-Wld" id="yNS-Dh-Orj"/>
                         <outlet property="imv" destination="x68-JV-Zab" id="Pqx-X1-e5C"/>
@@ -346,6 +376,9 @@
         <image name="photos" width="120" height="120"/>
         <image name="pro" width="92.333335876464844" height="33.333332061767578"/>
         <image name="settings" width="30" height="30"/>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
