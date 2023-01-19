@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FilterVc" customModule="SquareFit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8cs-8X-ug6">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Zkh-ti-Kys"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="IKp-aG-xhc">
+                    <rect key="frame" x="0.0" y="40" width="414" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OJP-0S-twx">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="8Wg-Er-Hc3"/>
+                        <outlet property="delegate" destination="-1" id="P2v-rQ-W9b"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="8cs-8X-ug6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="384-cy-YXP"/>
+                <constraint firstAttribute="bottom" secondItem="IKp-aG-xhc" secondAttribute="bottom" constant="10" id="DB6-mG-Xxe"/>
+                <constraint firstAttribute="trailing" secondItem="IKp-aG-xhc" secondAttribute="trailing" id="LuM-ru-R52"/>
+                <constraint firstItem="8cs-8X-ug6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Stz-fq-S3r"/>
+                <constraint firstItem="IKp-aG-xhc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="TaI-O4-GDA"/>
+                <constraint firstItem="IKp-aG-xhc" firstAttribute="top" secondItem="8cs-8X-ug6" secondAttribute="bottom" id="dpx-EA-f1p"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8cs-8X-ug6" secondAttribute="trailing" id="sK3-Vi-awf"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="collectionViewForFilter" destination="IKp-aG-xhc" id="dNz-S4-jgD"/>
+                <outlet property="optionView" destination="8cs-8X-ug6" id="Ez9-Cq-NIb"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="106.47321428571428"/>
+        </view>
+    </objects>
+</document>

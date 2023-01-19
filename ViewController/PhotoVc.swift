@@ -315,6 +315,7 @@ extension PhotoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollect
             vc.shapeVc.isHidden = true
             vc.frameVc.isHidden = true
             vc.adjustVc.isHidden = true
+            vc.filterVc.isHidden = true
             
             if titleName.contains("Adjust") {
                 vc.defaultHeight = CGFloat(adjustHeight)
@@ -344,6 +345,11 @@ extension PhotoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollect
                 vc.defaultHeight = CGFloat(shapeVcHeight)
                 vc.maximumContainerHeight = CGFloat(shapeVcHeight)
                 vc.shapeVc.isHidden = false
+                
+            }
+            else if titleName.contains("Filter") {
+                vc.defaultHeight = CGFloat(filterHeight)
+                vc.filterVc.isHidden = false
                 
             }
             else {
