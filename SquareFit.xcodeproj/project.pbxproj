@@ -225,6 +225,7 @@
 		01F013B529798E490077F22D /* F48.png in Resources */ = {isa = PBXBuildFile; fileRef = 01F0138129798E490077F22D /* F48.png */; };
 		01F013B8297997CE0077F22D /* Adjust.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01F013B6297997CE0077F22D /* Adjust.xib */; };
 		01F013B9297997CE0077F22D /* Adjust.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F013B7297997CE0077F22D /* Adjust.swift */; };
+		01F013BB29799CEC0077F22D /* StickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F013BA29799CEC0077F22D /* StickerView.swift */; };
 		0238AF71532FD6A445E993DC /* Pods_SquareFit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A999C260D46CBD636DFF6C9A /* Pods_SquareFit.framework */; };
 		91BD9F27580A73FBC7D7A079 /* Pods_SquareFitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5063DC39055A1E627922144D /* Pods_SquareFitTests.framework */; };
 		F0811D6E44DDAC4F9554A845 /* Pods_SquareFit_SquareFitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A0D1D8DB93A296AD993A5AF /* Pods_SquareFit_SquareFitUITests.framework */; };
@@ -470,6 +471,7 @@
 		01F0138129798E490077F22D /* F48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = F48.png; sourceTree = "<group>"; };
 		01F013B6297997CE0077F22D /* Adjust.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Adjust.xib; sourceTree = "<group>"; };
 		01F013B7297997CE0077F22D /* Adjust.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Adjust.swift; sourceTree = "<group>"; };
+		01F013BA29799CEC0077F22D /* StickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerView.swift; sourceTree = "<group>"; };
 		33DCA3D9E4555CEE76670315 /* Pods-SquareFitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SquareFitTests.debug.xcconfig"; path = "Target Support Files/Pods-SquareFitTests/Pods-SquareFitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3A237CDFD40E340FE5B7B9BE /* Pods-SquareFit-SquareFitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SquareFit-SquareFitUITests.debug.xcconfig"; path = "Target Support Files/Pods-SquareFit-SquareFitUITests/Pods-SquareFit-SquareFitUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		45E5460D1EDB2519231E6369 /* Pods-SquareFitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SquareFitTests.release.xcconfig"; path = "Target Support Files/Pods-SquareFitTests/Pods-SquareFitTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -544,6 +546,7 @@
 		010AE8CF2972BECD00A86316 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				01F013BA29799CEC0077F22D /* StickerView.swift */,
 				010AE8D02972BED900A86316 /* AppGlobal.swift */,
 			);
 			path = Model;
@@ -1278,6 +1281,7 @@
 				01680B332973CC100088F915 /* ColorCell.swift in Sources */,
 				01DFAC4429784E45005C7564 /* FrameVc.swift in Sources */,
 				01F013B9297997CE0077F22D /* Adjust.swift in Sources */,
+				01F013BB29799CEC0077F22D /* StickerView.swift in Sources */,
 				01CF1ADC29757ECD0003DFA4 /* CanvasRatioCell.swift in Sources */,
 				01864AF329719B6B00598CEC /* SceneDelegate.swift in Sources */,
 				01CF1AD829757EC40003DFA4 /* CanVas.swift in Sources */,

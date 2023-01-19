@@ -98,6 +98,7 @@ class CustomModalViewController: UIViewController, sendSticker, canvasSend, send
         }
         else if typeName.contains("Graphics") {
             stackView = UIStackView(arrangedSubviews: [spacer, stickerVc, spacer])
+            stickerVc.delegateForSticker = self
             stackView.axis = .vertical
         }
         else if typeName.contains("Shape") {
