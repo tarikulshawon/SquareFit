@@ -8,7 +8,7 @@
 import UIKit
 
 protocol imageIndexDelegate: AnyObject {
-    func imageNameWithIndex(tag:String ,image: UIImage)
+    func imageNameWithIndex(tag:String ,image: UIImage?)
 }
 
 class OverLayVc: UIView {
@@ -43,6 +43,9 @@ class OverLayVc: UIView {
     func setOverLay(index:Int) {
         if let image = UIImage(named: "Overlay" + "\(index)") {
             delegateForOverlay?.imageNameWithIndex(tag: "\(index)", image: image)
+        }
+        else {
+            delegateForOverlay?.imageNameWithIndex(tag: "\(index)", image: nil)
         }
     }
 }

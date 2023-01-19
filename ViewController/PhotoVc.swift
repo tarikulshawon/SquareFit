@@ -10,6 +10,12 @@ import AudioToolbox
 
 class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate {
     
+     
+    
+   
+    
+    
+    @IBOutlet weak var overlayView: UIImageView!
     @IBOutlet weak var center_horizontal_img_view: UIImageView!
     
     @IBOutlet weak var center_vertical_img_view: UIImageView!
@@ -17,6 +23,16 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate {
         let v = UIImage(named: frames)
         frameVc.image = v
         
+    }
+    
+    func sendOverLay(image: UIImage?) {
+        if image?.size.width ?? 0 > 0 {
+            overlayView.image = image
+            overlayView.isHidden = false
+        }
+        else {
+            overlayView.isHidden = true
+        }
     }
     
     

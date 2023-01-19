@@ -73,14 +73,33 @@
                                                     <constraint firstAttribute="width" constant="1" id="8JH-8m-5Wq"/>
                                                 </constraints>
                                             </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vTx-9G-th2">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ka5-d2-N2E">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="ka5-d2-N2E" secondAttribute="bottom" id="BnA-fu-5M8"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ka5-d2-N2E" secondAttribute="trailing" id="OkQ-Kr-BMq"/>
+                                                    <constraint firstItem="ka5-d2-N2E" firstAttribute="leading" secondItem="vTx-9G-th2" secondAttribute="leading" id="tDk-l9-2gS"/>
+                                                    <constraint firstItem="ka5-d2-N2E" firstAttribute="top" secondItem="vTx-9G-th2" secondAttribute="top" id="z16-eT-EJc"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" red="0.23137254900000001" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="375" id="7IZ-71-SSt"/>
                                             <constraint firstAttribute="height" constant="375" id="COn-qx-AIR"/>
+                                            <constraint firstItem="vTx-9G-th2" firstAttribute="width" secondItem="WcV-O9-0Z4" secondAttribute="width" id="QOm-qi-olY"/>
                                             <constraint firstItem="1Ap-L5-AlP" firstAttribute="centerX" secondItem="WcV-O9-0Z4" secondAttribute="centerX" id="Qb4-Kc-DpT"/>
                                             <constraint firstItem="6VJ-52-aok" firstAttribute="width" secondItem="WcV-O9-0Z4" secondAttribute="width" id="Uv8-yj-y6h"/>
+                                            <constraint firstItem="vTx-9G-th2" firstAttribute="centerY" secondItem="WcV-O9-0Z4" secondAttribute="centerY" id="Vsw-HE-shV"/>
+                                            <constraint firstItem="vTx-9G-th2" firstAttribute="height" secondItem="WcV-O9-0Z4" secondAttribute="height" id="WWz-Qr-887"/>
                                             <constraint firstItem="1Ap-L5-AlP" firstAttribute="height" secondItem="WcV-O9-0Z4" secondAttribute="height" id="cyh-Ko-uGk"/>
+                                            <constraint firstItem="vTx-9G-th2" firstAttribute="centerX" secondItem="WcV-O9-0Z4" secondAttribute="centerX" id="eFm-UF-eaP"/>
                                             <constraint firstItem="6VJ-52-aok" firstAttribute="centerX" secondItem="WcV-O9-0Z4" secondAttribute="centerX" id="i9e-Ef-pYb"/>
                                             <constraint firstItem="1Ap-L5-AlP" firstAttribute="centerY" secondItem="WcV-O9-0Z4" secondAttribute="centerY" id="k7e-fV-keU"/>
                                             <constraint firstItem="6VJ-52-aok" firstAttribute="centerY" secondItem="WcV-O9-0Z4" secondAttribute="centerY" id="z7I-z9-8s3"/>
@@ -182,6 +201,7 @@
                         <outlet property="holderView" destination="ElY-L5-Wld" id="yNS-Dh-Orj"/>
                         <outlet property="imv" destination="x68-JV-Zab" id="Pqx-X1-e5C"/>
                         <outlet property="intermediateview" destination="WcV-O9-0Z4" id="xtf-Vo-o8z"/>
+                        <outlet property="overlayView" destination="ka5-d2-N2E" id="SMb-Xq-qdv"/>
                         <outlet property="widthForTempView" destination="7IZ-71-SSt" id="HBJ-al-q2M"/>
                     </connections>
                 </viewController>

@@ -12,9 +12,17 @@ protocol allDelegate: AnyObject {
     func sendCanvasData(width:Int,height:Int)
     func stickerData(sticker: String)
     func sendFrame(frames:String)
+    func sendOverLay(image:UIImage?)
 }
 
-class CustomModalViewController: UIViewController, sendSticker, canvasSend, sendFrames {
+class CustomModalViewController: UIViewController, sendSticker, canvasSend, sendFrames, imageIndexDelegate {
+    
+    
+    func imageNameWithIndex(tag: String, image: UIImage?) {
+    
+        delegateForEditedView?.sendOverLay(image: image)
+    }
+    
     func sendFramesIndex(frames: String) {
         delegateForEditedView?.sendFrame(frames: frames)
     }
@@ -83,6 +91,7 @@ class CustomModalViewController: UIViewController, sendSticker, canvasSend, send
         }
         else {
             stackView = UIStackView(arrangedSubviews: [spacer, overlayVc, spacer])
+            overlayVc.delegateForOverlay = self
             stackView.axis = .vertical
         }
        
