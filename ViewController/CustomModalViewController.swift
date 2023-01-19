@@ -13,9 +13,16 @@ protocol allDelegate: AnyObject {
     func stickerData(sticker: String)
     func sendFrame(frames:String)
     func sendOverLay(image:UIImage?)
+    func sendAdjust(value: Float, index: Int)
 }
 
-class CustomModalViewController: UIViewController, sendSticker, canvasSend, sendFrames, imageIndexDelegate {
+class CustomModalViewController: UIViewController, sendSticker, canvasSend, sendFrames, imageIndexDelegate, sendValueForAdjust {
+    
+    
+    func sendAdjustValue(value: Float, index: Int) {
+        delegateForEditedView?.sendAdjust(value: value, index: index)
+    }
+    
     
     
     func imageNameWithIndex(tag: String, image: UIImage?) {
@@ -44,6 +51,8 @@ class CustomModalViewController: UIViewController, sendSticker, canvasSend, send
     let canVas = Bundle.main.loadNibNamed("CanVas", owner: nil, options: nil)![0] as! CanVas
     let shapeVc = Bundle.main.loadNibNamed("ShapeVc", owner: nil, options: nil)![0] as! ShapeVc
     let frameVc = Bundle.main.loadNibNamed("FrameVc", owner: nil, options: nil)![0] as! FrameVc
+    let adjustVc = Bundle.main.loadNibNamed("Adjust", owner: nil, options: nil)![0] as! Adjust
+
 
     var typeName: String = ""
     var gesturreView:UIView!
@@ -67,11 +76,17 @@ class CustomModalViewController: UIViewController, sendSticker, canvasSend, send
     lazy var contentStackView: UIStackView = {
         let spacer = UIView()
         
-        let stackView:UIStackView!
+        var stackView:UIStackView!
         
         if typeName.contains("Canvas") {
             stackView = UIStackView(arrangedSubviews: [spacer, canVas, spacer])
             canVas.delegateForSticker = self
+            stackView.axis = .vertical
+        }
+        
+        if typeName.contains("Adjust") {
+            stackView = UIStackView(arrangedSubviews: [spacer, adjustVc, spacer])
+            adjustVc.delegate = self
             stackView.axis = .vertical
         }
         

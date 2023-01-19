@@ -21,6 +21,7 @@ let canVasHeight = 280
 let canvasWidth:CGFloat = 50
 let shapeVcHeight = 350
 let framesVcHeight = 300
+let adjustHeight = 150
 
 
 

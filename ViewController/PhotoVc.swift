@@ -9,11 +9,9 @@ import UIKit
 import AudioToolbox
 
 class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate {
-    
-     
-    
-   
-    
+    func sendAdjust(value: Float, index: Int) {
+        
+    }
     
     @IBOutlet weak var overlayView: UIImageView!
     @IBOutlet weak var center_horizontal_img_view: UIImageView!
@@ -262,6 +260,13 @@ extension PhotoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollect
             vc.overlayVc.isHidden = true
             vc.shapeVc.isHidden = true
             vc.frameVc.isHidden = true
+            vc.adjustVc.isHidden = true
+            
+            if titleName.contains("Adjust") {
+                vc.defaultHeight = CGFloat(adjustHeight)
+                vc.maximumContainerHeight = CGFloat(adjustHeight)
+                vc.adjustVc.isHidden = false
+            }
             
             if titleName.contains("Frames") {
                 vc.defaultHeight = CGFloat(framesVcHeight)
