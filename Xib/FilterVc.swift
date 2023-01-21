@@ -232,9 +232,15 @@ extension FilterVc: UICollectionViewDataSource,UICollectionViewDelegate,UICollec
         }
         else {
             cell.gradietImv.image =  UIImage(named: "filterg")
-            var dic = tempArray[indexPath.row]
-            var image  = getFilteredImage(withInfo: dic as! [String : Any], for: UIImage(named: "filterg"))
-            cell.gradietImv.image  = image
+            
+            if let value = fliterArray[indexPath.section] as? Dictionary<String, Any>{
+                let tempArray  = value["items"] as! NSArray
+                var dic = tempArray[indexPath.row]
+                var image  = getFilteredImage(withInfo: dic as! [String : Any], for: UIImage(named: "filterg"))
+                cell.gradietImv.image  = image
+                 
+            }
+           
         }
         cell.layer.cornerRadius = cell.frame.size.height/2.0
         return cell

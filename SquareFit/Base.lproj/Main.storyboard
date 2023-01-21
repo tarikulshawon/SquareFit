@@ -216,7 +216,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kDg-gj-j8o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1415" y="-92"/>
+            <point key="canvasLocation" x="952" y="-630"/>
         </scene>
         <!--Home Vc-->
         <scene sceneID="tne-QT-ifu">
@@ -472,17 +472,26 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WSF-X5-FSz">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.23137254900000001" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="WSF-X5-FSz" firstAttribute="centerX" secondItem="9WP-Qm-2TW" secondAttribute="centerX" id="0Eu-J2-cUE"/>
+                                            <constraint firstItem="WSF-X5-FSz" firstAttribute="height" secondItem="9WP-Qm-2TW" secondAttribute="height" id="3s4-1g-pLb"/>
                                             <constraint firstAttribute="width" constant="375" id="4Ux-mf-bHU"/>
                                             <constraint firstItem="92x-q7-oAh" firstAttribute="centerX" secondItem="9WP-Qm-2TW" secondAttribute="centerX" id="8Om-Va-peO"/>
                                             <constraint firstAttribute="height" constant="375" id="LcT-pk-ufX"/>
                                             <constraint firstItem="8xR-jc-0t2" firstAttribute="centerY" secondItem="9WP-Qm-2TW" secondAttribute="centerY" id="Vbn-rj-thM"/>
                                             <constraint firstItem="92x-q7-oAh" firstAttribute="height" secondItem="9WP-Qm-2TW" secondAttribute="height" id="Yd7-Ma-hZC"/>
+                                            <constraint firstItem="WSF-X5-FSz" firstAttribute="centerY" secondItem="9WP-Qm-2TW" secondAttribute="centerY" id="f94-YI-ldV"/>
                                             <constraint firstItem="8xR-jc-0t2" firstAttribute="centerX" secondItem="9WP-Qm-2TW" secondAttribute="centerX" id="fbj-CM-Eoh"/>
                                             <constraint firstItem="92x-q7-oAh" firstAttribute="centerY" secondItem="9WP-Qm-2TW" secondAttribute="centerY" id="g6D-zL-V2Q"/>
                                             <constraint firstItem="8xR-jc-0t2" firstAttribute="width" secondItem="9WP-Qm-2TW" secondAttribute="width" id="n0g-dL-1x5"/>
+                                            <constraint firstItem="WSF-X5-FSz" firstAttribute="width" secondItem="9WP-Qm-2TW" secondAttribute="width" id="pCb-Bz-RCY"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -568,9 +577,12 @@
                         <outlet property="backgroundImgView" destination="VDC-BV-eil" id="tJb-qP-RI2"/>
                         <outlet property="blurVideoPreviewContainer" destination="TRm-mO-00k" id="FMb-z1-3La"/>
                         <outlet property="btnCollectionView" destination="dgq-e6-oeH" id="eJs-gO-uBe"/>
+                        <outlet property="center_horizontal_img_view" destination="8xR-jc-0t2" id="M9b-lF-e4Z"/>
+                        <outlet property="center_vertical_img_view" destination="92x-q7-oAh" id="DQK-HX-zt0"/>
                         <outlet property="heightForV" destination="LcT-pk-ufX" id="Ep9-qT-zQw"/>
                         <outlet property="previewContainer" destination="OdY-do-qNx" id="8Cv-m7-Q8f"/>
                         <outlet property="squareContainerView" destination="9WP-Qm-2TW" id="ipM-7I-fAp"/>
+                        <outlet property="stickerView" destination="WSF-X5-FSz" id="dwv-30-B7a"/>
                         <outlet property="videoPreviewContainer" destination="Y3k-5M-3B0" id="63l-kf-2fs"/>
                         <outlet property="widthForV" destination="4Ux-mf-bHU" id="dpl-VI-NYN"/>
                     </connections>

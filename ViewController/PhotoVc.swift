@@ -47,7 +47,6 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
     
     @IBOutlet weak var overlayView: UIImageView!
     @IBOutlet weak var center_horizontal_img_view: UIImageView!
-    
     @IBOutlet weak var center_vertical_img_view: UIImageView!
     func sendFrame(frames: String) {
         let v = UIImage(named: frames)

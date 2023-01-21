@@ -7,7 +7,45 @@
 
 import UIKit
 
-class VideoVc: UIViewController, UIGestureRecognizerDelegate, allDelegate {
+class VideoVc: UIViewController, UIGestureRecognizerDelegate, allDelegate, StickerViewDelegate {
+    
+    
+    func stickerViewDidBeginMoving(_ stickerView: StickerView) {
+        
+    }
+    
+    func stickerViewDidChangeMoving(_ stickerView: StickerView) {
+        
+    }
+    
+    func stickerViewDidEndMoving(_ stickerView: StickerView) {
+        
+    }
+    
+    func stickerViewDidBeginRotating(_ stickerView: StickerView) {
+        
+    }
+    
+    func stickerViewDidChangeRotating(_ stickerView: StickerView) {
+        
+    }
+    
+    func stickerViewDidEndRotating(_ stickerView: StickerView) {
+        
+    }
+    
+    func stickerViewDidClose(_ stickerView: StickerView) {
+        
+    }
+    
+    func stickerViewDidTap(_ stickerView: StickerView) {
+        
+    }
+    
+    
+    
+    @IBOutlet weak var stickerView: UIView!
+    
     
     func sendCanvasData(width: Int, height: Int) {
          
@@ -35,7 +73,67 @@ class VideoVc: UIViewController, UIGestureRecognizerDelegate, allDelegate {
     
     
     
+    func addSticker(test: UIImage) {
+        let testImage = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        testImage.image = test
+        let stickerView3 = StickerView.init(contentView: testImage)
+        stickerView3.backgroundColor = UIColor.clear
+        stickerView3.center = CGPoint.init(x: 50, y: 50)
+        stickerView3.delegate = self
+        stickerView3.setImage(UIImage.init(named: "Close")!, forHandler: StickerViewHandler.close)
+        stickerView3.setImage(UIImage.init(named: "Rotate")!, forHandler: StickerViewHandler.rotate)
+        stickerView3.setImage(UIImage.init(named: "Flip")!, forHandler: StickerViewHandler.flip)
+        stickerView3.showEditingHandlers = false
+        stickerView3.tag = -1
+        stickerView.addSubview(stickerView3)
+        stickerView.clipsToBounds = true
+        stickerView3.showEditingHandlers = true
+        stickerView3.showEditingHandlers = true
+    }
+    
+    
+    
+    
+    func exportVideo () {
+        
+        ExportManager.sharedManger.isMUte = isMute
+        ExportManager.sharedManger.isBackgroundImage = isBackgroundImage
+        ExportManager.sharedManger.isColor = isColor
+        ExportManager.sharedManger.scale = scale
+        ExportManager.sharedManger.isBlur = isBlur
+        ExportManager.sharedManger.flipScaleX = flipScaleX
+        ExportManager.sharedManger.flipScaleY = flipScaleY
+        ExportManager.sharedManger.ratioWidth = 1.0
+        ExportManager.sharedManger.ratioHeight = 1.0
+        ExportManager.sharedManger.videoPreviewContainer = videoPreviewContainer
+        ExportManager.sharedManger.currentProgress = currentProgress
+        ExportManager.sharedManger.backGroundColor = selectedColor
+        
+        if isBackgroundImage {
+            ExportManager.sharedManger.getBackgroundVideoAsset(videoAsset) { bgAsset in
+                if let bgAsset {
+                    ExportManager.sharedManger.export(withPreExportedAsset: nil, andBackgroundAsset: bgAsset)
+                }
+            }
+        }
+        
+        else if isBlur {
+            ExportManager.sharedManger.getBlurVideoAsset(videoAsset) { asset in
+                if let asset {
+                    ExportManager.sharedManger.export(withPreExportedAsset: asset, andBackgroundAsset: nil)
+                }
+            }
+        }
+        else {
+            ExportManager.sharedManger.export(withPreExportedAsset: nil, andBackgroundAsset: nil)
+        }
+        
+    }
+    
+    
     func stickerData(sticker: String) {
+        
+        addSticker(test: UIImage(named: sticker)!)
          
     }
     
@@ -55,6 +153,9 @@ class VideoVc: UIViewController, UIGestureRecognizerDelegate, allDelegate {
     @IBOutlet weak var btnCollectionView: UICollectionView!
     @IBOutlet weak var widthForV: NSLayoutConstraint!
     @IBOutlet weak var heightForV: NSLayoutConstraint!
+    
+    @IBOutlet weak var center_horizontal_img_view: UIImageView!
+    @IBOutlet weak var center_vertical_img_view: UIImageView!
     
     var panRecogniser:UIPanGestureRecognizer! = nil
     var pinchRecogniser:UIPinchGestureRecognizer! = nil
