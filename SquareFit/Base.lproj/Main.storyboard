@@ -443,7 +443,7 @@
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9WP-Qm-2TW">
                                         <rect key="frame" x="7.6666666666666572" y="104.66666666666663" width="375" height="375"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VDC-BV-eil">
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VDC-BV-eil">
                                                 <rect key="frame" x="-8" y="-7" width="390" height="390"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -485,23 +485,11 @@
                                             <constraint firstItem="8xR-jc-0t2" firstAttribute="width" secondItem="9WP-Qm-2TW" secondAttribute="width" id="n0g-dL-1x5"/>
                                         </constraints>
                                     </view>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C3o-Hi-iRD">
-                                        <rect key="frame" x="7.6666666666666572" y="104.66666666666663" width="375" height="375"/>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BG1-5p-lX2">
-                                        <rect key="frame" x="17" y="114" width="390" height="390"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="C3o-Hi-iRD" firstAttribute="width" secondItem="9WP-Qm-2TW" secondAttribute="width" id="29d-dV-fI7"/>
                                     <constraint firstItem="9WP-Qm-2TW" firstAttribute="centerX" secondItem="OdY-do-qNx" secondAttribute="centerX" id="6LP-L5-LmD"/>
                                     <constraint firstItem="9WP-Qm-2TW" firstAttribute="centerY" secondItem="OdY-do-qNx" secondAttribute="centerY" id="fJV-Ld-BU0"/>
-                                    <constraint firstItem="C3o-Hi-iRD" firstAttribute="centerX" secondItem="9WP-Qm-2TW" secondAttribute="centerX" id="oyt-Wr-YW2"/>
-                                    <constraint firstItem="C3o-Hi-iRD" firstAttribute="centerY" secondItem="9WP-Qm-2TW" secondAttribute="centerY" id="x4q-kf-9Pg"/>
-                                    <constraint firstItem="C3o-Hi-iRD" firstAttribute="height" secondItem="9WP-Qm-2TW" secondAttribute="height" id="yjH-oB-a8e"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W6n-s9-2mj">
@@ -577,6 +565,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundImgView" destination="VDC-BV-eil" id="tJb-qP-RI2"/>
                         <outlet property="blurVideoPreviewContainer" destination="TRm-mO-00k" id="FMb-z1-3La"/>
                         <outlet property="previewContainer" destination="OdY-do-qNx" id="8Cv-m7-Q8f"/>
                         <outlet property="squareContainerView" destination="9WP-Qm-2TW" id="ipM-7I-fAp"/>

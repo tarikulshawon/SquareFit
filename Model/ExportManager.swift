@@ -341,12 +341,6 @@ class ExportManager: NSObject {
                         while let presentedViewController = topController.presentedViewController {
                             topController = presentedViewController
                         }
-
-                        
-                        let vc = topController.storyboard?.instantiateViewController(withIdentifier: "TestViewController") as! TestViewController
-                        vc.asset = finalAsset
-                        topController.present(vc, animated: true, completion: nil)
-                     
                     }
                     
                     break

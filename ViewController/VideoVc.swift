@@ -37,6 +37,8 @@ class VideoVc: UIViewController, UIGestureRecognizerDelegate {
     let isMute = false
     let currentProgress:CGFloat = 0.0
     let selectedColor = UIColor.red
+    @IBOutlet weak var backgroundImgView: UIImageView!
+
     
     
     let isBackgroundImage = false
@@ -46,6 +48,7 @@ class VideoVc: UIViewController, UIGestureRecognizerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initalGesture()
+        self.initVideoAsset()
         
         // Do any additional setup after loading the view.
     }
@@ -53,7 +56,7 @@ class VideoVc: UIViewController, UIGestureRecognizerDelegate {
     func initVideoAsset() {
         
         
-        guard let path = Bundle.main.path(forResource: "mama", ofType:"mp4") else {
+        guard let path = Bundle.main.path(forResource: "mama", ofType:"mov") else {
             debugPrint("video.m4v not found")
             return
         }

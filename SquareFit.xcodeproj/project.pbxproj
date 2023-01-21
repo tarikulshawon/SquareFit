@@ -104,7 +104,7 @@
 		01680B9B2973CFC70088F915 /* OverlayThumb9.png in Resources */ = {isa = PBXBuildFile; fileRef = 01680B682973CFC70088F915 /* OverlayThumb9.png */; };
 		01680B9C2973CFC70088F915 /* OverlayThumb8.png in Resources */ = {isa = PBXBuildFile; fileRef = 01680B692973CFC70088F915 /* OverlayThumb8.png */; };
 		01680B9D2973CFC70088F915 /* OverlayThumb48.png in Resources */ = {isa = PBXBuildFile; fileRef = 01680B6A2973CFC70088F915 /* OverlayThumb48.png */; };
-		016B7E6B297B960400D5B6F1 /* mim.mov in Resources */ = {isa = PBXBuildFile; fileRef = 016B7E6A297B960400D5B6F1 /* mim.mov */; };
+		016B7E6B297B960400D5B6F1 /* mama.mov in Resources */ = {isa = PBXBuildFile; fileRef = 016B7E6A297B960400D5B6F1 /* mama.mov */; };
 		016B7E70297B9AA400D5B6F1 /* PlaybackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 016B7E6D297B9AA400D5B6F1 /* PlaybackView.m */; };
 		016B7E71297B9AA400D5B6F1 /* square_blank.mov in Resources */ = {isa = PBXBuildFile; fileRef = 016B7E6E297B9AA400D5B6F1 /* square_blank.mov */; };
 		016B7E73297BA23800D5B6F1 /* ExportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016B7E72297BA23800D5B6F1 /* ExportManager.swift */; };
@@ -354,7 +354,7 @@
 		01680B682973CFC70088F915 /* OverlayThumb9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OverlayThumb9.png; sourceTree = "<group>"; };
 		01680B692973CFC70088F915 /* OverlayThumb8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OverlayThumb8.png; sourceTree = "<group>"; };
 		01680B6A2973CFC70088F915 /* OverlayThumb48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OverlayThumb48.png; sourceTree = "<group>"; };
-		016B7E6A297B960400D5B6F1 /* mim.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = mim.mov; sourceTree = "<group>"; };
+		016B7E6A297B960400D5B6F1 /* mama.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = mama.mov; sourceTree = "<group>"; };
 		016B7E6C297B9AA300D5B6F1 /* SquareFit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SquareFit-Bridging-Header.h"; sourceTree = "<group>"; };
 		016B7E6D297B9AA400D5B6F1 /* PlaybackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaybackView.m; sourceTree = "<group>"; };
 		016B7E6E297B9AA400D5B6F1 /* square_blank.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = square_blank.mov; sourceTree = "<group>"; };
@@ -658,7 +658,7 @@
 				016B7E6F297B9AA400D5B6F1 /* PlaybackView.h */,
 				016B7E6D297B9AA400D5B6F1 /* PlaybackView.m */,
 				016B7E6E297B9AA400D5B6F1 /* square_blank.mov */,
-				016B7E6A297B960400D5B6F1 /* mim.mov */,
+				016B7E6A297B960400D5B6F1 /* mama.mov */,
 				0120929D297AD9E20081D3B8 /* Sounds */,
 				01AE39FE2971BFAD00C2F652 /* ViewController */,
 				01AE3A012971C00E00C2F652 /* Images */,
@@ -1137,7 +1137,7 @@
 				01680B6D2973CFC70088F915 /* OverlayThumb1.png in Resources */,
 				01F0139529798E490077F22D /* F5.jpg in Resources */,
 				01F013A629798E490077F22D /* F29.png in Resources */,
-				016B7E6B297B960400D5B6F1 /* mim.mov in Resources */,
+				016B7E6B297B960400D5B6F1 /* mama.mov in Resources */,
 				01864AFA29719B6C00598CEC /* Assets.xcassets in Resources */,
 				01F0139729798E490077F22D /* F1.jpg in Resources */,
 				010AEC542972D82900A86316 /* Cute in Resources */,
