@@ -49,6 +49,7 @@
 		010AECA629732A2A00A86316 /* ShapeVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 010AECA429732A2900A86316 /* ShapeVc.xib */; };
 		0120929E297AD9E20081D3B8 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 0120929D297AD9E20081D3B8 /* Sounds */; };
 		012092A0297ADF8F0081D3B8 /* VideoVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0120929F297ADF8F0081D3B8 /* VideoVc.swift */; };
+		0132410D297C4517002F8E3C /* lol.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0132410C297C4517002F8E3C /* lol.jpg */; };
 		01680B2D2973CA2E0088F915 /* OverLayVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01680B2B2973CA2E0088F915 /* OverLayVc.swift */; };
 		01680B2E2973CA2E0088F915 /* OverLayVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01680B2C2973CA2E0088F915 /* OverLayVc.xib */; };
 		01680B332973CC100088F915 /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01680B312973CC100088F915 /* ColorCell.swift */; };
@@ -300,6 +301,7 @@
 		010AECA429732A2900A86316 /* ShapeVc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShapeVc.xib; sourceTree = "<group>"; };
 		0120929D297AD9E20081D3B8 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
 		0120929F297ADF8F0081D3B8 /* VideoVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoVc.swift; sourceTree = "<group>"; };
+		0132410C297C4517002F8E3C /* lol.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lol.jpg; sourceTree = "<group>"; };
 		01680B2B2973CA2E0088F915 /* OverLayVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverLayVc.swift; sourceTree = "<group>"; };
 		01680B2C2973CA2E0088F915 /* OverLayVc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverLayVc.xib; sourceTree = "<group>"; };
 		01680B312973CC100088F915 /* ColorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
@@ -658,6 +660,7 @@
 		01864AE429719B6B00598CEC = {
 			isa = PBXGroup;
 			children = (
+				0132410C297C4517002F8E3C /* lol.jpg */,
 				016B7E6F297B9AA400D5B6F1 /* PlaybackView.h */,
 				016B7E6D297B9AA400D5B6F1 /* PlaybackView.m */,
 				016B7E6E297B9AA400D5B6F1 /* square_blank.mov */,
@@ -1197,6 +1200,7 @@
 				01F0132729798DBD0077F22D /* FrameThumb26.png in Resources */,
 				01AE3A032971C02000C2F652 /* bg.png in Resources */,
 				01F013B429798E490077F22D /* F49.png in Resources */,
+				0132410D297C4517002F8E3C /* lol.jpg in Resources */,
 				01F0133929798DBD0077F22D /* FrameThumb44.png in Resources */,
 				01F0132E29798DBD0077F22D /* FrameThumb31.png in Resources */,
 				01F0134929798DBD0077F22D /* FrameThumb38.png in Resources */,

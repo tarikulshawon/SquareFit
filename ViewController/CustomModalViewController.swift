@@ -14,11 +14,15 @@ protocol allDelegate: AnyObject {
     func sendFrame(frames:String)
     func sendOverLay(image:UIImage?)
     func sendAdjust(value: Float, index: Int)
+    func sendFilter(dic: Dictionary<String, Any>?)
 }
 
 class CustomModalViewController: UIViewController, sendSticker, canvasSend, sendFrames, imageIndexDelegate, sendValueForAdjust, filterIndexDelegate {
+    
 
     func filterNameWithIndex(dic: Dictionary<String, Any>?) {
+    
+        delegateForEditedView?.sendFilter(dic: dic)
         
     }
     func sendAdjustValue(value: Float, index: Int) {

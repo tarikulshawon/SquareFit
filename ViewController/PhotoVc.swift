@@ -9,6 +9,18 @@ import UIKit
 import AudioToolbox
 
 class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, StickerViewDelegate {
+    func sendFilter(dic: Dictionary<String, Any>?) {
+        
+        let img = UIImage(named: "lol.jpg")
+        
+        
+        if dic == nil {
+            imv.image = img
+            return
+        }
+        imv.image = getFilteredImage(withInfo: dic as! [String : Any], for: img)
+    }
+    
     func stickerViewDidBeginMoving(_ stickerView: StickerView) {
          
     }
@@ -226,7 +238,7 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
         
         widthForTempView.constant = holderView.frame.width
         heightForTempView.constant = holderView.frame.width
-        imv.image = UIImage(named: "bg")
+        imv.image = UIImage(named: "lol.jpg")
         imv.contentMode = .scaleAspectFit
         
         let totalCellWidth = cellWidth * CGFloat(btnArray.count)

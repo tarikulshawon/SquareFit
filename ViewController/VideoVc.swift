@@ -8,6 +8,10 @@
 import UIKit
 
 class VideoVc: UIViewController, UIGestureRecognizerDelegate, allDelegate, StickerViewDelegate {
+    func sendFilter(dic: Dictionary<String, Any>?) {
+        
+    }
+    
     
     
     func stickerViewDidBeginMoving(_ stickerView: StickerView) {

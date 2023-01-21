@@ -266,8 +266,12 @@ extension FilterVc: UICollectionViewDataSource,UICollectionViewDelegate,UICollec
             delegateForFilter?.filterNameWithIndex(dic: nil)
         }
         else  {
-            var dic = tempArray[indexPath.row]
-            delegateForFilter?.filterNameWithIndex(dic: dic as! Dictionary<String, Any>)
+            if let value = fliterArray[indexPath.section] as? Dictionary<String, Any>{
+                let tempArray  = value["items"] as! NSArray
+                var dic = tempArray[indexPath.row]
+                delegateForFilter?.filterNameWithIndex(dic: dic as! Dictionary<String, Any>)
+                 
+            }
         }
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
