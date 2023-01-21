@@ -567,9 +567,12 @@
                     <connections>
                         <outlet property="backgroundImgView" destination="VDC-BV-eil" id="tJb-qP-RI2"/>
                         <outlet property="blurVideoPreviewContainer" destination="TRm-mO-00k" id="FMb-z1-3La"/>
+                        <outlet property="btnCollectionView" destination="dgq-e6-oeH" id="eJs-gO-uBe"/>
+                        <outlet property="heightForV" destination="LcT-pk-ufX" id="Ep9-qT-zQw"/>
                         <outlet property="previewContainer" destination="OdY-do-qNx" id="8Cv-m7-Q8f"/>
                         <outlet property="squareContainerView" destination="9WP-Qm-2TW" id="ipM-7I-fAp"/>
                         <outlet property="videoPreviewContainer" destination="Y3k-5M-3B0" id="63l-kf-2fs"/>
+                        <outlet property="widthForV" destination="4Ux-mf-bHU" id="dpl-VI-NYN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R5k-Qs-GRC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
