@@ -320,6 +320,11 @@ class VideoVc: UIViewController, UIGestureRecognizerDelegate, allDelegate, Stick
      }
      */
     
+    private func makeHepticFeedback() {
+        let generator = UISelectionFeedbackGenerator()
+        generator.selectionChanged()
+    }
+    
     @objc private func didPan(_ recogniser: UIPanGestureRecognizer) {
         
         if recogniser.state == .began || recogniser.state == .changed {
@@ -327,7 +332,36 @@ class VideoVc: UIViewController, UIGestureRecognizerDelegate, allDelegate, Stick
             let translatedCenter = CGPoint(x: videoPreviewContainer.center.x + panTranslation.x, y: videoPreviewContainer.center.y + panTranslation.y)
             videoPreviewContainer.center = translatedCenter
             recogniser.setTranslation(.zero, in: videoPreviewContainer)
+            
+            
+            if (((videoPreviewContainer.center.x >= (squareContainerView.frame.size.width/2.0 - 2)) &&
+                 (videoPreviewContainer.center.x <= (squareContainerView.frame.size.width/2.0 + 2))))
+            {
+                center_vertical_img_view.isHidden = false
+                makeHepticFeedback()
+            }
+            else {
+                center_vertical_img_view.isHidden = true
+            }
+            
+            if (((videoPreviewContainer.center.y >= (squareContainerView.frame.size.width/2.0 - 2)) &&
+                 (videoPreviewContainer.center.y <= (squareContainerView.frame.size.width/2.0 + 2))))
+            {
+                center_horizontal_img_view.isHidden = false
+                makeHepticFeedback()
+            }
+            else {
+                center_horizontal_img_view.isHidden = true
+            }
+            
         }
+        
+        else if (recogniser.state == .ended) {
+            center_vertical_img_view.isHidden = true
+            center_horizontal_img_view.isHidden = true
+        }
+        
+        
     }
     
     
