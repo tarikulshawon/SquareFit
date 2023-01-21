@@ -48,6 +48,7 @@
 		010AECA529732A2A00A86316 /* ShapeVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010AECA329732A2900A86316 /* ShapeVc.swift */; };
 		010AECA629732A2A00A86316 /* ShapeVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 010AECA429732A2900A86316 /* ShapeVc.xib */; };
 		0120929E297AD9E20081D3B8 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 0120929D297AD9E20081D3B8 /* Sounds */; };
+		012092A0297ADF8F0081D3B8 /* VideoVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0120929F297ADF8F0081D3B8 /* VideoVc.swift */; };
 		01680B2D2973CA2E0088F915 /* OverLayVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01680B2B2973CA2E0088F915 /* OverLayVc.swift */; };
 		01680B2E2973CA2E0088F915 /* OverLayVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01680B2C2973CA2E0088F915 /* OverLayVc.xib */; };
 		01680B332973CC100088F915 /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01680B312973CC100088F915 /* ColorCell.swift */; };
@@ -103,6 +104,10 @@
 		01680B9B2973CFC70088F915 /* OverlayThumb9.png in Resources */ = {isa = PBXBuildFile; fileRef = 01680B682973CFC70088F915 /* OverlayThumb9.png */; };
 		01680B9C2973CFC70088F915 /* OverlayThumb8.png in Resources */ = {isa = PBXBuildFile; fileRef = 01680B692973CFC70088F915 /* OverlayThumb8.png */; };
 		01680B9D2973CFC70088F915 /* OverlayThumb48.png in Resources */ = {isa = PBXBuildFile; fileRef = 01680B6A2973CFC70088F915 /* OverlayThumb48.png */; };
+		016B7E6B297B960400D5B6F1 /* mim.mov in Resources */ = {isa = PBXBuildFile; fileRef = 016B7E6A297B960400D5B6F1 /* mim.mov */; };
+		016B7E70297B9AA400D5B6F1 /* PlaybackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 016B7E6D297B9AA400D5B6F1 /* PlaybackView.m */; };
+		016B7E71297B9AA400D5B6F1 /* square_blank.mov in Resources */ = {isa = PBXBuildFile; fileRef = 016B7E6E297B9AA400D5B6F1 /* square_blank.mov */; };
+		016B7E73297BA23800D5B6F1 /* ExportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016B7E72297BA23800D5B6F1 /* ExportManager.swift */; };
 		01864AF129719B6B00598CEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01864AF029719B6B00598CEC /* AppDelegate.swift */; };
 		01864AF329719B6B00598CEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01864AF229719B6B00598CEC /* SceneDelegate.swift */; };
 		01864AF529719B6B00598CEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01864AF429719B6B00598CEC /* ViewController.swift */; };
@@ -293,6 +298,7 @@
 		010AECA329732A2900A86316 /* ShapeVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeVc.swift; sourceTree = "<group>"; };
 		010AECA429732A2900A86316 /* ShapeVc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShapeVc.xib; sourceTree = "<group>"; };
 		0120929D297AD9E20081D3B8 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
+		0120929F297ADF8F0081D3B8 /* VideoVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoVc.swift; sourceTree = "<group>"; };
 		01680B2B2973CA2E0088F915 /* OverLayVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverLayVc.swift; sourceTree = "<group>"; };
 		01680B2C2973CA2E0088F915 /* OverLayVc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverLayVc.xib; sourceTree = "<group>"; };
 		01680B312973CC100088F915 /* ColorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
@@ -348,6 +354,12 @@
 		01680B682973CFC70088F915 /* OverlayThumb9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OverlayThumb9.png; sourceTree = "<group>"; };
 		01680B692973CFC70088F915 /* OverlayThumb8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OverlayThumb8.png; sourceTree = "<group>"; };
 		01680B6A2973CFC70088F915 /* OverlayThumb48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OverlayThumb48.png; sourceTree = "<group>"; };
+		016B7E6A297B960400D5B6F1 /* mim.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = mim.mov; sourceTree = "<group>"; };
+		016B7E6C297B9AA300D5B6F1 /* SquareFit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SquareFit-Bridging-Header.h"; sourceTree = "<group>"; };
+		016B7E6D297B9AA400D5B6F1 /* PlaybackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaybackView.m; sourceTree = "<group>"; };
+		016B7E6E297B9AA400D5B6F1 /* square_blank.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = square_blank.mov; sourceTree = "<group>"; };
+		016B7E6F297B9AA400D5B6F1 /* PlaybackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaybackView.h; sourceTree = "<group>"; };
+		016B7E72297BA23800D5B6F1 /* ExportManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportManager.swift; sourceTree = "<group>"; };
 		01864AED29719B6B00598CEC /* SquareFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SquareFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01864AF029719B6B00598CEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01864AF229719B6B00598CEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -552,6 +564,7 @@
 		010AE8CF2972BECD00A86316 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				016B7E72297BA23800D5B6F1 /* ExportManager.swift */,
 				01F013BA29799CEC0077F22D /* StickerView.swift */,
 				010AE8D02972BED900A86316 /* AppGlobal.swift */,
 			);
@@ -642,6 +655,10 @@
 		01864AE429719B6B00598CEC = {
 			isa = PBXGroup;
 			children = (
+				016B7E6F297B9AA400D5B6F1 /* PlaybackView.h */,
+				016B7E6D297B9AA400D5B6F1 /* PlaybackView.m */,
+				016B7E6E297B9AA400D5B6F1 /* square_blank.mov */,
+				016B7E6A297B960400D5B6F1 /* mim.mov */,
 				0120929D297AD9E20081D3B8 /* Sounds */,
 				01AE39FE2971BFAD00C2F652 /* ViewController */,
 				01AE3A012971C00E00C2F652 /* Images */,
@@ -655,6 +672,7 @@
 				01864AEE29719B6B00598CEC /* Products */,
 				621FC09FD52C1E9A901C5A8C /* Pods */,
 				89EC2C4589BC5833962D1FB0 /* Frameworks */,
+				016B7E6C297B9AA300D5B6F1 /* SquareFit-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -705,6 +723,7 @@
 				010AEC9D2972FC8A00A86316 /* CustomModalViewController.swift */,
 				01AE39FF2971BFCA00C2F652 /* HomeVc.swift */,
 				01A826982972972800DCCEF7 /* PhotoVc.swift */,
+				0120929F297ADF8F0081D3B8 /* VideoVc.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -949,6 +968,7 @@
 				TargetAttributes = {
 					01864AEC29719B6B00598CEC = {
 						CreatedOnToolsVersion = 14.0.1;
+						LastSwiftMigration = 1400;
 					};
 					01864B0229719B6D00598CEC = {
 						CreatedOnToolsVersion = 14.0.1;
@@ -1117,6 +1137,7 @@
 				01680B6D2973CFC70088F915 /* OverlayThumb1.png in Resources */,
 				01F0139529798E490077F22D /* F5.jpg in Resources */,
 				01F013A629798E490077F22D /* F29.png in Resources */,
+				016B7E6B297B960400D5B6F1 /* mim.mov in Resources */,
 				01864AFA29719B6C00598CEC /* Assets.xcassets in Resources */,
 				01F0139729798E490077F22D /* F1.jpg in Resources */,
 				010AEC542972D82900A86316 /* Cute in Resources */,
@@ -1150,6 +1171,7 @@
 				01F0138D29798E490077F22D /* F34.png in Resources */,
 				01F0133E29798DBD0077F22D /* FrameThumb48.png in Resources */,
 				01680B782973CFC70088F915 /* OverlayThumb5.png in Resources */,
+				016B7E71297B9AA400D5B6F1 /* square_blank.mov in Resources */,
 				010AEC4A2972D82900A86316 /* Summer in Resources */,
 				01F013B129798E490077F22D /* F38.png in Resources */,
 				010AECA629732A2A00A86316 /* ShapeVc.xib in Resources */,
@@ -1281,8 +1303,11 @@
 				010AEC9B2972FC4000A86316 /* StickerVc.swift in Sources */,
 				01864AF529719B6B00598CEC /* ViewController.swift in Sources */,
 				01AE3A002971BFCA00C2F652 /* HomeVc.swift in Sources */,
+				016B7E70297B9AA400D5B6F1 /* PlaybackView.m in Sources */,
 				01864AF129719B6B00598CEC /* AppDelegate.swift in Sources */,
+				012092A0297ADF8F0081D3B8 /* VideoVc.swift in Sources */,
 				010AECA529732A2A00A86316 /* ShapeVc.swift in Sources */,
+				016B7E73297BA23800D5B6F1 /* ExportManager.swift in Sources */,
 				010AE8CD2972BCA400A86316 /* RatioCell.swift in Sources */,
 				010AECA2297313E000A86316 /* HeaderView.swift in Sources */,
 				010AEC9E2972FC8A00A86316 /* CustomModalViewController.swift in Sources */,
@@ -1472,6 +1497,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7T4SDWZ6VK;
@@ -1490,6 +1516,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = hhhhh.SquareFit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SquareFit-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1501,6 +1529,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7T4SDWZ6VK;
@@ -1519,6 +1548,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = hhhhh.SquareFit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SquareFit-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

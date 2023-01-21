@@ -39,45 +39,43 @@ class HomeVc: UIViewController, PHPickerViewControllerDelegate {
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
         picker.dismiss(animated: true)
         
-        let itemProviders = results.map(\.itemProvider)
-        for item in itemProviders {
-            if isFromPhoto {
-                if item.canLoadObject(ofClass: UIImage.self) {
-                    item.loadObject(ofClass: UIImage.self) { (image, error) in
-                        DispatchQueue.main.async {
-                            let vc = self.storyboard?.instantiateViewController(withIdentifier: "PhotoVc") as! PhotoVc
-                            vc.modalPresentationStyle = .fullScreen
-                            self.present(vc, animated: true, completion: nil)
-                        }
-                    }
-                }
-            } else {
-            }
+        
+        if isFromPhoto {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "PhotoVc") as! PhotoVc
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+        }
+        else {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "VideoVc") as! VideoVc
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+            
         }
     }
-    
-    
-    @IBAction func gotoPhotos(_ sender: Any) {
-        let newFilter = PHPickerFilter.any(of: [.images])
-        let photoLibrary = PHPhotoLibrary.shared()
-        var configuration = PHPickerConfiguration(photoLibrary: photoLibrary)
-        configuration.filter = newFilter
-        let picker = PHPickerViewController(configuration: configuration)
-        picker.delegate = self
-        configuration.selection = .ordered
-        configuration.selectionLimit = 1
-        picker.modalPresentationStyle = .fullScreen
-        present(picker, animated: true)
+        
+        
+        @IBAction func gotoPhotos(_ sender: Any) {
+            isFromPhoto = true
+            let newFilter = PHPickerFilter.any(of: [.images])
+            let photoLibrary = PHPhotoLibrary.shared()
+            var configuration = PHPickerConfiguration(photoLibrary: photoLibrary)
+            configuration.filter = newFilter
+            let picker = PHPickerViewController(configuration: configuration)
+            picker.delegate = self
+            configuration.selection = .ordered
+            configuration.selectionLimit = 1
+            picker.modalPresentationStyle = .fullScreen
+            present(picker, animated: true)
+        }
+        
+        /*
+         // MARK: - Navigation
+         
+         // In a storyboard-based application, you will often want to do a little preparation before navigation
+         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         // Get the new view controller using segue.destination.
+         // Pass the selected object to the new view controller.
+         }
+         */
+        
     }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
-}
