@@ -8,7 +8,13 @@
 
 import UIKit
 
-
+enum KeyboardAccessory: CaseIterable {
+    case keyboard
+    case font
+    case color
+    case alignment
+    case done
+}
 
 protocol indexItem {
     func changeIndex(index: Int)
@@ -32,13 +38,9 @@ class KeyboardTopView: UIView {
 
 
 extension KeyboardTopView : UITabBarDelegate {
-    
-    
     public func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        
         let value = item.tag-300
         delegate?.changeIndex(index: value)
- 
     }
     
     

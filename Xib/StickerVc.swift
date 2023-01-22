@@ -10,9 +10,7 @@ final class StickerVc: UIView {
 
     @IBOutlet weak var contentsCollectionView: UICollectionView!
     @IBOutlet weak var categoryCollectionView: UICollectionView!
-    
-    private var autoScrollEnabled = true
-    
+        
     func getStickerArray(indexF: Int) -> NSArray {
         var tempArray: NSArray!
         if let value  = plistArray6[indexF] as? String, let path =  Bundle.main.path(forResource: value, ofType: nil) {
@@ -138,7 +136,6 @@ extension StickerVc: UICollectionViewDataSource,UICollectionViewDelegate,UIColle
             }
         } else {
             let scrollableSection = IndexPath.init(row: 0, section: indexPath.row)
-            autoScrollEnabled = false
             contentsCollectionView.scrollToItem(at: scrollableSection, at: .centeredVertically, animated: true)
         }
     }

@@ -594,7 +594,7 @@
         <!--Keyboard-->
         <scene sceneID="fyN-7k-ODX">
             <objects>
-                <viewController storyboardIdentifier="keyboard" id="jDm-wo-xGY" customClass="keyboard" customModule="Scanner_E" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="keyboard" id="jDm-wo-xGY" customClass="keyboard" customModule="SquareFit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IXn-0r-5id">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -608,8 +608,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="p3R-7M-Zop">
-                                                    <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="p3R-7M-Zop">
+                                                    <rect key="frame" x="0.0" y="100" width="390" height="744"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -618,7 +618,7 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="p3R-7M-Zop" firstAttribute="top" secondItem="ySz-YJ-hkQ" secondAttribute="top" id="AGA-t4-uT0"/>
+                                                <constraint firstItem="p3R-7M-Zop" firstAttribute="top" secondItem="ySz-YJ-hkQ" secondAttribute="top" constant="100" id="AGA-t4-uT0"/>
                                                 <constraint firstAttribute="bottom" secondItem="p3R-7M-Zop" secondAttribute="bottom" id="K6B-rn-mW9"/>
                                                 <constraint firstItem="p3R-7M-Zop" firstAttribute="leading" secondItem="ySz-YJ-hkQ" secondAttribute="leading" id="Spj-AC-Mdf"/>
                                                 <constraint firstAttribute="trailing" secondItem="p3R-7M-Zop" secondAttribute="trailing" id="g1y-ZY-RWn"/>

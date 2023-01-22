@@ -44,7 +44,7 @@ class keyboard: UIViewController,indexItem,chnageColor,changeFont,aligthmentTag,
     @IBOutlet var textView: UITextView!
     
     @IBOutlet var heightForToolsView: NSLayoutConstraint!
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         fontName =  fontArray[0]
@@ -63,8 +63,6 @@ class keyboard: UIViewController,indexItem,chnageColor,changeFont,aligthmentTag,
         keyboardViewExtentView =  (UINib(nibName: "KeyboardTopView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! KeyboardTopView)
         textView.inputAccessoryView = keyboardViewExtentView
         keyboardViewExtentView.delegate = self
-        
-        
         
         
         toolsView =  (UINib(nibName: "ToolsView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! ToolsView)
@@ -214,7 +212,6 @@ class keyboard: UIViewController,indexItem,chnageColor,changeFont,aligthmentTag,
             removeSubviews = false
         }
         
-        
         if index==3
         {
             
@@ -236,7 +233,7 @@ class keyboard: UIViewController,indexItem,chnageColor,changeFont,aligthmentTag,
         }
         else  if index==1
         {
-            
+            textView.endEditing(true)
             fontsView.frame = CGRect(x: 0, y:  CGFloat(screenHeight - keyBoardHeight + topViewHieght), width:  CGFloat(screenWidth), height: CGFloat(keyBoardHeight - topViewHieght))
             fontsView.delegateForFont = self
             window.addSubview(fontsView)
@@ -245,9 +242,8 @@ class keyboard: UIViewController,indexItem,chnageColor,changeFont,aligthmentTag,
         }
         removeSubviews = true
     }
-    func changeIndex(index: Int)
-    {
-        
+    
+    func changeIndex(index: Int) {
         if index==0
         {
             self.voidHidePicker()
@@ -330,8 +326,9 @@ class keyboard: UIViewController,indexItem,chnageColor,changeFont,aligthmentTag,
     {
         fontName = name as String
         self.setAttributedString()
-        
+        textView.becomeFirstResponder()
     }
+    
     func changeAlighment(index: Int) {
         
         alighment = index
