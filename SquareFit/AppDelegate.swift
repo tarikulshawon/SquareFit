@@ -42,7 +42,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func loadData()
     {
-        fontArray = NSMutableArray()
         
         do {
             let path = Bundle.main.path(forResource: "Fonts", ofType: "")
@@ -80,7 +79,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             let fontName = fontRef!.postScriptName
             let name:NSString = NSString(string:fontName!)
-            fontArray.adding(name)
+            fontArray.append(name as String)
             NSLog("%@", name)
         }
         
