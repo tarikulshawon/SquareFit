@@ -8,7 +8,15 @@
 import UIKit
 import AudioToolbox
 
-class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, StickerViewDelegate {
+class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, StickerViewDelegate, changeImage, backButton {
+    func doneBack() {
+        
+    }
+    
+    func changeImage(image: UIImage) {
+        
+    }
+    
     func sendFilter(dic: Dictionary<String, Any>?) {
         
         let img = UIImage(named: "lol.jpg")
@@ -330,8 +338,19 @@ extension PhotoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollect
             vc.imageEditVc.isHidden = true
             
             
+            if titleName.contains("Texts") {
+                
+                let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "keyboard") as? keyboard
+                vc?.delegateForChnageImage = self
+                vc?.delegateForBack = self
+                let navController = UINavigationController(rootViewController: vc!)
+                navController.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+                present(navController, animated: true, completion: nil)
+                return
+            }
             
-            if titleName.contains("Image") {
+            
+            else if titleName.contains("Image") {
                 vc.defaultHeight = CGFloat(adjustHeight)
                 vc.maximumContainerHeight = CGFloat(adjustHeight)
                 vc.imageEditVc.isHidden = false

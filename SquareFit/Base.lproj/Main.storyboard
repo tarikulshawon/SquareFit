@@ -591,6 +591,84 @@
             </objects>
             <point key="canvasLocation" x="617" y="-201"/>
         </scene>
+        <!--Keyboard-->
+        <scene sceneID="fyN-7k-ODX">
+            <objects>
+                <viewController storyboardIdentifier="keyboard" id="jDm-wo-xGY" customClass="keyboard" customModule="Scanner_E" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IXn-0r-5id">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NmP-C4-Ujf">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <subviews>
+                                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yYE-sc-3Ke">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ySz-YJ-hkQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="p3R-7M-Zop">
+                                                    <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="p3R-7M-Zop" firstAttribute="top" secondItem="ySz-YJ-hkQ" secondAttribute="top" id="AGA-t4-uT0"/>
+                                                <constraint firstAttribute="bottom" secondItem="p3R-7M-Zop" secondAttribute="bottom" id="K6B-rn-mW9"/>
+                                                <constraint firstItem="p3R-7M-Zop" firstAttribute="leading" secondItem="ySz-YJ-hkQ" secondAttribute="leading" id="Spj-AC-Mdf"/>
+                                                <constraint firstAttribute="trailing" secondItem="p3R-7M-Zop" secondAttribute="trailing" id="g1y-ZY-RWn"/>
+                                            </constraints>
+                                        </view>
+                                        <blurEffect style="regular"/>
+                                    </visualEffectView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="yYE-sc-3Ke" secondAttribute="bottom" id="0le-7c-bng"/>
+                                    <constraint firstItem="yYE-sc-3Ke" firstAttribute="leading" secondItem="NmP-C4-Ujf" secondAttribute="leading" id="JmX-zL-Slu"/>
+                                    <constraint firstAttribute="bottom" secondItem="yYE-sc-3Ke" secondAttribute="bottom" id="YAJ-Ij-zGt"/>
+                                    <constraint firstAttribute="trailing" secondItem="yYE-sc-3Ke" secondAttribute="trailing" id="bwe-vn-lh3"/>
+                                    <constraint firstAttribute="trailing" secondItem="yYE-sc-3Ke" secondAttribute="trailing" id="cGk-gG-3Xs"/>
+                                    <constraint firstItem="yYE-sc-3Ke" firstAttribute="leading" secondItem="NmP-C4-Ujf" secondAttribute="leading" id="kIE-nv-Q8C"/>
+                                    <constraint firstItem="yYE-sc-3Ke" firstAttribute="top" secondItem="NmP-C4-Ujf" secondAttribute="top" id="nMT-IB-JC1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WcG-xJ-Ztj"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="NmP-C4-Ujf" secondAttribute="bottom" id="eS4-zS-qji"/>
+                            <constraint firstAttribute="trailing" secondItem="NmP-C4-Ujf" secondAttribute="trailing" id="jXb-8f-wOD"/>
+                            <constraint firstItem="NmP-C4-Ujf" firstAttribute="top" secondItem="IXn-0r-5id" secondAttribute="top" id="tU3-Hw-XeL"/>
+                            <constraint firstItem="NmP-C4-Ujf" firstAttribute="leading" secondItem="IXn-0r-5id" secondAttribute="leading" id="tqv-Hj-Ebi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gOJ-Ya-F8x">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="9io-0p-Nvv">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="jWU-s3-7gW">
+                                <rect key="frame" x="20" y="7" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="gotoPreviousView:" destination="jDm-wo-xGY" eventType="touchUpInside" id="CR6-5Z-70c"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bottomSpaceForKeyBoardView" destination="K6B-rn-mW9" id="vj3-hV-a09"/>
+                        <outlet property="textView" destination="p3R-7M-Zop" id="Yg2-rl-GC2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="48J-r1-gIB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1485.5072463768117" y="1525.4464285714284"/>
+        </scene>
     </scenes>
     <resources>
         <image name="back" width="30" height="30"/>
