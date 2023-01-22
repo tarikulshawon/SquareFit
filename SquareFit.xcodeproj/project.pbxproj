@@ -125,7 +125,6 @@
 		013241A8297D24D8002F8E3C /* ColorWheelLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013241A2297D24D8002F8E3C /* ColorWheelLayer.swift */; };
 		013241A9297D24D8002F8E3C /* ColorWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013241A3297D24D8002F8E3C /* ColorWheel.swift */; };
 		013241AA297D24D8002F8E3C /* RotatingColorWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013241A4297D24D8002F8E3C /* RotatingColorWheel.swift */; };
-		013241AB297D24D8002F8E3C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 013241A6297D24D8002F8E3C /* Info.plist */; };
 		013241AD297D251A002F8E3C /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 013241AC297D251A002F8E3C /* Fonts */; };
 		01680B2D2973CA2E0088F915 /* OverLayVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01680B2B2973CA2E0088F915 /* OverLayVc.swift */; };
 		01680B2E2973CA2E0088F915 /* OverLayVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01680B2C2973CA2E0088F915 /* OverLayVc.xib */; };
@@ -403,7 +402,6 @@
 		013241A3297D24D8002F8E3C /* ColorWheel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorWheel.swift; sourceTree = "<group>"; };
 		013241A4297D24D8002F8E3C /* RotatingColorWheel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotatingColorWheel.swift; sourceTree = "<group>"; };
 		013241A5297D24D8002F8E3C /* SwiftColorWheel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftColorWheel.h; sourceTree = "<group>"; };
-		013241A6297D24D8002F8E3C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		013241AC297D251A002F8E3C /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		01680B2B2973CA2E0088F915 /* OverLayVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverLayVc.swift; sourceTree = "<group>"; };
 		01680B2C2973CA2E0088F915 /* OverLayVc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverLayVc.xib; sourceTree = "<group>"; };
@@ -768,7 +766,6 @@
 				013241A3297D24D8002F8E3C /* ColorWheel.swift */,
 				013241A4297D24D8002F8E3C /* RotatingColorWheel.swift */,
 				013241A5297D24D8002F8E3C /* SwiftColorWheel.h */,
-				013241A6297D24D8002F8E3C /* Info.plist */,
 			);
 			path = SwiftColorWheel;
 			sourceTree = "<group>";
@@ -1337,7 +1334,6 @@
 				01680B762973CFC70088F915 /* OverlayThumb47.png in Resources */,
 				01864AF829719B6B00598CEC /* Main.storyboard in Resources */,
 				01680B842973CFC70088F915 /* OverlayThumb19.png in Resources */,
-				013241AB297D24D8002F8E3C /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
