@@ -95,7 +95,7 @@ extension FrameVc: UICollectionViewDataSource,UICollectionViewDelegate,UICollect
                 cell?.transform =  CGAffineTransform(scaleX: 1.0, y: 1.0);                //cell?.backgroundColor = UIColor.clear
             })
         }
-        delegateForFramesr?.sendFramesIndex(frames: "F" + "\(indexPath.row)" + ".jpg")
+        delegateForFramesr?.sendFramesIndex(frames: "F" + "\(indexPath.row)")
         
     }
     

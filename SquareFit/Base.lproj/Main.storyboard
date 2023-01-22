@@ -113,7 +113,7 @@
                                             <constraint firstItem="6VJ-52-aok" firstAttribute="centerY" secondItem="WcV-O9-0Z4" secondAttribute="centerY" id="z7I-z9-8s3"/>
                                         </constraints>
                                     </view>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lg3-IE-39Q">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lg3-IE-39Q">
                                         <rect key="frame" x="7.6666666666666572" y="104.66666666666663" width="375" height="375"/>
                                     </imageView>
                                 </subviews>
