@@ -1,4 +1,3 @@
-
 import UIKit
 
 protocol sendSticker: AnyObject {
@@ -8,9 +7,11 @@ protocol sendSticker: AnyObject {
 final class StickerVc: UIView {
     var plistArray6: NSArray!
     weak var delegateForSticker: sendSticker?
-    
+
     @IBOutlet weak var contentsCollectionView: UICollectionView!
     @IBOutlet weak var categoryCollectionView: UICollectionView!
+    
+    private var autoScrollEnabled = true
     
     func getStickerArray(indexF: Int) -> NSArray {
         var tempArray: NSArray!
@@ -94,11 +95,10 @@ extension StickerVc: UICollectionViewDataSource,UICollectionViewDelegate,UIColle
             let tempArray = self.getStickerArray(indexF: indexPath.section)
             let filename = tempArray[indexPath.row]
             
-            if let value  = plistArray6[indexPath.section] as? String, let path =  Bundle.main.path(forResource: value, ofType: nil) {
+            if let value  = plistArray6[indexPath.section] as? String {
                 let imagePath = "\(value)/\(filename)"
                 let image = UIImage(named: imagePath)
                 cell.mainImv.image = image
-                
             }
             
             cell.iconImv.backgroundColor = UIColor(red: 38.0/255.0, green: 38.0/255.0, blue: 38.0/255.0, alpha: 1.0)
@@ -138,13 +138,14 @@ extension StickerVc: UICollectionViewDataSource,UICollectionViewDelegate,UIColle
             }
         } else {
             let scrollableSection = IndexPath.init(row: 0, section: indexPath.row)
+            autoScrollEnabled = false
             contentsCollectionView.scrollToItem(at: scrollableSection, at: .centeredVertically, animated: true)
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         if collectionView == contentsCollectionView {
-            return CGSize(width:collectionView.frame.size.width, height:50.0)
+            return CGSize(width:collectionView.frame.size.width, height: 50.0)
         } else {
             return .zero
         }
@@ -178,7 +179,6 @@ extension StickerVc: UICollectionViewDataSource,UICollectionViewDelegate,UIColle
 }
 
 
-// TODO: Need to fix autoscroll
 extension StickerVc {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         guard
@@ -190,7 +190,7 @@ extension StickerVc {
             return
         }
         
-        if scrollView == self.contentsCollectionView {
+        if scrollView == self.contentsCollectionView && contentsCollectionView.isDragging {
             if
                 let topSectionIndex = contentsCollectionView.indexPathsForVisibleItems.map({ $0.section }).sorted().first,
                 let selectedCollectionIndex = self.categoryCollectionView.indexPathsForSelectedItems?.first?.row,
