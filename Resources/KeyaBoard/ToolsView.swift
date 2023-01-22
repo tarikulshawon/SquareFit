@@ -37,16 +37,12 @@ class ToolsView: UIView {
         let button = sender as! UIButton
         let tag  = button.tag - 100
         delegeteAlighment?.changeAlighment(index: tag)
-        
-        
-        
     }
     
     @IBAction func textSizeChange(_ sender: UISlider) {
         let currentValue = Int(sender.value)
         delegeteFontSize?.chnageFontSize(size: currentValue)
-        
-        
+
     }
     
     @IBAction func changeLineSpacing(_ sender: UISlider) {

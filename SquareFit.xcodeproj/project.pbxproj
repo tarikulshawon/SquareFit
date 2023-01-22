@@ -755,11 +755,11 @@
 				0132418C297D2489002F8E3C /* ColorView.xib */,
 				0132418D297D2489002F8E3C /* FontsView.swift */,
 				0132418E297D2489002F8E3C /* FontsView.xib */,
+				01324193297D2489002F8E3C /* FontCell.swift */,
 				0132418F297D2489002F8E3C /* FontCell.xib */,
 				01324190297D2489002F8E3C /* ColorView.swift */,
 				01324191297D2489002F8E3C /* ToolsView.swift */,
 				01324192297D2489002F8E3C /* KeyboardTopView.xib */,
-				01324193297D2489002F8E3C /* FontCell.swift */,
 				01324194297D2489002F8E3C /* ToolsView.xib */,
 				01324195297D2489002F8E3C /* KeyboardTopView.swift */,
 			);

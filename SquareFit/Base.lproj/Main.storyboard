@@ -609,19 +609,48 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="p3R-7M-Zop">
-                                                    <rect key="frame" x="0.0" y="100" width="390" height="744"/>
+                                                    <rect key="frame" x="0.0" y="100" width="390" height="644"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="giD-Pw-D0h">
+                                                    <rect key="frame" x="0.0" y="744" width="390" height="100"/>
+                                                    <subviews>
+                                                        <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vkq-SE-tnq">
+                                                            <rect key="frame" x="0.0" y="0.0" width="390" height="100"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <items>
+                                                                <tabBarItem tag="300" title="Keyboard" image="keyboard" id="ykW-Hg-6oz">
+                                                                    <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                                                                </tabBarItem>
+                                                                <tabBarItem tag="301" title="Font" image="font" id="1im-ch-uOz"/>
+                                                                <tabBarItem tag="303" title="ALIGN" image="alignment" id="5K8-H8-8ip"/>
+                                                                <tabBarItem tag="302" title="Color" image="Color" id="4Yh-jL-YMb"/>
+                                                                <tabBarItem tag="304" title="DONE" image="Done" id="3hU-kz-0ib"/>
+                                                            </items>
+                                                        </tabBar>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="Vkq-SE-tnq" secondAttribute="trailing" id="VyJ-rQ-hoQ"/>
+                                                        <constraint firstItem="Vkq-SE-tnq" firstAttribute="top" secondItem="giD-Pw-D0h" secondAttribute="top" id="c0f-VK-xql"/>
+                                                        <constraint firstItem="Vkq-SE-tnq" firstAttribute="leading" secondItem="giD-Pw-D0h" secondAttribute="leading" id="iw2-Zp-0Xb"/>
+                                                        <constraint firstAttribute="height" constant="100" id="jE1-Vg-QPC"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Vkq-SE-tnq" secondAttribute="bottom" id="rra-3Z-p3J"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="p3R-7M-Zop" firstAttribute="top" secondItem="ySz-YJ-hkQ" secondAttribute="top" constant="100" id="AGA-t4-uT0"/>
-                                                <constraint firstAttribute="bottom" secondItem="p3R-7M-Zop" secondAttribute="bottom" id="K6B-rn-mW9"/>
+                                                <constraint firstItem="giD-Pw-D0h" firstAttribute="top" secondItem="p3R-7M-Zop" secondAttribute="bottom" id="BEt-tw-qOE"/>
+                                                <constraint firstAttribute="bottom" secondItem="giD-Pw-D0h" secondAttribute="bottom" id="Cdx-mR-aAw"/>
                                                 <constraint firstItem="p3R-7M-Zop" firstAttribute="leading" secondItem="ySz-YJ-hkQ" secondAttribute="leading" id="Spj-AC-Mdf"/>
+                                                <constraint firstItem="giD-Pw-D0h" firstAttribute="leading" secondItem="ySz-YJ-hkQ" secondAttribute="leading" id="a9w-oC-epN"/>
                                                 <constraint firstAttribute="trailing" secondItem="p3R-7M-Zop" secondAttribute="trailing" id="g1y-ZY-RWn"/>
+                                                <constraint firstAttribute="trailing" secondItem="giD-Pw-D0h" secondAttribute="trailing" id="lKS-P1-Msy"/>
                                             </constraints>
                                         </view>
                                         <blurEffect style="regular"/>
@@ -661,19 +690,26 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="bottomSpaceForKeyBoardView" destination="K6B-rn-mW9" id="vj3-hV-a09"/>
+                        <outlet property="customTabBar" destination="Vkq-SE-tnq" id="atn-tA-Hso"/>
+                        <outlet property="heightForToolsView" destination="Cdx-mR-aAw" id="gR7-uz-eUD"/>
+                        <outlet property="heightOfToolBar" destination="jE1-Vg-QPC" id="A2p-DH-GzI"/>
                         <outlet property="textView" destination="p3R-7M-Zop" id="Yg2-rl-GC2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="48J-r1-gIB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1485.5072463768117" y="1525.4464285714284"/>
+            <point key="canvasLocation" x="1484.6153846153845" y="1524.8815165876777"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Color" width="30" height="30"/>
+        <image name="Done" width="30" height="30"/>
+        <image name="alignment" width="30" height="30"/>
         <image name="back" width="30" height="30"/>
         <image name="bg.png" width="1242" height="2688"/>
         <image name="camera" width="120" height="120"/>
+        <image name="font" width="30" height="30"/>
+        <image name="keyboard" width="30" height="30"/>
         <image name="photos" width="120" height="120"/>
         <image name="pro" width="92.333335876464844" height="33.333332061767578"/>
         <image name="settings" width="30" height="30"/>

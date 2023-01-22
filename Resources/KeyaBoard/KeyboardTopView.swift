@@ -28,10 +28,8 @@ class KeyboardTopView: UIView {
 
     @IBOutlet var tabBarView: UITabBar!
     
-    override func draw(_ rect: CGRect)
-    {
+    override func draw(_ rect: CGRect) {
         self.tabBarView.delegate = self
-        
     }
     
 }
@@ -42,6 +40,4 @@ extension KeyboardTopView : UITabBarDelegate {
         let value = item.tag-300
         delegate?.changeIndex(index: value)
     }
-    
-    
 }

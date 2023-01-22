@@ -25,8 +25,8 @@ class keyboard: UIViewController,indexItem,chnageColor,changeFont,aligthmentTag,
     var keyBoardHeight = 0
     var keyboardViewExtentView: KeyboardTopView!
     var toolsView: ToolsView!
-    var colorView:ColorView!
-    var fontsView:FontsView!
+    var colorView: ColorView!
+    var fontsView: FontsView!
     var captureImage:UIImage!
     var screenSize: CGRect! = nil
     var screenWidth = 0
@@ -40,28 +40,39 @@ class keyboard: UIViewController,indexItem,chnageColor,changeFont,aligthmentTag,
     var colorForTextView = UIColor.white
     var lineSpacing = 0
     var lineSpacingBetweenlines = 0
+    var bottomConstant: CGFloat = 0
     
     @IBOutlet var textView: UITextView!
     
     @IBOutlet var heightForToolsView: NSLayoutConstraint!
-        
+    @IBOutlet weak var heightOfToolBar: NSLayoutConstraint!
+    @IBOutlet weak var customTabBar: UITabBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         fontName =  fontArray[0]
+        
+        // Notifications for when the keyboard opens/closes
         NotificationCenter.default.addObserver(
             self,
-            selector: #selector(keyboardWillShow),
+            selector: #selector(self.keyboardWillShow),
             name: UIResponder.keyboardWillShowNotification,
-            object: nil
-        )
+            object: nil)
+
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(self.keyboardWillHide),
+            name: UIResponder.keyboardWillHideNotification,
+            object: nil)
         
         screenSize = UIScreen.main.bounds
         screenWidth = Int(screenSize.width)
         screenHeight = Int(screenSize.height)
         textView.delegate = self
+        customTabBar.delegate = self
         
         keyboardViewExtentView =  (UINib(nibName: "KeyboardTopView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! KeyboardTopView)
-        textView.inputAccessoryView = keyboardViewExtentView
+
         keyboardViewExtentView.delegate = self
         
         
@@ -82,10 +93,7 @@ class keyboard: UIViewController,indexItem,chnageColor,changeFont,aligthmentTag,
         
         self.setAttributedString()
         
-        textView.becomeFirstResponder()
-        
-        
-        
+        //textView.becomeFirstResponder()
     }
     
     func setAttributedString( )
@@ -174,73 +182,12 @@ class keyboard: UIViewController,indexItem,chnageColor,changeFont,aligthmentTag,
         return image!
     }
     
-    
-    @objc func keyboardWillShow(_ notification: Notification) {
-        if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
-            let keyboardRectangle = keyboardFrame.cgRectValue
-            keyBoardHeight = Int(keyboardRectangle.height)
-            bottomSpaceForKeyBoardView.constant = CGFloat(keyBoardHeight)
-        }
-    }
-    
-    
     @IBAction func gotoPreviousView(_ sender: Any) {
         
         delegateForBack?.doneBack()
 
         NotificationCenter.default.removeObserver(self)
         self.dismiss(animated: true, completion: nil)
-    }
-    
-    
-    func toolIndexChange (index: Int)
-    {
-       
-        guard let firstScene = UIApplication.shared.connectedScenes.first as? UIWindowScene else {
-            return
-        }
-
-        guard let window = firstScene.windows.last else {
-            return
-        }
-        
-        let view = window.subviews.last!
-        
-        
-        if(removeSubviews){
-            view.removeFromSuperview()
-            removeSubviews = false
-        }
-        
-        if index==3
-        {
-            
-            toolsView.frame = CGRect(x: 0, y:  CGFloat(screenHeight - keyBoardHeight + topViewHieght), width:  CGFloat(screenWidth), height: CGFloat(keyBoardHeight - topViewHieght))
-            
-            toolsView.layer.zPosition = CGFloat(Float.greatestFiniteMagnitude)            
-            window.addSubview(toolsView)
-            window.bringSubviewToFront(toolsView)
-            
-        }
-        else  if index==2
-        {
-            
-            colorView.frame = CGRect(x: 0, y:  CGFloat(screenHeight - keyBoardHeight + topViewHieght), width:  CGFloat(screenWidth), height: CGFloat(keyBoardHeight - topViewHieght))
-            
-            window.addSubview(colorView)
-            window.bringSubviewToFront(colorView)
-            
-        }
-        else  if index==1
-        {
-            textView.endEditing(true)
-            fontsView.frame = CGRect(x: 0, y:  CGFloat(screenHeight - keyBoardHeight + topViewHieght), width:  CGFloat(screenWidth), height: CGFloat(keyBoardHeight - topViewHieght))
-            fontsView.delegateForFont = self
-            window.addSubview(fontsView)
-            window.bringSubviewToFront(fontsView)
-            
-        }
-        removeSubviews = true
     }
     
     func changeIndex(index: Int) {
@@ -266,10 +213,6 @@ class keyboard: UIViewController,indexItem,chnageColor,changeFont,aligthmentTag,
             
             self.dismiss(animated: true, completion: nil)
             
-        }
-        else
-        {
-            self.toolIndexChange(index: index)
         }
     }
     
@@ -351,4 +294,110 @@ class keyboard: UIViewController,indexItem,chnageColor,changeFont,aligthmentTag,
         self.setAttributedString()
     }
     
+}
+
+extension keyboard: UITabBarDelegate {
+    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        let value = item.tag - 300
+        if value == 0 {
+            textView.becomeFirstResponder()
+
+        } else if value == 1 {
+            textView.endEditing(true)
+            fontsView.isHidden = false
+            colorView.isHidden = true
+            toolsView.isHidden = true
+            
+            fontsView.frame = CGRect(x: 0, y:  CGFloat(screenHeight - keyBoardHeight + topViewHieght), width:  CGFloat(screenWidth), height: CGFloat(keyBoardHeight - keyBoardHeight))
+            fontsView.delegateForFont = self
+            
+            fontsView.layer.zPosition = CGFloat(MAXFLOAT)
+            
+            view.addSubview(fontsView)
+            
+            fontsView.translatesAutoresizingMaskIntoConstraints = false
+            
+            let bottom = fontsView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            let leading = fontsView.leadingAnchor.constraint(equalTo: view.leadingAnchor)
+            let trailing = fontsView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            let heightConstraint = fontsView.heightAnchor.constraint(equalToConstant: 336.0)
+            NSLayoutConstraint.activate([bottom, leading, trailing, heightConstraint])
+        } else if value == 2 {
+            textView.endEditing(true)
+            fontsView.isHidden = true
+            colorView.isHidden = false
+            toolsView.isHidden = true
+            
+            colorView.frame = CGRect(x: 0, y:  CGFloat(screenHeight - keyBoardHeight + topViewHieght), width:  CGFloat(screenWidth), height: CGFloat(keyBoardHeight - topViewHieght))
+            
+            view.addSubview(colorView)
+            
+            colorView.translatesAutoresizingMaskIntoConstraints = false
+            
+            let bottom = colorView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            let leading = colorView.leadingAnchor.constraint(equalTo: view.leadingAnchor)
+            let trailing = colorView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            let heightConstraint = colorView.heightAnchor.constraint(equalToConstant: 336.0)
+            NSLayoutConstraint.activate([bottom, leading, trailing, heightConstraint])
+        } else if value == 3 {
+            textView.endEditing(true)
+            fontsView.isHidden = true
+            colorView.isHidden = true
+            toolsView.isHidden = false
+            
+            toolsView.frame = CGRect(x: 0, y:  CGFloat(screenHeight - keyBoardHeight + topViewHieght), width:  CGFloat(screenWidth), height: CGFloat(keyBoardHeight - topViewHieght))
+            
+            view.addSubview(toolsView)
+            toolsView.translatesAutoresizingMaskIntoConstraints = false
+
+            let bottom = toolsView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            let leading = toolsView.leadingAnchor.constraint(equalTo: view.leadingAnchor)
+            let trailing = toolsView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            let heightConstraint = toolsView.heightAnchor.constraint(equalToConstant: 336.0)
+            NSLayoutConstraint.activate([bottom, leading, trailing, heightConstraint])
+        } else if value == 4 {
+            dismiss(animated: true)
+        }
+    }
+}
+
+extension keyboard {
+    @objc func keyboardWillShow(_ notification: NSNotification) {
+        moveViewWithKeyboard(notification: notification, keyboardWillShow: true)
+    }
+    
+    func moveViewWithKeyboard(notification: NSNotification, keyboardWillShow: Bool) {
+        // Keyboard's size
+        guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
+        let keyboardHeight = keyboardSize.height
+        
+        // Keyboard's animation duration
+        let keyboardDuration = notification.userInfo![UIResponder.keyboardAnimationDurationUserInfoKey] as! Double
+        
+        // Keyboard's animation curve
+        let keyboardCurve = UIView.AnimationCurve(rawValue: notification.userInfo![UIResponder.keyboardAnimationCurveUserInfoKey] as! Int)!
+        
+        // Change the constant
+        if keyboardWillShow {
+            let safeAreaExists = (self.view?.window?.safeAreaInsets.bottom != 0) // Check if safe area exists
+            print("Keyboard Height: \(keyboardHeight)")
+            heightForToolsView.constant = keyboardHeight
+            heightOfToolBar.constant = 60
+        }else {
+            //viewBottomConstraint.constant = 20
+        }
+        
+        // Animate the view the same way the keyboard animates
+        let animator = UIViewPropertyAnimator(duration: keyboardDuration, curve: keyboardCurve) { [weak self] in
+            // Update Constraints
+            self?.view.layoutIfNeeded()
+        }
+        
+        // Perform the animation
+        animator.startAnimation()
+    }
+    
+    @objc func keyboardWillHide(_ notification: NSNotification) {
+        //moveViewWithKeyboard(notification: notification, viewBottomConstraint: , keyboardWillShow: false)
+    }
 }
