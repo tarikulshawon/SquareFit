@@ -327,19 +327,28 @@ extension PhotoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollect
             vc.frameVc.isHidden = true
             vc.adjustVc.isHidden = true
             vc.filterVc.isHidden = true
+            vc.imageEditVc.isHidden = true
             
-            if titleName.contains("Adjust") {
+            
+            
+            if titleName.contains("Image") {
+                vc.defaultHeight = CGFloat(adjustHeight)
+                vc.maximumContainerHeight = CGFloat(adjustHeight)
+                vc.imageEditVc.isHidden = false
+            }
+            
+            else if titleName.contains("Adjust") {
                 vc.defaultHeight = CGFloat(adjustHeight)
                 vc.maximumContainerHeight = CGFloat(adjustHeight)
                 vc.adjustVc.isHidden = false
             }
             
-            if titleName.contains("Frames") {
+            else if titleName.contains("Frames") {
                 vc.defaultHeight = CGFloat(framesVcHeight)
                 vc.frameVc.isHidden = false
             }
             
-            if titleName.contains("Canvas") {
+            else if titleName.contains("Canvas") {
                 vc.defaultHeight = CGFloat(canVasHeight)
                 vc.maximumContainerHeight  = CGFloat(canVasHeight)
                 vc.canVas.isHidden = false

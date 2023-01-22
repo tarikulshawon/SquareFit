@@ -17,7 +17,21 @@ protocol allDelegate: AnyObject {
     func sendFilter(dic: Dictionary<String, Any>?)
 }
 
-class CustomModalViewController: UIViewController, sendSticker, canvasSend, sendFrames, imageIndexDelegate, sendValueForAdjust, filterIndexDelegate {
+class CustomModalViewController: UIViewController, sendSticker, canvasSend, sendFrames, imageIndexDelegate, sendValueForAdjust, filterIndexDelegate, sendImageDelegate {
+    
+    
+    func sendImage() {
+         
+    }
+    
+    func changeImageOpacity(value: Float) {
+         
+    }
+    
+    func chnageValue(value: Float, index: Int) {
+        
+    }
+    
     
 
     func filterNameWithIndex(dic: Dictionary<String, Any>?) {
@@ -59,6 +73,8 @@ class CustomModalViewController: UIViewController, sendSticker, canvasSend, send
     let frameVc = Bundle.main.loadNibNamed("FrameVc", owner: nil, options: nil)![0] as! FrameVc
     let adjustVc = Bundle.main.loadNibNamed("Adjust", owner: nil, options: nil)![0] as! Adjust
     let filterVc = Bundle.main.loadNibNamed("FilterVc", owner: nil, options: nil)![0] as! FilterVc
+    let imageEditVc = Bundle.main.loadNibNamed("ImageEditView", owner: nil, options: nil)![0] as! ImageEditView
+
 
 
     var typeName: String = ""
@@ -88,6 +104,11 @@ class CustomModalViewController: UIViewController, sendSticker, canvasSend, send
         if typeName.contains("Canvas") {
             stackView = UIStackView(arrangedSubviews: [spacer, canVas, spacer])
             canVas.delegateForSticker = self
+            stackView.axis = .vertical
+        }
+        else if typeName.contains("Image") {
+            stackView = UIStackView(arrangedSubviews: [spacer, imageEditVc, spacer])
+            imageEditVc.delegateForImage = self
             stackView.axis = .vertical
         }
         else if typeName.contains("Filter") {

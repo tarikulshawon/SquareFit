@@ -50,6 +50,9 @@
 		0120929E297AD9E20081D3B8 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 0120929D297AD9E20081D3B8 /* Sounds */; };
 		012092A0297ADF8F0081D3B8 /* VideoVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0120929F297ADF8F0081D3B8 /* VideoVc.swift */; };
 		0132410D297C4517002F8E3C /* lol.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0132410C297C4517002F8E3C /* lol.jpg */; };
+		0132410F297CCE69002F8E3C /* ImageEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0132410E297CCE69002F8E3C /* ImageEditView.swift */; };
+		01324111297CCE6E002F8E3C /* ImageEditView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01324110297CCE6E002F8E3C /* ImageEditView.xib */; };
+		01324113297CCE8F002F8E3C /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01324112297CCE8F002F8E3C /* CustomSlider.swift */; };
 		01680B2D2973CA2E0088F915 /* OverLayVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01680B2B2973CA2E0088F915 /* OverLayVc.swift */; };
 		01680B2E2973CA2E0088F915 /* OverLayVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01680B2C2973CA2E0088F915 /* OverLayVc.xib */; };
 		01680B332973CC100088F915 /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01680B312973CC100088F915 /* ColorCell.swift */; };
@@ -250,6 +253,9 @@
 		0120929D297AD9E20081D3B8 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
 		0120929F297ADF8F0081D3B8 /* VideoVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoVc.swift; sourceTree = "<group>"; };
 		0132410C297C4517002F8E3C /* lol.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lol.jpg; sourceTree = "<group>"; };
+		0132410E297CCE69002F8E3C /* ImageEditView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageEditView.swift; sourceTree = "<group>"; };
+		01324110297CCE6E002F8E3C /* ImageEditView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageEditView.xib; sourceTree = "<group>"; };
+		01324112297CCE8F002F8E3C /* CustomSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
 		01680B2B2973CA2E0088F915 /* OverLayVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverLayVc.swift; sourceTree = "<group>"; };
 		01680B2C2973CA2E0088F915 /* OverLayVc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverLayVc.xib; sourceTree = "<group>"; };
 		01680B312973CC100088F915 /* ColorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
@@ -465,6 +471,7 @@
 		010AE8CF2972BECD00A86316 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				01324112297CCE8F002F8E3C /* CustomSlider.swift */,
 				016B7E72297BA23800D5B6F1 /* ExportManager.swift */,
 				01F013BA29799CEC0077F22D /* StickerView.swift */,
 				010AE8D02972BED900A86316 /* AppGlobal.swift */,
@@ -475,6 +482,8 @@
 		010AEC982972FC3100A86316 /* Xib */ = {
 			isa = PBXGroup;
 			children = (
+				0132410E297CCE69002F8E3C /* ImageEditView.swift */,
+				01324110297CCE6E002F8E3C /* ImageEditView.xib */,
 				01F013BC2979A4830077F22D /* FilterVc.swift */,
 				01F013BD2979A4830077F22D /* FilterVc.xib */,
 				01F013B7297997CE0077F22D /* Adjust.swift */,
@@ -850,6 +859,7 @@
 				010AE8C62972B56800A86316 /* imageEdit.plist in Resources */,
 				01F0133129798DBD0077F22D /* FrameThumb30.png in Resources */,
 				01F0131F29798DBD0077F22D /* FrameThumb21.png in Resources */,
+				01324111297CCE6E002F8E3C /* ImageEditView.xib in Resources */,
 				01F0132F29798DBD0077F22D /* FrameThumb5.png in Resources */,
 				01680B972973CFC70088F915 /* OverlayThumb39.png in Resources */,
 				01F0132629798DBD0077F22D /* FrameThumb32.png in Resources */,
@@ -1111,8 +1121,10 @@
 				01DFAC4429784E45005C7564 /* FrameVc.swift in Sources */,
 				01F013B9297997CE0077F22D /* Adjust.swift in Sources */,
 				01F013BB29799CEC0077F22D /* StickerView.swift in Sources */,
+				01324113297CCE8F002F8E3C /* CustomSlider.swift in Sources */,
 				01CF1ADC29757ECD0003DFA4 /* CanvasRatioCell.swift in Sources */,
 				01864AF329719B6B00598CEC /* SceneDelegate.swift in Sources */,
+				0132410F297CCE69002F8E3C /* ImageEditView.swift in Sources */,
 				01CF1AD829757EC40003DFA4 /* CanVas.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
