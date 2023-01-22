@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01010DD8297D0FAA00FBF76A /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01010DD6297D0FAA00FBF76A /* TagCell.swift */; };
+		01010DD9297D0FAA00FBF76A /* TagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01010DD7297D0FAA00FBF76A /* TagCell.xib */; };
 		010AE8BE2972B56800A86316 /* category.plist in Resources */ = {isa = PBXBuildFile; fileRef = 010AE8B22972B56800A86316 /* category.plist */; };
 		010AE8BF2972B56800A86316 /* VideoEdit.plist in Resources */ = {isa = PBXBuildFile; fileRef = 010AE8B32972B56800A86316 /* VideoEdit.plist */; };
 		010AE8C02972B56800A86316 /* textEditOption.plist in Resources */ = {isa = PBXBuildFile; fileRef = 010AE8B42972B56800A86316 /* textEditOption.plist */; };
@@ -284,6 +286,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01010DD6297D0FAA00FBF76A /* TagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
+		01010DD7297D0FAA00FBF76A /* TagCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagCell.xib; sourceTree = "<group>"; };
 		010AE8B22972B56800A86316 /* category.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = category.plist; sourceTree = "<group>"; };
 		010AE8B32972B56800A86316 /* VideoEdit.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = VideoEdit.plist; sourceTree = "<group>"; };
 		010AE8B42972B56800A86316 /* textEditOption.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = textEditOption.plist; sourceTree = "<group>"; };
@@ -607,6 +611,8 @@
 		010AE8CA2972BC8600A86316 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				01010DD6297D0FAA00FBF76A /* TagCell.swift */,
+				01010DD7297D0FAA00FBF76A /* TagCell.xib */,
 				01CF1ADA29757ECD0003DFA4 /* CanvasRatioCell.swift */,
 				01CF1ADB29757ECD0003DFA4 /* CanvasRatioCell.xib */,
 				01680B312973CC100088F915 /* ColorCell.swift */,
@@ -1248,6 +1254,7 @@
 				01324138297D0AF3002F8E3C /* filter_15.jpg in Resources */,
 				01324149297D0AF3002F8E3C /* filter_20.jpg in Resources */,
 				01F013B8297997CE0077F22D /* Adjust.xib in Resources */,
+				01010DD9297D0FAA00FBF76A /* TagCell.xib in Resources */,
 				010AECA1297313E000A86316 /* HeaderView.xib in Resources */,
 				01324145297D0AF3002F8E3C /* filter_8.jpg in Resources */,
 				01F0132B29798DBD0077F22D /* FrameThumb33.png in Resources */,
@@ -1453,6 +1460,7 @@
 				0132419A297D2489002F8E3C /* ColorView.swift in Sources */,
 				01F013BE2979A4830077F22D /* FilterVc.swift in Sources */,
 				01DFAC4429784E45005C7564 /* FrameVc.swift in Sources */,
+				01010DD8297D0FAA00FBF76A /* TagCell.swift in Sources */,
 				01F013B9297997CE0077F22D /* Adjust.swift in Sources */,
 				013241AF297D289C002F8E3C /* keyboard.swift in Sources */,
 				01F013BB29799CEC0077F22D /* StickerView.swift in Sources */,
