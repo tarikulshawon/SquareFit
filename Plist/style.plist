@@ -142,5 +142,13 @@
 		<key>Height</key>
 		<integer>1</integer>
 	</dict>
+	<dict>
+		<key>Name</key>
+		<string>3:2</string>
+		<key>Width</key>
+		<integer>3</integer>
+		<key>Height</key>
+		<integer>2</integer>
+	</dict>
 </array>
 </plist>
