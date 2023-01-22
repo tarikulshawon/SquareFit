@@ -197,7 +197,15 @@ class keyboard: UIViewController,indexItem,chnageColor,changeFont,aligthmentTag,
     
     func toolIndexChange (index: Int)
     {
-        let window =  UIApplication.shared.windows.last!
+       
+        guard let firstScene = UIApplication.shared.connectedScenes.first as? UIWindowScene else {
+            return
+        }
+
+        guard let window = firstScene.windows.last else {
+            return
+        }
+        
         let view = window.subviews.last!
         
         
@@ -212,6 +220,7 @@ class keyboard: UIViewController,indexItem,chnageColor,changeFont,aligthmentTag,
             
             toolsView.frame = CGRect(x: 0, y:  CGFloat(screenHeight - keyBoardHeight + topViewHieght), width:  CGFloat(screenWidth), height: CGFloat(keyBoardHeight - topViewHieght))
             
+            toolsView.layer.zPosition = CGFloat(Float.greatestFiniteMagnitude)            
             window.addSubview(toolsView)
             window.bringSubviewToFront(toolsView)
             
@@ -283,8 +292,14 @@ class keyboard: UIViewController,indexItem,chnageColor,changeFont,aligthmentTag,
         if(removeSubviews)
         {
             keyboardViewExtentView.tabBarView.selectedItem = keyboardViewExtentView.tabBarView.items?.first
-            let window =  UIApplication.shared.windows.last!
-            let view = window.subviews.last!
+            guard let firstScene = UIApplication.shared.connectedScenes.first as? UIWindowScene else {
+                return
+            }
+
+            guard let firstWindow = firstScene.windows.last else {
+                return
+            }
+            let view = firstWindow.subviews.last!
             
             
             
