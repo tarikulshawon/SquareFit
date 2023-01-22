@@ -56,8 +56,8 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="btnScrollView" destination="UbJ-Rn-dzT" id="OeX-no-lAZ"/>
-                <outlet property="collectionViewForSticker" destination="WtH-XC-27y" id="TVD-Qx-hlv"/>
+                <outlet property="categoryCollectionView" destination="UbJ-Rn-dzT" id="Mc9-sJ-Gwj"/>
+                <outlet property="contentsCollectionView" destination="WtH-XC-27y" id="z23-ON-6In"/>
             </connections>
             <point key="canvasLocation" x="259" y="105"/>
         </view>

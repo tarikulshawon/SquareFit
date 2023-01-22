@@ -1,115 +1,57 @@
-//
-//  StickerVc.swift
-//  PosterMaker
-//
-//  Created by m-sagor-sikdar on 21/12/21.
-//
 
 import UIKit
 
 protocol sendSticker: AnyObject {
-    func sendSticker(sticker:String)
+    func sendSticker(sticker: String)
 }
 
-class StickerVc: UIView {
-    
+final class StickerVc: UIView {
     var plistArray6: NSArray!
-    var tempViww:UIView!
-    var selectedIndexView:UIView!
-    let buttonWidth:CGFloat = 80.0
-    let gapBetweenButtons: CGFloat = 7
-    var resourcePath2:String?
-    var currentSelectedSticker = 0
     weak var delegateForSticker: sendSticker?
-    private var autoScrollEnabled = true
     
-    @IBOutlet weak var collectionViewForSticker: UICollectionView!
-    @IBOutlet weak var btnScrollView: UICollectionView!
+    @IBOutlet weak var contentsCollectionView: UICollectionView!
+    @IBOutlet weak var categoryCollectionView: UICollectionView!
     
     func getStickerArray(indexF: Int) -> NSArray {
-        var tempArray:NSArray!
+        var tempArray: NSArray!
         if let value  = plistArray6[indexF] as? String, let path =  Bundle.main.path(forResource: value, ofType: nil) {
-            
             do {
                 try  tempArray =  FileManager.default.contentsOfDirectory(atPath: path) as NSArray
-            } catch {
-            }
-            
+            } catch { }
         }
         
         return tempArray
-        
     }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
         let nibName = UINib(nibName: RatioCell.reusableID, bundle: nil)
-        collectionViewForSticker.register(nibName, forCellWithReuseIdentifier:  RatioCell.reusableID)
-        collectionViewForSticker.delegate = self
-        collectionViewForSticker.dataSource = self
-        collectionViewForSticker.showsVerticalScrollIndicator = false
-        collectionViewForSticker.showsHorizontalScrollIndicator = false
+        contentsCollectionView.register(nibName, forCellWithReuseIdentifier:  RatioCell.reusableID)
+        contentsCollectionView.delegate = self
+        contentsCollectionView.dataSource = self
+        contentsCollectionView.showsVerticalScrollIndicator = false
+        contentsCollectionView.showsHorizontalScrollIndicator = false
         
-        btnScrollView.delegate = self
-        btnScrollView.dataSource = self
+        categoryCollectionView.delegate = self
+        categoryCollectionView.dataSource = self
         
-        btnScrollView.register(UINib(nibName: "TagCell", bundle: nil), forCellWithReuseIdentifier: "TagCell")
+        categoryCollectionView.register(UINib(nibName: "TagCell", bundle: nil), forCellWithReuseIdentifier: "TagCell")
         
-        collectionViewForSticker.register(UINib.init(nibName: "HeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HeaderView")
+        contentsCollectionView.register(UINib.init(nibName: "HeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HeaderView")
         
-        collectionViewForSticker.register(UINib.init(nibName: "HeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "HeaderView")
-        
-        
+        contentsCollectionView.register(UINib.init(nibName: "HeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "HeaderView")
         
         let path = Bundle.main.path(forResource: "sticker", ofType: "plist")
         plistArray6 = NSArray(contentsOfFile: path!)
     }
-    
-    @objc func buttonAction(sender: UIButton!) {
-        
-        let tag = sender.tag - 800
-        currentSelectedSticker = tag
-        getStickerArray(indexF: currentSelectedSticker)
-        
-        for i in 0..<self.plistArray6.count{
-            var btn = self.btnScrollView.viewWithTag(i+800) as? UIButton
-            btn?.setTitleColor(unselectedColor, for: .normal)
-        }
-        
-        DispatchQueue.main.async {
-           // self.collectionViewForSticker.reloadData()
-        }
-        
-        UIView.animate(withDuration: 0.2, animations: {
-            var value = CGFloat (sender.tag)
-            sender?.setTitleColor(UIColor.white, for: .normal)
-            var frame = self.selectedIndexView.frame
-            frame.origin.x = sender.frame.origin.x
-            self.selectedIndexView.frame = frame
-            self.layoutIfNeeded()
-            
-        }, completion: {_ in
-            
-            
-            var btn = self.btnScrollView.viewWithTag(sender.tag) as? UIButton
-            btn?.setTitleColor(UIColor.white, for: .normal)
-            
-            
-            
-            
-        })
-        
-    }
 }
 
 
-extension StickerVc: UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout
-{
-    
-    
+extension StickerVc: UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        if collectionView == collectionViewForSticker {
-            return  plistArray6.count
+        if collectionView == contentsCollectionView {
+            return plistArray6.count
         } else {
             return 1
         }
@@ -126,14 +68,11 @@ extension StickerVc: UICollectionViewDataSource,UICollectionViewDelegate,UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        
-        
-        return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-        
-        
+        UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
     }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == collectionViewForSticker {
+        if collectionView == contentsCollectionView {
             return self.getStickerArray(indexF: section).count
         } else {
             return plistArray6.count
@@ -142,8 +81,7 @@ extension StickerVc: UICollectionViewDataSource,UICollectionViewDelegate,UIColle
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
-        
-        if collectionView == collectionViewForSticker {
+        if collectionView == contentsCollectionView {
             return CGSize(width: 80, height: 80)
         } else {
             return CGSize(width: 80, height: 25)
@@ -151,16 +89,14 @@ extension StickerVc: UICollectionViewDataSource,UICollectionViewDelegate,UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == collectionViewForSticker {
-            
+        if collectionView == contentsCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RatioCell.reusableID  , for: indexPath as IndexPath) as! RatioCell
-            var tempArray = self.getStickerArray(indexF: indexPath.section)
+            let tempArray = self.getStickerArray(indexF: indexPath.section)
             let filename = tempArray[indexPath.row]
-            
             
             if let value  = plistArray6[indexPath.section] as? String, let path =  Bundle.main.path(forResource: value, ofType: nil) {
                 let imagePath = "\(value)/\(filename)"
-                var image = UIImage(named: imagePath)
+                let image = UIImage(named: imagePath)
                 cell.mainImv.image = image
                 
             }
@@ -178,41 +114,36 @@ extension StickerVc: UICollectionViewDataSource,UICollectionViewDelegate,UIColle
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForItemAt indexPath: IndexPath) -> UIEdgeInsets {
         
-        return UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
+        UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if collectionView == collectionViewForSticker {
+        if collectionView == contentsCollectionView {
             let cell = collectionView.cellForItem(at: indexPath)
             
-            UIView.animate(withDuration: 0.5, animations:
-                            {
+            UIView.animate(withDuration: 0.5, animations: {
                 cell?.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
-                //cell?.backgroundColor = UIColor.lightGray
             }) { (true) in
-                UIView.animate(withDuration: 0.5, animations:
-                                {
-                    cell?.transform =  CGAffineTransform(scaleX: 1.0, y: 1.0);                //cell?.backgroundColor = UIColor.clear
+                UIView.animate(withDuration: 0.5, animations: {
+                    cell?.transform =  CGAffineTransform(scaleX: 1.0, y: 1.0)
                 })
             }
-            
-            print("section: \(indexPath.section)")
-            
+                        
             let tempArray = self.getStickerArray(indexF: indexPath.section)
             let filename = tempArray[indexPath.row]
             
-            if let value  = plistArray6[currentSelectedSticker] as? String, let _ =  Bundle.main.path(forResource: value, ofType: nil) {
+            if let value  = plistArray6[indexPath.section] as? String, let _ =  Bundle.main.path(forResource: value, ofType: nil) {
                 let imagePath = "\(value)/\(filename)"
                 self.delegateForSticker?.sendSticker(sticker: imagePath)
             }
         } else {
             let scrollableSection = IndexPath.init(row: 0, section: indexPath.row)
-            collectionViewForSticker.scrollToItem(at: scrollableSection, at: .centeredVertically, animated: true)
+            contentsCollectionView.scrollToItem(at: scrollableSection, at: .centeredVertically, animated: true)
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        if collectionView == collectionViewForSticker {
+        if collectionView == contentsCollectionView {
             return CGSize(width:collectionView.frame.size.width, height:50.0)
         } else {
             return .zero
@@ -220,9 +151,9 @@ extension StickerVc: UICollectionViewDataSource,UICollectionViewDelegate,UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView,
-                       viewForSupplementaryElementOfKind kind: String,
-                       at indexPath: IndexPath) -> UICollectionReusableView {
-        if collectionView == collectionViewForSticker {
+                        viewForSupplementaryElementOfKind kind: String,
+                        at indexPath: IndexPath) -> UICollectionReusableView {
+        if collectionView == contentsCollectionView {
             switch kind {
             case UICollectionView.elementKindSectionHeader:
                 let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HeaderView", for: indexPath as IndexPath) as? HeaderView
@@ -243,28 +174,29 @@ extension StickerVc: UICollectionViewDataSource,UICollectionViewDelegate,UIColle
         } else {
             return UICollectionReusableView()
         }
-   }
+    }
 }
 
+
+// TODO: Need to fix autoscroll
 extension StickerVc {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         guard
-            let indexPaths = btnScrollView.indexPathsForSelectedItems,
+            let indexPaths = categoryCollectionView.indexPathsForSelectedItems,
             !indexPaths.isEmpty
         else {
             let selectedIndexPath = IndexPath(item: 0, section: 0)
-            btnScrollView.selectItem(at: selectedIndexPath, animated: false, scrollPosition: [])
+            categoryCollectionView.selectItem(at: selectedIndexPath, animated: false, scrollPosition: [])
             return
         }
         
-        if scrollView == self.collectionViewForSticker {
+        if scrollView == self.contentsCollectionView {
             if
-                let topSectionIndex = collectionViewForSticker.indexPathsForVisibleItems.map({ $0.section }).sorted().first,
-                let selectedCollectionIndex = self.btnScrollView.indexPathsForSelectedItems?.first?.row,
+                let topSectionIndex = contentsCollectionView.indexPathsForVisibleItems.map({ $0.section }).sorted().first,
+                let selectedCollectionIndex = self.categoryCollectionView.indexPathsForSelectedItems?.first?.row,
                 selectedCollectionIndex != topSectionIndex {
-                print("top: \(topSectionIndex), selected: \(selectedCollectionIndex))")
                 let indexPath = IndexPath(item: topSectionIndex, section: 0)
-                self.btnScrollView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredHorizontally)
+                self.categoryCollectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredHorizontally)
             }
         }
     }
