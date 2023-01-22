@@ -3,6 +3,7 @@
 <plist version="1.0">
 <array>
 	<string>Canvas</string>
+	<string>Background</string>
 	<string>Texts</string>
 	<string>Graphics</string>
 	<string>Frames</string>
