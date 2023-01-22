@@ -69,17 +69,6 @@
 	<dict>
 		<key>Name</key>
 		<string>IG Potriat
-&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;
-&lt;plist version=&quot;1.0&quot;&gt;
-&lt;dict&gt;
-	&lt;key&gt;Name&lt;/key&gt;
-	&lt;string&gt;fB cover&lt;/string&gt;
-	&lt;key&gt;Width&lt;/key&gt;
-	&lt;integer&gt;16&lt;/integer&gt;
-	&lt;key&gt;Height&lt;/key&gt;
-	&lt;integer&gt;9&lt;/integer&gt;
-&lt;/dict&gt;
-&lt;/plist&gt;
 </string>
 		<key>Width</key>
 		<integer>1080</integer>
