@@ -24,6 +24,9 @@ let framesVcHeight = 300
 var fliterArray:NSArray!
 let adjustHeight = 150
 let filterHeight = 300
+var fontArray:NSArray!
+var arrayForFont: NSArray!
+
 
 
 

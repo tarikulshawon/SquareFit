@@ -20,11 +20,27 @@
 	</dict>
 	<dict>
 		<key>Name</key>
+		<string>3:2</string>
+		<key>Width</key>
+		<integer>3</integer>
+		<key>Height</key>
+		<integer>2</integer>
+	</dict>
+	<dict>
+		<key>Name</key>
 		<string>A4</string>
 		<key>Width</key>
 		<integer>3508</integer>
 		<key>Height</key>
 		<integer>2480</integer>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>9:16</string>
+		<key>Width</key>
+		<integer>9</integer>
+		<key>Height</key>
+		<integer>16</integer>
 	</dict>
 	<dict>
 		<key>Name</key>
@@ -41,6 +57,14 @@
 		<integer>1280</integer>
 		<key>Height</key>
 		<integer>720</integer>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>1:3</string>
+		<key>Width</key>
+		<integer>1</integer>
+		<key>Height</key>
+		<integer>3</integer>
 	</dict>
 	<dict>
 		<key>Name</key>
@@ -77,14 +101,6 @@
 	</dict>
 	<dict>
 		<key>Name</key>
-		<string>9:16</string>
-		<key>Width</key>
-		<integer>9</integer>
-		<key>Height</key>
-		<integer>16</integer>
-	</dict>
-	<dict>
-		<key>Name</key>
 		<string>2:3</string>
 		<key>Width</key>
 		<integer>2</integer>
@@ -109,14 +125,6 @@
 	</dict>
 	<dict>
 		<key>Name</key>
-		<string>1:3</string>
-		<key>Width</key>
-		<integer>1</integer>
-		<key>Height</key>
-		<integer>3</integer>
-	</dict>
-	<dict>
-		<key>Name</key>
 		<string>3:4</string>
 		<key>Width</key>
 		<integer>3</integer>
@@ -130,14 +138,6 @@
 		<integer>2</integer>
 		<key>Height</key>
 		<integer>1</integer>
-	</dict>
-	<dict>
-		<key>Name</key>
-		<string>3:2</string>
-		<key>Width</key>
-		<integer>3</integer>
-		<key>Height</key>
-		<integer>2</integer>
 	</dict>
 </array>
 </plist>

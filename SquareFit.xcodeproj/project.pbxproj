@@ -111,6 +111,22 @@
 		01324188297D0AFC002F8E3C /* thumb_17.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0132416B297D0AFB002F8E3C /* thumb_17.jpg */; };
 		01324189297D0AFC002F8E3C /* thumb_16.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0132416C297D0AFB002F8E3C /* thumb_16.jpg */; };
 		0132418A297D0AFC002F8E3C /* thumb_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0132416D297D0AFB002F8E3C /* thumb_3.jpg */; };
+		01324196297D2489002F8E3C /* ColorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0132418C297D2489002F8E3C /* ColorView.xib */; };
+		01324197297D2489002F8E3C /* FontsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0132418D297D2489002F8E3C /* FontsView.swift */; };
+		01324198297D2489002F8E3C /* FontsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0132418E297D2489002F8E3C /* FontsView.xib */; };
+		01324199297D2489002F8E3C /* FontCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0132418F297D2489002F8E3C /* FontCell.xib */; };
+		0132419A297D2489002F8E3C /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01324190297D2489002F8E3C /* ColorView.swift */; };
+		0132419B297D2489002F8E3C /* ToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01324191297D2489002F8E3C /* ToolsView.swift */; };
+		0132419C297D2489002F8E3C /* KeyboardTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01324192297D2489002F8E3C /* KeyboardTopView.xib */; };
+		0132419D297D2489002F8E3C /* FontCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01324193297D2489002F8E3C /* FontCell.swift */; };
+		0132419E297D2489002F8E3C /* ToolsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01324194297D2489002F8E3C /* ToolsView.xib */; };
+		0132419F297D2489002F8E3C /* KeyboardTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01324195297D2489002F8E3C /* KeyboardTopView.swift */; };
+		013241A7297D24D8002F8E3C /* DefaultWheelGestureHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013241A1297D24D8002F8E3C /* DefaultWheelGestureHandler.swift */; };
+		013241A8297D24D8002F8E3C /* ColorWheelLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013241A2297D24D8002F8E3C /* ColorWheelLayer.swift */; };
+		013241A9297D24D8002F8E3C /* ColorWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013241A3297D24D8002F8E3C /* ColorWheel.swift */; };
+		013241AA297D24D8002F8E3C /* RotatingColorWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013241A4297D24D8002F8E3C /* RotatingColorWheel.swift */; };
+		013241AB297D24D8002F8E3C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 013241A6297D24D8002F8E3C /* Info.plist */; };
+		013241AD297D251A002F8E3C /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 013241AC297D251A002F8E3C /* Fonts */; };
 		01680B2D2973CA2E0088F915 /* OverLayVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01680B2B2973CA2E0088F915 /* OverLayVc.swift */; };
 		01680B2E2973CA2E0088F915 /* OverLayVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01680B2C2973CA2E0088F915 /* OverLayVc.xib */; };
 		01680B332973CC100088F915 /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01680B312973CC100088F915 /* ColorCell.swift */; };
@@ -372,6 +388,23 @@
 		0132416B297D0AFB002F8E3C /* thumb_17.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = thumb_17.jpg; sourceTree = "<group>"; };
 		0132416C297D0AFB002F8E3C /* thumb_16.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = thumb_16.jpg; sourceTree = "<group>"; };
 		0132416D297D0AFB002F8E3C /* thumb_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = thumb_3.jpg; sourceTree = "<group>"; };
+		0132418C297D2489002F8E3C /* ColorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorView.xib; sourceTree = "<group>"; };
+		0132418D297D2489002F8E3C /* FontsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontsView.swift; sourceTree = "<group>"; };
+		0132418E297D2489002F8E3C /* FontsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FontsView.xib; sourceTree = "<group>"; };
+		0132418F297D2489002F8E3C /* FontCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FontCell.xib; sourceTree = "<group>"; };
+		01324190297D2489002F8E3C /* ColorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
+		01324191297D2489002F8E3C /* ToolsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsView.swift; sourceTree = "<group>"; };
+		01324192297D2489002F8E3C /* KeyboardTopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyboardTopView.xib; sourceTree = "<group>"; };
+		01324193297D2489002F8E3C /* FontCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontCell.swift; sourceTree = "<group>"; };
+		01324194297D2489002F8E3C /* ToolsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToolsView.xib; sourceTree = "<group>"; };
+		01324195297D2489002F8E3C /* KeyboardTopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardTopView.swift; sourceTree = "<group>"; };
+		013241A1297D24D8002F8E3C /* DefaultWheelGestureHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultWheelGestureHandler.swift; sourceTree = "<group>"; };
+		013241A2297D24D8002F8E3C /* ColorWheelLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorWheelLayer.swift; sourceTree = "<group>"; };
+		013241A3297D24D8002F8E3C /* ColorWheel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorWheel.swift; sourceTree = "<group>"; };
+		013241A4297D24D8002F8E3C /* RotatingColorWheel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotatingColorWheel.swift; sourceTree = "<group>"; };
+		013241A5297D24D8002F8E3C /* SwiftColorWheel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftColorWheel.h; sourceTree = "<group>"; };
+		013241A6297D24D8002F8E3C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		013241AC297D251A002F8E3C /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		01680B2B2973CA2E0088F915 /* OverLayVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverLayVc.swift; sourceTree = "<group>"; };
 		01680B2C2973CA2E0088F915 /* OverLayVc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverLayVc.xib; sourceTree = "<group>"; };
 		01680B312973CC100088F915 /* ColorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
@@ -625,6 +658,9 @@
 		01324114297D0A7D002F8E3C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				013241AC297D251A002F8E3C /* Fonts */,
+				013241A0297D24D8002F8E3C /* SwiftColorWheel */,
+				0132418B297D2489002F8E3C /* KeyaBoard */,
 				01324150297D0AFB002F8E3C /* thumb */,
 				01324115297D0AF2002F8E3C /* lookup_table */,
 				0132410C297C4517002F8E3C /* lol.jpg */,
@@ -705,6 +741,36 @@
 				0132416D297D0AFB002F8E3C /* thumb_3.jpg */,
 			);
 			path = thumb;
+			sourceTree = "<group>";
+		};
+		0132418B297D2489002F8E3C /* KeyaBoard */ = {
+			isa = PBXGroup;
+			children = (
+				0132418C297D2489002F8E3C /* ColorView.xib */,
+				0132418D297D2489002F8E3C /* FontsView.swift */,
+				0132418E297D2489002F8E3C /* FontsView.xib */,
+				0132418F297D2489002F8E3C /* FontCell.xib */,
+				01324190297D2489002F8E3C /* ColorView.swift */,
+				01324191297D2489002F8E3C /* ToolsView.swift */,
+				01324192297D2489002F8E3C /* KeyboardTopView.xib */,
+				01324193297D2489002F8E3C /* FontCell.swift */,
+				01324194297D2489002F8E3C /* ToolsView.xib */,
+				01324195297D2489002F8E3C /* KeyboardTopView.swift */,
+			);
+			path = KeyaBoard;
+			sourceTree = "<group>";
+		};
+		013241A0297D24D8002F8E3C /* SwiftColorWheel */ = {
+			isa = PBXGroup;
+			children = (
+				013241A1297D24D8002F8E3C /* DefaultWheelGestureHandler.swift */,
+				013241A2297D24D8002F8E3C /* ColorWheelLayer.swift */,
+				013241A3297D24D8002F8E3C /* ColorWheel.swift */,
+				013241A4297D24D8002F8E3C /* RotatingColorWheel.swift */,
+				013241A5297D24D8002F8E3C /* SwiftColorWheel.h */,
+				013241A6297D24D8002F8E3C /* Info.plist */,
+			);
+			path = SwiftColorWheel;
 			sourceTree = "<group>";
 		};
 		01680B372973CFC70088F915 /* Thumb */ = {
@@ -1059,6 +1125,7 @@
 				01F0133129798DBD0077F22D /* FrameThumb30.png in Resources */,
 				01F0131F29798DBD0077F22D /* FrameThumb21.png in Resources */,
 				01324111297CCE6E002F8E3C /* ImageEditView.xib in Resources */,
+				01324198297D2489002F8E3C /* FontsView.xib in Resources */,
 				0132413D297D0AF3002F8E3C /* filter_1.jpg in Resources */,
 				01F0132F29798DBD0077F22D /* FrameThumb5.png in Resources */,
 				01680B972973CFC70088F915 /* OverlayThumb39.png in Resources */,
@@ -1074,6 +1141,7 @@
 				010AE8BF2972B56800A86316 /* VideoEdit.plist in Resources */,
 				01F0134029798DBD0077F22D /* FrameThumb29.png in Resources */,
 				010AEC9C2972FC4000A86316 /* StickerVc.xib in Resources */,
+				01324196297D2489002F8E3C /* ColorView.xib in Resources */,
 				01680B8B2973CFC70088F915 /* OverlayThumb26.png in Resources */,
 				01F0134A29798DBD0077F22D /* FrameThumb10.png in Resources */,
 				0132417C297D0AFC002F8E3C /* thumb_6.jpg in Resources */,
@@ -1100,7 +1168,9 @@
 				01680B8D2973CFC70088F915 /* OverlayThumb33.png in Resources */,
 				01680B892973CFC70088F915 /* OverlayThumb18.png in Resources */,
 				01324185297D0AFC002F8E3C /* thumb_15.jpg in Resources */,
+				01324199297D2489002F8E3C /* FontCell.xib in Resources */,
 				01324139297D0AF3002F8E3C /* filter_11.jpg in Resources */,
+				0132419E297D2489002F8E3C /* ToolsView.xib in Resources */,
 				01CF1AD929757EC40003DFA4 /* CanVas.xib in Resources */,
 				01F0133A29798DBD0077F22D /* FrameThumb50.png in Resources */,
 				010AEC492972D82900A86316 /* Paper in Resources */,
@@ -1117,6 +1187,7 @@
 				010AE8C82972B56800A86316 /* Motivational.plist in Resources */,
 				010AEC4B2972D82900A86316 /* Comic in Resources */,
 				01864AFD29719B6C00598CEC /* LaunchScreen.storyboard in Resources */,
+				0132419C297D2489002F8E3C /* KeyboardTopView.xib in Resources */,
 				01680B732973CFC70088F915 /* OverlayThumb46.png in Resources */,
 				01DFAC4529784E45005C7564 /* FrameVc.xib in Resources */,
 				01324137297D0AF3002F8E3C /* filter_29.jpg in Resources */,
@@ -1252,6 +1323,7 @@
 				0132413B297D0AF3002F8E3C /* filter_12.jpg in Resources */,
 				01AE3A032971C02000C2F652 /* bg.png in Resources */,
 				0132410D297C4517002F8E3C /* lol.jpg in Resources */,
+				013241AD297D251A002F8E3C /* Fonts in Resources */,
 				01F0133929798DBD0077F22D /* FrameThumb44.png in Resources */,
 				01F0132E29798DBD0077F22D /* FrameThumb31.png in Resources */,
 				01F0134929798DBD0077F22D /* FrameThumb38.png in Resources */,
@@ -1265,6 +1337,7 @@
 				01680B762973CFC70088F915 /* OverlayThumb47.png in Resources */,
 				01864AF829719B6B00598CEC /* Main.storyboard in Resources */,
 				01680B842973CFC70088F915 /* OverlayThumb19.png in Resources */,
+				013241AB297D24D8002F8E3C /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1361,27 +1434,36 @@
 				010AEC9B2972FC4000A86316 /* StickerVc.swift in Sources */,
 				01864AF529719B6B00598CEC /* ViewController.swift in Sources */,
 				01AE3A002971BFCA00C2F652 /* HomeVc.swift in Sources */,
+				013241AA297D24D8002F8E3C /* RotatingColorWheel.swift in Sources */,
+				0132419B297D2489002F8E3C /* ToolsView.swift in Sources */,
 				016B7E70297B9AA400D5B6F1 /* PlaybackView.m in Sources */,
 				01864AF129719B6B00598CEC /* AppDelegate.swift in Sources */,
 				012092A0297ADF8F0081D3B8 /* VideoVc.swift in Sources */,
 				010AECA529732A2A00A86316 /* ShapeVc.swift in Sources */,
+				01324197297D2489002F8E3C /* FontsView.swift in Sources */,
 				016B7E73297BA23800D5B6F1 /* ExportManager.swift in Sources */,
+				0132419F297D2489002F8E3C /* KeyboardTopView.swift in Sources */,
 				010AE8CD2972BCA400A86316 /* RatioCell.swift in Sources */,
 				010AECA2297313E000A86316 /* HeaderView.swift in Sources */,
+				0132419D297D2489002F8E3C /* FontCell.swift in Sources */,
 				010AEC9E2972FC8A00A86316 /* CustomModalViewController.swift in Sources */,
 				010AE8D12972BED900A86316 /* AppGlobal.swift in Sources */,
 				01680B2D2973CA2E0088F915 /* OverLayVc.swift in Sources */,
 				01A826992972972800DCCEF7 /* PhotoVc.swift in Sources */,
 				01680B332973CC100088F915 /* ColorCell.swift in Sources */,
+				0132419A297D2489002F8E3C /* ColorView.swift in Sources */,
 				01F013BE2979A4830077F22D /* FilterVc.swift in Sources */,
 				01DFAC4429784E45005C7564 /* FrameVc.swift in Sources */,
 				01F013B9297997CE0077F22D /* Adjust.swift in Sources */,
 				01F013BB29799CEC0077F22D /* StickerView.swift in Sources */,
 				01324113297CCE8F002F8E3C /* CustomSlider.swift in Sources */,
 				01CF1ADC29757ECD0003DFA4 /* CanvasRatioCell.swift in Sources */,
+				013241A7297D24D8002F8E3C /* DefaultWheelGestureHandler.swift in Sources */,
 				01864AF329719B6B00598CEC /* SceneDelegate.swift in Sources */,
+				013241A8297D24D8002F8E3C /* ColorWheelLayer.swift in Sources */,
 				0132410F297CCE69002F8E3C /* ImageEditView.swift in Sources */,
 				01CF1AD829757EC40003DFA4 /* CanVas.swift in Sources */,
+				013241A9297D24D8002F8E3C /* ColorWheel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
