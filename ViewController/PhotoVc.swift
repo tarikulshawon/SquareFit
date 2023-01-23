@@ -397,7 +397,7 @@ extension PhotoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollect
                 
                 vc.delegateForQuotes = self
                 let navController = UINavigationController(rootViewController: vc)
-                navController.modalPresentationStyle = UIModalPresentationStyle.overFullScreen
+                navController.modalPresentationStyle = UIModalPresentationStyle.popover
                 present(navController, animated: true, completion: nil)
                 return
             }
