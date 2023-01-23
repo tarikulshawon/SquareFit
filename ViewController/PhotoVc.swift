@@ -391,6 +391,16 @@ extension PhotoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollect
                 vc.filterVc.isHidden = false
                 
             }
+            else if titleName.contains("Quotes") {
+                let storyboard: UIStoryboard = UIStoryboard(name: "QuotesStoryBoard", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "QuotesStoryBoard") as! QuotesViewController
+                
+                vc.delegateForQuotes = self
+                let navController = UINavigationController(rootViewController: vc)
+                navController.modalPresentationStyle = UIModalPresentationStyle.overFullScreen
+                present(navController, animated: true, completion: nil)
+                return
+            }
             else {
                 vc.defaultHeight = 300
                 vc.stickerVc.isHidden = false
@@ -402,6 +412,12 @@ extension PhotoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollect
         }
     }
     
+}
+
+extension PhotoVc: quotesDelegate {
+    func sendQuoteText(text: String) {
+        print("Quotes delegate")
+    }
 }
 
 private extension PhotoVc {
