@@ -19,7 +19,7 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
     
     func sendFilter(dic: Dictionary<String, Any>?) {
         
-        let img = UIImage(named: "lol.jpg")
+        let img = selectedImage //UIImage(named: "lol.jpg")
         
         
         if dic == nil {
@@ -161,6 +161,7 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
     
 
     @IBOutlet weak var imv: UIImageView!
+    var selectedImage: UIImage? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -243,10 +244,9 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
     }
     
     @objc func updateFrame() {
-        
         widthForTempView.constant = holderView.frame.width
         heightForTempView.constant = holderView.frame.width
-        imv.image = UIImage(named: "lol.jpg")
+        imv.image = selectedImage //UIImage(named: "lol.jpg")
         imv.contentMode = .scaleAspectFit
         
         let totalCellWidth = cellWidth * CGFloat(btnArray.count)

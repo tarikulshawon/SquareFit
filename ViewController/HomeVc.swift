@@ -39,10 +39,22 @@ class HomeVc: UIViewController, PHPickerViewControllerDelegate {
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
         picker.dismiss(animated: true)
         
-        
         if isFromPhoto {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "PhotoVc") as! PhotoVc
             vc.modalPresentationStyle = .fullScreen
+            
+            for result in results {
+                  result.itemProvider.loadObject(ofClass: UIImage.self, completionHandler: { (object, error) in
+                     if let image = object as? UIImage {
+                        DispatchQueue.main.async {
+                           // Use UIImage
+                           print("Selected image: \(image)")
+                            vc.selectedImage = image
+                        }
+                     }
+                  })
+               }
+            
             self.present(vc, animated: true, completion: nil)
         }
         else {
