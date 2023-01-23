@@ -26,6 +26,8 @@ let adjustHeight = 150
 let filterHeight = 300
 var fontArray = [String]()
 var arrayForFont: NSArray!
+var plistArray1: NSArray!
+var plistArray: NSArray!
 
 
 

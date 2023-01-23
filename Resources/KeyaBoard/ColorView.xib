@@ -27,6 +27,9 @@
                                 <segment title="Gradient"/>
                                 <segment title="Texture"/>
                             </segments>
+                            <connections>
+                                <action selector="changeValue:" destination="iN0-l3-epB" eventType="valueChanged" id="zy6-ys-hIs"/>
+                            </connections>
                         </segmentedControl>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tbf-Ym-ryy">
                             <rect key="frame" x="0.0" y="56" width="414" height="94"/>
@@ -41,8 +44,8 @@
                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </collectionViewFlowLayout>
                                     <connections>
-                                        <outlet property="dataSource" destination="-1" id="gqr-Ac-JYY"/>
-                                        <outlet property="delegate" destination="-1" id="E7R-Yi-AoQ"/>
+                                        <outlet property="dataSource" destination="-1" id="nNj-I2-tzz"/>
+                                        <outlet property="delegate" destination="-1" id="Y7A-6Y-tEi"/>
                                     </connections>
                                 </collectionView>
                             </subviews>
@@ -76,6 +79,9 @@
                 <constraint firstItem="3bi-wd-WJS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="imu-Kn-AlV"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="collectionviewF" destination="jeJ-1U-PaF" id="woy-9r-bzg"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="114.50892857142857"/>
         </view>
     </objects>
