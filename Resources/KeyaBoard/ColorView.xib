@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -14,7 +13,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3bi-wd-WJS" userLabel="Rotating Color Wheel Flowery" customClass="RotatingColorWheel" customModule="SwiftColorWheel">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3bi-wd-WJS" userLabel="Rotating Color Wheel Flowery">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                     <subviews>
                         <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5tT-NK-rJL">
@@ -49,7 +48,7 @@
                                     </connections>
                                 </collectionView>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemMintColor"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="jeJ-1U-PaF" secondAttribute="trailing" id="OkZ-lu-QOF"/>
                                 <constraint firstItem="jeJ-1U-PaF" firstAttribute="leading" secondItem="Tbf-Ym-ryy" secondAttribute="leading" id="ZAr-6M-7oP"/>
@@ -85,9 +84,4 @@
             <point key="canvasLocation" x="131.8840579710145" y="114.50892857142857"/>
         </view>
     </objects>
-    <resources>
-        <systemColor name="systemMintColor">
-            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
 </document>
