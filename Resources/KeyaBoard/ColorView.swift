@@ -21,10 +21,10 @@ class ColorView: UIView {
 
     override func draw(_ rect: CGRect)
     {
-        colorWheel = RotatingColorWheel(frame:  CGRect(x: 0, y: 0, width:self.frame.size.width, height: self.frame.size.height))
-       colorWheel.delegate = self
-       colorWheel.backgroundColor = UIColor.clear
-       self.addSubview(colorWheel)
+       // colorWheel = RotatingColorWheel(frame:  CGRect(x: 0, y: 0, width:self.frame.size.width, height: self.frame.size.height))
+      // colorWheel.delegate = self
+      // colorWheel.backgroundColor = UIColor.clear
+      // self.addSubview(colorWheel)
         
     }
     
@@ -39,3 +39,5 @@ extension ColorView: ColorWheelDelegate {
         
     }
 }
+
+

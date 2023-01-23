@@ -872,7 +872,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "265"
             endingLineNumber = "265"
-            landmarkName = "changeIndex(index:)"
+            landmarkName = "chnageColorForView(color:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -888,7 +888,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "261"
             endingLineNumber = "261"
-            landmarkName = "changeIndex(index:)"
+            landmarkName = "voidHidePicker()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -904,7 +904,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "256"
             endingLineNumber = "256"
-            landmarkName = "changeIndex(index:)"
+            landmarkName = "voidHidePicker()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -920,7 +920,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "252"
             endingLineNumber = "252"
-            landmarkName = "changeIndex(index:)"
+            landmarkName = "voidHidePicker()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -936,7 +936,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "250"
             endingLineNumber = "250"
-            landmarkName = "changeIndex(index:)"
+            landmarkName = "voidHidePicker()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -952,7 +952,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "248"
             endingLineNumber = "248"
-            landmarkName = "changeIndex(index:)"
+            landmarkName = "voidHidePicker()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -968,7 +968,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "216"
             endingLineNumber = "216"
-            landmarkName = "toolIndexChange(index:)"
+            landmarkName = "changeIndex(index:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -984,7 +984,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "214"
             endingLineNumber = "214"
-            landmarkName = "toolIndexChange(index:)"
+            landmarkName = "changeIndex(index:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1000,7 +1000,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "210"
             endingLineNumber = "210"
-            landmarkName = "toolIndexChange(index:)"
+            landmarkName = "changeIndex(index:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1016,7 +1016,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "200"
             endingLineNumber = "200"
-            landmarkName = "toolIndexChange(index:)"
+            landmarkName = "changeIndex(index:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1032,7 +1032,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "308"
             endingLineNumber = "308"
-            landmarkName = "voidHidePicker()"
+            landmarkName = "tabBar(_:didSelect:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1048,7 +1048,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "303"
             endingLineNumber = "303"
-            landmarkName = "voidHidePicker()"
+            landmarkName = "tabBar(_:didSelect:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1064,7 +1064,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "294"
             endingLineNumber = "294"
-            landmarkName = "voidHidePicker()"
+            landmarkName = "chnageCharacterSpace(size:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1080,7 +1080,39 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "292"
             endingLineNumber = "292"
-            landmarkName = "voidHidePicker()"
+            landmarkName = "chnageCharacterSpace(size:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "85EE12A6-0FE1-4F3B-88D1-554576B026E8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ViewController/keyboard.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "204"
+            endingLineNumber = "204"
+            landmarkName = "changeIndex(index:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "09BE9E65-5C22-4B7D-92A0-F9507DC698CB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ViewController/keyboard.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "208"
+            endingLineNumber = "208"
+            landmarkName = "changeIndex(index:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
