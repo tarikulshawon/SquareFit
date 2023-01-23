@@ -28,6 +28,9 @@ class ColorView: UIView {
         // colorWheel.backgroundColor = UIColor.clear
         // self.addSubview(colorWheel)
         
+        let nibName = UINib(nibName: ColorCell.reusableID, bundle: nil)
+        collectionviewF.register(nibName, forCellWithReuseIdentifier:  ColorCell.reusableID)
+        
         let path1 = Bundle.main.path(forResource: "gradient", ofType: "plist")
         plistArray1 = NSArray(contentsOfFile: path1!)
         
