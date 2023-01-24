@@ -60,6 +60,9 @@ class HomeVc: UIViewController, PHPickerViewControllerDelegate {
         else {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "VideoVc") as! VideoVc
             vc.modalPresentationStyle = .fullScreen
+            
+            // TODO: same code for picking video from phone. 
+            
             self.present(vc, animated: true, completion: nil)
             
         }

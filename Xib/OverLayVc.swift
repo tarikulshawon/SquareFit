@@ -1,10 +1,3 @@
-//
-//  FilterVc.swift
-//  PosterMaker
-//
-//  Created by m-sagor-sikdar on 21/12/21.
-//
-
 import UIKit
 
 protocol imageIndexDelegate: AnyObject {
@@ -32,12 +25,12 @@ class OverLayVc: UIView {
         super.awakeFromNib()
         
         let nibName = UINib(nibName: ColorCell.reusableID, bundle: nil)
+        
         collectionViewForFilter.register(nibName, forCellWithReuseIdentifier:  ColorCell.reusableID)
         collectionViewForFilter.delegate = self
         collectionViewForFilter.dataSource = self
         collectionViewForFilter.showsVerticalScrollIndicator = false
         collectionViewForFilter.showsHorizontalScrollIndicator = false
-
     }
     
     func setOverLay(index:Int) {
@@ -50,8 +43,7 @@ class OverLayVc: UIView {
     }
 }
 
-extension OverLayVc: UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout
-{
+extension OverLayVc: UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -62,25 +54,22 @@ extension OverLayVc: UICollectionViewDataSource,UICollectionViewDelegate,UIColle
         return 10.0
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        
-        
-        return UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
-        
-        
-    }
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        
-        return noOfFilter + 1
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        insetForSectionAt section: Int
+    ) -> UIEdgeInsets {
+        UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
-    {
-        
-        
-        return CGSize(width: 60, height: 60)
-        
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int { noOfFilter + 1 }
+    
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        sizeForItemAt indexPath: IndexPath
+    ) -> CGSize {
+        CGSize(width: 60, height: 60)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -117,8 +106,4 @@ extension OverLayVc: UICollectionViewDataSource,UICollectionViewDelegate,UIColle
         
         setOverLay(index: indexPath.row - 1)
     }
-    
-    
 }
-
- 

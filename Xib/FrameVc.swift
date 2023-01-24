@@ -33,13 +33,10 @@ class FrameVc: UIView {
         collectionViewForFrame.dataSource = self
         collectionViewForFrame.showsVerticalScrollIndicator = false
         collectionViewForFrame.showsHorizontalScrollIndicator = false
-        
     }
-
 }
 
-extension FrameVc: UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout
-{
+extension FrameVc: UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -51,23 +48,13 @@ extension FrameVc: UICollectionViewDataSource,UICollectionViewDelegate,UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        
-        
-        return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-        
-        
-    }
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        return 49
-        
+        UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
-    {
-        
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int { 49 }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 70, height: 70)
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -77,10 +64,8 @@ extension FrameVc: UICollectionViewDataSource,UICollectionViewDelegate,UICollect
         cell.iconImv.backgroundColor = UIColor.init(red: 128.0/255.0, green: 92.0/255.0, blue: 242.0/255.0, alpha: 0.1)
         
         return cell
-        
-        
-        
     }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let cell = collectionView.cellForItem(at: indexPath)
@@ -95,9 +80,7 @@ extension FrameVc: UICollectionViewDataSource,UICollectionViewDelegate,UICollect
                 cell?.transform =  CGAffineTransform(scaleX: 1.0, y: 1.0);                //cell?.backgroundColor = UIColor.clear
             })
         }
-        delegateForFramesr?.sendFramesIndex(frames: "F" + "\(indexPath.row)")
         
+        delegateForFramesr?.sendFramesIndex(frames: "F" + "\(indexPath.row)")
     }
-    
-    
 }

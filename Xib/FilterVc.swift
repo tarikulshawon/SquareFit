@@ -44,11 +44,13 @@ class FilterVc: UIView {
         super.awakeFromNib()
         
         let nibName = UINib(nibName: ColorCell.reusableID, bundle: nil)
+        
         collectionViewForFilter.register(nibName, forCellWithReuseIdentifier:  ColorCell.reusableID)
         collectionViewForFilter.delegate = self
         collectionViewForFilter.dataSource = self
         collectionViewForFilter.showsVerticalScrollIndicator = false
         collectionViewForFilter.showsHorizontalScrollIndicator = false
+        
         let path = Bundle.main.path(forResource: "FilterGroup", ofType: "plist")
         fliterArray = NSArray(contentsOfFile: path!)
         filterName.removeAll()
@@ -145,6 +147,7 @@ class FilterVc: UIView {
             tempArray  = value["items"] as! NSArray
             
         }
+        
         self.collectionViewForFilter.reloadData()
         self.tempViww.backgroundColor = titleColor
         

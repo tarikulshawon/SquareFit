@@ -12,12 +12,12 @@ import UIKit
 protocol changeImage {
     func changeImage(image: UIImage)
 }
+
 protocol backButton {
     func  doneBack()
 }
-class keyboard: UIViewController,indexItem,chnageColor,changeFont,aligthmentTag,chnageFontSize,chnageLineSpacing,chnageCharacterSpace,UITextViewDelegate{
-    
-    
+
+class keyboard: UIViewController,  indexItem, chnageColor, changeFont, aligthmentTag, chnageFontSize, chnageLineSpacing, chnageCharacterSpace,  UITextViewDelegate {
     public var delegateForChnageImage: changeImage?
     public var delegateForBack: backButton?
 

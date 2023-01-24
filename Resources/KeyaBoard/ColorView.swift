@@ -21,8 +21,8 @@ class ColorView: UIView {
     var currentBackGroundIndex = 0
     
     @IBOutlet weak var collectionviewF: UICollectionView!
-    override func draw(_ rect: CGRect)
-    {
+    
+    override func draw(_ rect: CGRect) {
         // colorWheel = RotatingColorWheel(frame:  CGRect(x: 0, y: 0, width:self.frame.size.width, height: self.frame.size.height))
         // colorWheel.delegate = self
         // colorWheel.backgroundColor = UIColor.clear
@@ -39,12 +39,10 @@ class ColorView: UIView {
         collectionviewF.reloadData()
         
         collectionviewF.delegate = self
-        collectionviewF.delegate = self
-        
+        collectionviewF.dataSource = self
     }
     
     func getColor(colorString: String) -> UIColor {
-        
         var array = colorString.components(separatedBy: ",")
         if let firstNumber = array[0] as? String,
            let secondNumber = array[1] as? String,
@@ -57,9 +55,8 @@ class ColorView: UIView {
                 return UIColor(red: f1/255.0 , green: f2/255.0 , blue: f3/255.0 , alpha: 1.0)
             }
         }
+        
         return UIColor.black
-        
-        
     }
     
     
@@ -67,40 +64,38 @@ class ColorView: UIView {
         
         currentBackGroundIndex = sender.selectedSegmentIndex
         collectionviewF.reloadData()
-        
-        
-        
     }
     
 }
 
 extension ColorView: ColorWheelDelegate {
-    
-    
     func didSelect(color: UIColor) {
         delegateForColor?.chnageColorForView(color: color)
-        
-        
     }
 }
 
-
-
-extension ColorView:UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+extension ColorView:
+    UICollectionViewDelegate,
+    UICollectionViewDataSource,
+    UICollectionViewDelegateFlowLayout {
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 60, height: 60)
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        sizeForItemAt indexPath: IndexPath
+    ) -> CGSize {
+        CGSize(width: 60, height: 60)
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int { 1 }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         if currentBackGroundIndex == 0 {
             return plistArray.count + 1
         }else if currentBackGroundIndex == 1 {
             return plistArray1.count + 1
         }
+        
         return 23
     }
     

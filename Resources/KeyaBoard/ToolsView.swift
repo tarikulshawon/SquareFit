@@ -12,25 +12,24 @@ import UIKit
 protocol aligthmentTag {
     func changeAlighment(index: Int)
 }
+
 protocol chnageFontSize {
     func chnageFontSize(size: Int)
 }
+
 protocol chnageLineSpacing {
     func chnageLineSpacing(size: Int)
 }
+
 protocol chnageCharacterSpace {
     func chnageCharacterSpace(size: Int)
 }
 
 class ToolsView: UIView {
-    
-    
-    
     public var delegeteAlighment: aligthmentTag?
     public var delegeteFontSize: chnageFontSize?
     public var delegeteLineSpacing: chnageLineSpacing?
     public var delegeteCharacterSpacing: chnageCharacterSpace?
-    
     
     @IBAction func alightmentDone(_ sender: Any) {
         
@@ -51,11 +50,9 @@ class ToolsView: UIView {
         
     }
     
-    
     @IBAction func chnageCharacterSpacing(_ sender: UISlider) {
         
         let currentValue = Int(sender.value)
         delegeteCharacterSpacing?.chnageCharacterSpace(size: currentValue)
     }
-    
 }
