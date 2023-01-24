@@ -34,7 +34,7 @@
                             <rect key="frame" x="0.0" y="56" width="414" height="94"/>
                             <subviews>
                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="jeJ-1U-PaF">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="94"/>
+                                    <rect key="frame" x="41.5" y="4.5" width="331" height="85"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kgk-KT-9Zu">
                                         <size key="itemSize" width="128" height="128"/>
@@ -50,10 +50,10 @@
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="trailing" secondItem="jeJ-1U-PaF" secondAttribute="trailing" id="OkZ-lu-QOF"/>
-                                <constraint firstItem="jeJ-1U-PaF" firstAttribute="leading" secondItem="Tbf-Ym-ryy" secondAttribute="leading" id="ZAr-6M-7oP"/>
-                                <constraint firstItem="jeJ-1U-PaF" firstAttribute="top" secondItem="Tbf-Ym-ryy" secondAttribute="top" id="b3A-yq-NNH"/>
-                                <constraint firstAttribute="bottom" secondItem="jeJ-1U-PaF" secondAttribute="bottom" id="oGs-nD-6l6"/>
+                                <constraint firstItem="jeJ-1U-PaF" firstAttribute="centerY" secondItem="Tbf-Ym-ryy" secondAttribute="centerY" id="CKY-Ne-yLo"/>
+                                <constraint firstItem="jeJ-1U-PaF" firstAttribute="centerX" secondItem="Tbf-Ym-ryy" secondAttribute="centerX" id="OJu-nf-qIX"/>
+                                <constraint firstItem="jeJ-1U-PaF" firstAttribute="height" secondItem="Tbf-Ym-ryy" secondAttribute="height" multiplier="0.9" id="a7S-Gl-2ly"/>
+                                <constraint firstItem="jeJ-1U-PaF" firstAttribute="width" secondItem="Tbf-Ym-ryy" secondAttribute="width" multiplier="0.8" id="qsS-25-CXi"/>
                             </constraints>
                         </view>
                     </subviews>

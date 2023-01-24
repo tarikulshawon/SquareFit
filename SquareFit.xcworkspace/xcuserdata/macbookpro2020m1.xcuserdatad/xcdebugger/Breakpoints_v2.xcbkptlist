@@ -505,7 +505,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "24"
             endingLineNumber = "24"
-            landmarkName = "doneLoading(tag:successfully:)"
+            landmarkName = "awakeFromNib()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -521,15 +521,15 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "23"
             endingLineNumber = "23"
-            landmarkName = "doneLoading(tag:successfully:)"
-            landmarkType = "7">
+            landmarkName = "OverLayVc"
+            landmarkType = "3">
             <Locations>
                <Location
-                  uuid = "56674F2D-A162-4E62-BF41-001BF2E7C6F1 - fb2687c72144dbfd"
+                  uuid = "56674F2D-A162-4E62-BF41-001BF2E7C6F1 - d110bbb47213fe98"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "SquareFit.OverLayVc.doneLoading(tag: Swift.String, successfully: Swift.Bool) -&gt; ()"
+                  symbolName = "SquareFit.OverLayVc.noOfFilter.getter : Swift.Int"
                   moduleName = "SquareFit"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/macbookpro2020m1/Documents/GitHub/SquareFit/Xib/OverLayVc.swift"
@@ -537,14 +537,14 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "23"
                   endingLineNumber = "23"
-                  offsetFromSymbolStart = "150">
+                  offsetFromSymbolStart = "85">
                </Location>
                <Location
-                  uuid = "56674F2D-A162-4E62-BF41-001BF2E7C6F1 - fb2687c72144dbfd"
+                  uuid = "56674F2D-A162-4E62-BF41-001BF2E7C6F1 - bbb0c476f19c328c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "SquareFit.OverLayVc.doneLoading(tag: Swift.String, successfully: Swift.Bool) -&gt; ()"
+                  symbolName = "SquareFit.OverLayVc.noOfFilter.setter : Swift.Int"
                   moduleName = "SquareFit"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/macbookpro2020m1/Documents/GitHub/SquareFit/Xib/OverLayVc.swift"
@@ -552,7 +552,67 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "23"
                   endingLineNumber = "23"
-                  offsetFromSymbolStart = "796">
+                  offsetFromSymbolStart = "97">
+               </Location>
+               <Location
+                  uuid = "56674F2D-A162-4E62-BF41-001BF2E7C6F1 - ad901a6da90219f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SquareFit.OverLayVc.noOfFilter.modify : Swift.Int"
+                  moduleName = "SquareFit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro2020m1/Documents/GitHub/SquareFit/Xib/OverLayVc.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "56674F2D-A162-4E62-BF41-001BF2E7C6F1 - f76fc9ddf108f78c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SquareFit.OverLayVc.noOfFilter.modify : Swift.Int with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "SquareFit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro2020m1/Documents/GitHub/SquareFit/Xib/OverLayVc.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "15">
+               </Location>
+               <Location
+                  uuid = "56674F2D-A162-4E62-BF41-001BF2E7C6F1 - ff752e469c7e29eb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SquareFit.OverLayVc.init(frame: __C.CGRect) -&gt; SquareFit.OverLayVc"
+                  moduleName = "SquareFit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro2020m1/Documents/GitHub/SquareFit/Xib/OverLayVc.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "285">
+               </Location>
+               <Location
+                  uuid = "56674F2D-A162-4E62-BF41-001BF2E7C6F1 - 53abd0326c72ff7f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SquareFit.OverLayVc.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;SquareFit.OverLayVc&gt;"
+                  moduleName = "SquareFit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro2020m1/Documents/GitHub/SquareFit/Xib/OverLayVc.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "209">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -568,9 +628,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "115"
-            endingLineNumber = "115"
-            landmarkName = "collectionView(_:didSelectItemAt:)"
-            landmarkType = "7">
+            endingLineNumber = "115">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -584,9 +642,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "112"
-            endingLineNumber = "112"
-            landmarkName = "collectionView(_:didSelectItemAt:)"
-            landmarkType = "7">
+            endingLineNumber = "112">
             <Locations>
                <Location
                   uuid = "C701805B-D87B-41E7-A3F6-FFFFEBD1D938 - 56b86d159d1d405c"
@@ -647,9 +703,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "110"
-            endingLineNumber = "110"
-            landmarkName = "collectionView(_:didSelectItemAt:)"
-            landmarkType = "7">
+            endingLineNumber = "110">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -664,8 +718,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "109"
             endingLineNumber = "109"
-            landmarkName = "collectionView(_:didSelectItemAt:)"
-            landmarkType = "7">
+            landmarkName = "OverLayVc"
+            landmarkType = "21">
             <Locations>
                <Location
                   uuid = "022066DC-E9D4-4B13-A284-76F949EF43A4 - 56b86d159d1d40c3"
@@ -728,8 +782,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "44"
             endingLineNumber = "44"
-            landmarkName = "setOverLay(index:)"
-            landmarkType = "7">
+            landmarkName = "OverLayVc"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1111,7 +1165,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "103"
             endingLineNumber = "103"
-            landmarkName = "collectionView(_:numberOfItemsInSection:)"
+            landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1143,8 +1197,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "94"
             endingLineNumber = "94"
-            landmarkName = "ColorView"
-            landmarkType = "21">
+            landmarkName = "collectionView(_:numberOfItemsInSection:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1175,8 +1229,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "91"
             endingLineNumber = "91"
-            landmarkName = "collectionView(_:layout:sizeForItemAt:)"
-            landmarkType = "7">
+            landmarkName = "ColorView"
+            landmarkType = "21">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1319,7 +1373,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "92"
             endingLineNumber = "92"
-            landmarkName = "collectionView(_:layout:sizeForItemAt:)"
+            landmarkName = "collectionView(_:numberOfItemsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
