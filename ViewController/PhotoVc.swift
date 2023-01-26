@@ -401,6 +401,11 @@ extension PhotoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollect
                 present(navController, animated: true, completion: nil)
                 return
             }
+            else if titleName.contains("BackGround") {
+                vc.defaultHeight = 300
+                vc.backGroundView.isHidden = false
+                
+            }
             else {
                 vc.defaultHeight = 300
                 vc.stickerVc.isHidden = false

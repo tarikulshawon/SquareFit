@@ -14,6 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let path1 = Bundle.main.path(forResource: "gradient", ofType: "plist")
+        plistArray1 = NSArray(contentsOfFile: path1!)
+        
+        let path = Bundle.main.path(forResource: "colorp", ofType: "plist")
+        plistArray = NSArray(contentsOfFile: path!)
         self.loadData()
         return true
     }

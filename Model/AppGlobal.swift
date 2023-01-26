@@ -29,8 +29,25 @@ var arrayForFont: NSArray!
 var plistArray1: NSArray!
 var plistArray: NSArray!
 
+let no_Of_blur = 10
 
 
+func getColor(colorString: String) -> UIColor {
+    var array = colorString.components(separatedBy: ",")
+    if let firstNumber = array[0] as? String,
+       let secondNumber = array[1] as? String,
+       let thirdNumber = array[2] as? String {
+        
+        if let f1  = Double(firstNumber.trimmingCharacters(in: .whitespacesAndNewlines)),
+           let f2 = Double (secondNumber.trimmingCharacters(in: .whitespacesAndNewlines)),
+           let f3 = Double(thirdNumber.trimmingCharacters(in: .whitespacesAndNewlines)) {
+            
+            return UIColor(red: f1/255.0 , green: f2/255.0 , blue: f3/255.0 , alpha: 1.0)
+        }
+    }
+    
+    return UIColor.black
+}
 
 
 func getFilteredImage(withInfo dict: [String : Any]?, for img: UIImage?) -> UIImage? {
@@ -83,3 +100,58 @@ func getFilteredImage(withInfo dict: [String : Any]?, for img: UIImage?) -> UIIm
     return newImg
 }
  
+
+extension DispatchQueue {
+    static func background(_ task: (() -> Void)? = nil, completion: (() -> Void)? = nil) {
+        global(qos: .background).async {
+            task?()
+            if let completion = completion {
+                main.async {
+                    completion()
+                }
+            }
+        }
+    }
+    
+    static func userInitiated(_ task: (() -> Void)? = nil, completion: (() -> Void)? = nil) {
+        global(qos: .userInitiated).async {
+            task?()
+            if let completion = completion {
+                main.async {
+                    completion()
+                }
+            }
+        }
+    }
+}
+
+extension UIImage {
+    func blurred(radius: CGFloat, completion: ((UIImage?) -> Void)?) {
+        var image: UIImage?
+        DispatchQueue.background {
+            let ciContext = CIContext(options: nil)
+            guard let cgImage = self.cgImage else {
+                completion?(nil)
+                return
+            }
+            let inputImage = CIImage(cgImage: cgImage)
+            guard let ciFilter = CIFilter(name: "CIGaussianBlur") else {
+                completion?(nil)
+                return
+            }
+            ciFilter.setValue(inputImage, forKey: kCIInputImageKey)
+            ciFilter.setValue(radius, forKey: "inputRadius")
+            guard let resultImage = ciFilter.value(forKey: kCIOutputImageKey) as? CIImage else {
+                completion?(nil)
+                return
+            }
+            guard let cgImage2 = ciContext.createCGImage(resultImage, from: inputImage.extent) else {
+                completion?(nil)
+                return
+            }
+            image = UIImage(cgImage: cgImage2)
+        } completion: {
+            completion?(image)
+        }
+    }
+}

@@ -87,6 +87,9 @@
 		010DCDCA297EDBF5004421DB /* Texture3.png in Resources */ = {isa = PBXBuildFile; fileRef = 010DCDB4297EDBF5004421DB /* Texture3.png */; };
 		010DCDCB297EDBF5004421DB /* Texture2.png in Resources */ = {isa = PBXBuildFile; fileRef = 010DCDB5297EDBF5004421DB /* Texture2.png */; };
 		010DCDCC297EDBF5004421DB /* Texture11.png in Resources */ = {isa = PBXBuildFile; fileRef = 010DCDB6297EDBF5004421DB /* Texture11.png */; };
+		011537D02980267000CF9A87 /* background.plist in Resources */ = {isa = PBXBuildFile; fileRef = 011537CF2980267000CF9A87 /* background.plist */; };
+		011537D229803ECC00CF9A87 /* BackGround.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011537D129803ECC00CF9A87 /* BackGround.swift */; };
+		011537D629803FF300CF9A87 /* BackGround.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011537D529803FF300CF9A87 /* BackGround.xib */; };
 		0120929E297AD9E20081D3B8 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 0120929D297AD9E20081D3B8 /* Sounds */; };
 		012092A0297ADF8F0081D3B8 /* VideoVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0120929F297ADF8F0081D3B8 /* VideoVc.swift */; };
 		0132410D297C4517002F8E3C /* lol.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0132410C297C4517002F8E3C /* lol.jpg */; };
@@ -404,6 +407,9 @@
 		010DCDB4297EDBF5004421DB /* Texture3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Texture3.png; sourceTree = "<group>"; };
 		010DCDB5297EDBF5004421DB /* Texture2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Texture2.png; sourceTree = "<group>"; };
 		010DCDB6297EDBF5004421DB /* Texture11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Texture11.png; sourceTree = "<group>"; };
+		011537CF2980267000CF9A87 /* background.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = background.plist; sourceTree = "<group>"; };
+		011537D129803ECC00CF9A87 /* BackGround.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGround.swift; sourceTree = "<group>"; };
+		011537D529803FF300CF9A87 /* BackGround.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BackGround.xib; sourceTree = "<group>"; };
 		0120929D297AD9E20081D3B8 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
 		0120929F297ADF8F0081D3B8 /* VideoVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoVc.swift; sourceTree = "<group>"; };
 		0132410C297C4517002F8E3C /* lol.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lol.jpg; sourceTree = "<group>"; };
@@ -673,20 +679,12 @@
 				01010DDE297E4AC300FBF76A /* Author.swift */,
 				01010DDF297E4AC300FBF76A /* Quote.swift */,
 				01010DE0297E4AC300FBF76A /* QuotesViewController.swift */,
-				01010DE1297E4AC300FBF76A /* Model */,
 				01010DE2297E4AC300FBF76A /* View */,
 				01010DE7297E4AC300FBF76A /* Tag.swift */,
 				01010DE8297E4AC300FBF76A /* Data */,
 				01010DEC297E4AC300FBF76A /* Views */,
 			);
 			path = "Quotes Module";
-			sourceTree = "<group>";
-		};
-		01010DE1297E4AC300FBF76A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		01010DE2297E4AC300FBF76A /* View */ = {
@@ -722,6 +720,7 @@
 		010AE8B12972B56800A86316 /* Plist */ = {
 			isa = PBXGroup;
 			children = (
+				011537CF2980267000CF9A87 /* background.plist */,
 				016B7E74297BAA7D00D5B6F1 /* videobtn.plist */,
 				010AE8B22972B56800A86316 /* category.plist */,
 				010AE8B32972B56800A86316 /* VideoEdit.plist */,
@@ -788,6 +787,8 @@
 				010AEC9F297313DF00A86316 /* HeaderView.xib */,
 				010AEC992972FC3F00A86316 /* StickerVc.swift */,
 				010AEC9A2972FC4000A86316 /* StickerVc.xib */,
+				011537D129803ECC00CF9A87 /* BackGround.swift */,
+				011537D529803FF300CF9A87 /* BackGround.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -1452,6 +1453,7 @@
 				01010DFB297E4AC300FBF76A /* quotes.json in Resources */,
 				01864AFA29719B6C00598CEC /* Assets.xcassets in Resources */,
 				010AEC542972D82900A86316 /* Cute in Resources */,
+				011537D629803FF300CF9A87 /* BackGround.xib in Resources */,
 				010AEC582972D82900A86316 /* Education in Resources */,
 				01F0133B29798DBD0077F22D /* FrameThumb46.png in Resources */,
 				010AEC4C2972D82900A86316 /* FastFood in Resources */,
@@ -1490,6 +1492,7 @@
 				01680B902973CFC70088F915 /* OverlayThumb15.png in Resources */,
 				01F0133529798DBD0077F22D /* FrameThumb42.png in Resources */,
 				01324146297D0AF3002F8E3C /* filter_22.jpg in Resources */,
+				011537D02980267000CF9A87 /* background.plist in Resources */,
 				01F0133E29798DBD0077F22D /* FrameThumb48.png in Resources */,
 				01680B782973CFC70088F915 /* OverlayThumb5.png in Resources */,
 				016B7E71297B9AA400D5B6F1 /* square_blank.mov in Resources */,
@@ -1649,6 +1652,7 @@
 				01010DF6297E4AC300FBF76A /* QuotableCell.swift in Sources */,
 				010AEC9E2972FC8A00A86316 /* CustomModalViewController.swift in Sources */,
 				010AE8D12972BED900A86316 /* AppGlobal.swift in Sources */,
+				011537D229803ECC00CF9A87 /* BackGround.swift in Sources */,
 				01680B2D2973CA2E0088F915 /* OverLayVc.swift in Sources */,
 				01A826992972972800DCCEF7 /* PhotoVc.swift in Sources */,
 				01010DEF297E4AC300FBF76A /* QuotesVc.swift in Sources */,
