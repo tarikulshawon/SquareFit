@@ -13,15 +13,22 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8cs-8X-ug6">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="toV-Hd-1tG">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="45"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="Zkh-ti-Kys"/>
+                        <constraint firstAttribute="height" constant="45" id="7dE-dC-frp"/>
                     </constraints>
-                </view>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TSr-0S-XRs">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="IKp-aG-xhc">
-                    <rect key="frame" x="0.0" y="40" width="414" height="40"/>
+                    <rect key="frame" x="0.0" y="45" width="414" height="35"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OJP-0S-twx">
                         <size key="itemSize" width="128" height="128"/>
@@ -38,18 +45,18 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="8cs-8X-ug6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="384-cy-YXP"/>
                 <constraint firstAttribute="bottom" secondItem="IKp-aG-xhc" secondAttribute="bottom" constant="10" id="DB6-mG-Xxe"/>
+                <constraint firstItem="toV-Hd-1tG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="DNl-kS-yYv"/>
                 <constraint firstAttribute="trailing" secondItem="IKp-aG-xhc" secondAttribute="trailing" id="LuM-ru-R52"/>
-                <constraint firstItem="8cs-8X-ug6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Stz-fq-S3r"/>
+                <constraint firstItem="IKp-aG-xhc" firstAttribute="top" secondItem="toV-Hd-1tG" secondAttribute="bottom" id="Nah-h2-pbT"/>
+                <constraint firstItem="toV-Hd-1tG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="P2X-n3-Gx9"/>
                 <constraint firstItem="IKp-aG-xhc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="TaI-O4-GDA"/>
-                <constraint firstItem="IKp-aG-xhc" firstAttribute="top" secondItem="8cs-8X-ug6" secondAttribute="bottom" id="dpx-EA-f1p"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8cs-8X-ug6" secondAttribute="trailing" id="sK3-Vi-awf"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="toV-Hd-1tG" secondAttribute="trailing" id="xE4-ko-bVp"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="collectionViewForFilter" destination="IKp-aG-xhc" id="dNz-S4-jgD"/>
-                <outlet property="optionView" destination="8cs-8X-ug6" id="Ez9-Cq-NIb"/>
+                <outlet property="categoryCollectionView" destination="toV-Hd-1tG" id="rD1-nt-4Jj"/>
+                <outlet property="contentsCollectionView" destination="IKp-aG-xhc" id="Z6B-hf-SlD"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="106.47321428571428"/>
         </view>
