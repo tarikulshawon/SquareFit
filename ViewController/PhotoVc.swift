@@ -8,7 +8,29 @@
 import UIKit
 import AudioToolbox
 
-class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, StickerViewDelegate, changeImage, backButton {
+class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, StickerViewDelegate, changeImage, backButton, TextStickerContainerViewDelegate {
+    
+    
+    func setCurrentTextStickerView(textStickerContainerView: TextStickerContainerView) {
+         
+    }
+    
+    func editTextStickerView(textStickerContainerView: TextStickerContainerView) {
+         
+    }
+    
+    func deleteTextStickerView(textStickerContainerView: TextStickerContainerView) {
+         
+    }
+    
+    func moveViewPosition(textStickerContainerView: TextStickerContainerView) {
+         
+    }
+    
+    func showKeyBoard(text: String) {
+         
+    }
+    
     
     func sendShapeValue(sticker: String) {
         self.addSticker(test: UIImage(named: sticker)!)
@@ -79,6 +101,8 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
     @IBOutlet weak var overlayView: UIImageView!
     @IBOutlet weak var center_horizontal_img_view: UIImageView!
     @IBOutlet weak var center_vertical_img_view: UIImageView!
+    var currentTextStickerView: TextStickerContainerView?
+    
     func sendFrame(frames: String) {
         let v = UIImage(named: frames)
         frameVc.image = v
@@ -131,6 +155,40 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
         
     }
     
+    
+    func addText(text: String, font: UIFont) {
+        print("[AddText] delegate called")
+       
+        let frame = CGRect(x: 0, y: 0, width: 250, height: 200)
+        let sticker = TextStickerContainerView(frame: frame)
+        sticker.tag = -1// TODO: implement in alternative way
+        sticker.delegate = self
+        sticker.currentFontIndex = -1
+        
+        sticker.pathName = font.fontName //
+        sticker.pathType = "TEXT"
+        
+        //sticker.textStickerView.delegate = self
+        sticker.textStickerView.text = text
+        sticker.textStickerView.font = font
+        
+        sticker.textStickerView.updateTextFont()
+        sticker.initilizeTextStickerData(mainTextView: sticker.textStickerView)
+        
+        stickerView.addSubview(sticker)
+        stickerView.clipsToBounds = true
+        currentTextStickerView = sticker
+        
+        guard let textStickerView = currentTextStickerView else {
+            print("[EditVC] currentTextStickerView is nill")
+            return
+        }
+        
+        textStickerView.deleteController.isHidden = false
+        textStickerView.scaleController.isHidden = false
+        textStickerView.extendBarView.isHidden = false
+        textStickerView.hideTextBorder(isHide: false)
+    }
     
     
     func addSticker(test: UIImage) {
@@ -432,7 +490,7 @@ extension PhotoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollect
 
 extension PhotoVc: quotesDelegate {
     func sendQuoteText(text: String) {
-         
+        self.addText(text: text, font: UIFont.systemFont(ofSize: 20.0))
     }
 }
 
@@ -453,5 +511,38 @@ private extension PhotoVc {
         }
         
         present(vc, animated: true, completion: nil)
+    }
+}
+
+
+extension UITextView {
+    
+func setCharacterSpacing(_ spacing: CGFloat){
+    let attributedStr = NSMutableAttributedString(string: self.text ?? "")
+    attributedStr.addAttribute(NSAttributedString.Key.kern, value: spacing, range: NSMakeRange(0, attributedStr.length))
+    self.attributedText = attributedStr
+ }
+    
+    func updateTextFont() {
+        if text.isEmpty || bounds.size.equalTo(CGSize.zero) { return }
+        
+        let textViewSize = self.frame.size
+        let fixedWidth = textViewSize.width
+        let expectSize = self.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat(MAXFLOAT)))
+        
+        var expectFont = self.font
+        if (expectSize.height > textViewSize.height) {
+            while (self.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat(MAXFLOAT))).height > textViewSize.height) {
+                expectFont = self.font!.withSize(self.font!.pointSize - 1)
+                self.font = expectFont
+            }
+        }
+        else {
+            while (self.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat(MAXFLOAT))).height < textViewSize.height) {
+                expectFont = self.font
+                self.font = self.font!.withSize(self.font!.pointSize + 1)
+            }
+            self.font = expectFont
+        }
     }
 }
