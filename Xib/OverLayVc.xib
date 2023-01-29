@@ -15,13 +15,22 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SlX-Wh-jU8">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                    <subviews>
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="xfs-GD-Oei">
+                            <rect key="frame" x="18.5" y="6" width="377" height="49"/>
+                        </slider>
+                    </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="xfs-GD-Oei" firstAttribute="centerY" secondItem="SlX-Wh-jU8" secondAttribute="centerY" id="0Ya-8s-jK5"/>
+                        <constraint firstItem="xfs-GD-Oei" firstAttribute="centerX" secondItem="SlX-Wh-jU8" secondAttribute="centerX" id="Bzi-DD-A5I"/>
                         <constraint firstAttribute="height" constant="60" id="EfF-un-1qI"/>
+                        <constraint firstItem="xfs-GD-Oei" firstAttribute="height" secondItem="SlX-Wh-jU8" secondAttribute="height" multiplier="0.8" id="Mg1-6O-G76"/>
+                        <constraint firstItem="xfs-GD-Oei" firstAttribute="width" secondItem="SlX-Wh-jU8" secondAttribute="width" multiplier="0.9" id="hdZ-DP-T3S"/>
                     </constraints>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="yO9-mf-ZIW">
-                    <rect key="frame" x="0.0" y="48" width="414" height="242"/>
+                    <rect key="frame" x="0.0" y="60" width="414" height="230"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BsZ-Zx-0Vm">
                         <size key="itemSize" width="128" height="128"/>
@@ -36,10 +45,10 @@
             <constraints>
                 <constraint firstItem="yO9-mf-ZIW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="53F-VL-EYE"/>
                 <constraint firstAttribute="bottom" secondItem="yO9-mf-ZIW" secondAttribute="bottom" constant="10" id="GKD-2o-Zc8"/>
-                <constraint firstItem="yO9-mf-ZIW" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="JDP-eh-jUA"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="SlX-Wh-jU8" secondAttribute="trailing" id="Z8i-di-5bN"/>
                 <constraint firstItem="SlX-Wh-jU8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ao1-zZ-H9u"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="yO9-mf-ZIW" secondAttribute="trailing" id="cmL-ZD-uks"/>
+                <constraint firstItem="yO9-mf-ZIW" firstAttribute="top" secondItem="SlX-Wh-jU8" secondAttribute="bottom" id="rob-FV-34p"/>
                 <constraint firstItem="SlX-Wh-jU8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="xp1-1j-6q3"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

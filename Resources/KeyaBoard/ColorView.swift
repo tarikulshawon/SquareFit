@@ -11,6 +11,8 @@ import UIKit
 
 protocol chnageColor {
     func chnageColorForView(color: UIColor)
+    func chnageTexture(index:Int)
+    func changeGradient(index:Int)
 }
 
 class ColorView: UIView {
@@ -152,6 +154,28 @@ extension ColorView:
         return cell
         
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+            let cell = collectionView.cellForItem(at: indexPath)
+
+            UIView.animate(withDuration: 0.5, animations: {
+                cell?.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+            }) { (true) in
+                UIView.animate(withDuration: 0.5, animations: {
+                    cell?.transform =  CGAffineTransform(scaleX: 1.0, y: 1.0)
+                })
+            }
+        
+        if currentBackGroundIndex == 0 {
+            
+            if indexPath.row == 0 {
+                
+            }
+            
+        }
+        
+    }
+    
 }
 
 extension UIImage {

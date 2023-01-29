@@ -148,8 +148,9 @@ class CustomModalViewController: UIViewController, sendSticker, canvasSend, send
             stackView.axis = .vertical
         }
        
+        //stackView.distribution = .fill
+        //stackView.alignment = .center
         
-        stackView.spacing = 12.0
         return stackView
     }()
     

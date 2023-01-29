@@ -18,6 +18,16 @@ protocol backButton {
 }
 
 class keyboard: UIViewController,  indexItem, chnageColor, changeFont, aligthmentTag, chnageFontSize, chnageLineSpacing, chnageCharacterSpace,  UITextViewDelegate {
+    
+    
+    func chnageTexture(index: Int) {
+        
+    }
+    
+    func changeGradient(index: Int) {
+        
+    }
+    
     public var delegateForChnageImage: changeImage?
     public var delegateForBack: backButton?
 
