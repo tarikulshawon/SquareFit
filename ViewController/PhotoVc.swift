@@ -9,6 +9,12 @@ import UIKit
 import AudioToolbox
 
 class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, StickerViewDelegate, changeImage, backButton {
+    
+    func sendOverLayValue(value: CGFloat) {
+        overlayView.alpha = value
+        
+    }
+    
     func doneBack() {
         
     }

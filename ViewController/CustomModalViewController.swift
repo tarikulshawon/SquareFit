@@ -8,16 +8,21 @@
 import UIKit
 
 
-protocol allDelegate: AnyObject {
+@objc protocol allDelegate: AnyObject {
     func sendCanvasData(width:Int,height:Int)
     func stickerData(sticker: String)
     func sendFrame(frames:String)
     func sendOverLay(image:UIImage?)
     func sendAdjust(value: Float, index: Int)
     func sendFilter(dic: Dictionary<String, Any>?)
+    @objc optional func sendOverLayValue(value:CGFloat)
 }
 
 class CustomModalViewController: UIViewController, sendSticker, canvasSend, sendFrames, imageIndexDelegate, sendValueForAdjust, filterIndexDelegate, sendImageDelegate {
+    func changeValueForOverlay(value: CGFloat) {
+        delegateForEditedView?.sendOverLayValue?(value: value)
+    }
+    
     
     
     func sendImage() {

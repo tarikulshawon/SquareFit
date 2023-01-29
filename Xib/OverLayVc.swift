@@ -2,6 +2,7 @@ import UIKit
 
 protocol imageIndexDelegate: AnyObject {
     func imageNameWithIndex(tag:String ,image: UIImage?)
+    func changeValueForOverlay(value:CGFloat)
 }
 
 class OverLayVc: UIView {
@@ -19,6 +20,10 @@ class OverLayVc: UIView {
     }
     
   
+    @IBAction func sliderValueChnaged(_ sender: UISlider) {
+        
+        delegateForOverlay?.changeValueForOverlay(value: CGFloat(sender.value))
+    }
     
     var noOfFilter  = 49
     override func awakeFromNib() {

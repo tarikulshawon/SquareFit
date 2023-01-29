@@ -18,6 +18,9 @@
                     <subviews>
                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="xfs-GD-Oei">
                             <rect key="frame" x="18.5" y="6" width="377" height="49"/>
+                            <connections>
+                                <action selector="sliderValueChnaged:" destination="iN0-l3-epB" eventType="valueChanged" id="XX0-5A-XwP"/>
+                            </connections>
                         </slider>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
