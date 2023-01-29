@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="KeyboardTopView" customModule="CustomKeyBoard" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="KeyboardTopView" customModule="SquareFit" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -23,8 +22,9 @@
                         </tabBarItem>
                         <tabBarItem tag="301" title="Font" image="font" id="1zT-dd-pdt"/>
                         <tabBarItem tag="302" title="Color" image="Color" id="t0G-FF-IIZ"/>
-                        <tabBarItem tag="303" title="ALIGN" image="alignment" id="AMj-S8-3ib"/>
-                        <tabBarItem tag="304" title="DONE" image="Done" id="liz-PZ-d3d"/>
+                        <tabBarItem tag="303" title="Shadow" image="shadow" id="AMj-S8-3ib" userLabel="Shadow"/>
+                        <tabBarItem tag="304" title="ALIGN" image="alignment" id="EHr-nS-beR"/>
+                        <tabBarItem tag="305" title="DONE" image="Done" id="liz-PZ-d3d"/>
                     </items>
                     <color key="tintColor" red="1" green="0.8637430908" blue="0.56469790509999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -38,6 +38,7 @@
                     </constraints>
                 </view>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="vWd-p9-kJq" secondAttribute="bottom" id="Dtw-NG-NAh"/>
@@ -49,11 +50,10 @@
                 <constraint firstItem="vWd-p9-kJq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="lnQ-6e-uvw"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="tabBarView" destination="Nzn-HE-JAy" id="8GQ-MF-KI0"/>
             </connections>
-            <point key="canvasLocation" x="997" y="-1338"/>
+            <point key="canvasLocation" x="928" y="-1497"/>
         </view>
     </objects>
     <resources>
@@ -62,5 +62,6 @@
         <image name="alignment" width="30" height="30"/>
         <image name="font" width="30" height="30"/>
         <image name="keyboard" width="30" height="30"/>
+        <image name="shadow" width="30" height="30"/>
     </resources>
 </document>

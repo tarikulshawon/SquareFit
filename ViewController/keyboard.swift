@@ -27,6 +27,7 @@ class keyboard: UIViewController,  indexItem, chnageColor, changeFont, aligthmen
     var toolsView: ToolsView!
     var colorView: ColorView!
     var fontsView: FontsView!
+    var shadowView: Shadow!
     var captureImage:UIImage!
     var screenSize: CGRect! = nil
     var screenWidth = 0
@@ -85,6 +86,9 @@ class keyboard: UIViewController,  indexItem, chnageColor, changeFont, aligthmen
         
         colorView =  (UINib(nibName: "ColorView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! ColorView)
         colorView.delegateForColor = self
+        
+        
+        shadowView =  (UINib(nibName: "Shadow", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! Shadow)
         
         
         
@@ -307,6 +311,7 @@ extension keyboard: UITabBarDelegate {
             fontsView.isHidden = false
             colorView.isHidden = true
             toolsView.isHidden = true
+            shadowView.isHidden = true
             
             fontsView.frame = CGRect(x: 0, y:  CGFloat(screenHeight - keyBoardHeight + topViewHieght), width:  CGFloat(screenWidth), height: CGFloat(keyBoardHeight - keyBoardHeight))
             fontsView.delegateForFont = self
@@ -322,11 +327,12 @@ extension keyboard: UITabBarDelegate {
             let trailing = fontsView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
             let heightConstraint = fontsView.heightAnchor.constraint(equalToConstant: 336.0)
             NSLayoutConstraint.activate([bottom, leading, trailing, heightConstraint])
-        } else if value == 2 {
+        } else if value == 3 {
             textView.endEditing(true)
             fontsView.isHidden = true
             colorView.isHidden = false
             toolsView.isHidden = true
+            shadowView.isHidden = true
             
             colorView.frame = CGRect(x: 0, y:  CGFloat(screenHeight - keyBoardHeight + topViewHieght), width:  CGFloat(screenWidth), height: CGFloat(keyBoardHeight - topViewHieght))
             
@@ -339,12 +345,32 @@ extension keyboard: UITabBarDelegate {
             let trailing = colorView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
             let heightConstraint = colorView.heightAnchor.constraint(equalToConstant: 336.0)
             NSLayoutConstraint.activate([bottom, leading, trailing, heightConstraint])
-        } else if value == 3 {
+        }
+        else if value == 4 {
+            textView.endEditing(true)
+            fontsView.isHidden = true
+            colorView.isHidden = true
+            toolsView.isHidden = true
+            shadowView.isHidden = false
+            
+            shadowView.frame = CGRect(x: 0, y:  CGFloat(screenHeight - keyBoardHeight + topViewHieght), width:  CGFloat(screenWidth), height: CGFloat(keyBoardHeight - topViewHieght))
+            
+            view.addSubview(shadowView)
+            
+            shadowView.translatesAutoresizingMaskIntoConstraints = false
+            
+            let bottom = shadowView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            let leading = shadowView.leadingAnchor.constraint(equalTo: view.leadingAnchor)
+            let trailing = shadowView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            let heightConstraint = shadowView.heightAnchor.constraint(equalToConstant: 336.0)
+            NSLayoutConstraint.activate([bottom, leading, trailing, heightConstraint])
+        }
+        else if value == 2 {
             textView.endEditing(true)
             fontsView.isHidden = true
             colorView.isHidden = true
             toolsView.isHidden = false
-            
+            shadowView.isHidden = true
             toolsView.frame = CGRect(x: 0, y:  CGFloat(screenHeight - keyBoardHeight + topViewHieght), width:  CGFloat(screenWidth), height: CGFloat(keyBoardHeight - topViewHieght))
             
             view.addSubview(toolsView)
@@ -355,7 +381,7 @@ extension keyboard: UITabBarDelegate {
             let trailing = toolsView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
             let heightConstraint = toolsView.heightAnchor.constraint(equalToConstant: 336.0)
             NSLayoutConstraint.activate([bottom, leading, trailing, heightConstraint])
-        } else if value == 4 {
+        } else if value == 5 {
             dismiss(animated: true)
         }
     }

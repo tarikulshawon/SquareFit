@@ -170,6 +170,9 @@
 		013241AA297D24D8002F8E3C /* RotatingColorWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013241A4297D24D8002F8E3C /* RotatingColorWheel.swift */; };
 		013241AD297D251A002F8E3C /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 013241AC297D251A002F8E3C /* Fonts */; };
 		013241AF297D289C002F8E3C /* keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013241AE297D289B002F8E3C /* keyboard.swift */; };
+		01478E632985FAC7005B3EA2 /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01478E622985FAC7005B3EA2 /* Shadow.swift */; };
+		01478E672985FB90005B3EA2 /* GradientSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01478E662985FB90005B3EA2 /* GradientSlider.swift */; };
+		01478E692986048C005B3EA2 /* Shadow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01478E682986048B005B3EA2 /* Shadow.xib */; };
 		01680B2D2973CA2E0088F915 /* OverLayVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01680B2B2973CA2E0088F915 /* OverLayVc.swift */; };
 		01680B2E2973CA2E0088F915 /* OverLayVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01680B2C2973CA2E0088F915 /* OverLayVc.xib */; };
 		01680B332973CC100088F915 /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01680B312973CC100088F915 /* ColorCell.swift */; };
@@ -491,6 +494,9 @@
 		013241A5297D24D8002F8E3C /* SwiftColorWheel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftColorWheel.h; sourceTree = "<group>"; };
 		013241AC297D251A002F8E3C /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		013241AE297D289B002F8E3C /* keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = keyboard.swift; sourceTree = "<group>"; };
+		01478E622985FAC7005B3EA2 /* Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shadow.swift; sourceTree = "<group>"; };
+		01478E662985FB90005B3EA2 /* GradientSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientSlider.swift; sourceTree = "<group>"; };
+		01478E682986048B005B3EA2 /* Shadow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Shadow.xib; sourceTree = "<group>"; };
 		01680B2B2973CA2E0088F915 /* OverLayVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverLayVc.swift; sourceTree = "<group>"; };
 		01680B2C2973CA2E0088F915 /* OverLayVc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverLayVc.xib; sourceTree = "<group>"; };
 		01680B312973CC100088F915 /* ColorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
@@ -756,6 +762,7 @@
 		010AE8CF2972BECD00A86316 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				01478E662985FB90005B3EA2 /* GradientSlider.swift */,
 				016B7E6F297B9AA400D5B6F1 /* PlaybackView.h */,
 				016B7E6D297B9AA400D5B6F1 /* PlaybackView.m */,
 				01324112297CCE8F002F8E3C /* CustomSlider.swift */,
@@ -924,6 +931,8 @@
 				01324192297D2489002F8E3C /* KeyboardTopView.xib */,
 				01324194297D2489002F8E3C /* ToolsView.xib */,
 				01324195297D2489002F8E3C /* KeyboardTopView.swift */,
+				01478E622985FAC7005B3EA2 /* Shadow.swift */,
+				01478E682986048B005B3EA2 /* Shadow.xib */,
 			);
 			path = KeyaBoard;
 			sourceTree = "<group>";
@@ -1498,6 +1507,7 @@
 				016B7E71297B9AA400D5B6F1 /* square_blank.mov in Resources */,
 				0132416E297D0AFC002F8E3C /* thumb_27.jpg in Resources */,
 				010AEC4A2972D82900A86316 /* Summer in Resources */,
+				01478E692986048C005B3EA2 /* Shadow.xib in Resources */,
 				010AECA629732A2A00A86316 /* ShapeVc.xib in Resources */,
 				01680B7C2973CFC70088F915 /* OverlayThumb37.png in Resources */,
 				010DCDCB297EDBF5004421DB /* Texture2.png in Resources */,
@@ -1640,6 +1650,7 @@
 				013241AA297D24D8002F8E3C /* RotatingColorWheel.swift in Sources */,
 				0132419B297D2489002F8E3C /* ToolsView.swift in Sources */,
 				016B7E70297B9AA400D5B6F1 /* PlaybackView.m in Sources */,
+				01478E672985FB90005B3EA2 /* GradientSlider.swift in Sources */,
 				01864AF129719B6B00598CEC /* AppDelegate.swift in Sources */,
 				012092A0297ADF8F0081D3B8 /* VideoVc.swift in Sources */,
 				010AECA529732A2A00A86316 /* ShapeVc.swift in Sources */,
@@ -1654,6 +1665,7 @@
 				010AE8D12972BED900A86316 /* AppGlobal.swift in Sources */,
 				011537D229803ECC00CF9A87 /* BackGround.swift in Sources */,
 				01680B2D2973CA2E0088F915 /* OverLayVc.swift in Sources */,
+				01478E632985FAC7005B3EA2 /* Shadow.swift in Sources */,
 				01A826992972972800DCCEF7 /* PhotoVc.swift in Sources */,
 				01010DEF297E4AC300FBF76A /* QuotesVc.swift in Sources */,
 				01680B332973CC100088F915 /* ColorCell.swift in Sources */,

@@ -626,9 +626,10 @@
                                                                     <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                                                                 </tabBarItem>
                                                                 <tabBarItem tag="301" title="Font" image="font" id="1im-ch-uOz"/>
-                                                                <tabBarItem tag="303" title="ALIGN" image="alignment" id="5K8-H8-8ip"/>
-                                                                <tabBarItem tag="302" title="Color" image="Color" id="4Yh-jL-YMb"/>
-                                                                <tabBarItem tag="304" title="DONE" image="Done" id="3hU-kz-0ib"/>
+                                                                <tabBarItem tag="302" title="ALIGN" image="alignment" id="5K8-H8-8ip"/>
+                                                                <tabBarItem tag="303" title="Color" image="Color" id="4Yh-jL-YMb"/>
+                                                                <tabBarItem tag="304" title="Shadow" image="shadow" id="Zg8-fr-8zh" userLabel="Shadow"/>
+                                                                <tabBarItem tag="305" title="DONE" image="Done" id="3hU-kz-0ib"/>
                                                             </items>
                                                         </tabBar>
                                                     </subviews>
@@ -713,6 +714,7 @@
         <image name="photos" width="120" height="120"/>
         <image name="pro" width="92.333335876464844" height="33.333332061767578"/>
         <image name="settings" width="30" height="30"/>
+        <image name="shadow" width="30" height="30"/>
         <systemColor name="groupTableViewBackgroundColor">
             <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

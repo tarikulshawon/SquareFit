@@ -12,6 +12,7 @@ enum KeyboardAccessory: CaseIterable {
     case keyboard
     case font
     case color
+    case Shadow
     case alignment
     case done
 }
