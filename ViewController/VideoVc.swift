@@ -8,6 +8,10 @@
 import UIKit
 
 class VideoVc: UIViewController, UIGestureRecognizerDelegate, allDelegate, StickerViewDelegate {
+    func sendShapeValue(sticker: String) {
+        
+    }
+    
     func sendFilter(dic: Dictionary<String, Any>?) {
         
     }

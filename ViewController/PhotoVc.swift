@@ -10,6 +10,11 @@ import AudioToolbox
 
 class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, StickerViewDelegate, changeImage, backButton {
     
+    func sendShapeValue(sticker: String) {
+        self.addSticker(test: UIImage(named: sticker)!)
+    }
+    
+    
     func sendOverLayValue(value: CGFloat) {
         overlayView.alpha = value
         

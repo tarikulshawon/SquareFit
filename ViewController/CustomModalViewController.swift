@@ -16,9 +16,17 @@ import UIKit
     func sendAdjust(value: Float, index: Int)
     func sendFilter(dic: Dictionary<String, Any>?)
     @objc optional func sendOverLayValue(value:CGFloat)
+    func sendShapeValue(sticker: String)
 }
 
-class CustomModalViewController: UIViewController, sendSticker, canvasSend, sendFrames, imageIndexDelegate, sendValueForAdjust, filterIndexDelegate, sendImageDelegate {
+class CustomModalViewController: UIViewController, sendSticker, canvasSend, sendFrames, imageIndexDelegate, sendValueForAdjust, filterIndexDelegate, sendImageDelegate, sendShape {
+    
+    
+    func sendShape(sticker: String) {
+        
+        delegateForEditedView?.sendShapeValue(sticker: sticker)
+    }
+    
     func changeValueForOverlay(value: CGFloat) {
         delegateForEditedView?.sendOverLayValue?(value: value)
     }
@@ -145,6 +153,7 @@ class CustomModalViewController: UIViewController, sendSticker, canvasSend, send
         }
         else if typeName.contains("Shape") {
             stackView = UIStackView(arrangedSubviews: [spacer, shapeVc, spacer])
+            shapeVc.delegateForShape = self
             stackView.axis = .vertical
         }
         else {
