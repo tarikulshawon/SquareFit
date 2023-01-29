@@ -44,7 +44,7 @@ class ColorView: UIView {
         collectionviewF.dataSource = self
     }
     
-   
+    
     
     @IBAction func changeValue(_ sender: UISegmentedControl) {
         
@@ -156,27 +156,56 @@ extension ColorView:
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-            let cell = collectionView.cellForItem(at: indexPath)
-
+        let cell = collectionView.cellForItem(at: indexPath)
+        
+        UIView.animate(withDuration: 0.5, animations: {
+            cell?.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+        }) { (true) in
             UIView.animate(withDuration: 0.5, animations: {
-                cell?.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
-            }) { (true) in
-                UIView.animate(withDuration: 0.5, animations: {
-                    cell?.transform =  CGAffineTransform(scaleX: 1.0, y: 1.0)
-                })
-            }
+                cell?.transform =  CGAffineTransform(scaleX: 1.0, y: 1.0)
+            })
+        }
         
         if currentBackGroundIndex == 0 {
             
             if indexPath.row == 0 {
+            }
+            else if indexPath.row == 1 {
+            }
+            
+            else if let colorString = plistArray[indexPath.row - 2] as? String {
+            }
+            
+        }
+        if currentBackGroundIndex == 1 {
+            if indexPath.row == 0 {
+                return
+            }
+            if let objArray = plistArray1[indexPath.row-1] as? NSArray {
+                var allcolors: [CGColor] = []
+                for item in objArray {
+                    let color = getColor(colorString: item as? String ?? "")
+                    allcolors.append(color.cgColor)
+                }
+                
+                let uimage = UIImage.gradientImageWithBounds(bounds: CGRect(x: 0,y: 0,width: 400,height: 400), colors: allcolors)
+                
                 
             }
             
         }
-        
+        if currentBackGroundIndex == 2 {
+            if indexPath.row == 0 {
+                return
+            }
+            let value = UIImage(named: "Texture" + "\(indexPath.row - 1)")
+        }
+        return
     }
     
 }
+
+
 
 extension UIImage {
     static func gradientImageWithBounds(bounds: CGRect, colors: [CGColor]) -> UIImage {

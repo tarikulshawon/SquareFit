@@ -20,6 +20,7 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
     }
     
     func deleteTextStickerView(textStickerContainerView: TextStickerContainerView) {
+        currentTextStickerView?.removeFromSuperview()
          
     }
     
@@ -158,10 +159,15 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
     
     func addText(text: String, font: UIFont) {
         print("[AddText] delegate called")
+        
+        var value = UserDefaults.standard.integer(forKey: "text")
+        value = value + 1
+        
+        UserDefaults.standard.set(value, forKey: "text")
        
         let frame = CGRect(x: 0, y: 0, width: 250, height: 200)
         let sticker = TextStickerContainerView(frame: frame)
-        sticker.tag = -1// TODO: implement in alternative way
+        sticker.tag = value + 700// TODO: implement in alternative way
         sticker.delegate = self
         sticker.currentFontIndex = -1
         
