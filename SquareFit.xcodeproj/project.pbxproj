@@ -173,6 +173,11 @@
 		01478E632985FAC7005B3EA2 /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01478E622985FAC7005B3EA2 /* Shadow.swift */; };
 		01478E672985FB90005B3EA2 /* GradientSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01478E662985FB90005B3EA2 /* GradientSlider.swift */; };
 		01478E692986048C005B3EA2 /* Shadow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01478E682986048B005B3EA2 /* Shadow.xib */; };
+		01478E6B29866FB9005B3EA2 /* TextStickerContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01478E6A29866FB9005B3EA2 /* TextStickerContainerView.swift */; };
+		01478E6E29866FF8005B3EA2 /* TextStickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01478E6D29866FF8005B3EA2 /* TextStickerView.swift */; };
+		01478E7029867010005B3EA2 /* DeleteImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01478E6F29867010005B3EA2 /* DeleteImageView.swift */; };
+		01478E7229867023005B3EA2 /* BreakWordControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01478E7129867023005B3EA2 /* BreakWordControllerView.swift */; };
+		01478E7429867033005B3EA2 /* PanControllerImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01478E7329867033005B3EA2 /* PanControllerImageView.swift */; };
 		01680B2D2973CA2E0088F915 /* OverLayVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01680B2B2973CA2E0088F915 /* OverLayVc.swift */; };
 		01680B2E2973CA2E0088F915 /* OverLayVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01680B2C2973CA2E0088F915 /* OverLayVc.xib */; };
 		01680B332973CC100088F915 /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01680B312973CC100088F915 /* ColorCell.swift */; };
@@ -497,6 +502,11 @@
 		01478E622985FAC7005B3EA2 /* Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shadow.swift; sourceTree = "<group>"; };
 		01478E662985FB90005B3EA2 /* GradientSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientSlider.swift; sourceTree = "<group>"; };
 		01478E682986048B005B3EA2 /* Shadow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Shadow.xib; sourceTree = "<group>"; };
+		01478E6A29866FB9005B3EA2 /* TextStickerContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextStickerContainerView.swift; sourceTree = "<group>"; };
+		01478E6D29866FF8005B3EA2 /* TextStickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextStickerView.swift; sourceTree = "<group>"; };
+		01478E6F29867010005B3EA2 /* DeleteImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteImageView.swift; sourceTree = "<group>"; };
+		01478E7129867023005B3EA2 /* BreakWordControllerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreakWordControllerView.swift; sourceTree = "<group>"; };
+		01478E7329867033005B3EA2 /* PanControllerImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanControllerImageView.swift; sourceTree = "<group>"; };
 		01680B2B2973CA2E0088F915 /* OverLayVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverLayVc.swift; sourceTree = "<group>"; };
 		01680B2C2973CA2E0088F915 /* OverLayVc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverLayVc.xib; sourceTree = "<group>"; };
 		01680B312973CC100088F915 /* ColorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
@@ -949,6 +959,18 @@
 			path = SwiftColorWheel;
 			sourceTree = "<group>";
 		};
+		01478E6C29866FDF005B3EA2 /* TextSticker */ = {
+			isa = PBXGroup;
+			children = (
+				01478E7329867033005B3EA2 /* PanControllerImageView.swift */,
+				01478E7129867023005B3EA2 /* BreakWordControllerView.swift */,
+				01478E6F29867010005B3EA2 /* DeleteImageView.swift */,
+				01478E6D29866FF8005B3EA2 /* TextStickerView.swift */,
+				01478E6A29866FB9005B3EA2 /* TextStickerContainerView.swift */,
+			);
+			path = TextSticker;
+			sourceTree = "<group>";
+		};
 		01680B372973CFC70088F915 /* Thumb */ = {
 			isa = PBXGroup;
 			children = (
@@ -1010,6 +1032,7 @@
 		01864AE429719B6B00598CEC = {
 			isa = PBXGroup;
 			children = (
+				01478E6C29866FDF005B3EA2 /* TextSticker */,
 				01324114297D0A7D002F8E3C /* Resources */,
 				01010DDA297E4AC300FBF76A /* Quotes Module */,
 				01AE39FE2971BFAD00C2F652 /* ViewController */,
@@ -1642,6 +1665,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				01010DF2297E4AC300FBF76A /* Author.swift in Sources */,
+				01478E6E29866FF8005B3EA2 /* TextStickerView.swift in Sources */,
+				01478E6B29866FB9005B3EA2 /* TextStickerContainerView.swift in Sources */,
 				010AEC9B2972FC4000A86316 /* StickerVc.swift in Sources */,
 				01010DFD297E4AC300FBF76A /* QuotesCardCell.swift in Sources */,
 				01864AF529719B6B00598CEC /* ViewController.swift in Sources */,
@@ -1671,6 +1696,7 @@
 				01680B332973CC100088F915 /* ColorCell.swift in Sources */,
 				0132419A297D2489002F8E3C /* ColorView.swift in Sources */,
 				01F013BE2979A4830077F22D /* FilterVc.swift in Sources */,
+				01478E7429867033005B3EA2 /* PanControllerImageView.swift in Sources */,
 				01DFAC4429784E45005C7564 /* FrameVc.swift in Sources */,
 				01010DD8297D0FAA00FBF76A /* TagCell.swift in Sources */,
 				01F013B9297997CE0077F22D /* Adjust.swift in Sources */,
@@ -1679,6 +1705,7 @@
 				01324113297CCE8F002F8E3C /* CustomSlider.swift in Sources */,
 				01CF1ADC29757ECD0003DFA4 /* CanvasRatioCell.swift in Sources */,
 				01010DF3297E4AC300FBF76A /* Quote.swift in Sources */,
+				01478E7229867023005B3EA2 /* BreakWordControllerView.swift in Sources */,
 				01010DF1297E4AC300FBF76A /* QuotesViewModel.swift in Sources */,
 				013241A7297D24D8002F8E3C /* DefaultWheelGestureHandler.swift in Sources */,
 				01864AF329719B6B00598CEC /* SceneDelegate.swift in Sources */,
@@ -1688,6 +1715,7 @@
 				01010DF4297E4AC300FBF76A /* QuotesViewController.swift in Sources */,
 				01CF1AD829757EC40003DFA4 /* CanVas.swift in Sources */,
 				013241A9297D24D8002F8E3C /* ColorWheel.swift in Sources */,
+				01478E7029867010005B3EA2 /* DeleteImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

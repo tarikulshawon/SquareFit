@@ -432,7 +432,7 @@ extension PhotoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollect
 
 extension PhotoVc: quotesDelegate {
     func sendQuoteText(text: String) {
-        print("Quotes delegate")
+         
     }
 }
 
