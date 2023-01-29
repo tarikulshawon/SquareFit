@@ -129,7 +129,7 @@ extension BackGround: UICollectionViewDataSource,UICollectionViewDelegate,UIColl
             }
             
             
-            if indexPath.section == 2 {
+            else if indexPath.section == 2 {
                 
                 if indexPath.row == 0 {
                     cell.gradietImv.image = UIImage(named: "no-color")
@@ -156,7 +156,7 @@ extension BackGround: UICollectionViewDataSource,UICollectionViewDelegate,UIColl
                 }
             }
             
-            if indexPath.section == 3 {
+           else  if indexPath.section == 3 {
                 if indexPath.row == 0 {
                     cell.gradietImv.image = UIImage(named: "no-color")
                     cell.gradietImv.isHidden = false
