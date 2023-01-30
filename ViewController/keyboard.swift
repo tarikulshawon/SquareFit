@@ -11,6 +11,7 @@ import UIKit
 
 protocol changeImage {
     func changeImage(image: UIImage)
+    func changeAttri(attributed: NSAttributedString)
 }
 
 protocol backButton {
@@ -21,6 +22,7 @@ class keyboard: UIViewController,  indexItem, chnageColor, changeFont, aligthmen
     
     
     func chnageTexture(index: Int) {
+        
         
     }
     
@@ -58,6 +60,7 @@ class keyboard: UIViewController,  indexItem, chnageColor, changeFont, aligthmen
     @IBOutlet var heightForToolsView: NSLayoutConstraint!
     @IBOutlet weak var heightOfToolBar: NSLayoutConstraint!
     @IBOutlet weak var customTabBar: UITabBar!
+    var attributedT:NSAttributedString! = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -150,7 +153,7 @@ class keyboard: UIViewController,  indexItem, chnageColor, changeFont, aligthmen
         textView.attributedText = attributedQuote
         
         
-        
+        attributedT = attributedQuote
         
     }
     
@@ -199,6 +202,7 @@ class keyboard: UIViewController,  indexItem, chnageColor, changeFont, aligthmen
     @IBAction func gotoPreviousView(_ sender: Any) {
         
         delegateForBack?.doneBack()
+        delegateForChnageImage?.changeAttri(attributed: attributedT)
 
         NotificationCenter.default.removeObserver(self)
         self.dismiss(animated: true, completion: nil)
@@ -392,6 +396,7 @@ extension keyboard: UITabBarDelegate {
             let heightConstraint = toolsView.heightAnchor.constraint(equalToConstant: 336.0)
             NSLayoutConstraint.activate([bottom, leading, trailing, heightConstraint])
         } else if value == 5 {
+            delegateForChnageImage?.changeAttri(attributed: attributedT)
             dismiss(animated: true)
         }
     }

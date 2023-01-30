@@ -9,6 +9,10 @@ import UIKit
 import AudioToolbox
 
 class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, StickerViewDelegate, changeImage, backButton, TextStickerContainerViewDelegate {
+    func changeAttri(attributed: NSAttributedString) {
+        self.addText(text: "", attributed: attributed)
+    }
+    
     
     
     func setCurrentTextStickerView(textStickerContainerView: TextStickerContainerView) {
@@ -157,7 +161,7 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
     }
     
     
-    func addText(text: String, font: UIFont) {
+    func addText(text: String, attributed: NSAttributedString) {
         print("[AddText] delegate called")
         
         var value = UserDefaults.standard.integer(forKey: "text")
@@ -171,15 +175,15 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
         sticker.delegate = self
         sticker.currentFontIndex = -1
         
-        sticker.pathName = font.fontName //
+        //sticker.pathName = font.fontName //
         sticker.pathType = "TEXT"
         
         //sticker.textStickerView.delegate = self
         sticker.textStickerView.text = text
-        sticker.textStickerView.font = font
+       /// sticker.textStickerView.font = font
         
         sticker.textStickerView.updateTextFont()
-        sticker.initilizeTextStickerData(mainTextView: sticker.textStickerView)
+        sticker.initilizeTextStickerData(mainTextView: sticker.textStickerView, attributed: attributed)
         
         stickerView.addSubview(sticker)
         stickerView.clipsToBounds = true
@@ -496,7 +500,7 @@ extension PhotoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollect
 
 extension PhotoVc: quotesDelegate {
     func sendQuoteText(text: String) {
-        self.addText(text: text, font: UIFont.systemFont(ofSize: 20.0))
+        //self.addText(text: text, font: UIFont.systemFont(ofSize: 20.0))
     }
 }
 

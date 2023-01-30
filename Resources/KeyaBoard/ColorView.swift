@@ -169,16 +169,24 @@ extension ColorView:
         if currentBackGroundIndex == 0 {
             
             if indexPath.row == 0 {
+                
+                
             }
             else if indexPath.row == 1 {
+                
+                delegateForColor?.chnageColorForView(color: UIColor.clear)
             }
             
             else if let colorString = plistArray[indexPath.row - 2] as? String {
+                
+                delegateForColor?.chnageColorForView(color: getColor(colorString: colorString))
+                
             }
             
         }
         if currentBackGroundIndex == 1 {
             if indexPath.row == 0 {
+                delegateForColor?.chnageColorForView(color:UIColor.black)
                 return
             }
             if let objArray = plistArray1[indexPath.row-1] as? NSArray {
@@ -189,6 +197,7 @@ extension ColorView:
                 }
                 
                 let uimage = UIImage.gradientImageWithBounds(bounds: CGRect(x: 0,y: 0,width: 400,height: 400), colors: allcolors)
+                delegateForColor?.chnageColorForView(color: UIColor(patternImage: uimage))
                 
                 
             }
@@ -196,9 +205,11 @@ extension ColorView:
         }
         if currentBackGroundIndex == 2 {
             if indexPath.row == 0 {
+                delegateForColor?.chnageColorForView(color:UIColor.black)
                 return
             }
-            let value = UIImage(named: "Texture" + "\(indexPath.row - 1)")
+            let value = UIImage(named: "Texture" + "\(indexPath.row - 1)")!
+            delegateForColor?.chnageColorForView(color:UIColor(patternImage: value))
         }
         return
     }

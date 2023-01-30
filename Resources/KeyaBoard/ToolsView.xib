@@ -139,7 +139,7 @@
                                                         <constraint firstAttribute="width" constant="20" id="Yup-pP-Fz3"/>
                                                     </constraints>
                                                 </imageView>
-                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="10" maxValue="25" translatesAutoresizingMaskIntoConstraints="NO" id="nWr-cP-vco">
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minValue="15" maxValue="45" translatesAutoresizingMaskIntoConstraints="NO" id="nWr-cP-vco">
                                                     <rect key="frame" x="28" y="0.0" width="319" height="37"/>
                                                     <color key="tintColor" red="0.12156862745098039" green="0.73725490196078436" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
                                                     <connections>
@@ -248,7 +248,7 @@
                 <constraint firstItem="fdq-vw-uN3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ueM-yW-jOb"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="132" y="115"/>
+            <point key="canvasLocation" x="357" y="76"/>
         </view>
     </objects>
     <resources>
