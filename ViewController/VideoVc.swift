@@ -8,6 +8,11 @@
 import UIKit
 
 class VideoVc: UIViewController, UIGestureRecognizerDelegate, allDelegate, StickerViewDelegate {
+    
+    func sendColorBackgroundV(color: UIColor, image: UIImage?) {
+        
+    }
+    
     func sendShapeValue(sticker: String) {
         
     }

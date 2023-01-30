@@ -9,6 +9,17 @@ import UIKit
 import AudioToolbox
 
 class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, StickerViewDelegate, changeImage, backButton, TextStickerContainerViewDelegate {
+    func sendColorBackgroundV(color: UIColor, image: UIImage?) {
+        
+        if let value = image {
+            backgroundImv.image = value
+        }
+        else {
+            backgroundImv.image = nil
+            backgroundImv.backgroundColor = color
+        }
+    }
+    
     func changeAttri(attributed: NSAttributedString) {
         self.addText(text: "", attributed: attributed)
     }
@@ -125,6 +136,7 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
     }
     
     
+    @IBOutlet weak var backgroundImv: UIImageView!
     @IBOutlet weak var stickerView: UIView!
     
     @IBOutlet weak var intermediateview: UIView!

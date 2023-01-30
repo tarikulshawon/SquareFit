@@ -17,9 +17,14 @@ import UIKit
     func sendFilter(dic: Dictionary<String, Any>?)
     @objc optional func sendOverLayValue(value:CGFloat)
     func sendShapeValue(sticker: String)
+    func sendColorBackgroundV(color: UIColor, image: UIImage?)
 }
 
-class CustomModalViewController: UIViewController, sendSticker, canvasSend, sendFrames, imageIndexDelegate, sendValueForAdjust, filterIndexDelegate, sendImageDelegate, sendShape {
+class CustomModalViewController: UIViewController, sendSticker, canvasSend, sendFrames, imageIndexDelegate, sendValueForAdjust, filterIndexDelegate, sendImageDelegate, sendShape, sendBackGroundView {
+    func sendColorBackground(color: UIColor, image: UIImage?) {
+        delegateForEditedView?.sendColorBackgroundV(color: color, image: image)
+    }
+    
     
     
     func sendShape(sticker: String) {
@@ -117,6 +122,7 @@ class CustomModalViewController: UIViewController, sendSticker, canvasSend, send
         
         if typeName.contains("Background") {
             stackView = UIStackView(arrangedSubviews: [spacer, backGroundView, spacer])
+            backGroundView.delegateForBackground = self
             stackView.axis = .vertical
         }
         else if typeName.contains("Canvas") {
