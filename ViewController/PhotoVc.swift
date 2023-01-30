@@ -9,6 +9,56 @@ import UIKit
 import AudioToolbox
 
 class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, StickerViewDelegate, changeImage, backButton, TextStickerContainerViewDelegate {
+    
+   
+    @IBOutlet weak var widthForTempView: NSLayoutConstraint!
+    @IBOutlet weak var heightForTempView: NSLayoutConstraint!
+    @IBOutlet weak var btnCollectionView: UICollectionView!
+    @IBOutlet weak var holderView: UIView!
+    @IBOutlet weak var btnView: UIView!
+    @IBOutlet weak var imv: UIImageView!
+    @IBOutlet weak var overlayView: UIImageView!
+    @IBOutlet weak var center_horizontal_img_view: UIImageView!
+    @IBOutlet weak var center_vertical_img_view: UIImageView!
+    @IBOutlet weak var backgroundImv: UIImageView!
+    @IBOutlet weak var stickerView: UIView!
+    @IBOutlet weak var intermediateview: UIView!
+    @IBOutlet weak var frameVc: UIImageView!
+    var selectedImage: UIImage? = nil
+    var cellWidth:CGFloat = 60
+    var cellGap:CGFloat =  0
+    var panRecogniser:UIPanGestureRecognizer! = nil
+    var pinchRecogniser:UIPinchGestureRecognizer! = nil
+    var tapRecogniser: UITapGestureRecognizer! =  nil
+    var btnArray: NSArray! = nil
+    var currentTextStickerView: TextStickerContainerView?
+    let currentlyActiveIndex = 0
+    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        panRecogniser = UIPanGestureRecognizer(target: self, action: #selector(didPan(_:)))
+        pinchRecogniser = UIPinchGestureRecognizer(target: self, action: #selector(didPinch(_:)))
+        tapRecogniser = UITapGestureRecognizer(target: self, action: #selector(didTap(_:)))
+        
+        
+        intermediateview.addGestureRecognizer(panRecogniser)
+        intermediateview.addGestureRecognizer(pinchRecogniser)
+        intermediateview.addGestureRecognizer(tapRecogniser)
+        
+        panRecogniser.delegate = self
+        pinchRecogniser.delegate = self
+        tapRecogniser.delegate = self
+        
+        
+        let path = Bundle.main.path(forResource: "btn", ofType: "plist")
+        btnArray = NSArray(contentsOfFile: path!)
+        initCollectionView()
+        self.perform(#selector(self.updateFrame), with: self, afterDelay:0.1)
+       
+    }
+
     func sendColorBackgroundV(color: UIColor, image: UIImage?) {
         
         if let value = image {
@@ -23,7 +73,6 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
     func changeAttri(attributed: NSAttributedString) {
         self.addText(text: "", attributed: attributed)
     }
-    
     
     
     func setCurrentTextStickerView(textStickerContainerView: TextStickerContainerView) {
@@ -114,10 +163,7 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
         
     }
     
-    @IBOutlet weak var overlayView: UIImageView!
-    @IBOutlet weak var center_horizontal_img_view: UIImageView!
-    @IBOutlet weak var center_vertical_img_view: UIImageView!
-    var currentTextStickerView: TextStickerContainerView?
+  
     
     func sendFrame(frames: String) {
         let v = UIImage(named: frames)
@@ -136,12 +182,7 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
     }
     
     
-    @IBOutlet weak var backgroundImv: UIImageView!
-    @IBOutlet weak var stickerView: UIView!
     
-    @IBOutlet weak var intermediateview: UIView!
-    
-    @IBOutlet weak var frameVc: UIImageView!
     
     func sendCanvasData(width: Int, height: Int) {
        
@@ -231,54 +272,7 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
         stickerView3.showEditingHandlers = true
     }
     
-    
-    
-    @IBOutlet weak var widthForTempView: NSLayoutConstraint!
-    @IBOutlet weak var heightForTempView: NSLayoutConstraint!
-    
-    
-    
-    @IBOutlet weak var btnCollectionView: UICollectionView!
-    var btnArray: NSArray! = nil
-    @IBOutlet weak var holderView: UIView!
-    @IBOutlet weak var btnView: UIView!
-    let currentlyActiveIndex = 0
-    var cellWidth:CGFloat = 60
-    var cellGap:CGFloat =  0
-    
-    var panRecogniser:UIPanGestureRecognizer! = nil
-    var pinchRecogniser:UIPinchGestureRecognizer! = nil
-    var tapRecogniser: UITapGestureRecognizer! =  nil
-    
 
-    @IBOutlet weak var imv: UIImageView!
-    var selectedImage: UIImage? = nil
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        panRecogniser = UIPanGestureRecognizer(target: self, action: #selector(didPan(_:)))
-        pinchRecogniser = UIPinchGestureRecognizer(target: self, action: #selector(didPinch(_:)))
-        tapRecogniser = UITapGestureRecognizer(target: self, action: #selector(didTap(_:)))
-        
-        
-        intermediateview.addGestureRecognizer(panRecogniser)
-        intermediateview.addGestureRecognizer(pinchRecogniser)
-        intermediateview.addGestureRecognizer(tapRecogniser)
-        
-        panRecogniser.delegate = self
-        pinchRecogniser.delegate = self
-        tapRecogniser.delegate = self
-        
-        
-        let path = Bundle.main.path(forResource: "btn", ofType: "plist")
-        btnArray = NSArray(contentsOfFile: path!)
-        initCollectionView()
-        self.perform(#selector(self.updateFrame), with: self, afterDelay:0.1)
-       
-
-    }
-    
     @objc private func didPan(_ recogniser: UIPanGestureRecognizer) {
         
         if recogniser.state == .began || recogniser.state == .changed {
@@ -322,11 +316,8 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
     
     
     @objc private func didPinch(_ recogniser: UIPinchGestureRecognizer) {
-        
-        
         imv.transform = CGAffineTransformScale(imv.transform, recogniser.scale * 1, recogniser.scale * 1);
         recogniser.scale = 1;
-        
     }
     
     @objc private func didTap(_ recogniser: UITapGestureRecognizer) {
