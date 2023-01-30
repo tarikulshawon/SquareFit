@@ -118,8 +118,6 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
     func sendFilter(dic: Dictionary<String, Any>?) {
         
         let img = selectedImage //UIImage(named: "lol.jpg")
-        
-        
         if dic == nil {
             imv.image = img
             return
