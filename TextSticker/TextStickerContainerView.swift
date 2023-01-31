@@ -224,22 +224,23 @@ extension TextStickerContainerView {
         self.addSubview(deleteController)
     }
     
-    func initilizeTextStickerData(mainTextView: TextStickerView ,attributed: NSAttributedString){
-        //let text = prepareText(maintextView: mainTextView)
+    func initilizeTextStickerData(mainTextView: TextStickerView){
+        let text = prepareText(maintextView: mainTextView)
         
-        self.textStickerView.attributedText = attributed
-        //self.textStickerView.fontSize = mainTextView.font!.pointSize
+        self.textStickerView.text = text
+        self.textStickerView.fontSize = mainTextView.font!.pointSize
         
-        ///self.textStickerView.textColor = mainTextView.textColor
+        self.textStickerView.textColor = mainTextView.textColor
         self.textStickerView.autocorrectionType = .no
-        //self.textStickerView.backgroundColor = mainTextView.backgroundColor
+        self.textStickerView.backgroundColor = mainTextView.backgroundColor
         self.textStickerView.layer.shadowColor = mainTextView.layer.shadowColor
         self.textStickerView.layer.shadowRadius = mainTextView.layer.shadowRadius
         self.textStickerView.layer.shadowOpacity = mainTextView.layer.shadowOpacity
         self.textStickerView.layer.shadowOffset = mainTextView.layer.shadowOffset
-        //self.textStickerView.font = mainTextView.font
-        //self.textStickerView.textAlignment = mainTextView.textAlignment
         self.textStickerView.font = mainTextView.font
+        self.textStickerView.textAlignment = mainTextView.textAlignment
+        self.textStickerView.font = mainTextView.font
+        self.textStickerView.alpha = mainTextView.alpha
         let newSize = self.textStickerView.sizeThatFits(CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude))
         self.textStickerView.frame.size = CGSize(width: newSize.width, height: newSize.height)
     }

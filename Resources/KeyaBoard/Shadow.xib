@@ -26,12 +26,15 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P8U-2g-6pG" customClass="GradientSlider" customModule="TextArt" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P8U-2g-6pG" customClass="GradientSlider" customModule="SquareFit" customModuleProvider="target">
                                     <rect key="frame" x="53.5" y="5" width="330.5" height="30"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="EDA-3r-juc"/>
                                     </constraints>
+                                    <connections>
+                                        <action selector="offsetValueChanged:" destination="iN0-l3-epB" eventType="valueChanged" id="Y1n-C6-vbg"/>
+                                    </connections>
                                 </view>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -52,12 +55,15 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mve-g5-D5q" customClass="GradientSlider" customModule="TextArt" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mve-g5-D5q" customClass="GradientSlider" customModule="SquareFit" customModuleProvider="target">
                                     <rect key="frame" x="62" y="5" width="322" height="30"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="17b-SA-59W"/>
                                     </constraints>
+                                    <connections>
+                                        <action selector="opacityShadowValueChanged:" destination="iN0-l3-epB" eventType="valueChanged" id="itf-xh-0zw"/>
+                                    </connections>
                                 </view>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -78,12 +84,15 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ed3-hf-e6z" customClass="GradientSlider" customModule="TextArt" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ed3-hf-e6z" customClass="GradientSlider" customModule="SquareFit" customModuleProvider="target">
                                     <rect key="frame" x="56.5" y="5" width="327.5" height="30"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="v5O-2u-3Cf"/>
                                     </constraints>
+                                    <connections>
+                                        <action selector="radiusValueChanged:" destination="iN0-l3-epB" eventType="valueChanged" id="92K-yb-JBp"/>
+                                    </connections>
                                 </view>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -107,6 +116,11 @@
                 <constraint firstItem="FYq-Wv-5AU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hhK-0e-gpY"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="sliderForOffset" destination="P8U-2g-6pG" id="QZf-b6-uvi"/>
+                <outlet property="sliderForOpacity" destination="Mve-g5-D5q" id="IOx-Tr-8ik"/>
+                <outlet property="sliderForRadius" destination="Ed3-hf-e6z" id="S4K-Hu-3gG"/>
+            </connections>
             <point key="canvasLocation" x="132" y="115"/>
         </view>
     </objects>

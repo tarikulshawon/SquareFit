@@ -21,10 +21,7 @@ class FontsView: UIView,UITableViewDelegate,UITableViewDataSource{
     
     
     override func draw(_ rect: CGRect) {
-        
-        
-        
-        
+    
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "FontCell", bundle: nil), forCellReuseIdentifier: "FontCell")
@@ -51,7 +48,7 @@ class FontsView: UIView,UITableViewDelegate,UITableViewDataSource{
         cell.lbl.text = (name as! String)
         cell.lbl.textAlignment = .center
         cell.lbl.font =  UIFont(name:name as! String, size: 24.0)
-        
+        cell.selectionStyle = .none
         return cell
         
         

@@ -17,19 +17,17 @@ protocol chnageFontSize {
     func chnageFontSize(size: Int)
 }
 
-protocol chnageLineSpacing {
-    func chnageLineSpacing(size: Int)
+protocol chnageAlpa {
+    func changeAlpa(value: Float)
 }
 
-protocol chnageCharacterSpace {
-    func chnageCharacterSpace(size: Int)
-}
+
 
 class ToolsView: UIView {
     public var delegeteAlighment: aligthmentTag?
     public var delegeteFontSize: chnageFontSize?
-    public var delegeteLineSpacing: chnageLineSpacing?
-    public var delegeteCharacterSpacing: chnageCharacterSpace?
+    public var delegeteForAlpa: chnageAlpa?
+    
     
     @IBAction func alightmentDone(_ sender: Any) {
         
@@ -38,21 +36,15 @@ class ToolsView: UIView {
         delegeteAlighment?.changeAlighment(index: tag)
     }
     
+    
+    
+    @IBAction func opacityValueChange(_ sender: UISlider) {
+        
+        delegeteForAlpa?.changeAlpa(value: sender.value)
+    }
     @IBAction func textSizeChange(_ sender: UISlider) {
         let currentValue = Int(sender.value)
         delegeteFontSize?.chnageFontSize(size: currentValue)
-
     }
     
-    @IBAction func changeLineSpacing(_ sender: UISlider) {
-        let currentValue = Int(sender.value)
-        delegeteLineSpacing?.chnageLineSpacing(size: currentValue)
-        
-    }
-    
-    @IBAction func chnageCharacterSpacing(_ sender: UISlider) {
-        
-        let currentValue = Int(sender.value)
-        delegeteCharacterSpacing?.chnageCharacterSpace(size: currentValue)
-    }
 }

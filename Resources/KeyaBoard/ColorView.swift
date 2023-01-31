@@ -186,7 +186,7 @@ extension ColorView:
         }
         if currentBackGroundIndex == 1 {
             if indexPath.row == 0 {
-                delegateForColor?.chnageColorForView(color:UIColor.black)
+                delegateForColor?.chnageColorForView(color:UIColor.white)
                 return
             }
             if let objArray = plistArray1[indexPath.row-1] as? NSArray {
@@ -205,7 +205,7 @@ extension ColorView:
         }
         if currentBackGroundIndex == 2 {
             if indexPath.row == 0 {
-                delegateForColor?.chnageColorForView(color:UIColor.black)
+                delegateForColor?.chnageColorForView(color:UIColor.white)
                 return
             }
             let value = UIImage(named: "Texture" + "\(indexPath.row - 1)")!

@@ -11,14 +11,36 @@ import UIKit
 
 protocol changeImage {
     func changeImage(image: UIImage)
-    func changeAttri(attributed: NSAttributedString)
+    func changeTextView(textView: UITextView)
 }
 
 protocol backButton {
     func  doneBack()
 }
 
-class keyboard: UIViewController,  indexItem, chnageColor, changeFont, aligthmentTag, chnageFontSize, chnageLineSpacing, chnageCharacterSpace,  UITextViewDelegate {
+class keyboard: UIViewController,  indexItem, chnageColor, changeFont, aligthmentTag, chnageFontSize,  UITextViewDelegate, chnageAlpa, shadowDelegate {
+    
+    func opacityShadowValue(value: Double) {
+        
+      textView.textInputView.layer.shadowOpacity = Float(value)
+         
+    }
+    
+    func radiusShadowalue(value: Double) {
+        textView.textInputView.layer.shadowRadius = CGFloat(Float(value))
+    }
+    
+    func offsetShadowValue(value: Double) {
+        
+        textView.textInputView.layer.shadowOffset = .init(width: 5, height: value)
+         
+    }
+    
+    
+    func changeAlpa(value: Float) {
+        textView.alpha = CGFloat(value)
+    }
+    
     
     
     func chnageTexture(index: Int) {
@@ -46,7 +68,7 @@ class keyboard: UIViewController,  indexItem, chnageColor, changeFont, aligthmen
     var screenHeight = 0
     var topViewHieght = 60
     var removeSubviews = false
-    var fontSize = 15
+    var fontSize = 25
     var fontName = "sadiq"
     var FontHasChanged = false
     var alighment = 1
@@ -94,8 +116,9 @@ class keyboard: UIViewController,  indexItem, chnageColor, changeFont, aligthmen
         
         toolsView.delegeteAlighment = self
         toolsView.delegeteFontSize = self
-        toolsView.delegeteLineSpacing = self
-        toolsView.delegeteCharacterSpacing = self
+        //toolsView.delegeteLineSpacing = self
+       // toolsView.delegeteCharacterSpacing = self
+        toolsView.delegeteForAlpa = self
         
         colorView =  (UINib(nibName: "ColorView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! ColorView)
         colorView.delegateForColor = self
@@ -202,7 +225,7 @@ class keyboard: UIViewController,  indexItem, chnageColor, changeFont, aligthmen
     @IBAction func gotoPreviousView(_ sender: Any) {
         
         delegateForBack?.doneBack()
-        delegateForChnageImage?.changeAttri(attributed: attributedT)
+        delegateForChnageImage?.changeTextView(textView: textView)
 
         NotificationCenter.default.removeObserver(self)
         self.dismiss(animated: true, completion: nil)
@@ -287,7 +310,7 @@ class keyboard: UIViewController,  indexItem, chnageColor, changeFont, aligthmen
     {
         fontName = name as String
         self.setAttributedString()
-        textView.becomeFirstResponder()
+        //textView.becomeFirstResponder()
     }
     
     func changeAlighment(index: Int) {
@@ -372,6 +395,7 @@ extension keyboard: UITabBarDelegate {
             view.addSubview(shadowView)
             
             shadowView.translatesAutoresizingMaskIntoConstraints = false
+            shadowView.delegateForShadow = self
             
             let bottom = shadowView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
             let leading = shadowView.leadingAnchor.constraint(equalTo: view.leadingAnchor)
@@ -396,7 +420,7 @@ extension keyboard: UITabBarDelegate {
             let heightConstraint = toolsView.heightAnchor.constraint(equalToConstant: 336.0)
             NSLayoutConstraint.activate([bottom, leading, trailing, heightConstraint])
         } else if value == 5 {
-            delegateForChnageImage?.changeAttri(attributed: attributedT)
+            delegateForChnageImage?.changeTextView(textView: textView)
             dismiss(animated: true)
         }
     }

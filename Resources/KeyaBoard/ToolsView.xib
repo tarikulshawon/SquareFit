@@ -129,10 +129,10 @@
                                     <rect key="frame" x="0.0" y="0.0" width="345" height="108"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Bu-bf-J7N">
-                                            <rect key="frame" x="0.0" y="0.0" width="345" height="36"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="345" height="54"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="font-increase" translatesAutoresizingMaskIntoConstraints="NO" id="2G2-lP-JiY">
-                                                    <rect key="frame" x="0.0" y="8" width="20" height="20"/>
+                                                    <rect key="frame" x="0.0" y="17" width="20" height="20"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="Ame-5M-l5k"/>
@@ -140,7 +140,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minValue="15" maxValue="45" translatesAutoresizingMaskIntoConstraints="NO" id="nWr-cP-vco">
-                                                    <rect key="frame" x="28" y="0.0" width="319" height="37"/>
+                                                    <rect key="frame" x="28" y="0.0" width="319" height="55"/>
                                                     <color key="tintColor" red="0.12156862745098039" green="0.73725490196078436" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
                                                     <connections>
                                                         <action selector="textSizeChange:" destination="iN0-l3-epB" eventType="valueChanged" id="yZj-Fn-sHO"/>
@@ -158,21 +158,21 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9lB-Eo-WOd">
-                                            <rect key="frame" x="0.0" y="36" width="345" height="36"/>
+                                            <rect key="frame" x="0.0" y="54" width="345" height="54"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="text-vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hoM-eo-jVQ">
-                                                    <rect key="frame" x="0.0" y="8" width="20" height="20"/>
+                                                    <rect key="frame" x="0.0" y="17" width="20" height="20"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="Hto-Wb-ifl"/>
                                                         <constraint firstAttribute="width" constant="20" id="TUq-dg-4Tt"/>
                                                     </constraints>
                                                 </imageView>
-                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="Zd8-aQ-fqx">
-                                                    <rect key="frame" x="28" y="0.0" width="319" height="37"/>
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.40000000000000002" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Zd8-aQ-fqx">
+                                                    <rect key="frame" x="28" y="0.0" width="319" height="55"/>
                                                     <color key="tintColor" red="0.1215686275" green="0.73725490199999999" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
                                                     <connections>
-                                                        <action selector="changeLineSpacing:" destination="iN0-l3-epB" eventType="valueChanged" id="L5M-AN-CjK"/>
+                                                        <action selector="opacityValueChange:" destination="iN0-l3-epB" eventType="valueChanged" id="BGz-hl-3qq"/>
                                                     </connections>
                                                 </slider>
                                             </subviews>
@@ -184,35 +184,6 @@
                                                 <constraint firstItem="hoM-eo-jVQ" firstAttribute="leading" secondItem="9lB-Eo-WOd" secondAttribute="leading" id="Z95-tB-NsH"/>
                                                 <constraint firstItem="hoM-eo-jVQ" firstAttribute="centerY" secondItem="9lB-Eo-WOd" secondAttribute="centerY" id="fyQ-0P-Syr"/>
                                                 <constraint firstItem="Zd8-aQ-fqx" firstAttribute="top" secondItem="9lB-Eo-WOd" secondAttribute="top" id="qsT-GP-8Qh"/>
-                                            </constraints>
-                                        </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DT6-uY-M9w">
-                                            <rect key="frame" x="0.0" y="72" width="345" height="36"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="text-horizontal" translatesAutoresizingMaskIntoConstraints="NO" id="1mV-4G-ssp">
-                                                    <rect key="frame" x="0.0" y="8" width="20" height="20"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="20" id="YTq-Tj-es1"/>
-                                                        <constraint firstAttribute="width" constant="20" id="x11-vA-HUN"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="bi1-vI-MvJ">
-                                                    <rect key="frame" x="28" y="0.0" width="319" height="37"/>
-                                                    <color key="tintColor" red="0.12156862745098039" green="0.73725490196078436" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <connections>
-                                                        <action selector="chnageCharacterSpacing:" destination="iN0-l3-epB" eventType="valueChanged" id="OM1-bN-ndX"/>
-                                                    </connections>
-                                                </slider>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="bi1-vI-MvJ" secondAttribute="trailing" id="3m5-OI-sCh"/>
-                                                <constraint firstAttribute="bottom" secondItem="bi1-vI-MvJ" secondAttribute="bottom" id="DiC-CO-ilg"/>
-                                                <constraint firstItem="1mV-4G-ssp" firstAttribute="centerY" secondItem="DT6-uY-M9w" secondAttribute="centerY" id="Q8U-xQ-GcR"/>
-                                                <constraint firstItem="bi1-vI-MvJ" firstAttribute="leading" secondItem="1mV-4G-ssp" secondAttribute="trailing" constant="10" id="o66-eT-h4t"/>
-                                                <constraint firstItem="bi1-vI-MvJ" firstAttribute="top" secondItem="DT6-uY-M9w" secondAttribute="top" id="oCh-sV-Tkt"/>
-                                                <constraint firstItem="1mV-4G-ssp" firstAttribute="leading" secondItem="DT6-uY-M9w" secondAttribute="leading" id="omo-VM-XAb"/>
                                             </constraints>
                                         </view>
                                     </subviews>
@@ -257,7 +228,6 @@
         <image name="left-align" width="30" height="30"/>
         <image name="middle-align" width="30" height="30"/>
         <image name="right-align" width="30" height="30"/>
-        <image name="text-horizontal" width="30" height="30"/>
         <image name="text-vertical" width="30" height="30"/>
     </resources>
 </document>

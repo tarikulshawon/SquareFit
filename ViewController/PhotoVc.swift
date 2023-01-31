@@ -10,7 +10,13 @@ import AudioToolbox
 
 class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, StickerViewDelegate, changeImage, backButton, TextStickerContainerViewDelegate {
     
-   
+    
+    func changeTextView(textView: UITextView) {
+        self.addText(text: textView.text, font: textView.font!, textView: textView)
+    }
+    
+    
+    
     @IBOutlet weak var widthForTempView: NSLayoutConstraint!
     @IBOutlet weak var heightForTempView: NSLayoutConstraint!
     @IBOutlet weak var btnCollectionView: UICollectionView!
@@ -34,7 +40,7 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
     var currentTextStickerView: TextStickerContainerView?
     let currentlyActiveIndex = 0
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -56,9 +62,9 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
         btnArray = NSArray(contentsOfFile: path!)
         initCollectionView()
         self.perform(#selector(self.updateFrame), with: self, afterDelay:0.1)
-       
+        
     }
-
+    
     func sendColorBackgroundV(color: UIColor, image: UIImage?) {
         
         if let value = image {
@@ -71,29 +77,29 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
     }
     
     func changeAttri(attributed: NSAttributedString) {
-        self.addText(text: "", attributed: attributed)
+        self.addText(text: "", font: UIFont.systemFont(ofSize: 20.0), textView: nil)
     }
     
     
     func setCurrentTextStickerView(textStickerContainerView: TextStickerContainerView) {
-         
+        
     }
     
     func editTextStickerView(textStickerContainerView: TextStickerContainerView) {
-         
+        
     }
     
     func deleteTextStickerView(textStickerContainerView: TextStickerContainerView) {
         currentTextStickerView?.removeFromSuperview()
-         
+        
     }
     
     func moveViewPosition(textStickerContainerView: TextStickerContainerView) {
-         
+        
     }
     
     func showKeyBoard(text: String) {
-         
+        
     }
     
     
@@ -126,31 +132,31 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
     }
     
     func stickerViewDidBeginMoving(_ stickerView: StickerView) {
-         
+        
     }
     
     func stickerViewDidChangeMoving(_ stickerView: StickerView) {
-         
+        
     }
     
     func stickerViewDidEndMoving(_ stickerView: StickerView) {
-         
+        
     }
     
     func stickerViewDidBeginRotating(_ stickerView: StickerView) {
-         
+        
     }
     
     func stickerViewDidChangeRotating(_ stickerView: StickerView) {
-         
+        
     }
     
     func stickerViewDidEndRotating(_ stickerView: StickerView) {
-         
+        
     }
     
     func stickerViewDidClose(_ stickerView: StickerView) {
-         
+        
     }
     
     func stickerViewDidTap(_ stickerView: StickerView) {
@@ -161,7 +167,7 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
         
     }
     
-  
+    
     
     func sendFrame(frames: String) {
         let v = UIImage(named: frames)
@@ -183,7 +189,7 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
     
     
     func sendCanvasData(width: Int, height: Int) {
-       
+        
         let result = CGFloat(height*Int(holderView.frame.width))/CGFloat(width)
         UIView.animate(withDuration: 0.4, animations: {
             
@@ -199,7 +205,7 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
             }
             
             self.view.layoutIfNeeded()
-             
+            
         }) { _ in
             
         }
@@ -212,29 +218,46 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
     }
     
     
-    func addText(text: String, attributed: NSAttributedString) {
+    func addText(text: String,font:UIFont,textView:UITextView? ) {
+        if text.count < 1 {
+            return
+        }
         print("[AddText] delegate called")
         
         var value = UserDefaults.standard.integer(forKey: "text")
         value = value + 1
         
         UserDefaults.standard.set(value, forKey: "text")
-       
+        
         let frame = CGRect(x: 0, y: 0, width: 250, height: 200)
         let sticker = TextStickerContainerView(frame: frame)
         sticker.tag = value + 700// TODO: implement in alternative way
         sticker.delegate = self
         sticker.currentFontIndex = -1
         
-        //sticker.pathName = font.fontName //
+        sticker.pathName = font.fontName //
         sticker.pathType = "TEXT"
         
         //sticker.textStickerView.delegate = self
         sticker.textStickerView.text = text
-       /// sticker.textStickerView.font = font
+        sticker.textStickerView.font = font
+        
+        
+        if let value = textView {
+            sticker.textStickerView.textColor = value.textColor
+            sticker.textStickerView.backgroundColor = value.backgroundColor
+            sticker.textStickerView.textAlignment = value.textAlignment
+            sticker.textStickerView.font = value.font
+            sticker.textStickerView.layer.shadowColor = value.layer.shadowColor
+            sticker.textStickerView.layer.shadowRadius = value.layer.shadowRadius
+            sticker.textStickerView.layer.shadowOpacity = value.layer.shadowOpacity
+            sticker.textStickerView.layer.shadowOffset = value.layer.shadowOffset
+            sticker.textStickerView.backgroundColor = value.backgroundColor
+            sticker.textStickerView.alpha = value.alpha
+        }
         
         sticker.textStickerView.updateTextFont()
-        sticker.initilizeTextStickerData(mainTextView: sticker.textStickerView, attributed: attributed)
+        sticker.initilizeTextStickerData(mainTextView: sticker.textStickerView)
         
         stickerView.addSubview(sticker)
         stickerView.clipsToBounds = true
@@ -270,7 +293,7 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
         stickerView3.showEditingHandlers = true
     }
     
-
+    
     @objc private func didPan(_ recogniser: UIPanGestureRecognizer) {
         
         if recogniser.state == .began || recogniser.state == .changed {
@@ -301,7 +324,7 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
         }
         
         else if (recogniser.state == .ended) {
-           
+            
             center_vertical_img_view.isHidden = true
             center_horizontal_img_view.isHidden = true
         }
@@ -344,7 +367,7 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
         layout.scrollDirection = .horizontal
         btnCollectionView?.reloadData()
     }
-        
+    
     func initCollectionView() {
         let emptyAutomationsCell = RatioCell.nib
         btnCollectionView?.register(emptyAutomationsCell, forCellWithReuseIdentifier: RatioCell.reusableID)
@@ -455,10 +478,10 @@ extension PhotoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollect
             
             else if titleName.contains("Overlay") {
                 vc.defaultHeight = CGFloat(overLayHeight)
-               // vc.maximumContainerHeight = CGFloat(overLayHeight)
+                // vc.maximumContainerHeight = CGFloat(overLayHeight)
                 vc.overlayVc.isHidden = false
                 
-               
+                
             }
             else if titleName.contains("Shape") {
                 vc.defaultHeight = CGFloat(shapeVcHeight)
@@ -489,7 +512,7 @@ extension PhotoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollect
             else {
                 vc.defaultHeight = 300
                 vc.stickerVc.isHidden = false
-
+                
             }
             vc.typeName = titleName
             
@@ -501,7 +524,7 @@ extension PhotoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollect
 
 extension PhotoVc: quotesDelegate {
     func sendQuoteText(text: String) {
-        //self.addText(text: text, font: UIFont.systemFont(ofSize: 20.0))
+        self.addText(text: text, font: UIFont.systemFont(ofSize: 20.0), textView: nil)
     }
 }
 
@@ -528,11 +551,11 @@ private extension PhotoVc {
 
 extension UITextView {
     
-func setCharacterSpacing(_ spacing: CGFloat){
-    let attributedStr = NSMutableAttributedString(string: self.text ?? "")
-    attributedStr.addAttribute(NSAttributedString.Key.kern, value: spacing, range: NSMakeRange(0, attributedStr.length))
-    self.attributedText = attributedStr
- }
+    func setCharacterSpacing(_ spacing: CGFloat){
+        let attributedStr = NSMutableAttributedString(string: self.text ?? "")
+        attributedStr.addAttribute(NSAttributedString.Key.kern, value: spacing, range: NSMakeRange(0, attributedStr.length))
+        self.attributedText = attributedStr
+    }
     
     func updateTextFont() {
         if text.isEmpty || bounds.size.equalTo(CGSize.zero) { return }
