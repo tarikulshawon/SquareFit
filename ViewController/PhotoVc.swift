@@ -51,7 +51,7 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
         
         intermediateview.addGestureRecognizer(panRecogniser)
         intermediateview.addGestureRecognizer(pinchRecogniser)
-        intermediateview.addGestureRecognizer(tapRecogniser)
+        stickerView.addGestureRecognizer(tapRecogniser)
         
         panRecogniser.delegate = self
         pinchRecogniser.delegate = self
@@ -380,7 +380,7 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
     }
     
     @objc private func didTap(_ recogniser: UITapGestureRecognizer) {
-        
+        self.hideALL()
         
     }
     

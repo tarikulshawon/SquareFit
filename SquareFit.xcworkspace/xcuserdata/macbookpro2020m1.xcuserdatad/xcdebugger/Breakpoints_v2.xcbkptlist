@@ -329,8 +329,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "179"
             endingLineNumber = "179"
-            landmarkName = "sendOverLay(image:)"
-            landmarkType = "7">
+            landmarkName = "PhotoVc"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1190,6 +1190,38 @@
             endingLineNumber = "251"
             landmarkName = "addText(text:font:textView:size:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1D218970-EA24-4150-89C8-2C3F29BA0E25 - c77e90c85d1c9df7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SquareFit.PhotoVc.addText(text: Swift.String, font: __C.UIFont, textView: Swift.Optional&lt;__C.UITextView&gt;, size: CoreGraphics.CGFloat) -&gt; ()"
+                  moduleName = "SquareFit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro2020m1/Documents/GitHub/SquareFit/ViewController/PhotoVc.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "251"
+                  endingLineNumber = "251"
+                  offsetFromSymbolStart = "1944">
+               </Location>
+               <Location
+                  uuid = "1D218970-EA24-4150-89C8-2C3F29BA0E25 - c77e90c85d1c9df7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SquareFit.PhotoVc.addText(text: Swift.String, font: __C.UIFont, textView: Swift.Optional&lt;__C.UITextView&gt;, size: CoreGraphics.CGFloat) -&gt; ()"
+                  moduleName = "SquareFit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro2020m1/Documents/GitHub/SquareFit/ViewController/PhotoVc.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "251"
+                  endingLineNumber = "251"
+                  offsetFromSymbolStart = "1979">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1332,8 +1364,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "88"
             endingLineNumber = "88"
-            landmarkName = "PhotoVc"
-            landmarkType = "3">
+            landmarkName = "setCurrentTextStickerView(textStickerContainerView:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1349,6 +1381,22 @@
             startingLineNumber = "84"
             endingLineNumber = "84"
             landmarkName = "setCurrentTextStickerView(textStickerContainerView:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7B541303-460C-4B0E-96A3-CF3415AFAEE1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ViewController/PhotoVc.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "385"
+            endingLineNumber = "385"
+            landmarkName = "didTap(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
