@@ -131,58 +131,18 @@ class keyboard: UIViewController,  indexItem, chnageColor, changeFont, aligthmen
         fontsView =  (UINib(nibName: "FontsView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! FontsView)
         
         
-        self.setAttributedString()
+        //self.setAttributedString()
         
         //textView.becomeFirstResponder()
+        
+        textView.font =  UIFont(name:fontName , size:CGFloat(fontSize))
     }
     
-    func setAttributedString( )
-    {
-        
-        
-        let value=textView.font!.lineHeight + CGFloat(lineSpacingBetweenlines)
-        let paragraph = NSMutableParagraphStyle()
-        
-        
-        paragraph.lineHeightMultiple = value;
-        paragraph.maximumLineHeight =  value;
-        paragraph.minimumLineHeight =  value;
-        
-        switch (alighment) {
-        case 0:
-            paragraph.alignment = .left;
-            break;
-        case 1:
-            paragraph.alignment = .center;
-            break;
-        case 2:
-            paragraph.alignment = .right;
-            break;
-        case 3:
-            paragraph.alignment = .justified;
-        default:
-            break;
-        }
-        let attributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont(name:fontName , size:CGFloat(fontSize)) as Any,
-            .foregroundColor: colorForTextView,
-            NSAttributedString.Key.kern:CGFloat(lineSpacing),
-            .paragraphStyle: paragraph
-            
-        ]
-        
-        
-        let attributedQuote = NSAttributedString(string: textView.text, attributes: attributes)
-        textView.attributedText = attributedQuote
-        
-        
-        attributedT = attributedQuote
-        
-    }
+   
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         
-        self.setAttributedString()
+       
         return true
     }
     
@@ -302,37 +262,53 @@ class keyboard: UIViewController,  indexItem, chnageColor, changeFont, aligthmen
     }
     func chnageColorForView(color: UIColor)
     {
-        colorForTextView = color
-        self.setAttributedString()
+        textView.textColor = color
         
     }
     func changeFont(name: NSString)
     {
         fontName = name as String
-        self.setAttributedString()
-        //textView.becomeFirstResponder()
+        textView.font =  UIFont(name:fontName , size:CGFloat(fontSize))
     }
     
     func changeAlighment(index: Int) {
         
         alighment = index
-        self.setAttributedString()
+        
+        switch (alighment) {
+        case 0:
+            textView.textAlignment = .left
+            break;
+        case 1:
+            textView.textAlignment = .center;
+            break;
+        case 2:
+            textView.textAlignment = .right;
+            break;
+        case 3:
+            textView.textAlignment = .justified;
+        default:
+            break;
+        }
+        
+        
     }
     func chnageFontSize(size: Int)
     {
         fontSize = size
-        self.setAttributedString()
+        textView.font = UIFont(name:fontName , size:CGFloat(fontSize))
+        
         
     }
     func chnageLineSpacing(size: Int)
     {
         lineSpacing = size
-        self.setAttributedString()
+       // self.setAttributedString()
     }
     func chnageCharacterSpace(size: Int)
     {
         lineSpacingBetweenlines = size
-        self.setAttributedString()
+        //self.setAttributedString()
     }
     
 }

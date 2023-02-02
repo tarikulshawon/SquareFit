@@ -240,33 +240,17 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
         
         //sticker.textStickerView.delegate = self
         sticker.textStickerView.text = text
-        sticker.textStickerView.font = font
+        //sticker.textStickerView.font = font
         
         
         if let value = textView {
             
             // retrieve attributes
-            let attributes = value.attributedText.attributes(at: 0, effectiveRange: nil)
 
-            // iterate each attribute
-            for attr in attributes {
-                switch attr.key {
-                case .foregroundColor:
-                    sticker.textStickerView.textColor = attr.value as? UIColor
-                case .font:
-                    sticker.textStickerView.font = attr.value as? UIFont
-                case .backgroundColor:
-                    sticker.textStickerView.backgroundColor = attr.value as? UIColor
-                default:
-                    break
-                }
-              //print(attr.key, attr.value)
-            }
-            
             //sticker.textStickerView.textColor = ...
-            //sticker.textStickerView.backgroundColor = value.backgroundColor
+            sticker.textStickerView.backgroundColor = value.backgroundColor
             sticker.textStickerView.textAlignment = value.textAlignment
-            //sticker.textStickerView.font = value.font
+            sticker.textStickerView.font = value.font
             sticker.textStickerView.layer.shadowColor = value.layer.shadowColor
             sticker.textStickerView.layer.shadowRadius = value.layer.shadowRadius
             sticker.textStickerView.layer.shadowOpacity = value.layer.shadowOpacity

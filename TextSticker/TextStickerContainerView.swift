@@ -226,6 +226,7 @@ extension TextStickerContainerView {
     
     func initilizeTextStickerData(mainTextView: TextStickerView){
         let text = prepareText(maintextView: mainTextView)
+       // print(mainTextView.font?.)
         
         self.textStickerView.text = text
         self.textStickerView.fontSize = mainTextView.font!.pointSize
