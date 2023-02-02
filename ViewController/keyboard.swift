@@ -11,7 +11,7 @@ import UIKit
 
 protocol changeImage {
     func changeImage(image: UIImage)
-    func changeTextView(textView: UITextView)
+    func changeTextView(textView: UITextView,size:CGFloat)
 }
 
 protocol backButton {
@@ -185,7 +185,7 @@ class keyboard: UIViewController,  indexItem, chnageColor, changeFont, aligthmen
     @IBAction func gotoPreviousView(_ sender: Any) {
         
         delegateForBack?.doneBack()
-        delegateForChnageImage?.changeTextView(textView: textView)
+       // delegateForChnageImage?.changeTextView(textView: textView)
 
         NotificationCenter.default.removeObserver(self)
         self.dismiss(animated: true, completion: nil)
@@ -396,7 +396,7 @@ extension keyboard: UITabBarDelegate {
             let heightConstraint = toolsView.heightAnchor.constraint(equalToConstant: 336.0)
             NSLayoutConstraint.activate([bottom, leading, trailing, heightConstraint])
         } else if value == 5 {
-            delegateForChnageImage?.changeTextView(textView: textView)
+            delegateForChnageImage?.changeTextView(textView: textView, size: CGFloat(fontSize))
             dismiss(animated: true)
         }
     }

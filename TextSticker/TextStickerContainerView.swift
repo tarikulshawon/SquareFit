@@ -224,12 +224,13 @@ extension TextStickerContainerView {
         self.addSubview(deleteController)
     }
     
-    func initilizeTextStickerData(mainTextView: TextStickerView){
+    func initilizeTextStickerData(mainTextView: TextStickerView,fontSize:CGFloat,fontName:String){
         let text = prepareText(maintextView: mainTextView)
        // print(mainTextView.font?.)
         
         self.textStickerView.text = text
-        self.textStickerView.fontSize = mainTextView.font!.pointSize
+        self.textStickerView.fontSize = fontSize
+        
         
         self.textStickerView.textColor = mainTextView.textColor
         self.textStickerView.autocorrectionType = .no
@@ -238,7 +239,14 @@ extension TextStickerContainerView {
         self.textStickerView.layer.shadowRadius = mainTextView.layer.shadowRadius
         self.textStickerView.layer.shadowOpacity = mainTextView.layer.shadowOpacity
         self.textStickerView.layer.shadowOffset = mainTextView.layer.shadowOffset
-        self.textStickerView.font = mainTextView.font
+        
+        if fontName.count > 0 {
+            self.textStickerView.font = UIFont(name: fontName, size: fontSize)
+        }
+        else {
+            self.textStickerView.font = UIFont.systemFont(ofSize: fontSize)
+        }
+       
         self.textStickerView.textAlignment = mainTextView.textAlignment
         self.textStickerView.font = mainTextView.font
         self.textStickerView.alpha = mainTextView.alpha

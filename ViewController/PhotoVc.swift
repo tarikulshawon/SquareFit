@@ -11,8 +11,8 @@ import AudioToolbox
 class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, StickerViewDelegate, changeImage, backButton, TextStickerContainerViewDelegate {
     
     
-    func changeTextView(textView: UITextView) {
-        self.addText(text: textView.text, font: textView.font!, textView: textView)
+    func changeTextView(textView: UITextView,size:CGFloat ) {
+        self.addText(text: textView.text, font: textView.font!, textView: textView, size: size)
     }
     
     
@@ -76,13 +76,15 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
         }
     }
     
-    func changeAttri(attributed: NSAttributedString) {
-        self.addText(text: "", font: UIFont.systemFont(ofSize: 20.0), textView: nil)
+    func changeAttri(attributed: NSAttributedString ,fontSize:CGFloat) {
+        self.addText(text: "", font: UIFont.systemFont(ofSize: 20.0), textView: nil, size: fontSize)
     }
     
     
     func setCurrentTextStickerView(textStickerContainerView: TextStickerContainerView) {
-        
+        self.hideALL()
+        self.currentTextStickerView = textStickerContainerView
+        self.currentTextStickerView?.hideTextBorder(isHide: false)
     }
     
     func editTextStickerView(textStickerContainerView: TextStickerContainerView) {
@@ -218,18 +220,21 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
     }
     
     
-    func addText(text: String, font: UIFont, textView: UITextView?) {
+    func addText(text: String, font: UIFont, textView: UITextView? ,size:CGFloat) {
+        
         if text.count < 1 {
             return
         }
+        self.hideALL()
         print("[AddText] delegate called")
         
+        var fontName = ""
         var value = UserDefaults.standard.integer(forKey: "text")
         value = value + 1
         
         UserDefaults.standard.set(value, forKey: "text")
         
-        let frame = CGRect(x: 0, y: 0, width: 250, height: 200)
+        let frame = CGRect(x: 0, y: 0, width: 350, height: 200)
         let sticker = TextStickerContainerView(frame: frame)
         sticker.tag = value + 700// TODO: implement in alternative way
         sticker.delegate = self
@@ -240,17 +245,21 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
         
         //sticker.textStickerView.delegate = self
         sticker.textStickerView.text = text
-        //sticker.textStickerView.font = font
+        sticker.textStickerView.font = font
         
         
         if let value = textView {
             
             // retrieve attributes
-
+            fontName = value.font?.fontName ?? ""
             //sticker.textStickerView.textColor = ...
             sticker.textStickerView.backgroundColor = value.backgroundColor
             sticker.textStickerView.textAlignment = value.textAlignment
-            sticker.textStickerView.font = value.font
+            sticker.textStickerView.font = UIFont(name: value.font?.fontName ?? "", size: size)
+            
+            
+            
+            
             sticker.textStickerView.layer.shadowColor = value.layer.shadowColor
             sticker.textStickerView.layer.shadowRadius = value.layer.shadowRadius
             sticker.textStickerView.layer.shadowOpacity = value.layer.shadowOpacity
@@ -260,7 +269,7 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
         }
         
         sticker.textStickerView.updateTextFont()
-        sticker.initilizeTextStickerData(mainTextView: sticker.textStickerView)
+        sticker.initilizeTextStickerData(mainTextView: sticker.textStickerView, fontSize: size, fontName: fontName)
         
         stickerView.addSubview(sticker)
         stickerView.clipsToBounds = true
@@ -275,6 +284,32 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
         textStickerView.scaleController.isHidden = false
         textStickerView.extendBarView.isHidden = false
         textStickerView.hideTextBorder(isHide: false)
+        
+        
+        currentTextStickerView?.scaleController.updateFrame()
+    }
+    
+    func hideALL() {
+        
+        
+        currentTextStickerView = nil
+        for (index,view) in (stickerView.subviews.filter{($0 is StickerView) || ($0 is TextStickerContainerView)}).enumerated(){
+            switch view {
+            case is StickerView:
+                //guard let ma = view as? StickerView else { return }
+                let ma = view as! StickerView
+                ma.showEditingHandlers = false
+            case is TextStickerContainerView:
+                let ma = view as! TextStickerContainerView
+                ma.deleteController.isHidden = true
+                ma.scaleController.isHidden = true
+                ma.extendBarView?.isHidden = true
+                ma.hideTextBorder(isHide: true)
+            default:
+                break
+            }
+            
+        }
     }
     
     
@@ -527,7 +562,7 @@ extension PhotoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollect
 
 extension PhotoVc: quotesDelegate {
     func sendQuoteText(text: String) {
-        self.addText(text: text, font: UIFont.systemFont(ofSize: 20.0), textView: nil)
+        self.addText(text: text, font: UIFont.systemFont(ofSize: 20.0), textView: nil, size: 20.0)
     }
 }
 
