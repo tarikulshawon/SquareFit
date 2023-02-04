@@ -6,6 +6,7 @@ target 'SquareFit' do
   use_frameworks!
 
   # Pods for SquareFit
+  pod 'Mantis', '~> 2.6.1'
 
   target 'SquareFitTests' do
     inherit! :search_paths

@@ -1236,6 +1236,7 @@
 				01864AE929719B6B00598CEC /* Sources */,
 				01864AEA29719B6B00598CEC /* Frameworks */,
 				01864AEB29719B6B00598CEC /* Resources */,
+				5F5E8C3AA3E298DCC9E54503 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1273,6 +1274,7 @@
 				01864B0929719B6D00598CEC /* Sources */,
 				01864B0A29719B6D00598CEC /* Frameworks */,
 				01864B0B29719B6D00598CEC /* Resources */,
+				24A7970ED7F73CA4CE0EA8EB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1604,6 +1606,40 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		24A7970ED7F73CA4CE0EA8EB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SquareFit-SquareFitUITests/Pods-SquareFit-SquareFitUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SquareFit-SquareFitUITests/Pods-SquareFit-SquareFitUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SquareFit-SquareFitUITests/Pods-SquareFit-SquareFitUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F5E8C3AA3E298DCC9E54503 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SquareFit/Pods-SquareFit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SquareFit/Pods-SquareFit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SquareFit/Pods-SquareFit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7702694FA40E51DA75B6D88B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
