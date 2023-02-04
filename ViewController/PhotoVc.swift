@@ -134,8 +134,17 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
     let currentlyActiveIndex = 0
     
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        
+    }
+    
+    @IBOutlet weak var drawView: DrawingView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        drawView.clipsToBounds = true
         
         panRecogniser = UIPanGestureRecognizer(target: self, action: #selector(didPan(_:)))
         pinchRecogniser = UIPinchGestureRecognizer(target: self, action: #selector(didPinch(_:)))
@@ -550,6 +559,7 @@ extension PhotoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollect
             vc.adjustVc.isHidden = true
             vc.filterVc.isHidden = true
             vc.imageEditVc.isHidden = true
+            vc.drawView.isHidden = true
             
             
             if titleName.contains("Texts") {
@@ -568,6 +578,12 @@ extension PhotoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollect
                 vc.defaultHeight = CGFloat(adjustHeight)
                 vc.maximumContainerHeight = CGFloat(adjustHeight)
                 vc.imageEditVc.isHidden = false
+            }
+            
+            else if titleName.contains("Draw") {
+                vc.defaultHeight = CGFloat(250)
+                vc.maximumContainerHeight = CGFloat(250)
+                vc.drawView.isHidden = false
             }
             
             else if titleName.contains("Adjust") {

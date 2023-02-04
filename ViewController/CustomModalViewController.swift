@@ -93,6 +93,7 @@ class CustomModalViewController: UIViewController, sendSticker, canvasSend, send
     let filterVc = Bundle.main.loadNibNamed("FilterVc", owner: nil, options: nil)![0] as! FilterVc
     let imageEditVc = Bundle.main.loadNibNamed("ImageEditView", owner: nil, options: nil)![0] as! ImageEditView
     let backGroundView = Bundle.main.loadNibNamed("BackGround", owner: nil, options: nil)![0] as! BackGround
+    let drawView = Bundle.main.loadNibNamed("Draw", owner: nil, options: nil)![0] as! Draw
 
 
 
@@ -120,7 +121,12 @@ class CustomModalViewController: UIViewController, sendSticker, canvasSend, send
         
         var stackView:UIStackView!
         
-        if typeName.contains("Background") {
+        if typeName.contains("Draw") {
+            stackView = UIStackView(arrangedSubviews: [spacer, drawView, spacer])
+            stackView.axis = .vertical
+
+        }
+       else  if typeName.contains("Background") {
             stackView = UIStackView(arrangedSubviews: [spacer, backGroundView, spacer])
             backGroundView.delegateForBackground = self
             stackView.axis = .vertical

@@ -251,6 +251,7 @@
 		01A988F9298DFC7C007F4240 /* TextEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A988F8298DFB83007F4240 /* TextEdit.swift */; };
 		01A988FD298E41D4007F4240 /* Draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A988FC298E41D4007F4240 /* Draw.swift */; };
 		01A988FF298E41E1007F4240 /* Draw.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A988FE298E41E1007F4240 /* Draw.xib */; };
+		01A98901298E5627007F4240 /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A98900298E5627007F4240 /* DrawingView.swift */; };
 		01AE3A002971BFCA00C2F652 /* HomeVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AE39FF2971BFCA00C2F652 /* HomeVc.swift */; };
 		01AE3A032971C02000C2F652 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AE3A022971C02000C2F652 /* bg.png */; };
 		01CF1AD829757EC40003DFA4 /* CanVas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CF1AD629757EC30003DFA4 /* CanVas.swift */; };
@@ -589,6 +590,7 @@
 		01A988F8298DFB83007F4240 /* TextEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEdit.swift; sourceTree = "<group>"; };
 		01A988FC298E41D4007F4240 /* Draw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Draw.swift; sourceTree = "<group>"; };
 		01A988FE298E41E1007F4240 /* Draw.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Draw.xib; sourceTree = "<group>"; };
+		01A98900298E5627007F4240 /* DrawingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
 		01AE39FF2971BFCA00C2F652 /* HomeVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVc.swift; sourceTree = "<group>"; };
 		01AE3A022971C02000C2F652 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		01CF1AD629757EC30003DFA4 /* CanVas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanVas.swift; sourceTree = "<group>"; };
@@ -778,6 +780,7 @@
 		010AE8CF2972BECD00A86316 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				01A98900298E5627007F4240 /* DrawingView.swift */,
 				01478E662985FB90005B3EA2 /* GradientSlider.swift */,
 				016B7E6F297B9AA400D5B6F1 /* PlaybackView.h */,
 				016B7E6D297B9AA400D5B6F1 /* PlaybackView.m */,
@@ -1716,6 +1719,7 @@
 				01F013BB29799CEC0077F22D /* StickerView.swift in Sources */,
 				01324113297CCE8F002F8E3C /* CustomSlider.swift in Sources */,
 				01CF1ADC29757ECD0003DFA4 /* CanvasRatioCell.swift in Sources */,
+				01A98901298E5627007F4240 /* DrawingView.swift in Sources */,
 				01010DF3297E4AC300FBF76A /* Quote.swift in Sources */,
 				01478E7229867023005B3EA2 /* BreakWordControllerView.swift in Sources */,
 				01010DF1297E4AC300FBF76A /* QuotesViewModel.swift in Sources */,

@@ -8,13 +8,24 @@
 import UIKit
 
 class Draw: UIView {
+    var colorArray = [UIColor]()
     
-    
+    @IBOutlet weak var collectionView: UICollectionView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        collectionView.delegate = self
+        collectionView.dataSource  = self
         let path = Bundle.main.path(forResource: "colorp", ofType: "plist")
         plistArray = NSArray(contentsOfFile: path!)
+        let nibName = UINib(nibName: RatioCell.reusableID, bundle: nil)
+        collectionView.register(nibName, forCellWithReuseIdentifier:  RatioCell.reusableID)
+        colorArray.append(UIColor.white)
+        colorArray.append(UIColor.black)
+        
+        for item in plistArray {
+            colorArray.append(getColor(colorString: item as! String))
+        }
+        
     }
     
     
@@ -39,22 +50,31 @@ class Draw: UIView {
     
 }
 
-extension Draw: UICollectionViewDelegate, UICollectionViewDataSource {
+extension Draw: UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return  plistArray.count
+        return  colorArray.count
+    }
+
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        sizeForItemAt indexPath: IndexPath
+    ) -> CGSize {
+        
+        print("khanki")
+        return CGSize(width: 60, height: 60)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        if let view = cell.viewWithTag(111) {
-            view.layer.cornerRadius = 3
-            view.backgroundColor = getColor(colorString: plistArray[indexPath.row] as! String)
-        }
+        
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RatioCell.reusableID  , for: indexPath as IndexPath) as! RatioCell
+        cell.backgroundColor = colorArray[indexPath.row]
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let color = getColor(colorString: plistArray[indexPath.row] as! String)
+       
         
     }
     
