@@ -225,7 +225,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kDg-gj-j8o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="952" y="-630"/>
+            <point key="canvasLocation" x="182" y="-1617"/>
         </scene>
         <!--Home Vc-->
         <scene sceneID="tne-QT-ifu">
@@ -453,17 +453,17 @@
                                         <rect key="frame" x="7.6666666666666572" y="104.66666666666663" width="375" height="375"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VDC-BV-eil">
-                                                <rect key="frame" x="-8" y="-7" width="390" height="390"/>
+                                                <rect key="frame" x="-10" y="-8" width="390" height="390"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </imageView>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TRm-mO-00k" customClass="PlaybackView">
-                                                <rect key="frame" x="-8" y="-7" width="390" height="390"/>
+                                                <rect key="frame" x="-10" y="-8" width="390" height="390"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y3k-5M-3B0" customClass="PlaybackView">
-                                                <rect key="frame" x="-8" y="-7" width="390" height="390"/>
+                                                <rect key="frame" x="-10" y="-8" width="390" height="390"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>

@@ -4,6 +4,7 @@
 <array>
 	<string>Canvas</string>
 	<string>Crop</string>
+	<string>Draw</string>
 	<string>Background</string>
 	<string>Texts</string>
 	<string>Graphics</string>
@@ -14,6 +15,5 @@
 	<string>Overlay</string>
 	<string>Image</string>
 	<string>Shape</string>
-	<string>Draw</string>
 </array>
 </plist>

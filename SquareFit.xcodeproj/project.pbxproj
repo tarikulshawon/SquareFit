@@ -249,7 +249,8 @@
 		01864B1429719B6D00598CEC /* SquareFitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01864B1329719B6D00598CEC /* SquareFitUITestsLaunchTests.swift */; };
 		01A826992972972800DCCEF7 /* PhotoVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A826982972972800DCCEF7 /* PhotoVc.swift */; };
 		01A988F9298DFC7C007F4240 /* TextEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A988F8298DFB83007F4240 /* TextEdit.swift */; };
-		01A988FB298E3A44007F4240 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A988FA298E3A44007F4240 /* CanvasView.swift */; };
+		01A988FD298E41D4007F4240 /* Draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A988FC298E41D4007F4240 /* Draw.swift */; };
+		01A988FF298E41E1007F4240 /* Draw.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A988FE298E41E1007F4240 /* Draw.xib */; };
 		01AE3A002971BFCA00C2F652 /* HomeVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AE39FF2971BFCA00C2F652 /* HomeVc.swift */; };
 		01AE3A032971C02000C2F652 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AE3A022971C02000C2F652 /* bg.png */; };
 		01CF1AD829757EC40003DFA4 /* CanVas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CF1AD629757EC30003DFA4 /* CanVas.swift */; };
@@ -586,7 +587,8 @@
 		01864B1329719B6D00598CEC /* SquareFitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareFitUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		01A826982972972800DCCEF7 /* PhotoVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoVc.swift; sourceTree = "<group>"; };
 		01A988F8298DFB83007F4240 /* TextEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEdit.swift; sourceTree = "<group>"; };
-		01A988FA298E3A44007F4240 /* CanvasView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		01A988FC298E41D4007F4240 /* Draw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Draw.swift; sourceTree = "<group>"; };
+		01A988FE298E41E1007F4240 /* Draw.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Draw.xib; sourceTree = "<group>"; };
 		01AE39FF2971BFCA00C2F652 /* HomeVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVc.swift; sourceTree = "<group>"; };
 		01AE3A022971C02000C2F652 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		01CF1AD629757EC30003DFA4 /* CanVas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanVas.swift; sourceTree = "<group>"; };
@@ -776,7 +778,6 @@
 		010AE8CF2972BECD00A86316 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				01A988FA298E3A44007F4240 /* CanvasView.swift */,
 				01478E662985FB90005B3EA2 /* GradientSlider.swift */,
 				016B7E6F297B9AA400D5B6F1 /* PlaybackView.h */,
 				016B7E6D297B9AA400D5B6F1 /* PlaybackView.m */,
@@ -811,6 +812,8 @@
 				010AEC9A2972FC4000A86316 /* StickerVc.xib */,
 				011537D129803ECC00CF9A87 /* BackGround.swift */,
 				011537D529803FF300CF9A87 /* BackGround.xib */,
+				01A988FC298E41D4007F4240 /* Draw.swift */,
+				01A988FE298E41E1007F4240 /* Draw.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -1424,6 +1427,7 @@
 				01324144297D0AF3002F8E3C /* filter_9.jpg in Resources */,
 				01680B6C2973CFC70088F915 /* OverlayThumb0.png in Resources */,
 				01324175297D0AFC002F8E3C /* thumb_21.jpg in Resources */,
+				01A988FF298E41E1007F4240 /* Draw.xib in Resources */,
 				01F0131C29798DBD0077F22D /* FrameThumb0.png in Resources */,
 				01F0133729798DBD0077F22D /* FrameThumb41.png in Resources */,
 				01680B982973CFC70088F915 /* OverlayThumb13.png in Resources */,
@@ -1684,6 +1688,7 @@
 				01478E672985FB90005B3EA2 /* GradientSlider.swift in Sources */,
 				01864AF129719B6B00598CEC /* AppDelegate.swift in Sources */,
 				012092A0297ADF8F0081D3B8 /* VideoVc.swift in Sources */,
+				01A988FD298E41D4007F4240 /* Draw.swift in Sources */,
 				010AECA529732A2A00A86316 /* ShapeVc.swift in Sources */,
 				01324197297D2489002F8E3C /* FontsView.swift in Sources */,
 				016B7E73297BA23800D5B6F1 /* ExportManager.swift in Sources */,
@@ -1714,7 +1719,6 @@
 				01010DF3297E4AC300FBF76A /* Quote.swift in Sources */,
 				01478E7229867023005B3EA2 /* BreakWordControllerView.swift in Sources */,
 				01010DF1297E4AC300FBF76A /* QuotesViewModel.swift in Sources */,
-				01A988FB298E3A44007F4240 /* CanvasView.swift in Sources */,
 				013241A7297D24D8002F8E3C /* DefaultWheelGestureHandler.swift in Sources */,
 				01864AF329719B6B00598CEC /* SceneDelegate.swift in Sources */,
 				01010DF5297E4AC300FBF76A /* TagableCell.swift in Sources */,
