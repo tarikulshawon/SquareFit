@@ -11,6 +11,8 @@ import Mantis
 
 class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, StickerViewDelegate, changeImage, backButton, TextStickerContainerViewDelegate, CropViewControllerDelegate {
     func cropViewControllerDidCrop(_ cropViewController: Mantis.CropViewController, cropped: UIImage, transformation: Mantis.Transformation, cropInfo: Mantis.CropInfo) {
+        imv.image = cropped
+        cropViewController.dismiss(animated: true)
         
     }
     
