@@ -9,6 +9,10 @@ import UIKit
 import AudioToolbox
 
 class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, StickerViewDelegate, changeImage, backButton, TextStickerContainerViewDelegate {
+    func sendOpacityValue(value: CGFloat) {
+        drawView.strokeOpacity = value
+    }
+    
     func clearAllDataValue() {
         drawView.clearCanvasView()
     }

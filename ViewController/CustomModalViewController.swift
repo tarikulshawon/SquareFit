@@ -23,6 +23,7 @@ import UIKit
     func shouldHideDraw()
     @objc optional func sendBrushWidthValue(value:CGFloat)
     @objc optional func clearAllDataValue()
+    @objc optional func sendOpacityValue(value:CGFloat)
 }
 
 class CustomModalViewController: UIViewController, sendSticker, canvasSend, sendFrames, imageIndexDelegate, sendValueForAdjust, filterIndexDelegate, sendImageDelegate, sendShape, sendBackGroundView, drawViewDelegate {
@@ -39,7 +40,7 @@ class CustomModalViewController: UIViewController, sendSticker, canvasSend, send
     }
     
     func sendOpacity(value: CGFloat) {
-        
+        delegateForEditedView?.sendOpacityValue!(value: value)
     }
     
     func undoAction() {
