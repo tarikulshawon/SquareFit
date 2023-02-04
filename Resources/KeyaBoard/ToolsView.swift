@@ -27,8 +27,21 @@ class ToolsView: UIView {
     public var delegeteAlighment: aligthmentTag?
     public var delegeteFontSize: chnageFontSize?
     public var delegeteForAlpa: chnageAlpa?
+    var currentTextSizeValue = 25
+    var maximumValueText = 62
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+    }
     
+    func setValue() {
+        
+        textIncreasingSlider.maximumValue = Float(maximumValueText)
+        textIncreasingSlider.value = Float(currentTextSizeValue)
+    }
+    
+    @IBOutlet weak var textIncreasingSlider: UISlider!
     @IBAction func alightmentDone(_ sender: Any) {
         
         let button = sender as! UIButton

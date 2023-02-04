@@ -20,10 +20,10 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fkD-wn-lfU">
-                                    <rect key="frame" x="0.0" y="0.0" width="103.5" height="60"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="103.66666666666667" height="60"/>
                                     <subviews>
                                         <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNI-Vk-eCw">
-                                            <rect key="frame" x="22" y="0.0" width="60" height="60"/>
+                                            <rect key="frame" x="21.666666666666671" y="0.0" width="60" height="60"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="GNI-Vk-eCw" secondAttribute="height" id="84A-gs-YjX"/>
@@ -42,10 +42,10 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oPQ-rz-iIm">
-                                    <rect key="frame" x="103.5" y="0.0" width="103.5" height="60"/>
+                                    <rect key="frame" x="103.66666666666669" y="0.0" width="103.33333333333331" height="60"/>
                                     <subviews>
                                         <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XqK-RY-m0X">
-                                            <rect key="frame" x="22" y="0.0" width="60" height="60"/>
+                                            <rect key="frame" x="21.666666666666657" y="0.0" width="60" height="60"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="XqK-RY-m0X" secondAttribute="height" id="JxV-no-uF0"/>
@@ -64,10 +64,10 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qgJ-uk-2x4">
-                                    <rect key="frame" x="207" y="0.0" width="103.5" height="60"/>
+                                    <rect key="frame" x="206.99999999999997" y="0.0" width="103.66666666666666" height="60"/>
                                     <subviews>
                                         <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9L-GN-x8d">
-                                            <rect key="frame" x="22" y="0.0" width="60" height="60"/>
+                                            <rect key="frame" x="21.666666666666657" y="0.0" width="60" height="60"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="U9L-GN-x8d" secondAttribute="height" id="E3J-PF-T7t"/>
@@ -86,10 +86,10 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d4N-og-I37">
-                                    <rect key="frame" x="310.5" y="0.0" width="103.5" height="60"/>
+                                    <rect key="frame" x="310.66666666666669" y="0.0" width="103.33333333333331" height="60"/>
                                     <subviews>
                                         <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Fp-Lv-Okl">
-                                            <rect key="frame" x="22" y="0.0" width="60" height="60"/>
+                                            <rect key="frame" x="21.666666666666629" y="0.0" width="60" height="60"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="3Fp-Lv-Okl" secondAttribute="height" id="2iN-pz-Hmb"/>
@@ -123,7 +123,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JD3-Re-N02">
-                            <rect key="frame" x="34.5" y="16" width="345" height="108"/>
+                            <rect key="frame" x="34.666666666666657" y="16" width="345" height="108"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7IQ-pk-hAz">
                                     <rect key="frame" x="0.0" y="0.0" width="345" height="108"/>
@@ -219,6 +219,9 @@
                 <constraint firstItem="fdq-vw-uN3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ueM-yW-jOb"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="textIncreasingSlider" destination="nWr-cP-vco" id="oHY-Cz-bAu"/>
+            </connections>
             <point key="canvasLocation" x="357" y="76"/>
         </view>
     </objects>

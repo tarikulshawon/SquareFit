@@ -15,4 +15,5 @@ target 'SquareFit' do
   target 'SquareFitUITests' do
     # Pods for testing
   end
+pod 'Mantis', '~> 2.6.1'
 end

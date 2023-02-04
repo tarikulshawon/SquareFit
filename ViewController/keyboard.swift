@@ -94,8 +94,13 @@ class keyboard: UIViewController,  indexItem, chnageColor, changeFont, aligthmen
         super.viewDidLoad()
         fontName =  fontArray[0]
         
+        toolsView =  (UINib(nibName: "ToolsView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! ToolsView)
         
         if texeditObj.text.count > 0 {
+            toolsView.currentTextSizeValue = Int(Float(texeditObj.fontSize))
+            toolsView.maximumValueText = Int(Float(max(texeditObj.fontSize,60)))
+            toolsView.setValue()
+            
             isFromUpdate  = true
             textView.text = texeditObj.text
             fontSize = Int(texeditObj.fontSize)
@@ -151,7 +156,7 @@ class keyboard: UIViewController,  indexItem, chnageColor, changeFont, aligthmen
         keyboardViewExtentView.delegate = self
         
         
-        toolsView =  (UINib(nibName: "ToolsView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! ToolsView)
+        
         
         toolsView.delegeteAlighment = self
         toolsView.delegeteFontSize = self
