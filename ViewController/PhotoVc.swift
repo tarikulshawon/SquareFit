@@ -9,6 +9,15 @@ import UIKit
 import AudioToolbox
 
 class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, StickerViewDelegate, changeImage, backButton, TextStickerContainerViewDelegate {
+    func clearAllDataValue() {
+        drawView.clearCanvasView()
+    }
+    
+    
+    func sendBrushWidthValue(value: CGFloat) {
+        drawView.strokeWidth =  value
+    }
+    
     func shouldHideDraw() {
         drawView.isUserInteractionEnabled = false
     }
@@ -325,6 +334,7 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
             }
             
             self.view.layoutIfNeeded()
+            self.drawView.layoutIfNeeded()
             
         }) { _ in
             
@@ -598,7 +608,7 @@ extension PhotoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollect
             }
             
             else if titleName.contains("Draw") {
-                vc.defaultHeight = CGFloat(300)
+                vc.defaultHeight = CGFloat(200)
                 vc.maximumContainerHeight = CGFloat(300)
                 vc.drawView.isHidden = false
                 drawView.isUserInteractionEnabled = true

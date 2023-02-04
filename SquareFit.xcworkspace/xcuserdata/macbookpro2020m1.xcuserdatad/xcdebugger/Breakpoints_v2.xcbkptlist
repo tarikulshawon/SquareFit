@@ -327,10 +327,10 @@
             filePath = "ViewController/PhotoVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "297"
-            endingLineNumber = "297"
-            landmarkName = "sendOverLay(image:)"
-            landmarkType = "7">
+            startingLineNumber = "306"
+            endingLineNumber = "306"
+            landmarkName = "PhotoVc"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -343,8 +343,8 @@
             filePath = "ViewController/PhotoVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "302"
-            endingLineNumber = "302"
+            startingLineNumber = "311"
+            endingLineNumber = "311"
             landmarkName = "sendOverLay(image:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -359,8 +359,8 @@
             filePath = "ViewController/PhotoVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "300"
-            endingLineNumber = "300"
+            startingLineNumber = "309"
+            endingLineNumber = "309"
             landmarkName = "sendOverLay(image:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -375,8 +375,8 @@
             filePath = "ViewController/PhotoVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "299"
-            endingLineNumber = "299"
+            startingLineNumber = "308"
+            endingLineNumber = "308"
             landmarkName = "sendOverLay(image:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -391,8 +391,8 @@
             filePath = "ViewController/PhotoVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "298"
-            endingLineNumber = "298"
+            startingLineNumber = "307"
+            endingLineNumber = "307"
             landmarkName = "sendOverLay(image:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -407,10 +407,10 @@
             filePath = "ViewController/CustomModalViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
-            landmarkName = "CustomModalViewController"
-            landmarkType = "3">
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "imageNameWithIndex(tag:image:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -423,8 +423,8 @@
             filePath = "ViewController/CustomModalViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
             landmarkName = "imageNameWithIndex(tag:image:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -439,8 +439,8 @@
             filePath = "ViewController/CustomModalViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "imageNameWithIndex(tag:image:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1058,8 +1058,8 @@
             filePath = "ViewController/PhotoVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "216"
-            endingLineNumber = "216"
+            startingLineNumber = "225"
+            endingLineNumber = "225"
             landmarkName = "moveViewPosition(textStickerContainerView:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1074,8 +1074,8 @@
             filePath = "ViewController/PhotoVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "212"
-            endingLineNumber = "212"
+            startingLineNumber = "221"
+            endingLineNumber = "221"
             landmarkName = "deleteTextStickerView(textStickerContainerView:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1090,10 +1090,10 @@
             filePath = "ViewController/PhotoVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "208"
-            endingLineNumber = "208"
-            landmarkName = "PhotoVc"
-            landmarkType = "3">
+            startingLineNumber = "217"
+            endingLineNumber = "217"
+            landmarkName = "editTextStickerView(textStickerContainerView:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1106,10 +1106,10 @@
             filePath = "ViewController/PhotoVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "205"
-            endingLineNumber = "205"
-            landmarkName = "editTextStickerView(textStickerContainerView:)"
-            landmarkType = "7">
+            startingLineNumber = "214"
+            endingLineNumber = "214"
+            landmarkName = "PhotoVc"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1122,10 +1122,10 @@
             filePath = "ViewController/PhotoVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "PhotoVc"
-            landmarkType = "3">
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "undoValue()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1138,10 +1138,10 @@
             filePath = "ViewController/PhotoVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "PhotoVc"
-            landmarkType = "3">
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "undoValue()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1154,8 +1154,8 @@
             filePath = "ViewController/CustomModalViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "355"
-            endingLineNumber = "355"
+            startingLineNumber = "361"
+            endingLineNumber = "361"
             landmarkName = "animateDismissView()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1164,6 +1164,54 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "E2AE48E3-188E-46BB-9615-F9B9AD0D7713"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ViewController/CustomModalViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "358"
+            endingLineNumber = "358"
+            landmarkName = "animateDismissView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CFDDAA53-95FB-4488-8043-F7B3D0D74EFA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ViewController/CustomModalViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "356"
+            endingLineNumber = "356"
+            landmarkName = "animateDismissView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "66EA82CB-ACF6-411C-9BDF-4B8C68CFE412"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ViewController/CustomModalViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "354"
+            endingLineNumber = "354"
+            landmarkName = "animateDismissView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EA347A18-1072-4D0A-94DA-EBA74A222ABE"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -1179,54 +1227,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CFDDAA53-95FB-4488-8043-F7B3D0D74EFA"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ViewController/CustomModalViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "350"
-            endingLineNumber = "350"
-            landmarkName = "animateDismissView()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "66EA82CB-ACF6-411C-9BDF-4B8C68CFE412"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ViewController/CustomModalViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "348"
-            endingLineNumber = "348"
-            landmarkName = "animateDismissView()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "EA347A18-1072-4D0A-94DA-EBA74A222ABE"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ViewController/CustomModalViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "346"
-            endingLineNumber = "346"
-            landmarkName = "animateDismissView()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "12E8F730-3FD9-43D4-A99D-3CAF482A3BD2"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -1234,8 +1234,8 @@
             filePath = "ViewController/CustomModalViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "341"
-            endingLineNumber = "341"
+            startingLineNumber = "347"
+            endingLineNumber = "347"
             landmarkName = "viewDidDisappear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1250,9 +1250,41 @@
             filePath = "ViewController/CustomModalViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "340"
-            endingLineNumber = "340"
+            startingLineNumber = "346"
+            endingLineNumber = "346"
             landmarkName = "viewDidDisappear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "88B408D9-3262-4C7E-B874-FF426E5B3854"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ViewController/PhotoVc.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "clearAllDataValue()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3B8583A9-2F00-4EC7-A4E4-3D950B9C0BB9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ViewController/PhotoVc.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "clearAllDataValue()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -12,6 +12,7 @@ protocol drawViewDelegate: AnyObject {
     func sendOpacity(value:CGFloat)
     func undoAction()
     func sendColor(color:UIColor)
+    func clearAllData()
 }
 
 class Draw: UIView {
@@ -55,6 +56,7 @@ class Draw: UIView {
     }
     
     @IBAction func onClickClear(_ sender: Any) {
+        delegateForDraw?.clearAllData()
         
     }
     @IBAction func onClickUndo(_ sender: Any) {
@@ -76,7 +78,7 @@ extension Draw: UICollectionViewDelegate, UICollectionViewDataSource,UICollectio
     ) -> CGSize {
         
        // print("khanki")
-        return CGSize(width: 60, height: 60)
+        return CGSize(width: 40, height: 40)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

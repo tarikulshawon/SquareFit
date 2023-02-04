@@ -21,15 +21,21 @@ import UIKit
     @objc optional func undoValue()
     @objc optional func sendColorValue(color: UIColor)
     func shouldHideDraw()
+    @objc optional func sendBrushWidthValue(value:CGFloat)
+    @objc optional func clearAllDataValue()
 }
 
 class CustomModalViewController: UIViewController, sendSticker, canvasSend, sendFrames, imageIndexDelegate, sendValueForAdjust, filterIndexDelegate, sendImageDelegate, sendShape, sendBackGroundView, drawViewDelegate {
+    func clearAllData() {
+        delegateForEditedView?.clearAllDataValue!()
+    }
+    
     func sendColor(color: UIColor) {
         delegateForEditedView?.sendColorValue!(color: color)
     }
     
     func sendBrushWidth(value: CGFloat) {
-        
+        delegateForEditedView?.sendBrushWidthValue!(value: value)
     }
     
     func sendOpacity(value: CGFloat) {
