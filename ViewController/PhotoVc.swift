@@ -7,8 +7,34 @@
 
 import UIKit
 import AudioToolbox
+import Mantis
 
-class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, StickerViewDelegate, changeImage, backButton, TextStickerContainerViewDelegate {
+class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, StickerViewDelegate, changeImage, backButton, TextStickerContainerViewDelegate, CropViewControllerDelegate {
+    func cropViewControllerDidCrop(_ cropViewController: Mantis.CropViewController, cropped: UIImage, transformation: Mantis.Transformation, cropInfo: Mantis.CropInfo) {
+        
+    }
+    
+    func cropViewControllerDidFailToCrop(_ cropViewController: Mantis.CropViewController, original: UIImage) {
+        
+    }
+    
+    func cropViewControllerDidCancel(_ cropViewController: Mantis.CropViewController, original: UIImage) {
+        cropViewController.dismiss(animated: true)
+        
+    }
+    
+    func cropViewControllerDidBeginResize(_ cropViewController: Mantis.CropViewController) {
+        
+    }
+    
+    func cropViewControllerDidEndResize(_ cropViewController: Mantis.CropViewController, original: UIImage, cropInfo: Mantis.CropInfo) {
+        
+    }
+    
+    func cropViewControllerDidImageTransformed(_ cropViewController: Mantis.CropViewController) {
+        
+    }
+    
     func sendOpacityValue(value: CGFloat) {
         drawView.strokeOpacity = value
     }
@@ -500,7 +526,9 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
     @objc func updateFrame() {
         widthForTempView.constant = holderView.frame.width
         heightForTempView.constant = holderView.frame.width
-        imv.image = selectedImage //UIImage(named: "lol.jpg")
+        selectedImage = UIImage(named: "lol.jpg")
+        imv.image = selectedImage
+    
         imv.contentMode = .scaleAspectFit
         
         let totalCellWidth = cellWidth * CGFloat(btnArray.count)
@@ -591,6 +619,16 @@ extension PhotoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollect
             vc.filterVc.isHidden = true
             vc.imageEditVc.isHidden = true
             vc.drawView.isHidden = true
+            
+            
+            if titleName.contains("Crop"){
+                
+                let cropViewController = Mantis.cropViewController(image:selectedImage!)
+                cropViewController.delegate = self
+                self.present(cropViewController, animated: true)
+                
+                return
+            }
             
             
             if titleName.contains("Texts") {
