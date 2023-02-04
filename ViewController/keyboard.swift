@@ -11,7 +11,7 @@ import UIKit
 
 protocol changeImage {
     func changeImage(image: UIImage)
-    func changeTextView(obj:TextEdit)
+    func changeTextView(obj:TextEdit ,isFromUpdate:Bool)
 }
 
 protocol backButton {
@@ -79,10 +79,11 @@ class keyboard: UIViewController,  indexItem, chnageColor, changeFont, aligthmen
     var lineSpacing = 0
     var lineSpacingBetweenlines = 0
     var bottomConstant: CGFloat = 0
+    var isFromUpdate = false
     
     @IBOutlet var textView: UITextView!
     
-    let texeditObj = TextEdit()
+    var texeditObj = TextEdit()
     
     @IBOutlet var heightForToolsView: NSLayoutConstraint!
     @IBOutlet weak var heightOfToolBar: NSLayoutConstraint!
@@ -92,6 +93,39 @@ class keyboard: UIViewController,  indexItem, chnageColor, changeFont, aligthmen
     override func viewDidLoad() {
         super.viewDidLoad()
         fontName =  fontArray[0]
+        
+        
+        if texeditObj.text.count > 0 {
+            isFromUpdate  = true
+            textView.text = texeditObj.text
+            fontSize = Int(texeditObj.fontSize)
+            if texeditObj.fontName.count > 0 {
+                
+                textView.font = UIFont(name: texeditObj.fontName, size: texeditObj.fontSize)
+                
+            } else {
+                
+                textView.font  = UIFont.systemFont(ofSize: texeditObj.fontSize)
+            }
+            textView.textAlignment = texeditObj.aigment
+            textView.alpha = texeditObj.textOpacity
+            textView.layer.shadowColor = texeditObj.shadowColor
+            textView.layer.shadowOffset = texeditObj.shadowOffset
+            
+            if texeditObj.shadowRadius != -1 {
+                textView.layer.shadowRadius = texeditObj.shadowRadius
+            }
+            
+            if texeditObj.shadowOpacity != -1 {
+                textView.layer.shadowOpacity = Float(texeditObj.shadowOpacity)
+            }
+            textView.backgroundColor = texeditObj.textBackGroundColor
+            textView.textColor = texeditObj.fontColor
+        
+        } else {
+            
+            textView.font =  UIFont(name:fontName , size:CGFloat(fontSize))
+        }
         
         // Notifications for when the keyboard opens/closes
         NotificationCenter.default.addObserver(
@@ -140,7 +174,7 @@ class keyboard: UIViewController,  indexItem, chnageColor, changeFont, aligthmen
         
         //textView.becomeFirstResponder()
         
-        textView.font =  UIFont(name:fontName , size:CGFloat(fontSize))
+       
     }
     
    
@@ -407,8 +441,8 @@ extension keyboard: UITabBarDelegate {
             let heightConstraint = toolsView.heightAnchor.constraint(equalToConstant: 336.0)
             NSLayoutConstraint.activate([bottom, leading, trailing, heightConstraint])
         } else if value == 5 {
-            texeditObj.text = texeditObj.text
-            delegateForChnageImage?.changeTextView(obj: texeditObj)
+            texeditObj.text = textView.text
+            delegateForChnageImage?.changeTextView(obj: texeditObj,isFromUpdate: isFromUpdate)
             dismiss(animated: true)
         }
     }

@@ -11,7 +11,47 @@ import AudioToolbox
 class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, StickerViewDelegate, changeImage, backButton, TextStickerContainerViewDelegate {
     
     
-    func changeTextView(obj: TextEdit) {
+    func changeTextView(obj: TextEdit,isFromUpdate:Bool) {
+        
+        if isFromUpdate {
+            
+            currentTextStickerView?.textStickerView.fontSize = obj.fontSize
+            currentTextStickerView?.textStickerView.textColor = obj.fontColor
+            currentTextStickerView?.textStickerView.autocorrectionType = .no
+            currentTextStickerView?.textStickerView.backgroundColor = obj.textBackGroundColor
+            currentTextStickerView?.textStickerView.layer.shadowColor = obj.shadowColor
+            
+            if obj.shadowRadius != -1 {
+                currentTextStickerView?.textStickerView.layer.shadowRadius = obj.shadowRadius
+            }
+            
+            if obj.shadowOpacity != -1 {
+                currentTextStickerView?.textStickerView.layer.shadowOpacity = Float(obj.shadowOpacity)
+            }
+           
+            if obj.shadowOffset.width > 0 {
+                currentTextStickerView?.textStickerView.layer.shadowOffset = obj.shadowOffset
+            }
+           
+           
+            if obj.fontName.count > 0 {
+                currentTextStickerView?.textStickerView.font = UIFont(name: obj.fontName, size: obj.fontSize)
+            }
+            else {
+                currentTextStickerView?.textStickerView.font = UIFont.systemFont(ofSize: obj.fontSize)
+            }
+           
+            currentTextStickerView?.textStickerView.textAlignment = obj.aigment
+            
+            currentTextStickerView?.textStickerView.alpha = obj.textOpacity
+            currentTextStickerView?.textStickerView.backgroundColor = obj.textBackGroundColor
+            currentTextStickerView?.textStickerView.text = obj.text
+            currentTextStickerView?.scaleController.updateFrame()
+        
+        }
+        else {
+            self.addText(obj: obj)
+        }
         
         
     }
@@ -21,20 +61,44 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
     
     func showKeyBoard(container: TextStickerView) {
         
+        let x = container.fontSize
+        let y = container.font?.fontName
+        let z = container.textColor
+        let l = container.backgroundColor
+        let m = container.layer.shadowColor
+        
+        print(x)
+        print(y)
+        print(z)
+        print(l)
+        print(m)
         
         if let a  = container.fontSize,
             let b = container.font?.fontName ,
-           let c = container.textColor{
+           let c = container.textColor,
+           let d = container.backgroundColor,
+           let e = container.layer.shadowColor{
             
+            let obj = TextEdit()
+            obj.fontSize = a
+            obj.fontName = b
+            obj.fontColor = c
+            obj.textBackGroundColor = d
+            obj.shadowColor = e
+            obj.shadowOffset = container.layer.shadowOffset
+            obj.shadowOpacity = Double(container.layer.shadowOpacity)
+            obj.shadowRadius = container.layer.shadowRadius
+            obj.textOpacity = container.alpha
+            obj.text = container.text
+            obj.textBackGroundColor = container.backgroundColor ?? UIColor.clear
+            obj.aigment = container.textAlignment
             
             let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "keyboard") as? keyboard
             vc?.delegateForChnageImage = self
             vc?.delegateForBack = self
+            vc?.texeditObj = obj
             let navController = UINavigationController(rootViewController: vc!)
             navController.modalPresentationStyle = UIModalPresentationStyle.fullScreen
-            vc?.textView.textAlignment = container.textAlignment
-            vc?.textView.font = UIFont(name: b, size: a)
-            vc?.textView.textColor = c
             present(navController, animated: true, completion: nil)
             
         }

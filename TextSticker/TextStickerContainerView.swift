@@ -231,11 +231,11 @@ extension TextStickerContainerView {
         self.textStickerView.text = text
         
         
-        
+        self.textStickerView.fontSize = obj.fontSize
         self.textStickerView.textColor = obj.fontColor
         self.textStickerView.autocorrectionType = .no
         self.textStickerView.backgroundColor = obj.textBackGroundColor
-        self.textStickerView.layer.shadowColor = obj.shadowColor.cgColor
+        self.textStickerView.layer.shadowColor = obj.shadowColor
         
         if obj.shadowRadius != -1 {
             self.textStickerView.layer.shadowRadius = obj.shadowRadius
@@ -416,7 +416,7 @@ extension TextStickerContainerView {
                     print("halarpo")
                     self.delegate?.showKeyBoard(container: view.textStickerView)
                     
-                    print(view.textStickerView.font?.fontName)
+                   
                 }
         
         self.delegate?.setCurrentTextStickerView(textStickerContainerView: self)

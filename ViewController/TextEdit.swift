@@ -19,6 +19,6 @@ class TextEdit {
     var shadowOffset:CGSize = CGSize(width: 0,height: 0)
     var textOpacity:CGFloat = 1
     var textBackGroundColor = UIColor.clear
-    var shadowColor = UIColor.black
+    var shadowColor:CGColor = UIColor.black.cgColor
     var text = ""
 }
