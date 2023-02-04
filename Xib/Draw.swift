@@ -7,9 +7,16 @@
 
 import UIKit
 
+protocol drawViewDelegate: AnyObject {
+    func sendBrushWidth(value: CGFloat)
+    func sendOpacity(value:CGFloat)
+    func undoAction()
+}
+
 class Draw: UIView {
     var colorArray = [UIColor]()
     
+    weak var delegateForDraw: drawViewDelegate?
     @IBOutlet weak var collectionView: UICollectionView!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,13 +37,19 @@ class Draw: UIView {
     
     
     
+    @IBAction func undoAction(_ sender: Any) {
+        
+        delegateForDraw?.undoAction()
+    }
     
     @IBAction func onClickBrushWidth(_ sender: UISlider) {
+        delegateForDraw?.sendBrushWidth(value: CGFloat(sender.value))
         
     }
     
     
     @IBAction func onClickOpacity(_ sender: UISlider) {
+        delegateForDraw?.sendOpacity(value: CGFloat(sender.value))
         
     }
     
@@ -61,7 +74,7 @@ extension Draw: UICollectionViewDelegate, UICollectionViewDataSource,UICollectio
         sizeForItemAt indexPath: IndexPath
     ) -> CGSize {
         
-        print("khanki")
+       // print("khanki")
         return CGSize(width: 60, height: 60)
     }
     

@@ -31,6 +31,9 @@
                                         </imageView>
                                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="MT5-yG-hnc">
                                             <rect key="frame" x="36" y="0.0" width="296" height="39"/>
+                                            <connections>
+                                                <action selector="onClickBrushWidth:" destination="iN0-l3-epB" eventType="valueChanged" id="lJB-nL-Nof"/>
+                                            </connections>
                                         </slider>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -46,6 +49,9 @@
                                         </imageView>
                                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="tdp-aG-T3U">
                                             <rect key="frame" x="36" y="0.0" width="296" height="33"/>
+                                            <connections>
+                                                <action selector="onClickOpacity:" destination="iN0-l3-epB" eventType="valueChanged" id="LLK-yI-eXZ"/>
+                                            </connections>
                                         </slider>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -93,27 +99,54 @@
                         <constraint firstAttribute="trailing" secondItem="cwO-FX-OXo" secondAttribute="trailing" id="yNm-Sw-vEV"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x7s-hH-Xaa">
+                    <rect key="frame" x="10" y="25" width="370" height="70"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OV9-5E-YNN">
+                            <rect key="frame" x="320" y="15" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="3aA-zL-47z"/>
+                                <constraint firstAttribute="width" secondItem="OV9-5E-YNN" secondAttribute="height" multiplier="1:1" id="MuS-1d-TX7"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="undo"/>
+                            <connections>
+                                <action selector="undoAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Vxj-mL-lf6"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="OV9-5E-YNN" secondAttribute="trailing" constant="10" id="4b1-zw-2V8"/>
+                        <constraint firstAttribute="height" constant="70" id="LTj-Ig-1jh"/>
+                        <constraint firstItem="OV9-5E-YNN" firstAttribute="centerY" secondItem="x7s-hH-Xaa" secondAttribute="centerY" id="zwD-K8-H5y"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="T7a-5p-H2T" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="5zy-PJ-DYI"/>
+                <constraint firstItem="x7s-hH-Xaa" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Bfc-T3-aUm"/>
                 <constraint firstItem="T7a-5p-H2T" firstAttribute="top" secondItem="RBW-hV-70j" secondAttribute="bottom" constant="20" id="F9S-9W-K2e"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="RBW-hV-70j" secondAttribute="trailing" constant="20" id="Fzj-km-524"/>
+                <constraint firstItem="RBW-hV-70j" firstAttribute="top" secondItem="x7s-hH-Xaa" secondAttribute="bottom" constant="5" id="V0Z-eE-bth"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="T7a-5p-H2T" secondAttribute="bottom" constant="10" id="YAe-JC-ZSU"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="T7a-5p-H2T" secondAttribute="trailing" id="eRB-6l-dis"/>
                 <constraint firstItem="RBW-hV-70j" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="hSk-Yn-qFc"/>
+                <constraint firstAttribute="trailing" secondItem="x7s-hH-Xaa" secondAttribute="trailing" constant="10" id="zet-Pf-Wru"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="collectionView" destination="cwO-FX-OXo" id="uJo-vD-A0H"/>
             </connections>
-            <point key="canvasLocation" x="253.84615384615384" y="17.772511848341232"/>
+            <point key="canvasLocation" x="164.61538461538461" y="87.440758293838854"/>
         </view>
     </objects>
     <resources>
         <image name="brush" width="21.333333969116211" height="21.333333969116211"/>
         <image name="opacity" width="10.666666984558105" height="10.666666984558105"/>
+        <image name="undo" width="30" height="30"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

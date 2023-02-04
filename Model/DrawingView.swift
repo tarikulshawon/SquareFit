@@ -1,61 +1,82 @@
 //
-//  Canvas.swift
-//  DrawSomethingLBTA
+//  CanvasView.swift
+//  DrawingApp
 //
-//  Created by Brian Voong on 1/3/19.
-//  Copyright © 2019 Brian Voong. All rights reserved.
+//  Created by Ranosys on 19/09/19.
+//  Copyright © 2019 Ranosys. All rights reserved.
 //
 
 import UIKit
 
+struct TouchPointsAndColor {
+    var color: UIColor?
+    var width: CGFloat?
+    var opacity: CGFloat?
+    var points: [CGPoint]?
+    
+    init(color: UIColor, points: [CGPoint]?) {
+        self.color = color
+        self.points = points
+    }
+}
+
 class DrawingView: UIView {
-    
-    // public function
-    func undo() {
-        _ = lines.popLast()
-        setNeedsDisplay()
-    }
-    
-    func clear() {
-        lines.removeAll()
-        setNeedsDisplay()
-    }
-    
-    fileprivate var lines = [[CGPoint]]()
+
+    var lines = [TouchPointsAndColor]()
+    var strokeWidth: CGFloat = 1.0
+    var strokeColor: UIColor = .black
+    var strokeOpacity: CGFloat = 1.0
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         
-        guard let context = UIGraphicsGetCurrentContext() else { return }
-        
-        context.setStrokeColor(UIColor.black.cgColor)
-        context.setLineWidth(10)
-        context.setLineCap(.butt)
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return
+        }
         
         lines.forEach { (line) in
-            for (i, p) in line.enumerated() {
+            for (i, p) in (line.points?.enumerated())! {
                 if i == 0 {
                     context.move(to: p)
                 } else {
                     context.addLine(to: p)
                 }
+                context.setStrokeColor(line.color?.withAlphaComponent(line.opacity ?? 1.0).cgColor ?? UIColor.black.cgColor)
+                context.setLineWidth(line.width ?? 1.0)
             }
+            context.setLineCap(.round)
+            context.strokePath()
         }
-        
-        context.strokePath()
-        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        lines.append([CGPoint]())
+        lines.append(TouchPointsAndColor(color: UIColor(), points: [CGPoint]()))
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard let point = touches.first?.location(in: nil) else { return }
-        guard var lastLine = lines.popLast() else { return }
-        lastLine.append(point)
-        lines.append(lastLine)
+        guard let touch = touches.first?.location(in: nil) else {
+            return
+        }
+        
+        guard var lastPoint = lines.popLast() else {return}
+        lastPoint.points?.append(touch)
+        lastPoint.color = strokeColor
+        lastPoint.width = strokeWidth
+        lastPoint.opacity = strokeOpacity
+        lines.append(lastPoint)
         setNeedsDisplay()
+    }
+    
+    func clearCanvasView() {
+        lines.removeAll()
+        setNeedsDisplay()
+    }
+    
+    func undoDraw() {
+        if lines.count > 0 {
+            lines.removeLast()
+            setNeedsDisplay()
+        }
     }
     
 }

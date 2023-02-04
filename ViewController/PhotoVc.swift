@@ -11,6 +11,12 @@ import AudioToolbox
 class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, StickerViewDelegate, changeImage, backButton, TextStickerContainerViewDelegate {
     
     
+    func undoValue() {
+        drawView.undoDraw()
+    }
+    
+    
+    
     func changeTextView(obj: TextEdit,isFromUpdate:Bool) {
         
         if isFromUpdate {
@@ -581,8 +587,8 @@ extension PhotoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollect
             }
             
             else if titleName.contains("Draw") {
-                vc.defaultHeight = CGFloat(250)
-                vc.maximumContainerHeight = CGFloat(250)
+                vc.defaultHeight = CGFloat(300)
+                vc.maximumContainerHeight = CGFloat(300)
                 vc.drawView.isHidden = false
             }
             

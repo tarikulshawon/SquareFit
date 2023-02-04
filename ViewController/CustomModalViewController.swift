@@ -18,9 +18,23 @@ import UIKit
     @objc optional func sendOverLayValue(value:CGFloat)
     func sendShapeValue(sticker: String)
     func sendColorBackgroundV(color: UIColor, image: UIImage?)
+    @objc optional func undoValue()
 }
 
-class CustomModalViewController: UIViewController, sendSticker, canvasSend, sendFrames, imageIndexDelegate, sendValueForAdjust, filterIndexDelegate, sendImageDelegate, sendShape, sendBackGroundView {
+class CustomModalViewController: UIViewController, sendSticker, canvasSend, sendFrames, imageIndexDelegate, sendValueForAdjust, filterIndexDelegate, sendImageDelegate, sendShape, sendBackGroundView, drawViewDelegate {
+    func sendBrushWidth(value: CGFloat) {
+        
+    }
+    
+    func sendOpacity(value: CGFloat) {
+        
+    }
+    
+    func undoAction() {
+        
+        delegateForEditedView?.undoValue!()
+    }
+    
     func sendColorBackground(color: UIColor, image: UIImage?) {
         delegateForEditedView?.sendColorBackgroundV(color: color, image: image)
     }
@@ -123,6 +137,7 @@ class CustomModalViewController: UIViewController, sendSticker, canvasSend, send
         
         if typeName.contains("Draw") {
             stackView = UIStackView(arrangedSubviews: [spacer, drawView, spacer])
+            drawView.delegateForDraw = self
             stackView.axis = .vertical
 
         }
