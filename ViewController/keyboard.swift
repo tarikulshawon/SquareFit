@@ -99,6 +99,7 @@ class keyboard: UIViewController,  indexItem, chnageColor, changeFont, aligthmen
         if texeditObj.text.count > 0 {
             toolsView.currentTextSizeValue = Int(Float(texeditObj.fontSize))
             toolsView.maximumValueText = Int(Float(max(texeditObj.fontSize,60)))
+            toolsView.opacityValue = texeditObj.textOpacity
             toolsView.setValue()
             
             isFromUpdate  = true

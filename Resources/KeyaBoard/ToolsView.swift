@@ -29,7 +29,9 @@ class ToolsView: UIView {
     public var delegeteForAlpa: chnageAlpa?
     var currentTextSizeValue = 25
     var maximumValueText = 62
+    var opacityValue:CGFloat = 1.0
     
+    @IBOutlet weak var alpaSlider: UISlider!
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -39,6 +41,7 @@ class ToolsView: UIView {
         
         textIncreasingSlider.maximumValue = Float(maximumValueText)
         textIncreasingSlider.value = Float(currentTextSizeValue)
+        alpaSlider.value = Float(opacityValue)
     }
     
     @IBOutlet weak var textIncreasingSlider: UISlider!

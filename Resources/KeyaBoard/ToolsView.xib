@@ -220,6 +220,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="alpaSlider" destination="Zd8-aQ-fqx" id="XNj-Wr-5im"/>
                 <outlet property="textIncreasingSlider" destination="nWr-cP-vco" id="oHY-Cz-bAu"/>
             </connections>
             <point key="canvasLocation" x="357" y="76"/>
