@@ -11,7 +11,7 @@ protocol TextStickerContainerViewDelegate: NSObject {
     func editTextStickerView(textStickerContainerView: TextStickerContainerView)
     func deleteTextStickerView(textStickerContainerView: TextStickerContainerView)
     func moveViewPosition(textStickerContainerView: TextStickerContainerView)
-    func showKeyBoard(text:String)
+    func showKeyBoard(container:TextStickerView)
 }
 
 protocol UpdateTextFontSize: AnyObject {
@@ -224,32 +224,45 @@ extension TextStickerContainerView {
         self.addSubview(deleteController)
     }
     
-    func initilizeTextStickerData(mainTextView: TextStickerView,fontSize:CGFloat,fontName:String){
+    func initilizeTextStickerData(mainTextView: TextStickerView,obj:TextEdit){
         let text = prepareText(maintextView: mainTextView)
        // print(mainTextView.font?.)
         
         self.textStickerView.text = text
-        self.textStickerView.fontSize = fontSize
         
         
-        self.textStickerView.textColor = mainTextView.textColor
+        
+        self.textStickerView.textColor = obj.fontColor
         self.textStickerView.autocorrectionType = .no
-        self.textStickerView.backgroundColor = mainTextView.backgroundColor
-        self.textStickerView.layer.shadowColor = mainTextView.layer.shadowColor
-        self.textStickerView.layer.shadowRadius = mainTextView.layer.shadowRadius
-        self.textStickerView.layer.shadowOpacity = mainTextView.layer.shadowOpacity
-        self.textStickerView.layer.shadowOffset = mainTextView.layer.shadowOffset
+        self.textStickerView.backgroundColor = obj.textBackGroundColor
+        self.textStickerView.layer.shadowColor = obj.shadowColor.cgColor
         
-        if fontName.count > 0 {
-            self.textStickerView.font = UIFont(name: fontName, size: fontSize)
+        if obj.shadowRadius != -1 {
+            self.textStickerView.layer.shadowRadius = obj.shadowRadius
         }
-        else {
-            self.textStickerView.font = UIFont.systemFont(ofSize: fontSize)
+        
+        if obj.shadowOpacity != -1 {
+            self.textStickerView.layer.shadowOpacity = Float(obj.shadowOpacity)
         }
        
-        self.textStickerView.textAlignment = mainTextView.textAlignment
-        self.textStickerView.font = mainTextView.font
-        self.textStickerView.alpha = mainTextView.alpha
+        if obj.shadowOffset.width > 0 {
+            self.textStickerView.layer.shadowOffset = obj.shadowOffset
+        }
+       
+       
+        if obj.fontName.count > 0 {
+            self.textStickerView.font = UIFont(name: obj.fontName, size: obj.fontSize)
+        }
+        else {
+            self.textStickerView.font = UIFont.systemFont(ofSize: obj.fontSize)
+        }
+       
+        self.textStickerView.textAlignment = obj.aigment
+        
+        self.textStickerView.alpha = obj.textOpacity
+        self.textStickerView.backgroundColor = obj.textBackGroundColor
+        
+        
         let newSize = self.textStickerView.sizeThatFits(CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude))
         self.textStickerView.frame.size = CGSize(width: newSize.width, height: newSize.height)
     }
@@ -401,7 +414,9 @@ extension TextStickerContainerView {
         // MARK: Add Edit And Delete Menu Bar
                 if let view = recognizer.view as? TextStickerContainerView {
                     print("halarpo")
-                    self.delegate?.showKeyBoard(text: view.textStickerView.text)
+                    self.delegate?.showKeyBoard(container: view.textStickerView)
+                    
+                    print(view.textStickerView.font?.fontName)
                 }
         
         self.delegate?.setCurrentTextStickerView(textStickerContainerView: self)

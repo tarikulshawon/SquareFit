@@ -11,10 +11,39 @@ import AudioToolbox
 class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, StickerViewDelegate, changeImage, backButton, TextStickerContainerViewDelegate {
     
     
-    func changeTextView(textView: UITextView,size:CGFloat ) {
-        self.addText(text: textView.text, font: textView.font!, textView: textView, size: size)
+    func changeTextView(obj: TextEdit) {
+        
+        
     }
     
+    
+    
+    
+    func showKeyBoard(container: TextStickerView) {
+        
+        
+        if let a  = container.fontSize,
+            let b = container.font?.fontName ,
+           let c = container.textColor{
+            
+            
+            let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "keyboard") as? keyboard
+            vc?.delegateForChnageImage = self
+            vc?.delegateForBack = self
+            let navController = UINavigationController(rootViewController: vc!)
+            navController.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+            vc?.textView.textAlignment = container.textAlignment
+            vc?.textView.font = UIFont(name: b, size: a)
+            vc?.textView.textColor = c
+            present(navController, animated: true, completion: nil)
+            
+        }
+        
+    }
+    
+    
+    
+  
     
     
     @IBOutlet weak var widthForTempView: NSLayoutConstraint!
@@ -76,10 +105,7 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
         }
     }
     
-    func changeAttri(attributed: NSAttributedString ,fontSize:CGFloat) {
-        self.addText(text: "", font: UIFont.systemFont(ofSize: 20.0), textView: nil, size: fontSize)
-    }
-    
+   
     
     func setCurrentTextStickerView(textStickerContainerView: TextStickerContainerView) {
         self.hideALL()
@@ -100,7 +126,9 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
         
     }
     
-    func showKeyBoard(text: String) {
+    func showKeyBoard(textst: String) {
+        
+        
         
     }
     
@@ -220,11 +248,9 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
     }
     
     
-    func addText(text: String, font: UIFont, textView: UITextView? ,size:CGFloat) {
+    func addText(obj:TextEdit) {
         
-        if text.count < 1 {
-            return
-        }
+       
         self.hideALL()
         print("[AddText] delegate called")
         
@@ -240,36 +266,19 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
         sticker.delegate = self
         sticker.currentFontIndex = -1
         
-        sticker.pathName = font.fontName //
-        sticker.pathType = "TEXT"
-        
-        //sticker.textStickerView.delegate = self
-        sticker.textStickerView.text = text
-        sticker.textStickerView.font = font
-        
-        
-        if let value = textView {
-            
-            // retrieve attributes
-            fontName = value.font?.fontName ?? ""
-            //sticker.textStickerView.textColor = ...
-            sticker.textStickerView.backgroundColor = value.backgroundColor
-            sticker.textStickerView.textAlignment = value.textAlignment
-            sticker.textStickerView.font = UIFont(name: value.font?.fontName ?? "", size: size)
-            
-            
-            
-            
-            sticker.textStickerView.layer.shadowColor = value.layer.shadowColor
-            sticker.textStickerView.layer.shadowRadius = value.layer.shadowRadius
-            sticker.textStickerView.layer.shadowOpacity = value.layer.shadowOpacity
-            sticker.textStickerView.layer.shadowOffset = value.layer.shadowOffset
-            sticker.textStickerView.backgroundColor = value.backgroundColor
-            sticker.textStickerView.alpha = value.alpha
+      
+        if obj.fontName.count < 1 {
+            sticker.textStickerView.font = UIFont.systemFont(ofSize: obj.fontSize)
+        }else {
+            sticker.textStickerView.font =  UIFont(name: obj.fontName, size: obj.fontSize)
         }
+      
+      
+        sticker.textStickerView.text = obj.text
         
+       
         sticker.textStickerView.updateTextFont()
-        sticker.initilizeTextStickerData(mainTextView: sticker.textStickerView, fontSize: size, fontName: fontName)
+        sticker.initilizeTextStickerData(mainTextView: sticker.textStickerView,obj: obj)
         
         stickerView.addSubview(sticker)
         stickerView.clipsToBounds = true
@@ -562,7 +571,9 @@ extension PhotoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollect
 
 extension PhotoVc: quotesDelegate {
     func sendQuoteText(text: String) {
-        self.addText(text: text, font: UIFont.systemFont(ofSize: 20.0), textView: nil, size: 20.0)
+        let obj = TextEdit()
+        obj.text = text
+        self.addText(obj: obj)
     }
 }
 

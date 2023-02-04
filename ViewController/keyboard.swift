@@ -11,7 +11,7 @@ import UIKit
 
 protocol changeImage {
     func changeImage(image: UIImage)
-    func changeTextView(textView: UITextView,size:CGFloat)
+    func changeTextView(obj:TextEdit)
 }
 
 protocol backButton {
@@ -28,17 +28,20 @@ class keyboard: UIViewController,  indexItem, chnageColor, changeFont, aligthmen
     
     func radiusShadowalue(value: Double) {
         textView.textInputView.layer.shadowRadius = CGFloat(Float(value))
+        texeditObj.shadowRadius = value
     }
     
     func offsetShadowValue(value: Double) {
         
         textView.textInputView.layer.shadowOffset = .init(width: 5, height: value)
+        texeditObj.shadowOffset = .init(width: 5, height: value)  
          
     }
     
     
     func changeAlpa(value: Float) {
         textView.alpha = CGFloat(value)
+        texeditObj.textOpacity = CGFloat(value)
     }
     
     
@@ -78,6 +81,8 @@ class keyboard: UIViewController,  indexItem, chnageColor, changeFont, aligthmen
     var bottomConstant: CGFloat = 0
     
     @IBOutlet var textView: UITextView!
+    
+    let texeditObj = TextEdit()
     
     @IBOutlet var heightForToolsView: NSLayoutConstraint!
     @IBOutlet weak var heightOfToolBar: NSLayoutConstraint!
@@ -263,12 +268,13 @@ class keyboard: UIViewController,  indexItem, chnageColor, changeFont, aligthmen
     func chnageColorForView(color: UIColor)
     {
         textView.textColor = color
-        
+        texeditObj.fontColor = color
     }
     func changeFont(name: NSString)
     {
         fontName = name as String
         textView.font =  UIFont(name:fontName , size:CGFloat(fontSize))
+        texeditObj.fontName = fontName
     }
     
     func changeAlighment(index: Int) {
@@ -291,12 +297,15 @@ class keyboard: UIViewController,  indexItem, chnageColor, changeFont, aligthmen
             break;
         }
         
+        texeditObj.aigment = textView.textAlignment
         
     }
     func chnageFontSize(size: Int)
     {
         fontSize = size
         textView.font = UIFont(name:fontName , size:CGFloat(fontSize))
+        
+        texeditObj.fontSize = Double(fontSize)
         
         
     }
@@ -309,6 +318,8 @@ class keyboard: UIViewController,  indexItem, chnageColor, changeFont, aligthmen
     {
         lineSpacingBetweenlines = size
         //self.setAttributedString()
+        
+        
     }
     
 }
@@ -396,7 +407,8 @@ extension keyboard: UITabBarDelegate {
             let heightConstraint = toolsView.heightAnchor.constraint(equalToConstant: 336.0)
             NSLayoutConstraint.activate([bottom, leading, trailing, heightConstraint])
         } else if value == 5 {
-            delegateForChnageImage?.changeTextView(textView: textView, size: CGFloat(fontSize))
+            texeditObj.text = texeditObj.text
+            delegateForChnageImage?.changeTextView(obj: texeditObj)
             dismiss(animated: true)
         }
     }
