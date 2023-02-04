@@ -8,6 +8,10 @@
 import UIKit
 
 class VideoVc: UIViewController, UIGestureRecognizerDelegate, allDelegate, StickerViewDelegate {
+    func shouldHideDraw() {
+        
+    }
+    
     
     
     func sendColorBackgroundV(color: UIColor, image: UIImage?) {

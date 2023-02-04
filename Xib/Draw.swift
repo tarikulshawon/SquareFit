@@ -11,6 +11,7 @@ protocol drawViewDelegate: AnyObject {
     func sendBrushWidth(value: CGFloat)
     func sendOpacity(value:CGFloat)
     func undoAction()
+    func sendColor(color:UIColor)
 }
 
 class Draw: UIView {
@@ -83,11 +84,12 @@ extension Draw: UICollectionViewDelegate, UICollectionViewDataSource,UICollectio
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RatioCell.reusableID  , for: indexPath as IndexPath) as! RatioCell
         cell.backgroundColor = colorArray[indexPath.row]
+        cell.layer.cornerRadius = cell.frame.width / 2.0
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-       
+        delegateForDraw?.sendColor(color: colorArray[indexPath.row])
         
     }
     

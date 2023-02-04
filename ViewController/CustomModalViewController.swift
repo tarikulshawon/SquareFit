@@ -19,9 +19,15 @@ import UIKit
     func sendShapeValue(sticker: String)
     func sendColorBackgroundV(color: UIColor, image: UIImage?)
     @objc optional func undoValue()
+    @objc optional func sendColorValue(color: UIColor)
+    func shouldHideDraw()
 }
 
 class CustomModalViewController: UIViewController, sendSticker, canvasSend, sendFrames, imageIndexDelegate, sendValueForAdjust, filterIndexDelegate, sendImageDelegate, sendShape, sendBackGroundView, drawViewDelegate {
+    func sendColor(color: UIColor) {
+        delegateForEditedView?.sendColorValue!(color: color)
+    }
+    
     func sendBrushWidth(value: CGFloat) {
         
     }
@@ -327,6 +333,12 @@ class CustomModalViewController: UIViewController, sendSticker, canvasSend, send
         UIView.animate(withDuration: 0.4) {
             self.dimmedView.alpha = self.maxDimmedAlpha
         }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        delegateForEditedView?.shouldHideDraw()
     }
     
     func animateDismissView() {

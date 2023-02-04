@@ -9,6 +9,16 @@ import UIKit
 import AudioToolbox
 
 class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, StickerViewDelegate, changeImage, backButton, TextStickerContainerViewDelegate {
+    func shouldHideDraw() {
+        drawView.isUserInteractionEnabled = false
+    }
+    
+    
+    
+    func sendColorValue(color: UIColor) {
+        drawView.strokeColor = color
+    }
+    
     
     
     func undoValue() {
@@ -151,6 +161,7 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
         super.viewDidLoad()
         
         drawView.clipsToBounds = true
+        drawView.isUserInteractionEnabled = false
         
         panRecogniser = UIPanGestureRecognizer(target: self, action: #selector(didPan(_:)))
         pinchRecogniser = UIPinchGestureRecognizer(target: self, action: #selector(didPinch(_:)))
@@ -590,6 +601,7 @@ extension PhotoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollect
                 vc.defaultHeight = CGFloat(300)
                 vc.maximumContainerHeight = CGFloat(300)
                 vc.drawView.isHidden = false
+                drawView.isUserInteractionEnabled = true
             }
             
             else if titleName.contains("Adjust") {
