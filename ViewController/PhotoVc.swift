@@ -769,6 +769,7 @@ extension PhotoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollect
                 vc.defaultHeight = CGFloat(adjustHeight)
                 vc.maximumContainerHeight = CGFloat(adjustHeight)
                 vc.adjustVc.isHidden = false
+               
             }
             
             else if titleName.contains("Frames") {

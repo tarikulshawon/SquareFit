@@ -54,6 +54,21 @@ class Adjust: UIView {
     
     @IBAction func sliderValueChanged(_ sender: UISlider) {
         
+        if currentIndex == 0 {
+            brigthness = sender.value
+        }else if currentIndex == 1 {
+            saturation = sender.value
+        }
+        else if currentIndex == 2 {
+            hue = sender.value
+        }
+        else if currentIndex == 3 {
+            sharpen = sender.value
+        }
+        else if  currentIndex == 4 {
+            contrast = sender.value
+        }
+        
         delegate?.sendAdjustValue(value: sender.value, index: currentIndex)
         
     }

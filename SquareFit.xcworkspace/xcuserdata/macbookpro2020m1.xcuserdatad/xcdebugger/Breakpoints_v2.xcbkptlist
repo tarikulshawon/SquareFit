@@ -329,8 +329,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "372"
             endingLineNumber = "372"
-            landmarkName = "sendOverLay(image:)"
-            landmarkType = "7">
+            landmarkName = "PhotoVc"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
