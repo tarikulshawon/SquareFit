@@ -327,9 +327,9 @@
             filePath = "ViewController/PhotoVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "338"
-            endingLineNumber = "338"
-            landmarkName = "sendOverLay(image:)"
+            startingLineNumber = "370"
+            endingLineNumber = "370"
+            landmarkName = "didPan(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -343,9 +343,9 @@
             filePath = "ViewController/PhotoVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "343"
-            endingLineNumber = "343"
-            landmarkName = "sendOverLay(image:)"
+            startingLineNumber = "375"
+            endingLineNumber = "375"
+            landmarkName = "didPan(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -359,9 +359,9 @@
             filePath = "ViewController/PhotoVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "341"
-            endingLineNumber = "341"
-            landmarkName = "sendOverLay(image:)"
+            startingLineNumber = "373"
+            endingLineNumber = "373"
+            landmarkName = "didPan(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -375,9 +375,9 @@
             filePath = "ViewController/PhotoVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "340"
-            endingLineNumber = "340"
-            landmarkName = "sendOverLay(image:)"
+            startingLineNumber = "372"
+            endingLineNumber = "372"
+            landmarkName = "didPan(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -391,9 +391,9 @@
             filePath = "ViewController/PhotoVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "339"
-            endingLineNumber = "339"
-            landmarkName = "sendOverLay(image:)"
+            startingLineNumber = "371"
+            endingLineNumber = "371"
+            landmarkName = "didPan(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1058,9 +1058,9 @@
             filePath = "ViewController/PhotoVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "257"
-            endingLineNumber = "257"
-            landmarkName = "moveViewPosition(textStickerContainerView:)"
+            startingLineNumber = "274"
+            endingLineNumber = "274"
+            landmarkName = "addText(obj:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1074,9 +1074,9 @@
             filePath = "ViewController/PhotoVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "253"
-            endingLineNumber = "253"
-            landmarkName = "deleteTextStickerView(textStickerContainerView:)"
+            startingLineNumber = "270"
+            endingLineNumber = "270"
+            landmarkName = "addText(obj:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1090,10 +1090,10 @@
             filePath = "ViewController/PhotoVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "249"
-            endingLineNumber = "249"
-            landmarkName = "PhotoVc"
-            landmarkType = "3">
+            startingLineNumber = "266"
+            endingLineNumber = "266"
+            landmarkName = "addText(obj:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1106,41 +1106,9 @@
             filePath = "ViewController/PhotoVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "246"
-            endingLineNumber = "246"
-            landmarkName = "editTextStickerView(textStickerContainerView:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3355BEC6-5203-468F-B1CE-84F24F05E8CD"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ViewController/PhotoVc.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "undoValue()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D13A058D-A823-4977-9339-3CA042B18EBB"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ViewController/PhotoVc.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "undoValue()"
+            startingLineNumber = "263"
+            endingLineNumber = "263"
+            landmarkName = "addText(obj:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1259,118 +1227,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "88B408D9-3262-4C7E-B874-FF426E5B3854"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ViewController/PhotoVc.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "clearAllDataValue()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3B8583A9-2F00-4EC7-A4E4-3D950B9C0BB9"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ViewController/PhotoVc.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "clearAllDataValue()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6A677779-4C90-40A3-9F6F-B17752D4746E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ViewController/PhotoVc.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "532"
-            endingLineNumber = "532"
-            landmarkName = "updateFrame()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6122A99C-36A0-4C36-B456-ADA0D4BE941F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ViewController/PhotoVc.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "cropViewControllerDidCancel(_:original:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "48660AA6-BDEC-433B-8407-10613352F3F8"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ViewController/PhotoVc.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "cropViewControllerDidCancel(_:original:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3B431935-920F-47A0-89CE-05BE69C7541F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ViewController/PhotoVc.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "cropViewControllerDidEndResize(_:original:cropInfo:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CFD66E9D-6E51-44E1-AA39-5C529E1DE71D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ViewController/PhotoVc.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "cropViewControllerDidEndResize(_:original:cropInfo:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "8FC1FA17-BE08-4067-8AF8-FB51504F6F6F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -1381,6 +1237,22 @@
             startingLineNumber = "13"
             endingLineNumber = "13"
             landmarkName = "cropViewControllerDidCrop(_:cropped:transformation:cropInfo:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F11DAFD0-FC48-4DE6-B67F-1C3522BD9F51"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ViewController/PhotoVc.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "275"
+            endingLineNumber = "275"
+            landmarkName = "addText(obj:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

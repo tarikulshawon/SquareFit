@@ -10,6 +10,50 @@ import AudioToolbox
 import Mantis
 
 class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, StickerViewDelegate, changeImage, backButton, TextStickerContainerViewDelegate, CropViewControllerDelegate {
+
+    @IBOutlet weak var widthForTempView: NSLayoutConstraint!
+    @IBOutlet weak var heightForTempView: NSLayoutConstraint!
+    @IBOutlet weak var btnCollectionView: UICollectionView!
+    @IBOutlet weak var holderView: UIView!
+    @IBOutlet weak var btnView: UIView!
+    @IBOutlet weak var imv: UIImageView!
+    @IBOutlet weak var overlayView: UIImageView!
+    @IBOutlet weak var center_horizontal_img_view: UIImageView!
+    @IBOutlet weak var center_vertical_img_view: UIImageView!
+    @IBOutlet weak var backgroundImv: UIImageView!
+    @IBOutlet weak var stickerView: UIView!
+    @IBOutlet weak var intermediateview: UIView!
+    @IBOutlet weak var frameVc: UIImageView!
+    var selectedImage: UIImage? = nil
+    var cellWidth:CGFloat = 60
+    var cellGap:CGFloat =  0
+    var panRecogniser:UIPanGestureRecognizer! = nil
+    var pinchRecogniser:UIPinchGestureRecognizer! = nil
+    var tapRecogniser: UITapGestureRecognizer! =  nil
+    var btnArray: NSArray! = nil
+    var currentTextStickerView: TextStickerContainerView?
+    let currentlyActiveIndex = 0
+    
+    var Brightness: Float = 0.0
+    var max_brightness:Float = 0.7
+    var min_brightness:Float = -0.7
+    
+    var Saturation: Float = 1.0
+    var max_saturation:Float = 3
+    var min_saturation:Float = -1
+    
+    var hue: Float = 0.0
+    var max_hue:Float = 1.0
+    var min_hue:Float = -1.0
+    
+    var Contrast: Float = 1.0
+    var max_contrast:Float = 1.5
+    var min_contrast:Float = 0.5
+    
+    var sharpen:Float = 0
+    var max_sharpen:Float = 4.0
+    var min_sharpen:Float = -4.0
+    
     func cropViewControllerDidCrop(_ cropViewController: Mantis.CropViewController, cropped: UIImage, transformation: Mantis.Transformation, cropInfo: Mantis.CropInfo) {
         imv.image = cropped
         cropViewController.dismiss(animated: true)
@@ -164,33 +208,6 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
     
     
     
-  
-    
-    
-    @IBOutlet weak var widthForTempView: NSLayoutConstraint!
-    @IBOutlet weak var heightForTempView: NSLayoutConstraint!
-    @IBOutlet weak var btnCollectionView: UICollectionView!
-    @IBOutlet weak var holderView: UIView!
-    @IBOutlet weak var btnView: UIView!
-    @IBOutlet weak var imv: UIImageView!
-    @IBOutlet weak var overlayView: UIImageView!
-    @IBOutlet weak var center_horizontal_img_view: UIImageView!
-    @IBOutlet weak var center_vertical_img_view: UIImageView!
-    @IBOutlet weak var backgroundImv: UIImageView!
-    @IBOutlet weak var stickerView: UIView!
-    @IBOutlet weak var intermediateview: UIView!
-    @IBOutlet weak var frameVc: UIImageView!
-    var selectedImage: UIImage? = nil
-    var cellWidth:CGFloat = 60
-    var cellGap:CGFloat =  0
-    var panRecogniser:UIPanGestureRecognizer! = nil
-    var pinchRecogniser:UIPinchGestureRecognizer! = nil
-    var tapRecogniser: UITapGestureRecognizer! =  nil
-    var btnArray: NSArray! = nil
-    var currentTextStickerView: TextStickerContainerView?
-    let currentlyActiveIndex = 0
-    
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -325,6 +342,21 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
     }
     
     func sendAdjust(value: Float, index: Int) {
+        
+        if index == 0 {
+            Brightness = value
+        }else if index == 1 {
+            Saturation = value
+        }
+        else if index == 2 {
+            hue = value
+        }
+        else if index == 3 {
+            sharpen = value
+        }
+        else if index == 4 {
+            Contrast = value
+        }
         
     }
     
@@ -523,6 +555,44 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
     @objc private func didTap(_ recogniser: UITapGestureRecognizer) {
         self.hideALL()
         
+    }
+    
+    
+    func getImgae(br:Float,sat:Float,sha:Float,contr:Float,image:UIImage)->UIImage {
+        
+        
+        if let currentFilter = CIFilter(name:"CIColorControls") {
+            let beginImage = CIImage(image: image)
+            let context = CIContext(options: nil)
+            
+            currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
+            currentFilter.setValue(br, forKey: kCIInputBrightnessKey)
+            currentFilter.setValue(sat, forKey: kCIInputSaturationKey)
+            currentFilter.setValue(contr, forKey: kCIInputContrastKey)
+            
+            if let output = currentFilter.outputImage {
+                if let cgimg = context.createCGImage(output, from: output.extent) {
+                    let processedImage = UIImage(cgImage: cgimg)
+                    
+                    let context = CIContext(options: nil)
+                    if let currentFilter = CIFilter(name:"CISharpenLuminance") {
+                        
+                        let beginImage = CIImage(image: processedImage)
+                        
+                        currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
+                        currentFilter.setValue(sha, forKey: "inputSharpness")
+                        if let output = currentFilter.outputImage {
+                            if let cgimg = context.createCGImage(output, from: output.extent) {
+                                let processedImage = UIImage(cgImage: cgimg)
+                                return processedImage
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+        return UIImage()
     }
     
     @objc func updateFrame() {
