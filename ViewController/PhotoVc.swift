@@ -54,6 +54,8 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
     var max_sharpen:Float = 4.0
     var min_sharpen:Float = -4.0
     
+    var currentFilterDic:Dictionary<String, Any>? = nil
+    
     func cropViewControllerDidCrop(_ cropViewController: Mantis.CropViewController, cropped: UIImage, transformation: Mantis.Transformation, cropInfo: Mantis.CropInfo) {
         imv.image = cropped
         cropViewController.dismiss(animated: true)
@@ -302,11 +304,9 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
     func sendFilter(dic: Dictionary<String, Any>?) {
         
         let img = selectedImage //UIImage(named: "lol.jpg")
-        if dic == nil {
-            imv.image = img
-            return
-        }
-        imv.image = getFilteredImage(withInfo: dic as! [String : Any], for: img)
+        currentFilterDic = dic
+        self.DoAdjustMent(inputImage: img!)
+        
     }
     
     func stickerViewDidBeginMoving(_ stickerView: StickerView) {
@@ -357,6 +357,8 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
         else if index == 4 {
             Contrast = value
         }
+        
+        self.DoAdjustMent(inputImage: selectedImage!)
         
     }
     
@@ -558,41 +560,76 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
     }
     
     
-    func getImgae(br:Float,sat:Float,sha:Float,contr:Float,image:UIImage)->UIImage {
-        
-        
+    
+    
+    func DoAdjustMent(inputImage: UIImage) {
+        let context = CIContext(options: nil)
         if let currentFilter = CIFilter(name:"CIColorControls") {
-            let beginImage = CIImage(image: image)
-            let context = CIContext(options: nil)
+            let beginImage = CIImage(image: inputImage)
             
             currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
-            currentFilter.setValue(br, forKey: kCIInputBrightnessKey)
-            currentFilter.setValue(sat, forKey: kCIInputSaturationKey)
-            currentFilter.setValue(contr, forKey: kCIInputContrastKey)
+            currentFilter.setValue(Brightness, forKey: kCIInputBrightnessKey)
+            currentFilter.setValue(Saturation, forKey: kCIInputSaturationKey)
+            currentFilter.setValue(Contrast, forKey: kCIInputContrastKey)
             
             if let output = currentFilter.outputImage {
                 if let cgimg = context.createCGImage(output, from: output.extent) {
                     let processedImage = UIImage(cgImage: cgimg)
-                    
-                    let context = CIContext(options: nil)
-                    if let currentFilter = CIFilter(name:"CISharpenLuminance") {
-                        
-                        let beginImage = CIImage(image: processedImage)
-                        
-                        currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
-                        currentFilter.setValue(sha, forKey: "inputSharpness")
-                        if let output = currentFilter.outputImage {
-                            if let cgimg = context.createCGImage(output, from: output.extent) {
-                                let processedImage = UIImage(cgImage: cgimg)
-                                return processedImage
-                            }
-                        }
-                    }
-                    
+                    self.sharpenValue(inputImage: processedImage)
                 }
             }
         }
-        return UIImage()
+        
+    }
+    
+    func sharpenValue (inputImage:UIImage) {
+        let context = CIContext(options: nil)
+        
+        if let currentFilter = CIFilter(name:"CISharpenLuminance") {
+            
+            let beginImage = CIImage(image: inputImage)
+            
+            currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
+            currentFilter.setValue(sharpen, forKey: "inputSharpness")
+            if let output = currentFilter.outputImage {
+                if let cgimg = context.createCGImage(output, from: output.extent) {
+                    let processedImage = UIImage(cgImage: cgimg)
+                    self.hueAdjust(inputImage: processedImage)
+                }
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    func hueAdjust(inputImage: UIImage) {
+        let context = CIContext(options: nil)
+        
+        if let currentFilter = CIFilter(name: "CIHueAdjust") {
+            let beginImage = CIImage(image: inputImage)
+            
+            currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
+            currentFilter.setValue(hue, forKey: "inputAngle")
+            
+            if let output = currentFilter.outputImage {
+                if let cgimg = context.createCGImage(output, from: output.extent) {
+                    let processedImage = UIImage(cgImage: cgimg)
+                    DispatchQueue.main.async { [weak self] in
+                        guard let self = self else { return }
+                        if self.currentFilterDic != nil {
+                            self.imv.image = getFilteredImage(withInfo: self.currentFilterDic, for: processedImage)
+                        }
+                        else  {
+                            // Memory warning
+                            self.imv.image = processedImage
+                        }
+                    }
+                }
+            }
+        }
+        
     }
     
     @objc func updateFrame() {
@@ -802,11 +839,15 @@ extension PhotoVc: quotesDelegate {
 private extension PhotoVc {
     func presentSheetViewController(with vc: UIViewController, initialHeight: CGFloat, maxHeight: CGFloat) {
         if let sheet = vc.sheetPresentationController {
-            sheet.detents = [
-                .custom(identifier: .init("\(initialHeight)") ,resolver: { _ in initialHeight }),
-                .medium(),
-                .custom(identifier: .init("\(maxHeight)") ,resolver: { _ in maxHeight })
-            ]
+            if #available(iOS 16.0, *) {
+                sheet.detents = [
+                    .custom(identifier: .init("\(initialHeight)") ,resolver: { _ in initialHeight }),
+                    .medium(),
+                    .custom(identifier: .init("\(maxHeight)") ,resolver: { _ in maxHeight })
+                ]
+            } else {
+                // Fallback on earlier versions
+            }
             
             sheet.selectedDetentIdentifier = .none
             sheet.largestUndimmedDetentIdentifier = .medium

@@ -535,11 +535,15 @@ extension VideoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollect
 private extension VideoVc {
     func presentSheetViewController(with vc: UIViewController, initialHeight: CGFloat, maxHeight: CGFloat) {
         if let sheet = vc.sheetPresentationController {
-            sheet.detents = [
-                .custom(identifier: .init("\(initialHeight)") ,resolver: { _ in initialHeight }),
-                .medium(),
-                .custom(identifier: .init("\(maxHeight)") ,resolver: { _ in maxHeight })
-            ]
+            if #available(iOS 16.0, *) {
+                sheet.detents = [
+                    .custom(identifier: .init("\(initialHeight)") ,resolver: { _ in initialHeight }),
+                    .medium(),
+                    .custom(identifier: .init("\(maxHeight)") ,resolver: { _ in maxHeight })
+                ]
+            } else {
+                // Fallback on earlier versions
+            }
             
             sheet.selectedDetentIdentifier = .none
             sheet.largestUndimmedDetentIdentifier = .medium
