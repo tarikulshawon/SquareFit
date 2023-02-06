@@ -78,7 +78,7 @@
 		F063C6012B22B57BC1432428F8017329 /* Pods-SquareFit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A8C87AAE5A6C18350CE73C6FD9AC208B /* Pods-SquareFit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F4016E5A83126FA3270B0C66EC31301E /* CoreGraphicsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BF548BB6AA84E09177265DD9C7CED7 /* CoreGraphicsExtensions.swift */; };
 		FB9B1FBA989955F58E0EAAE6D2623CE7 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = C268677A7B3A927DAE5298FC763B0235 /* Config.swift */; };
-		FE1C3482C85228AAD354083F31D19AC5 /* Mantis-MantisResources in Resources */ = {isa = PBXBuildFile; fileRef = E50395ED50F3D5D97E3957A2ED43921F /* Mantis-MantisResources */; };
+		FE1C3482C85228AAD354083F31D19AC5 /* MantisResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E50395ED50F3D5D97E3957A2ED43921F /* MantisResources.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,7 +173,7 @@
 		914F2CFDB1094AD2A16D1959514654A4 /* Pods-SquareFit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SquareFit.debug.xcconfig"; sourceTree = "<group>"; };
 		97E48B9F0E2BA8A7111CB44158877F89 /* Mantis.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mantis.swift; path = Sources/Mantis/Mantis.swift; sourceTree = "<group>"; };
 		9A1E33818317BEBC9FE994795DB347EE /* CropViewModelProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CropViewModelProtocol.swift; path = Sources/Mantis/Protocols/CropViewModelProtocol.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DC027A6BD8074B97F8FC1461D804459 /* CropBoxFreeAspectFrameUpdater.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CropBoxFreeAspectFrameUpdater.swift; path = Sources/Mantis/CropView/CropBoxFreeAspectFrameUpdater.swift; sourceTree = "<group>"; };
 		9E46AEB7774E2D56A73C9A3BE06776AD /* CropAuxiliaryIndicatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CropAuxiliaryIndicatorView.swift; path = Sources/Mantis/CropView/CropAuxiliaryIndicatorView.swift; sourceTree = "<group>"; };
 		A1983F3BF203B076C13630BE566ABA24 /* Pods-SquareFitTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-SquareFitTests"; path = Pods_SquareFitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -215,7 +215,7 @@
 		E0083332120C00520AC824E06557A48F /* Pods-SquareFit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SquareFit.release.xcconfig"; sourceTree = "<group>"; };
 		E1621B94C24D3436F3C1A0451E6BD1B6 /* Pods-SquareFit-SquareFitUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SquareFit-SquareFitUITests-frameworks.sh"; sourceTree = "<group>"; };
 		E2723289EBE41432651798B20091CAF0 /* Mantis.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Mantis.modulemap; sourceTree = "<group>"; };
-		E50395ED50F3D5D97E3957A2ED43921F /* Mantis-MantisResources */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Mantis-MantisResources"; path = MantisResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		E50395ED50F3D5D97E3957A2ED43921F /* MantisResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MantisResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9CF36E35E9CD7A7419A538FFFAD7EA3 /* MantisLocalizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = MantisLocalizable.strings; path = it.lproj/MantisLocalizable.strings; sourceTree = "<group>"; };
 		EB3AFBA16E77E9EEEDDFC31431C47D39 /* Pods-SquareFit-SquareFitUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SquareFit-SquareFitUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		ECEA6534F825135ED5919160986CD41F /* CropVisualEffectView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CropVisualEffectView.swift; path = Sources/Mantis/MaskBackground/CropVisualEffectView.swift; sourceTree = "<group>"; };
@@ -307,7 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				316D22F8B19400DBC5073973480D1521 /* Mantis */,
-				E50395ED50F3D5D97E3957A2ED43921F /* Mantis-MantisResources */,
+				E50395ED50F3D5D97E3957A2ED43921F /* MantisResources.bundle */,
 				408A44BAF0ACDBE3EF61F88A18F8FDF7 /* Pods-SquareFit */,
 				CE0B3E31D20DF3BA33B144D32724BBB1 /* Pods-SquareFit-SquareFitUITests */,
 				A1983F3BF203B076C13630BE566ABA24 /* Pods-SquareFitTests */,
@@ -403,7 +403,6 @@
 				64CA72FDB6D84C90B5A70003D779D848 /* Resources */,
 				2B75EBABF5AAD02CF7113B624FDD7243 /* Support Files */,
 			);
-			name = Mantis;
 			path = Mantis;
 			sourceTree = "<group>";
 		};
@@ -523,7 +522,7 @@
 			);
 			name = "Mantis-MantisResources";
 			productName = MantisResources;
-			productReference = E50395ED50F3D5D97E3957A2ED43921F /* Mantis-MantisResources */;
+			productReference = E50395ED50F3D5D97E3957A2ED43921F /* MantisResources.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		8F30D034B1446497E0DEB2E4857F7FDE /* Pods-SquareFitTests */ = {
@@ -659,7 +658,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE1C3482C85228AAD354083F31D19AC5 /* Mantis-MantisResources in Resources */,
+				FE1C3482C85228AAD354083F31D19AC5 /* MantisResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1014,6 +1013,7 @@
 			baseConfigurationReference = 161766C879A40075FD7FD33A93DF401E /* Mantis.release.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Mantis";
+				DEVELOPMENT_TEAM = Z3NNC949Y7;
 				IBSC_MODULE = Mantis;
 				INFOPLIST_FILE = "Target Support Files/Mantis/ResourceBundle-MantisResources-Mantis-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1030,6 +1030,7 @@
 			baseConfigurationReference = C0C46AE9FACA781DBC3EF2D102B81114 /* Mantis.debug.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Mantis";
+				DEVELOPMENT_TEAM = Z3NNC949Y7;
 				IBSC_MODULE = Mantis;
 				INFOPLIST_FILE = "Target Support Files/Mantis/ResourceBundle-MantisResources-Mantis-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;

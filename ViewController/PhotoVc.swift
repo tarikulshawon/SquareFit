@@ -10,7 +10,7 @@ import AudioToolbox
 import Mantis
 
 class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, StickerViewDelegate, changeImage, backButton, TextStickerContainerViewDelegate, CropViewControllerDelegate {
-
+    
     @IBOutlet weak var widthForTempView: NSLayoutConstraint!
     @IBOutlet weak var heightForTempView: NSLayoutConstraint!
     @IBOutlet weak var btnCollectionView: UICollectionView!
@@ -131,26 +131,26 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
             if obj.shadowOpacity != -1 {
                 currentTextStickerView?.textStickerView.layer.shadowOpacity = Float(obj.shadowOpacity)
             }
-           
+            
             if obj.shadowOffset.width > 0 {
                 currentTextStickerView?.textStickerView.layer.shadowOffset = obj.shadowOffset
             }
-           
-           
+            
+            
             if obj.fontName.count > 0 {
                 currentTextStickerView?.textStickerView.font = UIFont(name: obj.fontName, size: obj.fontSize)
             }
             else {
                 currentTextStickerView?.textStickerView.font = UIFont.systemFont(ofSize: obj.fontSize)
             }
-           
+            
             currentTextStickerView?.textStickerView.textAlignment = obj.aigment
             
             currentTextStickerView?.textStickerView.alpha = obj.textOpacity
             currentTextStickerView?.textStickerView.backgroundColor = obj.textBackGroundColor
             currentTextStickerView?.textStickerView.text = obj.text
             currentTextStickerView?.scaleController.updateFrame()
-        
+            
         }
         else {
             self.addText(obj: obj)
@@ -177,7 +177,7 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
         print(m)
         
         if let a  = container.fontSize,
-            let b = container.font?.fontName ,
+           let b = container.font?.fontName ,
            let c = container.textColor,
            let d = container.backgroundColor,
            let e = container.layer.shadowColor{
@@ -255,7 +255,7 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
         }
     }
     
-   
+    
     
     func setCurrentTextStickerView(textStickerContainerView: TextStickerContainerView) {
         self.hideALL()
@@ -416,7 +416,7 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
     
     func addText(obj:TextEdit) {
         
-       
+        
         self.hideALL()
         print("[AddText] delegate called")
         
@@ -432,17 +432,17 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
         sticker.delegate = self
         sticker.currentFontIndex = -1
         
-      
+        
         if obj.fontName.count < 1 {
             sticker.textStickerView.font = UIFont.systemFont(ofSize: obj.fontSize)
         }else {
             sticker.textStickerView.font =  UIFont(name: obj.fontName, size: obj.fontSize)
         }
-      
-      
+        
+        
         sticker.textStickerView.text = obj.text
         
-       
+        
         sticker.textStickerView.updateTextFont()
         sticker.initilizeTextStickerData(mainTextView: sticker.textStickerView,obj: obj)
         
@@ -637,7 +637,7 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
         heightForTempView.constant = holderView.frame.width
         selectedImage = UIImage(named: "lol.jpg")
         imv.image = selectedImage
-    
+        
         imv.contentMode = .scaleAspectFit
         
         let totalCellWidth = cellWidth * CGFloat(btnArray.count)
@@ -753,46 +753,37 @@ extension PhotoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollect
             
             
             else if titleName.contains("Image") {
-                vc.defaultHeight = CGFloat(adjustHeight)
-                vc.maximumContainerHeight = CGFloat(adjustHeight)
+                vc.defaultHeight =  150
                 vc.imageEditVc.isHidden = false
             }
             
             else if titleName.contains("Draw") {
-                vc.defaultHeight = CGFloat(200)
-                vc.maximumContainerHeight = CGFloat(300)
+                vc.defaultHeight = CGFloat(280)
                 vc.drawView.isHidden = false
                 drawView.isUserInteractionEnabled = true
             }
             
             else if titleName.contains("Adjust") {
-                vc.defaultHeight = CGFloat(adjustHeight)
-                vc.maximumContainerHeight = CGFloat(adjustHeight)
+                vc.defaultHeight = CGFloat(150)
                 vc.adjustVc.isHidden = false
-               
+                
             }
             
             else if titleName.contains("Frames") {
-                vc.defaultHeight = CGFloat(framesVcHeight)
                 vc.frameVc.isHidden = false
             }
             
             else if titleName.contains("Canvas") {
-                vc.defaultHeight = CGFloat(canVasHeight)
-                vc.maximumContainerHeight  = CGFloat(canVasHeight)
+                vc.defaultHeight = CGFloat(250)
                 vc.canVas.isHidden = false
             }
             
             else if titleName.contains("Overlay") {
-                vc.defaultHeight = CGFloat(overLayHeight)
-                // vc.maximumContainerHeight = CGFloat(overLayHeight)
                 vc.overlayVc.isHidden = false
                 
                 
             }
             else if titleName.contains("Shape") {
-                vc.defaultHeight = CGFloat(shapeVcHeight)
-                vc.maximumContainerHeight = CGFloat(shapeVcHeight)
                 vc.shapeVc.isHidden = false
                 
             }
@@ -812,18 +803,27 @@ extension PhotoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollect
                 return
             }
             else if titleName.contains("BackGround") {
-                vc.defaultHeight = 300
+               
                 vc.backGroundView.isHidden = false
                 
             }
             else {
-                vc.defaultHeight = 300
+                
                 vc.stickerVc.isHidden = false
                 
             }
             vc.typeName = titleName
             
-            presentSheetViewController(with: vc, initialHeight: vc.defaultHeight, maxHeight: vc.maximumContainerHeight)
+            
+            if vc.defaultHeight < 300 {
+                presentSheetViewController(with: vc, shouldShowSmallHeigh: true, height: vc.defaultHeight)
+            }
+            else {
+                presentSheetViewController(with: vc, shouldShowSmallHeigh: false, height: vc.defaultHeight)
+            }
+            
+            
+           
         }
     }
     
@@ -838,18 +838,30 @@ extension PhotoVc: quotesDelegate {
 }
 
 private extension PhotoVc {
-    func presentSheetViewController(with vc: UIViewController, initialHeight: CGFloat, maxHeight: CGFloat) {
+    func presentSheetViewController(with vc: UIViewController,shouldShowSmallHeigh:Bool,height:CGFloat) {
+        
+       
         if let sheet = vc.sheetPresentationController {
+            
+            
+            let smallId = UISheetPresentationController.Detent.Identifier("small")
             if #available(iOS 16.0, *) {
-                sheet.detents = [
-                    .custom(identifier: .init("\(initialHeight)") ,resolver: { _ in initialHeight }),
-                    .medium(),
-                    .custom(identifier: .init("\(maxHeight)") ,resolver: { _ in maxHeight })
-                ]
+                let smallDetent = UISheetPresentationController.Detent.custom(identifier: smallId) { context in
+                    return height
+                }
+                
+                if shouldShowSmallHeigh {
+                    sheet.detents = [smallDetent]
+                }
+                else {
+                    sheet.detents = [smallDetent,.medium(),.large()]
+                }
+                
             } else {
                 // Fallback on earlier versions
             }
             
+           
             sheet.selectedDetentIdentifier = .none
             sheet.largestUndimmedDetentIdentifier = .medium
             sheet.prefersScrollingExpandsWhenScrolledToEdge = false
