@@ -178,7 +178,7 @@ class keyboard: UIViewController,  indexItem, chnageColor, changeFont, aligthmen
         
         //self.setAttributedString()
         
-        //textView.becomeFirstResponder()
+        textView.becomeFirstResponder()
         
        
     }
