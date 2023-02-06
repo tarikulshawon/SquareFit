@@ -327,8 +327,8 @@
             filePath = "ViewController/PhotoVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "372"
-            endingLineNumber = "372"
+            startingLineNumber = "382"
+            endingLineNumber = "382"
             landmarkName = "PhotoVc"
             landmarkType = "3">
          </BreakpointContent>
@@ -343,8 +343,8 @@
             filePath = "ViewController/PhotoVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "377"
-            endingLineNumber = "377"
+            startingLineNumber = "387"
+            endingLineNumber = "387"
             landmarkName = "sendOverLay(image:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -359,8 +359,8 @@
             filePath = "ViewController/PhotoVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "375"
-            endingLineNumber = "375"
+            startingLineNumber = "385"
+            endingLineNumber = "385"
             landmarkName = "sendOverLay(image:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -375,8 +375,8 @@
             filePath = "ViewController/PhotoVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "374"
-            endingLineNumber = "374"
+            startingLineNumber = "384"
+            endingLineNumber = "384"
             landmarkName = "sendOverLay(image:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -391,8 +391,8 @@
             filePath = "ViewController/PhotoVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "373"
-            endingLineNumber = "373"
+            startingLineNumber = "383"
+            endingLineNumber = "383"
             landmarkName = "sendOverLay(image:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -579,8 +579,8 @@
             filePath = "ViewController/HomeVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "picker(_:didFinishPicking:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1058,8 +1058,8 @@
             filePath = "ViewController/PhotoVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "276"
-            endingLineNumber = "276"
+            startingLineNumber = "286"
+            endingLineNumber = "286"
             landmarkName = "moveViewPosition(textStickerContainerView:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1074,8 +1074,8 @@
             filePath = "ViewController/PhotoVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "272"
-            endingLineNumber = "272"
+            startingLineNumber = "282"
+            endingLineNumber = "282"
             landmarkName = "deleteTextStickerView(textStickerContainerView:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1090,8 +1090,8 @@
             filePath = "ViewController/PhotoVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "268"
-            endingLineNumber = "268"
+            startingLineNumber = "278"
+            endingLineNumber = "278"
             landmarkName = "editTextStickerView(textStickerContainerView:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1106,8 +1106,8 @@
             filePath = "ViewController/PhotoVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "265"
-            endingLineNumber = "265"
+            startingLineNumber = "275"
+            endingLineNumber = "275"
             landmarkName = "PhotoVc"
             landmarkType = "3">
          </BreakpointContent>
@@ -1122,8 +1122,8 @@
             filePath = "ViewController/PhotoVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "277"
-            endingLineNumber = "277"
+            startingLineNumber = "287"
+            endingLineNumber = "287"
             landmarkName = "moveViewPosition(textStickerContainerView:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1138,8 +1138,8 @@
             filePath = "ViewController/PhotoVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "359"
-            endingLineNumber = "359"
+            startingLineNumber = "369"
+            endingLineNumber = "369"
             landmarkName = "sendAdjust(value:index:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1154,8 +1154,8 @@
             filePath = "ViewController/PhotoVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "845"
-            endingLineNumber = "845"
+            startingLineNumber = "855"
+            endingLineNumber = "855"
             landmarkName = "presentSheetViewController(with:shouldShowSmallHeigh:height:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1170,8 +1170,8 @@
             filePath = "ViewController/PhotoVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "841"
-            endingLineNumber = "841"
+            startingLineNumber = "851"
+            endingLineNumber = "851"
             landmarkName = "presentSheetViewController(with:shouldShowSmallHeigh:height:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1186,8 +1186,8 @@
             filePath = "ViewController/PhotoVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "843"
-            endingLineNumber = "843"
+            startingLineNumber = "853"
+            endingLineNumber = "853"
             landmarkName = "presentSheetViewController(with:shouldShowSmallHeigh:height:)"
             landmarkType = "7">
          </BreakpointContent>

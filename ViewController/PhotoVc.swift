@@ -212,11 +212,21 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        setNeedsStatusBarAppearanceUpdate()
         
     }
     
     @IBOutlet weak var drawView: DrawingView!
+    
+   
+    
+    
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -758,7 +768,7 @@ extension PhotoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollect
             }
             
             else if titleName.contains("Draw") {
-                vc.defaultHeight = CGFloat(280)
+                vc.defaultHeight = CGFloat(240)
                 vc.drawView.isHidden = false
                 drawView.isUserInteractionEnabled = true
             }

@@ -16,7 +16,19 @@ class HomeVc: UIViewController, PHPickerViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         // Do any additional setup after loading the view.
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setNeedsStatusBarAppearanceUpdate()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
     }
     
     
