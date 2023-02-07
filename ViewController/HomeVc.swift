@@ -27,6 +27,7 @@ class HomeVc: UIViewController, PHPickerViewControllerDelegate {
         setNeedsStatusBarAppearanceUpdate()
     }
     
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
     }

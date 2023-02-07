@@ -26,6 +26,17 @@ class keyboard: UIViewController,  indexItem, chnageColor, changeFont, aligthmen
          
     }
     
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setNeedsStatusBarAppearanceUpdate()
+        
+    }
+    
     func radiusShadowalue(value: Double) {
         textView.textInputView.layer.shadowRadius = CGFloat(Float(value))
         texeditObj.shadowRadius = value
@@ -179,7 +190,7 @@ class keyboard: UIViewController,  indexItem, chnageColor, changeFont, aligthmen
         //self.setAttributedString()
         
         textView.becomeFirstResponder()
-        
+        setNeedsStatusBarAppearanceUpdate()
        
     }
     
