@@ -16,7 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         let path1 = Bundle.main.path(forResource: "gradient", ofType: "plist")
         plistArray1 = NSArray(contentsOfFile: path1!)
-        
+       
+
         let path = Bundle.main.path(forResource: "colorp", ofType: "plist")
         plistArray = NSArray(contentsOfFile: path!)
         self.loadData()

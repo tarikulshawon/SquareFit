@@ -192,6 +192,8 @@ class keyboard: UIViewController,  indexItem, chnageColor, changeFont, aligthmen
         textView.becomeFirstResponder()
         setNeedsStatusBarAppearanceUpdate()
        
+        textView.keyboardAppearance = .dark
+
     }
     
    
