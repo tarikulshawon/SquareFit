@@ -105,7 +105,7 @@ class TextStickerContainerView: UIView {
         textStickerView.layer.name = "notHide"
         textStickerView.tag = 1000
         layer.cornerRadius = 10
-        backgroundColor = .red
+        backgroundColor = .clear
         clipsToBounds = false
         addSubview(self.textStickerView)
         isUserInteractionEnabled = true
