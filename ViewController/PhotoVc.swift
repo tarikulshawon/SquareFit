@@ -862,12 +862,14 @@ private extension PhotoVc {
                 let smallDetent = UISheetPresentationController.Detent.custom(identifier: smallId) { context in
                     return height
                 }
-                
+
                 if shouldShowSmallHeigh {
                     sheet.detents = [smallDetent]
+                    sheet.largestUndimmedDetentIdentifier = smallId
                 }
                 else {
-                    sheet.detents = [smallDetent,.medium(),.large()]
+                    sheet.detents = [.medium(),smallDetent, .large()]
+                    sheet.largestUndimmedDetentIdentifier = .large
                 }
                 
             } else {
@@ -876,7 +878,7 @@ private extension PhotoVc {
             
            
             sheet.selectedDetentIdentifier = .none
-            sheet.largestUndimmedDetentIdentifier = .medium
+            //sheet.largestUndimmedDetentIdentifier = .large
             sheet.prefersScrollingExpandsWhenScrolledToEdge = false
             sheet.prefersEdgeAttachedInCompactHeight = true
             sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
