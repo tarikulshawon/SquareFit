@@ -519,6 +519,9 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
     
     @objc private func didPan(_ recogniser: UIPanGestureRecognizer) {
         
+        
+       
+        
         if recogniser.state == .began || recogniser.state == .changed {
             let panTranslation = recogniser.translation(in: imv.superview)
             let translatedCenter = CGPoint(x: imv.center.x + panTranslation.x, y: imv.center.y + panTranslation.y)

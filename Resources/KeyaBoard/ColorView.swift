@@ -18,6 +18,7 @@ protocol chnageColor {
 class ColorView: UIView {
     
     
+    @IBOutlet weak var colorSegment: UISegmentedControl!
     private var colorWheel: RotatingColorWheel!
     public var delegateForColor: chnageColor?
     var currentBackGroundIndex = 0
@@ -25,6 +26,18 @@ class ColorView: UIView {
     @IBOutlet weak var collectionviewF: UICollectionView!
     
     override func draw(_ rect: CGRect) {
+        
+        
+        colorSegment.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
+        colorSegment.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .normal)
+
+        colorSegment.selectedSegmentTintColor =  titleColor
+        colorSegment.layer.borderWidth = 1.0
+        colorSegment.layer.cornerRadius = 5.0
+        colorSegment.layer.borderColor = UIColor.white.cgColor
+        colorSegment.layer.masksToBounds = true
+        
+        
         // colorWheel = RotatingColorWheel(frame:  CGRect(x: 0, y: 0, width:self.frame.size.width, height: self.frame.size.height))
         // colorWheel.delegate = self
         // colorWheel.backgroundColor = UIColor.clear

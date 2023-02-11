@@ -26,6 +26,7 @@
                                 <segment title="Gradient"/>
                                 <segment title="Texture"/>
                             </segments>
+                            <color key="tintColor" red="0.1215686275" green="0.1215686275" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="changeValue:" destination="iN0-l3-epB" eventType="valueChanged" id="zy6-ys-hIs"/>
                             </connections>
@@ -80,6 +81,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="collectionviewF" destination="jeJ-1U-PaF" id="woy-9r-bzg"/>
+                <outlet property="colorSegment" destination="5tT-NK-rJL" id="z0o-Jo-gah"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="114.50892857142857"/>
         </view>
