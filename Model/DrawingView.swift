@@ -1,11 +1,3 @@
-//
-//  CanvasView.swift
-//  DrawingApp
-//
-//  Created by Ranosys on 19/09/19.
-//  Copyright © 2019 Ranosys. All rights reserved.
-//
-
 import UIKit
 
 struct TouchPointsAndColor {
@@ -21,7 +13,6 @@ struct TouchPointsAndColor {
 }
 
 class DrawingView: UIView {
-
     var lines = [TouchPointsAndColor]()
     var strokeWidth: CGFloat = 1.0
     var strokeColor: UIColor = .black
@@ -30,20 +21,20 @@ class DrawingView: UIView {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         
-        guard let context = UIGraphicsGetCurrentContext() else {
-            return
-        }
+        guard let context = UIGraphicsGetCurrentContext() else { return }
         
-        lines.forEach { (line) in
+        lines.forEach { line in
             for (i, p) in (line.points?.enumerated())! {
                 if i == 0 {
                     context.move(to: p)
                 } else {
                     context.addLine(to: p)
                 }
+                
                 context.setStrokeColor(line.color?.withAlphaComponent(line.opacity ?? 1.0).cgColor ?? UIColor.black.cgColor)
                 context.setLineWidth(line.width ?? 1.0)
             }
+            
             context.setLineCap(.round)
             context.strokePath()
         }
@@ -54,16 +45,15 @@ class DrawingView: UIView {
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard let touch = touches.first?.location(in: nil) else {
-            return
-        }
+        guard let touch = touches.first?.location(in: self) else { return }
         
-        guard var lastPoint = lines.popLast() else {return}
+        guard var lastPoint = lines.popLast() else { return }
         lastPoint.points?.append(touch)
         lastPoint.color = strokeColor
         lastPoint.width = strokeWidth
         lastPoint.opacity = strokeOpacity
         lines.append(lastPoint)
+        
         setNeedsDisplay()
     }
     

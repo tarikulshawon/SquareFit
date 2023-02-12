@@ -68,7 +68,7 @@ class Draw: UIView {
 
 extension Draw: UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return  colorArray.count
+        return colorArray.count
     }
 
     func collectionView(
@@ -77,7 +77,6 @@ extension Draw: UICollectionViewDelegate, UICollectionViewDataSource,UICollectio
         sizeForItemAt indexPath: IndexPath
     ) -> CGSize {
         
-       // print("khanki")
         return CGSize(width: 40, height: 40)
     }
     

@@ -878,7 +878,6 @@ private extension PhotoVc {
             
            
             sheet.selectedDetentIdentifier = .none
-            //sheet.largestUndimmedDetentIdentifier = .large
             sheet.prefersScrollingExpandsWhenScrolledToEdge = false
             sheet.prefersEdgeAttachedInCompactHeight = true
             sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
