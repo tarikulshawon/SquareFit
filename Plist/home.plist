@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>canvas1</string>
+	<string>crop1</string>
+	<string>draw1</string>
+	<string>background1</string>
+	<string>texts1</string>
+	<string>graphics1</string>
+	<string>frames1</string>
+	<string>quotes1</string>
+	<string>adjust1</string>
+	<string>filter1</string>
+	<string>overlay1</string>
+	<string>image1</string>
+	<string>shape1</string>
+	<string>music1</string>
+</array>
+</plist>

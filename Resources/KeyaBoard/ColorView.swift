@@ -89,11 +89,6 @@ extension ColorView:
     func numberOfSections(in collectionView: UICollectionView) -> Int { 1 }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if currentBackGroundIndex == 0 {
-            return plistArray.count + 2
-        }else if currentBackGroundIndex == 1 {
-            return plistArray1.count + 1
-        }
         
         return 23
     }
