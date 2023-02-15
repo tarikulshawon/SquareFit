@@ -12,6 +12,7 @@ protocol TextStickerContainerViewDelegate: NSObject {
     func deleteTextStickerView(textStickerContainerView: TextStickerContainerView)
     func moveViewPosition(textStickerContainerView: TextStickerContainerView)
     func showKeyBoard(container:TextStickerView)
+    func endFinish()
 }
 
 protocol UpdateTextFontSize: AnyObject {
@@ -394,6 +395,10 @@ extension TextStickerContainerView {
             let translation = gestureRecognizer.translation(in: self.superview)
             gestureRecognizer.view!.center = CGPoint(x: gestureRecognizer.view!.center.x + translation.x, y: gestureRecognizer.view!.center.y + translation.y)
             gestureRecognizer.setTranslation(CGPoint(x: 0, y: 0), in: self.superview)
+        }
+        
+        if gestureRecognizer.state == UIGestureRecognizer.State.ended {
+            self.delegate?.endFinish()
         }
     }
     

@@ -11,6 +11,13 @@ import Mantis
 
 class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, StickerViewDelegate, changeImage, backButton, TextStickerContainerViewDelegate, CropViewControllerDelegate {
     
+    
+    func endFinish() {
+        shouldMove = true
+    }
+    
+    
+    var shouldMove = true
     @IBOutlet weak var widthForTempView: NSLayoutConstraint!
     @IBOutlet weak var heightForTempView: NSLayoutConstraint!
     @IBOutlet weak var btnCollectionView: UICollectionView!
@@ -268,6 +275,7 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
     
     
     func setCurrentTextStickerView(textStickerContainerView: TextStickerContainerView) {
+        shouldMove = false
         self.hideALL()
         self.currentTextStickerView = textStickerContainerView
         self.currentTextStickerView?.hideTextBorder(isHide: false)
@@ -458,6 +466,7 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
         sticker.textStickerView.updateTextFont()
         sticker.initilizeTextStickerData(mainTextView: sticker.textStickerView,obj: obj)
         
+        sticker.isUserInteractionEnabled = true
         stickerView.addSubview(sticker)
         stickerView.clipsToBounds = true
         currentTextStickerView = sticker
@@ -522,6 +531,10 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
     @objc private func didPan(_ recogniser: UIPanGestureRecognizer) {
         
         
+        if !shouldMove
+        {
+            return
+        }
        
         
         if recogniser.state == .began || recogniser.state == .changed {
