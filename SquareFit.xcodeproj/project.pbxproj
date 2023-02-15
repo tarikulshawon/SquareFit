@@ -178,6 +178,7 @@
 		01478E7029867010005B3EA2 /* DeleteImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01478E6F29867010005B3EA2 /* DeleteImageView.swift */; };
 		01478E7229867023005B3EA2 /* BreakWordControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01478E7129867023005B3EA2 /* BreakWordControllerView.swift */; };
 		01478E7429867033005B3EA2 /* PanControllerImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01478E7329867033005B3EA2 /* PanControllerImageView.swift */; };
+		015698B5299D3FED002355DB /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 015698B4299D3FED002355DB /* bg.png */; };
 		01680B2D2973CA2E0088F915 /* OverLayVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01680B2B2973CA2E0088F915 /* OverLayVc.swift */; };
 		01680B2E2973CA2E0088F915 /* OverLayVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01680B2C2973CA2E0088F915 /* OverLayVc.xib */; };
 		01680B332973CC100088F915 /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01680B312973CC100088F915 /* ColorCell.swift */; };
@@ -253,7 +254,6 @@
 		01A988FF298E41E1007F4240 /* Draw.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A988FE298E41E1007F4240 /* Draw.xib */; };
 		01A98901298E5627007F4240 /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A98900298E5627007F4240 /* DrawingView.swift */; };
 		01AE3A002971BFCA00C2F652 /* HomeVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AE39FF2971BFCA00C2F652 /* HomeVc.swift */; };
-		01AE3A032971C02000C2F652 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 01AE3A022971C02000C2F652 /* bg.png */; };
 		01CF1AD829757EC40003DFA4 /* CanVas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CF1AD629757EC30003DFA4 /* CanVas.swift */; };
 		01CF1AD929757EC40003DFA4 /* CanVas.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01CF1AD729757EC40003DFA4 /* CanVas.xib */; };
 		01CF1ADC29757ECD0003DFA4 /* CanvasRatioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CF1ADA29757ECD0003DFA4 /* CanvasRatioCell.swift */; };
@@ -511,6 +511,7 @@
 		01478E6F29867010005B3EA2 /* DeleteImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteImageView.swift; sourceTree = "<group>"; };
 		01478E7129867023005B3EA2 /* BreakWordControllerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreakWordControllerView.swift; sourceTree = "<group>"; };
 		01478E7329867033005B3EA2 /* PanControllerImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanControllerImageView.swift; sourceTree = "<group>"; };
+		015698B4299D3FED002355DB /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		01680B2B2973CA2E0088F915 /* OverLayVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverLayVc.swift; sourceTree = "<group>"; };
 		01680B2C2973CA2E0088F915 /* OverLayVc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverLayVc.xib; sourceTree = "<group>"; };
 		01680B312973CC100088F915 /* ColorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
@@ -592,7 +593,6 @@
 		01A988FE298E41E1007F4240 /* Draw.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Draw.xib; sourceTree = "<group>"; };
 		01A98900298E5627007F4240 /* DrawingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
 		01AE39FF2971BFCA00C2F652 /* HomeVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVc.swift; sourceTree = "<group>"; };
-		01AE3A022971C02000C2F652 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		01CF1AD629757EC30003DFA4 /* CanVas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanVas.swift; sourceTree = "<group>"; };
 		01CF1AD729757EC40003DFA4 /* CanVas.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CanVas.xib; sourceTree = "<group>"; };
 		01CF1ADA29757ECD0003DFA4 /* CanvasRatioCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanvasRatioCell.swift; sourceTree = "<group>"; };
@@ -1119,6 +1119,7 @@
 		01AE3A012971C00E00C2F652 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				015698B4299D3FED002355DB /* bg.png */,
 				01F012E629798DBD0077F22D /* SmallFrame */,
 				01680B372973CFC70088F915 /* Thumb */,
 				010AEC442972D82800A86316 /* Arrows */,
@@ -1139,7 +1140,6 @@
 				010AEC382972D82700A86316 /* Summer */,
 				010AEC412972D82800A86316 /* Transport */,
 				010AEC3D2972D82800A86316 /* Vegetables */,
-				01AE3A022971C02000C2F652 /* bg.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -1524,6 +1524,7 @@
 				010DCDC6297EDBF5004421DB /* Texture0.png in Resources */,
 				01324148297D0AF3002F8E3C /* filter_21.jpg in Resources */,
 				01324142297D0AF3002F8E3C /* filter_5.jpg in Resources */,
+				015698B5299D3FED002355DB /* bg.png in Resources */,
 				010DCDB7297EDBF5004421DB /* Texture20.png in Resources */,
 				01324182297D0AFC002F8E3C /* thumb_28.jpg in Resources */,
 				010AE8C02972B56800A86316 /* textEditOption.plist in Resources */,
@@ -1572,7 +1573,6 @@
 				01F0132729798DBD0077F22D /* FrameThumb26.png in Resources */,
 				0132417B297D0AFC002F8E3C /* thumb_7.jpg in Resources */,
 				0132413B297D0AF3002F8E3C /* filter_12.jpg in Resources */,
-				01AE3A032971C02000C2F652 /* bg.png in Resources */,
 				0132410D297C4517002F8E3C /* lol.jpg in Resources */,
 				013241AD297D251A002F8E3C /* Fonts in Resources */,
 				010DCDC4297EDBF5004421DB /* Texture4.png in Resources */,
