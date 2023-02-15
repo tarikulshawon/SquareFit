@@ -321,6 +321,8 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
     
     func stickerViewDidBeginMoving(_ stickerView: StickerView) {
         
+        stickerView.showEditingHandlers = true
+        
     }
     
     func stickerViewDidChangeMoving(_ stickerView: StickerView) {
@@ -771,7 +773,7 @@ extension PhotoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollect
             }
             
             else if titleName.contains("Draw") {
-                vc.defaultHeight = CGFloat(240)
+                vc.defaultHeight = CGFloat(200)
                 vc.drawView.isHidden = false
                 drawView.isUserInteractionEnabled = true
             }
