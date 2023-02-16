@@ -18,14 +18,7 @@ protocol backButton {
     func  doneBack()
 }
 
-class keyboard: UIViewController,  indexItem, chnageColor, changeFont, aligthmentTag, chnageFontSize,  UITextViewDelegate, chnageAlpa, shadowDelegate {
-    
-    func opacityShadowValue(value: Double) {
-        
-      textView.textInputView.layer.shadowOpacity = Float(value)
-         
-    }
-    
+class keyboard: UIViewController,  indexItem, chnageColor, changeFont, aligthmentTag, chnageFontSize,  UITextViewDelegate, chnageAlpa {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
@@ -36,19 +29,6 @@ class keyboard: UIViewController,  indexItem, chnageColor, changeFont, aligthmen
         setNeedsStatusBarAppearanceUpdate()
         
     }
-    
-    func radiusShadowalue(value: Double) {
-        textView.textInputView.layer.shadowRadius = CGFloat(Float(value))
-        texeditObj.shadowRadius = value
-    }
-    
-    func offsetShadowValue(value: Double) {
-        
-        textView.textInputView.layer.shadowOffset = .init(width: 5, height: value)
-        texeditObj.shadowOffset = .init(width: 5, height: value)  
-         
-    }
-    
     
     func changeAlpa(value: Float) {
         textView.alpha = CGFloat(value)
@@ -461,9 +441,28 @@ extension keyboard: UITabBarDelegate {
             NSLayoutConstraint.activate([bottom, leading, trailing, heightConstraint])
         } else if value == 5 {
             texeditObj.text = textView.text
-            delegateForChnageImage?.changeTextView(obj: texeditObj,isFromUpdate: isFromUpdate)
+            delegateForChnageImage?.changeTextView(obj: texeditObj, isFromUpdate: isFromUpdate)
             dismiss(animated: true)
         }
+    }
+}
+
+// MARK: Shadow Delegation
+
+extension keyboard: shadowDelegate {
+    func opacityShadowValue(value: Double) {
+        textView.textInputView.layer.shadowOpacity = Float(value)
+        texeditObj.shadowOpacity = value
+    }
+    
+    func radiusShadowalue(value: Double) {
+        textView.textInputView.layer.shadowRadius = CGFloat(Float(value))
+        texeditObj.shadowRadius = value
+    }
+    
+    func offsetShadowValue(value: Double) {
+        textView.textInputView.layer.shadowOffset = .init(width: 5, height: value)
+        texeditObj.shadowOffset = .init(width: 5, height: value)
     }
 }
 
