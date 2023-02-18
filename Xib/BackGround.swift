@@ -1,4 +1,5 @@
 import UIKit
+import Combine
 
 protocol sendBackGroundView: AnyObject {
     func sendColorBackground(color: UIColor ,image:UIImage?)
@@ -6,6 +7,8 @@ protocol sendBackGroundView: AnyObject {
 
 final class BackGround: UIView {
     var plistArray6: NSArray!
+    var cancellable: AnyCancellable?
+
     weak var delegateForBackground: sendBackGroundView?
     
     @IBOutlet weak var contentsCollectionView: UICollectionView!
@@ -203,6 +206,39 @@ extension BackGround: UICollectionViewDataSource,UICollectionViewDelegate,UIColl
                 
                 
                 if indexPath.row == 0 {
+                    
+                    if indexPath.row == 0 {
+                        
+                        
+                        let picker = UIColorPickerViewController()
+                        self.cancellable = picker.publisher(for: \.selectedColor)
+                            .sink { color in
+                                
+                                //  Changing view color on main thread.
+                                DispatchQueue.main.async {
+                                    self.delegateForBackground?.sendColorBackground(color: color , image: nil)
+                                    
+                                }
+                            }
+                        
+                        
+                        if let sheet = picker.sheetPresentationController {
+                            
+                            sheet.detents = [.medium()]
+                            sheet.largestUndimmedDetentIdentifier = .large
+                            sheet.selectedDetentIdentifier = .none
+                            sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+                            sheet.prefersEdgeAttachedInCompactHeight = true
+                            sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
+                        }
+                        let keyWindow = UIApplication.shared.connectedScenes
+                                .filter({$0.activationState == .foregroundActive})
+                                .compactMap({$0 as? UIWindowScene})
+                                .first?.windows
+                                .filter({$0.isKeyWindow}).first
+                    
+                        keyWindow?.rootViewController?.visibleViewController!.present(picker, animated: true, completion: nil)
+                }
                     
                 }
                 else if indexPath.row == 1 {
