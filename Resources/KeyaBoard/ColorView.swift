@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Combine
 
 
 protocol chnageColor {
@@ -18,7 +19,8 @@ protocol chnageColor {
 class ColorView: UIView {
     
    
-    
+    var cancellable: AnyCancellable?
+
     @IBOutlet weak var colorSegment: UISegmentedControl!
     private var colorWheel: RotatingColorWheel!
     public var delegateForColor: chnageColor?
@@ -199,7 +201,34 @@ extension ColorView:
             if indexPath.row == 0 {
                 
                 
-            }
+                let picker = UIColorPickerViewController()
+                self.cancellable = picker.publisher(for: \.selectedColor)
+                    .sink { color in
+                        
+                        //  Changing view color on main thread.
+                        DispatchQueue.main.async {
+                            
+                        }
+                    }
+                
+                
+                if let sheet = picker.sheetPresentationController {
+                    
+                    sheet.detents = [.medium()]
+                    sheet.largestUndimmedDetentIdentifier = .large
+                    sheet.selectedDetentIdentifier = .none
+                    sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+                    sheet.prefersEdgeAttachedInCompactHeight = true
+                    sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
+                }
+                let keyWindow = UIApplication.shared.connectedScenes
+                        .filter({$0.activationState == .foregroundActive})
+                        .compactMap({$0 as? UIWindowScene})
+                        .first?.windows
+                        .filter({$0.isKeyWindow}).first
+            
+                keyWindow?.rootViewController?.visibleViewController!.present(picker, animated: true, completion: nil)
+        }
             else if indexPath.row == 1 {
                 
                 delegateForColor?.chnageColorForView(color: UIColor.clear, index: currenIndex)
@@ -257,5 +286,21 @@ extension UIImage {
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return image!
+    }
+}
+
+
+extension UIViewController {
+    /// The visible view controller from a given view controller
+    var visibleViewController: UIViewController? {
+        if let navigationController = self as? UINavigationController {
+            return navigationController.topViewController?.visibleViewController
+        } else if let tabBarController = self as? UITabBarController {
+            return tabBarController.selectedViewController?.visibleViewController
+        } else if let presentedViewController = presentedViewController {
+            return presentedViewController.visibleViewController
+        } else {
+            return self
+        }
     }
 }
