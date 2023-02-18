@@ -10,13 +10,14 @@ import UIKit
 
 
 protocol chnageColor {
-    func chnageColorForView(color: UIColor)
+    func chnageColorForView(color: UIColor,index:Int)
     func chnageTexture(index:Int)
     func changeGradient(index:Int)
 }
 
 class ColorView: UIView {
     
+   
     
     @IBOutlet weak var colorSegment: UISegmentedControl!
     private var colorWheel: RotatingColorWheel!
@@ -24,7 +25,15 @@ class ColorView: UIView {
     var currentBackGroundIndex = 0
     
     @IBOutlet weak var collectionviewF: UICollectionView!
+    var currenIndex = 0
     
+    @IBAction func BackgroundOrTextChange(_ sender: UISegmentedControl) {
+        currenIndex = sender.selectedSegmentIndex
+    
+    }
+    
+    
+    @IBOutlet weak var textBG: UISegmentedControl!
     override func draw(_ rect: CGRect) {
         
         
@@ -36,6 +45,17 @@ class ColorView: UIView {
         colorSegment.layer.cornerRadius = 5.0
         colorSegment.layer.borderColor = UIColor.white.cgColor
         colorSegment.layer.masksToBounds = true
+        
+        
+        textBG.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
+        textBG.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .normal)
+
+        textBG.selectedSegmentTintColor =  titleColor
+        textBG.layer.borderWidth = 1.0
+        textBG.layer.cornerRadius = 5.0
+        textBG.layer.borderColor = UIColor.white.cgColor
+        textBG.layer.masksToBounds = true
+        
         
         
         // colorWheel = RotatingColorWheel(frame:  CGRect(x: 0, y: 0, width:self.frame.size.width, height: self.frame.size.height))
@@ -69,7 +89,7 @@ class ColorView: UIView {
 
 extension ColorView: ColorWheelDelegate {
     func didSelect(color: UIColor) {
-        delegateForColor?.chnageColorForView(color: color)
+        delegateForColor?.chnageColorForView(color: color, index: 0)
     }
 }
 
@@ -182,19 +202,19 @@ extension ColorView:
             }
             else if indexPath.row == 1 {
                 
-                delegateForColor?.chnageColorForView(color: UIColor.clear)
+                delegateForColor?.chnageColorForView(color: UIColor.clear, index: currenIndex)
             }
             
             else if let colorString = plistArray[indexPath.row - 2] as? String {
                 
-                delegateForColor?.chnageColorForView(color: getColor(colorString: colorString))
+                delegateForColor?.chnageColorForView(color: getColor(colorString: colorString), index: currenIndex)
                 
             }
             
         }
         if currentBackGroundIndex == 1 {
             if indexPath.row == 0 {
-                delegateForColor?.chnageColorForView(color:UIColor.white)
+                delegateForColor?.chnageColorForView(color:UIColor.white, index: currenIndex)
                 return
             }
             if let objArray = plistArray1[indexPath.row-1] as? NSArray {
@@ -205,7 +225,7 @@ extension ColorView:
                 }
                 
                 let uimage = UIImage.gradientImageWithBounds(bounds: CGRect(x: 0,y: 0,width: 400,height: 400), colors: allcolors)
-                delegateForColor?.chnageColorForView(color: UIColor(patternImage: uimage))
+                delegateForColor?.chnageColorForView(color: UIColor(patternImage: uimage), index: currenIndex)
                 
                 
             }
@@ -213,11 +233,11 @@ extension ColorView:
         }
         if currentBackGroundIndex == 2 {
             if indexPath.row == 0 {
-                delegateForColor?.chnageColorForView(color:UIColor.white)
+                delegateForColor?.chnageColorForView(color:UIColor.white, index: currenIndex)
                 return
             }
             let value = UIImage(named: "Texture" + "\(indexPath.row - 1)")!
-            delegateForColor?.chnageColorForView(color:UIColor(patternImage: value))
+            delegateForColor?.chnageColorForView(color:UIColor(patternImage: value), index: currenIndex)
         }
         return
     }

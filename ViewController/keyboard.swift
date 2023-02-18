@@ -298,10 +298,19 @@ class keyboard: UIViewController,  indexItem, chnageColor, changeFont, aligthmen
         }
         
     }
-    func chnageColorForView(color: UIColor)
+    func chnageColorForView(color: UIColor,index:Int)
     {
-        textView.textColor = color
-        texeditObj.fontColor = color
+       
+        
+        if index == 0 {
+            textView.textColor = color
+            texeditObj.fontColor = color
+        }
+        else {
+            textView.backgroundColor = color
+            texeditObj.textBackGroundColor = color
+        }
+        
     }
     func changeFont(name: NSString)
     {
