@@ -207,6 +207,7 @@ extension ColorView:
                         
                         //  Changing view color on main thread.
                         DispatchQueue.main.async {
+                            self.delegateForColor?.chnageColorForView(color: color, index: self.currenIndex)
                             
                         }
                     }
