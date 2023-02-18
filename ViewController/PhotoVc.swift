@@ -61,6 +61,9 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
     var max_sharpen:Float = 4.0
     var min_sharpen:Float = -4.0
     
+    var isDrawViewActive = false
+    
+    @IBOutlet weak var drawImv: UIImageView!
     var currentFilterDic:Dictionary<String, Any>? = nil
     
     func cropViewControllerDidCrop(_ cropViewController: Mantis.CropViewController, cropped: UIImage, transformation: Mantis.Transformation, cropInfo: Mantis.CropInfo) {
@@ -104,7 +107,16 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
     }
     
     func shouldHideDraw() {
+        
+        if isDrawViewActive {
+            drawImv.isHidden = false
+            let image = drawView.takeScreenshot()
+            drawImv.image = image
+        }
+        
+        drawView.isHidden = true
         drawView.isUserInteractionEnabled = false
+       isDrawViewActive = false
     }
     
     
@@ -225,7 +237,7 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
     
     @IBOutlet weak var drawView: DrawingView!
     
-   
+    
     
     
     
@@ -535,7 +547,7 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
         {
             return
         }
-       
+        
         
         if recogniser.state == .began || recogniser.state == .changed {
             let panTranslation = recogniser.translation(in: imv.superview)
@@ -695,6 +707,15 @@ class PhotoVc: UIViewController, allDelegate, UIGestureRecognizerDelegate, Stick
         self.dismiss(animated: true)
     }
     
+    func showAlertWithDistructiveButton() {
+        let alert = UIAlertController(title: "", message: "You can  draw when square mode is on", preferredStyle: UIAlertController.Style.alert)
+        
+        alert.addAction(UIAlertAction(title: "ok", style: UIAlertAction.Style.default, handler: { _ in
+            //Cancel Action
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
 }
 
 extension PhotoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
@@ -748,7 +769,7 @@ extension PhotoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollect
         
         if let titleName = cell?.iconLabel.text {
             
-            
+            isDrawViewActive = false
             let vc = CustomModalViewController()
             
             vc.delegateForEditedView = self
@@ -791,8 +812,16 @@ extension PhotoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollect
             }
             
             else if titleName.contains("Draw") {
+                
+                isDrawViewActive = true
+                if widthForTempView.constant != heightForTempView.constant {
+                    self.showAlertWithDistructiveButton()
+                    return
+                }
                 vc.defaultHeight = CGFloat(200)
                 vc.drawView.isHidden = false
+                drawImv.isHidden = true
+                drawView.isHidden = false
                 drawView.isUserInteractionEnabled = true
             }
             
@@ -836,7 +865,7 @@ extension PhotoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollect
                 return
             }
             else if titleName.contains("BackGround") {
-               
+                
                 vc.backGroundView.isHidden = false
                 
             }
@@ -856,7 +885,7 @@ extension PhotoVc:UICollectionViewDelegate, UICollectionViewDataSource,UICollect
             }
             
             
-           
+            
         }
     }
     
@@ -873,7 +902,7 @@ extension PhotoVc: quotesDelegate {
 private extension PhotoVc {
     func presentSheetViewController(with vc: UIViewController,shouldShowSmallHeigh:Bool,height:CGFloat) {
         
-       
+        
         if let sheet = vc.sheetPresentationController {
             
             
@@ -882,7 +911,7 @@ private extension PhotoVc {
                 let smallDetent = UISheetPresentationController.Detent.custom(identifier: smallId) { context in
                     return height
                 }
-
+                
                 if shouldShowSmallHeigh {
                     sheet.detents = [smallDetent]
                     sheet.largestUndimmedDetentIdentifier = smallId
@@ -896,7 +925,7 @@ private extension PhotoVc {
                 // Fallback on earlier versions
             }
             
-           
+            
             sheet.selectedDetentIdentifier = .none
             sheet.prefersScrollingExpandsWhenScrolledToEdge = false
             sheet.prefersEdgeAttachedInCompactHeight = true
@@ -937,5 +966,25 @@ extension UITextView {
             }
             self.font = expectFont
         }
+    }
+}
+
+
+
+extension UIView {
+    func takeScreenshot() -> UIImage {
+        
+        // Begin context
+        UIGraphicsBeginImageContextWithOptions(self.bounds.size, false, UIScreen.main.scale)
+        
+        // Draw view in that context
+        drawHierarchy(in: self.bounds, afterScreenUpdates: true)
+        
+        // And finally, get image
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        if (image != nil) { return image! }
+        return UIImage()
     }
 }
