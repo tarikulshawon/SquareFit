@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04CCFB24558ED81C3155DE0CAD64BD40 /* Pods-SquareFitTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B6A40391B72EC3C3646DE3EA6ED51BB /* Pods-SquareFitTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04CCFB24558ED81C3155DE0CAD64BD40 /* Pods-SquareFitTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E1E8E64C9F5F0C6789EC31F9B1A8EFDA /* Pods-SquareFitTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0BA17FF2C5AADE5839A1ED8D299A72B7 /* RotationDialProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DCDA31E9DDE682BB2ED3D43A700AC4 /* RotationDialProtocol.swift */; };
 		0CD33520A9BDDA967E77050CAD2F8747 /* CropViewStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C9E59DC84C19794EA1AEFAD67BBB22 /* CropViewStatus.swift */; };
 		10EA694040D26BF608FC6EE112390DDD /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E764A9AE90B027AC71AF0C5A01BB42 /* UIViewExtensions.swift */; };
-		1434DDBCE021071099E389FC44628BC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		173516FB497982F86CB9F9AFD1B720BD /* Pods-SquareFitTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3C266ABBF530436C9CC884D0323433 /* Pods-SquareFitTests-dummy.m */; };
+		173516FB497982F86CB9F9AFD1B720BD /* Pods-SquareFitTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E0EC6AA542FE68D6DA08E9610C74C2E8 /* Pods-SquareFitTests-dummy.m */; };
 		1829536C8D19A19C3B5E25AF115DD1F4 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8E1F39DBAE0769C8F277CD3DE00D8A /* Enum.swift */; };
 		1A7A745DF9F513D77183C8D06CACA350 /* ImageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CF88135AE81B3C017B2A1DC0693154 /* ImageContainer.swift */; };
 		1C013E1E0136BA03395B4FF38DEC7726 /* FixedRatioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D219B7F98EF5C351AFEC7D6DB9EC62 /* FixedRatioManager.swift */; };
@@ -25,6 +24,7 @@
 		2D0BFFF46D31AE5A0C3DFAFAD5AF6677 /* ToolBarButtonImageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B550372ED11CC3FF2875016A03CECC1 /* ToolBarButtonImageBuilder.swift */; };
 		34BCFF5A91474FDE1956B5B1D7860D75 /* RotationDialViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0914A0EB5765F05B7E80D55B62F148AB /* RotationDialViewModelProtocol.swift */; };
 		34C2F455DEB606D27B431C9F524E6812 /* CropBoxLockedAspectFrameUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD06E672287C3E5C023010A2BA44BCA0 /* CropBoxLockedAspectFrameUpdater.swift */; };
+		367A70E67B7DDA464365914D04EF1EC7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		3AFF0765216ACBCC815342CB392A81EB /* RatioItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608CC654D2D809E1B8EA63FCB5038CBC /* RatioItemView.swift */; };
 		3D0DA661BCCEC0E04FB49729B25C8D95 /* CropView+UIScrollViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FDF929F6416E1CDEFEAA6C47122B93 /* CropView+UIScrollViewDelegate.swift */; };
 		47D37A18823E1B46B3EA020725601260 /* CGAffineTransformExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E405672B08298D3AABCDF0A2D5AD2E /* CGAffineTransformExtensions.swift */; };
@@ -38,8 +38,7 @@
 		6F7AC288DBA2BC3CE5A457D889005A42 /* RatioPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451AB141070EC8B98391785E3C8A4644 /* RatioPresenter.swift */; };
 		717840719F7EE9C41DC388183DA568B3 /* CropToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C864A0DC196E032E7A42C8D3DC1EA527 /* CropToolbar.swift */; };
 		71F574F7FFEDCB8C532ADCE3B8B133DC /* CropViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7C22D099DE228ACE70F26393EA0CAE /* CropViewModel.swift */; };
-		76CA5D36F44700E00429B342D2C39C4C /* Pods-SquareFit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B7DDD34E2C8295DFDE972495D32B68 /* Pods-SquareFit-dummy.m */; };
-		7752D9F5BCAB74AA091028BC5A2F5D28 /* Pods-SquareFit-SquareFitUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8D46D52D221C4B4F7661C59DF5790A /* Pods-SquareFit-SquareFitUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7752D9F5BCAB74AA091028BC5A2F5D28 /* Pods-SquareFit-SquareFitUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 30713E5D17DA8C1D8A929B631885A887 /* Pods-SquareFit-SquareFitUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		825604C83F4356D79F3DEC143F06E57D /* CropAuxiliaryIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E46AEB7774E2D56A73C9A3BE06776AD /* CropAuxiliaryIndicatorView.swift */; };
 		827C8F2314D22ED1A8871B1C5E08B0AE /* LocalizedHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D92FF90A734BE41DC9C437DE9B3421 /* LocalizedHelper.swift */; };
 		86E34562B3AB08593B6C3282E4273A81 /* CropToolbarProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEEFDE3144F7BC60FF7FD88BE3F5816 /* CropToolbarProtocol.swift */; };
@@ -49,11 +48,12 @@
 		936B0FFBCC11151DEBBDAD037E43443E /* CGAngle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC5658242BDE26E7FF29A06EED803AC /* CGAngle.swift */; };
 		9380125AA5763548B4E0EF7382EDF2E8 /* CropVisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEA6534F825135ED5919160986CD41F /* CropVisualEffectView.swift */; };
 		93CFD433968B886F2539BAA7A238514C /* CropView+Touches.swift in Sources */ = {isa = PBXBuildFile; fileRef = C950261914C717B190B6F948131060DA /* CropView+Touches.swift */; };
-		9495F390AFB551A6A7964BB9884C445F /* Pods-SquareFit-SquareFitUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A50EB5345701DF475D6F6F014FBA3A4C /* Pods-SquareFit-SquareFitUITests-dummy.m */; };
+		9495F390AFB551A6A7964BB9884C445F /* Pods-SquareFit-SquareFitUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E537CB9D1445AEE2E8525092D9569C /* Pods-SquareFit-SquareFitUITests-dummy.m */; };
 		991EC59489024D5D5325C36BEB631F7B /* CropToolbarConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3B3B84A3740E1E701BF1E271706FD0 /* CropToolbarConfig.swift */; };
 		9AB1296015F6028C0F7DAD65A5FF40AC /* MantisLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B707C762354B44A960F36B68A56E7D1 /* MantisLocalizable.strings */; };
 		9B02E4402AEA6A8658961F7D595B0516 /* RotationDialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B47FE885FEB3C8F6428A7211498657 /* RotationDialViewModel.swift */; };
 		A186D33F6BE83314C2CAED076DA95ECD /* RotationDialPlate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FDF590E669638270C393730FEBC6E5 /* RotationDialPlate.swift */; };
+		A4B81C3AA9B63DA02A79488D565B2BC6 /* Pods-SquareFit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 582212EB4DA9ED5A92B45DA17F1E18EE /* Pods-SquareFit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD439FC8A58CF8FDD254CA1EDEE6C375 /* CropDimmingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E5A36901C986BD1FE1CB16245D5B7 /* CropDimmingView.swift */; };
 		AD610361FD94A601FC1ACD234F24F47B /* CropScrollViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1EFB9DAD1DC3C35D402D88A811ECE0 /* CropScrollViewProtocol.swift */; };
 		B2C62EC6D695DB09627E43BEED1D3981 /* CGImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F796F33CC5BCB75FCE696CBC8EB2FE /* CGImageExtensions.swift */; };
@@ -61,6 +61,7 @@
 		BA3C6C2262CA1D70A2ED2172B79DD8ED /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6462586D80F65740C78D9697D9CCF892 /* UIImageExtensions.swift */; };
 		BC46D7558F38B726D169655988653683 /* CropViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD76BDF7212D5378886C159365149436 /* CropViewControllerDelegate.swift */; };
 		BF556C8576A7F98356AAD5DCB9AAD372 /* Mantis-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 56504081A7F401C7B0F65962D54C28D4 /* Mantis-dummy.m */; };
+		C0653290D8140CB11E15007935CF4FBF /* Pods-SquareFit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5244380F4B97099D39881155F0DBBCD5 /* Pods-SquareFit-dummy.m */; };
 		C207AAF989C96FB5E5604B5A249F8DC9 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE21B72BF4675B5A771699E7B21D0D4 /* Global.swift */; };
 		C923DEA4041806C35E4DA95A746CED61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		CAA4091CD78849DF1F0A2FD4A4708F04 /* Mantis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E48B9F0E2BA8A7111CB44158877F89 /* Mantis.swift */; };
@@ -75,10 +76,9 @@
 		ED13DEA90EF7A9BFC59CAF5FDE658681 /* CropMaskViewManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8FAEEB3DA7884F0D692FF2444602D5 /* CropMaskViewManagerProtocol.swift */; };
 		EF22B0C7DB7A9C234FD1A8C0D18AEEF8 /* Definition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC1F4B73F6688D7CCD48517D5F037A2 /* Definition.swift */; };
 		EFF0E95C29C7334BAC6948C16C48E87C /* ToolBarButtonImageBuilder+DrawImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28A083D295494932F0A64DFB5BF1264 /* ToolBarButtonImageBuilder+DrawImage.swift */; };
-		F063C6012B22B57BC1432428F8017329 /* Pods-SquareFit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A8C87AAE5A6C18350CE73C6FD9AC208B /* Pods-SquareFit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F4016E5A83126FA3270B0C66EC31301E /* CoreGraphicsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BF548BB6AA84E09177265DD9C7CED7 /* CoreGraphicsExtensions.swift */; };
 		FB9B1FBA989955F58E0EAAE6D2623CE7 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = C268677A7B3A927DAE5298FC763B0235 /* Config.swift */; };
-		FE1C3482C85228AAD354083F31D19AC5 /* MantisResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E50395ED50F3D5D97E3957A2ED43921F /* MantisResources.bundle */; };
+		FE1C3482C85228AAD354083F31D19AC5 /* Mantis-MantisResources in Resources */ = {isa = PBXBuildFile; fileRef = E50395ED50F3D5D97E3957A2ED43921F /* Mantis-MantisResources */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,13 +96,6 @@
 			remoteGlobalIDString = 2FE76CFB815F0D65B5A0962A62EB8E05;
 			remoteInfo = "Mantis-MantisResources";
 		};
-		AA98A107F56F1E7153F06EE682BA9A3A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B765AE885D71986CD6D5EC0726D8ED31;
-			remoteInfo = Mantis;
-		};
 		F8E1772C3B4ED13C023D17F5BF7BCE50 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -116,77 +109,80 @@
 		0003A3F206B3015E35CE23B33F1A1310 /* CropView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CropView.swift; path = Sources/Mantis/CropView/CropView.swift; sourceTree = "<group>"; };
 		06A54E4E2DB1B0DE15100B08B165C4B3 /* CropViewProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CropViewProtocol.swift; path = Sources/Mantis/Protocols/CropViewProtocol.swift; sourceTree = "<group>"; };
 		0914A0EB5765F05B7E80D55B62F148AB /* RotationDialViewModelProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RotationDialViewModelProtocol.swift; path = Sources/Mantis/Protocols/RotationDialViewModelProtocol.swift; sourceTree = "<group>"; };
-		0B6A40391B72EC3C3646DE3EA6ED51BB /* Pods-SquareFitTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SquareFitTests-umbrella.h"; sourceTree = "<group>"; };
-		0D83C255C660E2141B9D686D9F402311 /* Pods-SquareFit-SquareFitUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SquareFit-SquareFitUITests.modulemap"; sourceTree = "<group>"; };
+		0B9AB9CE3A770D4FDC3AF3A9EA9EBB41 /* Pods-SquareFit-SquareFitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SquareFit-SquareFitUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0E8FAEEB3DA7884F0D692FF2444602D5 /* CropMaskViewManagerProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CropMaskViewManagerProtocol.swift; path = Sources/Mantis/Protocols/CropMaskViewManagerProtocol.swift; sourceTree = "<group>"; };
-		124F8BE60F8975054230D895E7D046E0 /* Pods-SquareFitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SquareFitTests-Info.plist"; sourceTree = "<group>"; };
 		13E764A9AE90B027AC71AF0C5A01BB42 /* UIViewExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIViewExtensions.swift; path = Sources/Mantis/Extensions/UIViewExtensions.swift; sourceTree = "<group>"; };
 		161766C879A40075FD7FD33A93DF401E /* Mantis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Mantis.release.xcconfig; sourceTree = "<group>"; };
 		16D219B7F98EF5C351AFEC7D6DB9EC62 /* FixedRatioManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FixedRatioManager.swift; path = Sources/Mantis/CropViewController/FixedRatioManager.swift; sourceTree = "<group>"; };
 		1851E41AD84A53466C52E4051BB7FE8F /* GeometryHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GeometryHelper.swift; path = Sources/Mantis/Helpers/GeometryHelper.swift; sourceTree = "<group>"; };
 		1A04AC5337C37DF281463C3927A6007B /* MantisLocalizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = MantisLocalizable.strings; path = ru.lproj/MantisLocalizable.strings; sourceTree = "<group>"; };
-		20B7DDD34E2C8295DFDE972495D32B68 /* Pods-SquareFit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SquareFit-dummy.m"; sourceTree = "<group>"; };
 		27FDF929F6416E1CDEFEAA6C47122B93 /* CropView+UIScrollViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CropView+UIScrollViewDelegate.swift"; path = "Sources/Mantis/CropView/CropView+UIScrollViewDelegate.swift"; sourceTree = "<group>"; };
 		2AE21B72BF4675B5A771699E7B21D0D4 /* Global.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Global.swift; path = Sources/Mantis/Global.swift; sourceTree = "<group>"; };
+		2D81625036A888C3245770EC7B28CEE2 /* Pods-SquareFit-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SquareFit-acknowledgements.markdown"; sourceTree = "<group>"; };
+		30713E5D17DA8C1D8A929B631885A887 /* Pods-SquareFit-SquareFitUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SquareFit-SquareFitUITests-umbrella.h"; sourceTree = "<group>"; };
 		316D22F8B19400DBC5073973480D1521 /* Mantis */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Mantis; path = Mantis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		34E01D5E547E78BABD7EC7236E375DB2 /* Mantis-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Mantis-umbrella.h"; sourceTree = "<group>"; };
 		364C4FA510EF43B29CDB5BD66803B4D8 /* CropOverlayViewProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CropOverlayViewProtocol.swift; path = Sources/Mantis/Protocols/CropOverlayViewProtocol.swift; sourceTree = "<group>"; };
 		37900A07E9AD3822C325D6DE2FF7D8B5 /* MantisLocalizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = MantisLocalizable.strings; path = de.lproj/MantisLocalizable.strings; sourceTree = "<group>"; };
+		3A41F9EA0E2B5D2A1AEEBDB5D36A1FA3 /* Pods-SquareFit-SquareFitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SquareFit-SquareFitUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3A8E1F39DBAE0769C8F277CD3DE00D8A /* Enum.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Enum.swift; path = Sources/Mantis/Enum.swift; sourceTree = "<group>"; };
 		408A44BAF0ACDBE3EF61F88A18F8FDF7 /* Pods-SquareFit */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-SquareFit"; path = Pods_SquareFit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4095CA76C1EC599BA4B0C9E5967A3BA9 /* RatioSelector.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RatioSelector.swift; path = Sources/Mantis/CropViewController/RatioSelector.swift; sourceTree = "<group>"; };
+		40F0D20982A38AE71E798719AFAC078B /* Pods-SquareFitTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SquareFitTests.modulemap"; sourceTree = "<group>"; };
 		41990DC67B24666F42C2124D9D6DB4CF /* Orientation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Orientation.swift; path = Sources/Mantis/Helpers/Orientation.swift; sourceTree = "<group>"; };
 		44A46386F3DBDED6FD935448AD1C004E /* CropWorkbenchView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CropWorkbenchView.swift; path = Sources/Mantis/CropView/CropWorkbenchView.swift; sourceTree = "<group>"; };
 		451AB141070EC8B98391785E3C8A4644 /* RatioPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RatioPresenter.swift; path = Sources/Mantis/CropViewController/RatioPresenter.swift; sourceTree = "<group>"; };
-		49454A30468C6A49549AB795BAD4EC71 /* Pods-SquareFit-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SquareFit-frameworks.sh"; sourceTree = "<group>"; };
 		4D3B3B84A3740E1E701BF1E271706FD0 /* CropToolbarConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CropToolbarConfig.swift; path = Sources/Mantis/CropToolbarConfig.swift; sourceTree = "<group>"; };
 		4D5E3925604D48E25E426B9D16883801 /* TypeAlias.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TypeAlias.swift; path = Sources/Mantis/TypeAlias.swift; sourceTree = "<group>"; };
-		4E8E2435B256066049028F30BF7A97E2 /* Pods-SquareFit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SquareFit-Info.plist"; sourceTree = "<group>"; };
-		4EE4D19FBC20E99DBE642533EE645FFC /* Pods-SquareFit-SquareFitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SquareFit-SquareFitUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4EEEFDE3144F7BC60FF7FD88BE3F5816 /* CropToolbarProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CropToolbarProtocol.swift; path = Sources/Mantis/Protocols/CropToolbarProtocol.swift; sourceTree = "<group>"; };
+		4FB622EFCBE3DB4D63AB7649AE284C46 /* Pods-SquareFit-SquareFitUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SquareFit-SquareFitUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		51E405672B08298D3AABCDF0A2D5AD2E /* CGAffineTransformExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGAffineTransformExtensions.swift; path = Sources/Mantis/Extensions/CGAffineTransformExtensions.swift; sourceTree = "<group>"; };
+		5244380F4B97099D39881155F0DBBCD5 /* Pods-SquareFit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SquareFit-dummy.m"; sourceTree = "<group>"; };
+		55E537CB9D1445AEE2E8525092D9569C /* Pods-SquareFit-SquareFitUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SquareFit-SquareFitUITests-dummy.m"; sourceTree = "<group>"; };
 		56504081A7F401C7B0F65962D54C28D4 /* Mantis-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Mantis-dummy.m"; sourceTree = "<group>"; };
+		582212EB4DA9ED5A92B45DA17F1E18EE /* Pods-SquareFit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SquareFit-umbrella.h"; sourceTree = "<group>"; };
 		5B7B7257F376D3ACCA32240E3B75C4FC /* MantisLocalizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = MantisLocalizable.strings; path = ar.lproj/MantisLocalizable.strings; sourceTree = "<group>"; };
 		5CAB5F5BEC4AEF1DF79C59F4457D6CA9 /* ImageContainerProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageContainerProtocol.swift; path = Sources/Mantis/Protocols/ImageContainerProtocol.swift; sourceTree = "<group>"; };
+		5D7EFC4A319E17E0BF71B5BEE2DA78FE /* Pods-SquareFitTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SquareFitTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5DCD12E0CB4D74E313FB103C092CD3D4 /* RotationDial.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RotationDial.swift; path = Sources/Mantis/RotationDial/RotationDial.swift; sourceTree = "<group>"; };
 		608CC654D2D809E1B8EA63FCB5038CBC /* RatioItemView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RatioItemView.swift; path = Sources/Mantis/CropViewController/RatioItemView.swift; sourceTree = "<group>"; };
+		611336A6AFE67FD33E63087B6E4C027F /* Pods-SquareFitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SquareFitTests.release.xcconfig"; sourceTree = "<group>"; };
 		61AE4ACF11C83DDD69F54E0C0FCAEE55 /* CropViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CropViewController.swift; path = Sources/Mantis/CropViewController/CropViewController.swift; sourceTree = "<group>"; };
 		62DCDA31E9DDE682BB2ED3D43A700AC4 /* RotationDialProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RotationDialProtocol.swift; path = Sources/Mantis/Protocols/RotationDialProtocol.swift; sourceTree = "<group>"; };
 		646143676C594B11ABE9DC1A704B2FFE /* MantisLocalizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = MantisLocalizable.strings; path = en.lproj/MantisLocalizable.strings; sourceTree = "<group>"; };
 		6462586D80F65740C78D9697D9CCF892 /* UIImageExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImageExtensions.swift; path = Sources/Mantis/Extensions/UIImageExtensions.swift; sourceTree = "<group>"; };
-		6A214E60626087FBF70D750FAA999344 /* Pods-SquareFitTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SquareFitTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		67CE71FA2F4FCE6108F3FC6B9C078D8E /* Pods-SquareFit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SquareFit-Info.plist"; sourceTree = "<group>"; };
+		67F49349791A7DC1E88F11C7FF109787 /* Pods-SquareFitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SquareFitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6A95396C712F0F1B495142F3BA8A1CB4 /* RotationCalculator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RotationCalculator.swift; path = Sources/Mantis/RotationDial/RotationCalculator.swift; sourceTree = "<group>"; };
-		6D3C266ABBF530436C9CC884D0323433 /* Pods-SquareFitTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SquareFitTests-dummy.m"; sourceTree = "<group>"; };
 		6D7C22D099DE228ACE70F26393EA0CAE /* CropViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CropViewModel.swift; path = Sources/Mantis/CropView/CropViewModel.swift; sourceTree = "<group>"; };
 		6F91C1A35099D109F7EB54A253F094B2 /* MantisLocalizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = MantisLocalizable.strings; path = es.lproj/MantisLocalizable.strings; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7A14B214200A1809924D0C84A514D9E2 /* Pods-SquareFitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SquareFitTests-Info.plist"; sourceTree = "<group>"; };
 		7B550372ED11CC3FF2875016A03CECC1 /* ToolBarButtonImageBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToolBarButtonImageBuilder.swift; path = Sources/Mantis/CropViewController/ToolBarButtonImageBuilder.swift; sourceTree = "<group>"; };
+		7DFBE4179E9AFE2893096FD4A14633EE /* Pods-SquareFit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SquareFit.debug.xcconfig"; sourceTree = "<group>"; };
 		8171BA3E6F4A0CE14520A9B18441D360 /* MantisLocalizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = MantisLocalizable.strings; path = "zh-Hans.lproj/MantisLocalizable.strings"; sourceTree = "<group>"; };
 		83FDF590E669638270C393730FEBC6E5 /* RotationDialPlate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RotationDialPlate.swift; path = Sources/Mantis/RotationDial/RotationDialPlate.swift; sourceTree = "<group>"; };
 		847F06C8EC4B27E9B9BFB6714409607D /* MantisLocalizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = MantisLocalizable.strings; path = ja.lproj/MantisLocalizable.strings; sourceTree = "<group>"; };
-		851ECB654DA28F861500782B9E311A7E /* Pods-SquareFit-SquareFitUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SquareFit-SquareFitUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		84FC4D839C2CB45FD90E5CDF5CA6AA55 /* Pods-SquareFit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SquareFit.release.xcconfig"; sourceTree = "<group>"; };
 		871D36673679F30241698906E7C8CBF8 /* MantisLocalizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = MantisLocalizable.strings; path = "zh-Hant.lproj/MantisLocalizable.strings"; sourceTree = "<group>"; };
-		890B1DF4714C4A18F6E361A1F621A334 /* Pods-SquareFit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SquareFit.modulemap"; sourceTree = "<group>"; };
 		898C546FD59F74E38B4663EEBDFE80A9 /* MantisLocalizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = MantisLocalizable.strings; path = "ko-KR.lproj/MantisLocalizable.strings"; sourceTree = "<group>"; };
 		89B47FE885FEB3C8F6428A7211498657 /* RotationDialViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RotationDialViewModel.swift; path = Sources/Mantis/RotationDial/RotationDialViewModel.swift; sourceTree = "<group>"; };
+		8ECA3E0B3285ADC8FF8D015E31039E44 /* Pods-SquareFit-SquareFitUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SquareFit-SquareFitUITests-Info.plist"; sourceTree = "<group>"; };
 		90CF88135AE81B3C017B2A1DC0693154 /* ImageContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageContainer.swift; path = Sources/Mantis/CropView/ImageContainer.swift; sourceTree = "<group>"; };
-		914F2CFDB1094AD2A16D1959514654A4 /* Pods-SquareFit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SquareFit.debug.xcconfig"; sourceTree = "<group>"; };
+		958AA4383BF9245CC70EE8B76755157C /* Pods-SquareFit-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SquareFit-acknowledgements.plist"; sourceTree = "<group>"; };
 		97E48B9F0E2BA8A7111CB44158877F89 /* Mantis.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mantis.swift; path = Sources/Mantis/Mantis.swift; sourceTree = "<group>"; };
 		9A1E33818317BEBC9FE994795DB347EE /* CropViewModelProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CropViewModelProtocol.swift; path = Sources/Mantis/Protocols/CropViewModelProtocol.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DC027A6BD8074B97F8FC1461D804459 /* CropBoxFreeAspectFrameUpdater.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CropBoxFreeAspectFrameUpdater.swift; path = Sources/Mantis/CropView/CropBoxFreeAspectFrameUpdater.swift; sourceTree = "<group>"; };
 		9E46AEB7774E2D56A73C9A3BE06776AD /* CropAuxiliaryIndicatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CropAuxiliaryIndicatorView.swift; path = Sources/Mantis/CropView/CropAuxiliaryIndicatorView.swift; sourceTree = "<group>"; };
 		A1983F3BF203B076C13630BE566ABA24 /* Pods-SquareFitTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-SquareFitTests"; path = Pods_SquareFitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3F796F33CC5BCB75FCE696CBC8EB2FE /* CGImageExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGImageExtensions.swift; path = Sources/Mantis/Extensions/CGImageExtensions.swift; sourceTree = "<group>"; };
-		A50EB5345701DF475D6F6F014FBA3A4C /* Pods-SquareFit-SquareFitUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SquareFit-SquareFitUITests-dummy.m"; sourceTree = "<group>"; };
 		A6BF548BB6AA84E09177265DD9C7CED7 /* CoreGraphicsExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoreGraphicsExtensions.swift; path = Sources/Mantis/Extensions/CoreGraphicsExtensions.swift; sourceTree = "<group>"; };
-		A8C87AAE5A6C18350CE73C6FD9AC208B /* Pods-SquareFit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SquareFit-umbrella.h"; sourceTree = "<group>"; };
 		AAC1F4B73F6688D7CCD48517D5F037A2 /* Definition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Definition.swift; path = Sources/Mantis/Definition.swift; sourceTree = "<group>"; };
-		AC5FDABB8FAC809EF8832AD84293EC82 /* Pods-SquareFit-SquareFitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SquareFit-SquareFitUITests.release.xcconfig"; sourceTree = "<group>"; };
-		AC8D46D52D221C4B4F7661C59DF5790A /* Pods-SquareFit-SquareFitUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SquareFit-SquareFitUITests-umbrella.h"; sourceTree = "<group>"; };
-		AE46F5AAB920C1BA2ABB1ECB89BE766B /* Pods-SquareFitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SquareFitTests.release.xcconfig"; sourceTree = "<group>"; };
+		B43FC87022FA7BC9AECAA7653472CC69 /* Pods-SquareFit-SquareFitUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SquareFit-SquareFitUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		B7F0C088877D4E5512395404B6C7A9B6 /* RatioOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RatioOptions.swift; path = Sources/Mantis/RatioOptions.swift; sourceTree = "<group>"; };
 		BBB23B3840F554413E615D2D8768F2BC /* MantisLocalizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = MantisLocalizable.strings; path = "pt-PT.lproj/MantisLocalizable.strings"; sourceTree = "<group>"; };
+		BBB4248F797B3647FC1EDA956B2C4BE5 /* Pods-SquareFit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SquareFit.modulemap"; sourceTree = "<group>"; };
 		BD06E672287C3E5C023010A2BA44BCA0 /* CropBoxLockedAspectFrameUpdater.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CropBoxLockedAspectFrameUpdater.swift; path = Sources/Mantis/CropView/CropBoxLockedAspectFrameUpdater.swift; sourceTree = "<group>"; };
 		BD33A0A7C4CC6B5E463E021CE324E42F /* MantisLocalizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = MantisLocalizable.strings; path = nl.lproj/MantisLocalizable.strings; sourceTree = "<group>"; };
 		BF9E5A36901C986BD1FE1CB16245D5B7 /* CropDimmingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CropDimmingView.swift; path = Sources/Mantis/MaskBackground/CropDimmingView.swift; sourceTree = "<group>"; };
@@ -195,34 +191,30 @@
 		C06C98FE5970FC09EEB7B02D72858DD9 /* RotationDial+Touches.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "RotationDial+Touches.swift"; path = "Sources/Mantis/RotationDial/RotationDial+Touches.swift"; sourceTree = "<group>"; };
 		C0C46AE9FACA781DBC3EF2D102B81114 /* Mantis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Mantis.debug.xcconfig; sourceTree = "<group>"; };
 		C268677A7B3A927DAE5298FC763B0235 /* Config.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Config.swift; path = Sources/Mantis/Config.swift; sourceTree = "<group>"; };
-		C55FFCF4690DE4EC53F30F69AB96C7C6 /* Pods-SquareFitTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SquareFitTests.modulemap"; sourceTree = "<group>"; };
-		C63F84BA8A213482643380F9EB2ACC37 /* Pods-SquareFit-SquareFitUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SquareFit-SquareFitUITests-Info.plist"; sourceTree = "<group>"; };
 		C7259C2352CC6A35200671462ABFA166 /* Mantis-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Mantis-prefix.pch"; sourceTree = "<group>"; };
 		C864A0DC196E032E7A42C8D3DC1EA527 /* CropToolbar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CropToolbar.swift; path = Sources/Mantis/CropViewController/CropToolbar.swift; sourceTree = "<group>"; };
 		C8C9E59DC84C19794EA1AEFAD67BBB22 /* CropViewStatus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CropViewStatus.swift; path = Sources/Mantis/CropView/CropViewStatus.swift; sourceTree = "<group>"; };
 		C950261914C717B190B6F948131060DA /* CropView+Touches.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CropView+Touches.swift"; path = "Sources/Mantis/CropView/CropView+Touches.swift"; sourceTree = "<group>"; };
 		CAC5658242BDE26E7FF29A06EED803AC /* CGAngle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGAngle.swift; path = Sources/Mantis/RotationDial/CGAngle.swift; sourceTree = "<group>"; };
+		CCD9204ABD2CE15AC3650C8F1E78999D /* Pods-SquareFitTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SquareFitTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		CE0B3E31D20DF3BA33B144D32724BBB1 /* Pods-SquareFit-SquareFitUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-SquareFit-SquareFitUITests"; path = Pods_SquareFit_SquareFitUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF281C8756640CA96A02B389271B0414 /* ToolbarButtonOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToolbarButtonOptions.swift; path = Sources/Mantis/ToolbarButtonOptions.swift; sourceTree = "<group>"; };
-		D2414947384916F88C332E8769DECB6D /* Pods-SquareFit-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SquareFit-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D28A083D295494932F0A64DFB5BF1264 /* ToolBarButtonImageBuilder+DrawImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ToolBarButtonImageBuilder+DrawImage.swift"; path = "Sources/Mantis/CropViewController/ToolBarButtonImageBuilder+DrawImage.swift"; sourceTree = "<group>"; };
-		DA87E2B212B7504BB2FC095B88E6197D /* Pods-SquareFit-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SquareFit-acknowledgements.plist"; sourceTree = "<group>"; };
+		D67C6FD0376CA92EA5D2D28069E93645 /* Pods-SquareFit-SquareFitUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SquareFit-SquareFitUITests.modulemap"; sourceTree = "<group>"; };
 		DBC2DB392DE48119A4FB1D80A31641C2 /* CropMaskViewManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CropMaskViewManager.swift; path = Sources/Mantis/CropView/CropMaskViewManager.swift; sourceTree = "<group>"; };
 		DC06058AA5A75A4F7EE5FD5D15BCAED5 /* ResourceBundle-MantisResources-Mantis-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-MantisResources-Mantis-Info.plist"; sourceTree = "<group>"; };
 		DD76BDF7212D5378886C159365149436 /* CropViewControllerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CropViewControllerDelegate.swift; path = Sources/Mantis/Protocols/CropViewControllerDelegate.swift; sourceTree = "<group>"; };
-		DEB3A0B707B0256E7C1131E7A2FAB670 /* Pods-SquareFitTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SquareFitTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		DFF580B8DC995272311E7578AE1BFE3F /* DialConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DialConfig.swift; path = Sources/Mantis/RotationDial/DialConfig.swift; sourceTree = "<group>"; };
-		E0083332120C00520AC824E06557A48F /* Pods-SquareFit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SquareFit.release.xcconfig"; sourceTree = "<group>"; };
-		E1621B94C24D3436F3C1A0451E6BD1B6 /* Pods-SquareFit-SquareFitUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SquareFit-SquareFitUITests-frameworks.sh"; sourceTree = "<group>"; };
+		E0EC6AA542FE68D6DA08E9610C74C2E8 /* Pods-SquareFitTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SquareFitTests-dummy.m"; sourceTree = "<group>"; };
+		E1E8E64C9F5F0C6789EC31F9B1A8EFDA /* Pods-SquareFitTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SquareFitTests-umbrella.h"; sourceTree = "<group>"; };
 		E2723289EBE41432651798B20091CAF0 /* Mantis.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Mantis.modulemap; sourceTree = "<group>"; };
-		E50395ED50F3D5D97E3957A2ED43921F /* MantisResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MantisResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		E50395ED50F3D5D97E3957A2ED43921F /* Mantis-MantisResources */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Mantis-MantisResources"; path = MantisResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9CF36E35E9CD7A7419A538FFFAD7EA3 /* MantisLocalizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = MantisLocalizable.strings; path = it.lproj/MantisLocalizable.strings; sourceTree = "<group>"; };
-		EB3AFBA16E77E9EEEDDFC31431C47D39 /* Pods-SquareFit-SquareFitUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SquareFit-SquareFitUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		ECEA6534F825135ED5919160986CD41F /* CropVisualEffectView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CropVisualEffectView.swift; path = Sources/Mantis/MaskBackground/CropVisualEffectView.swift; sourceTree = "<group>"; };
 		ED1EFB9DAD1DC3C35D402D88A811ECE0 /* CropScrollViewProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CropScrollViewProtocol.swift; path = Sources/Mantis/Protocols/CropScrollViewProtocol.swift; sourceTree = "<group>"; };
-		ED58EBA0A2E0A8E138D432D5FE8713FD /* Pods-SquareFitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SquareFitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F25E963422F48BE37ADBA562B8541DA8 /* CropMaskProtocal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CropMaskProtocal.swift; path = Sources/Mantis/MaskBackground/CropMaskProtocal.swift; sourceTree = "<group>"; };
 		F5D92FF90A734BE41DC9C437DE9B3421 /* LocalizedHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocalizedHelper.swift; path = Sources/Mantis/Helpers/LocalizedHelper.swift; sourceTree = "<group>"; };
+		F77F61EC5ABC360052961FBA01137308 /* Pods-SquareFit-SquareFitUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SquareFit-SquareFitUITests-frameworks.sh"; sourceTree = "<group>"; };
 		F7EF32E2192949FF1F2D49290C6355A3 /* Mantis.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Mantis.h; path = Sources/Mantis/Mantis.h; sourceTree = "<group>"; };
 		F92B1B684D399AA28DBA6FB99952C2F7 /* MantisLocalizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = MantisLocalizable.strings; path = ko.lproj/MantisLocalizable.strings; sourceTree = "<group>"; };
 		FC2BABDCA340E775157FB4775E600C0B /* CropViewConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CropViewConfig.swift; path = Sources/Mantis/CropViewConfig.swift; sourceTree = "<group>"; };
@@ -234,14 +226,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D89D7746D23BD0582248E68C79E6710 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		51C1D946380C27BF7C8E482D50CBF397 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1434DDBCE021071099E389FC44628BC5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +244,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D7331C43252181D146090DE03FDC810C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				367A70E67B7DDA464365914D04EF1EC7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EF315510DD7257C6363BA0FB7B55C649 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -271,6 +263,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12574158FEFED9FDBB5242AB2B7F46EF /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4FDEB07C67AFF45C9149DD4706559B2A /* Pods-SquareFit */,
+				96824B8068F2F382157E6C08EC9ED58E /* Pods-SquareFit-SquareFitUITests */,
+				946FF1631421410248280B22060E5AD4 /* Pods-SquareFitTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
 		2B75EBABF5AAD02CF7113B624FDD7243 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -285,6 +287,22 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Mantis";
+			sourceTree = "<group>";
+		};
+		4FDEB07C67AFF45C9149DD4706559B2A /* Pods-SquareFit */ = {
+			isa = PBXGroup;
+			children = (
+				BBB4248F797B3647FC1EDA956B2C4BE5 /* Pods-SquareFit.modulemap */,
+				2D81625036A888C3245770EC7B28CEE2 /* Pods-SquareFit-acknowledgements.markdown */,
+				958AA4383BF9245CC70EE8B76755157C /* Pods-SquareFit-acknowledgements.plist */,
+				5244380F4B97099D39881155F0DBBCD5 /* Pods-SquareFit-dummy.m */,
+				67CE71FA2F4FCE6108F3FC6B9C078D8E /* Pods-SquareFit-Info.plist */,
+				582212EB4DA9ED5A92B45DA17F1E18EE /* Pods-SquareFit-umbrella.h */,
+				7DFBE4179E9AFE2893096FD4A14633EE /* Pods-SquareFit.debug.xcconfig */,
+				84FC4D839C2CB45FD90E5CDF5CA6AA55 /* Pods-SquareFit.release.xcconfig */,
+			);
+			name = "Pods-SquareFit";
+			path = "Target Support Files/Pods-SquareFit";
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -307,28 +325,12 @@
 			isa = PBXGroup;
 			children = (
 				316D22F8B19400DBC5073973480D1521 /* Mantis */,
-				E50395ED50F3D5D97E3957A2ED43921F /* MantisResources.bundle */,
+				E50395ED50F3D5D97E3957A2ED43921F /* Mantis-MantisResources */,
 				408A44BAF0ACDBE3EF61F88A18F8FDF7 /* Pods-SquareFit */,
 				CE0B3E31D20DF3BA33B144D32724BBB1 /* Pods-SquareFit-SquareFitUITests */,
 				A1983F3BF203B076C13630BE566ABA24 /* Pods-SquareFitTests */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		8237822341E4823E90F987FB78B98B8F /* Pods-SquareFitTests */ = {
-			isa = PBXGroup;
-			children = (
-				C55FFCF4690DE4EC53F30F69AB96C7C6 /* Pods-SquareFitTests.modulemap */,
-				6A214E60626087FBF70D750FAA999344 /* Pods-SquareFitTests-acknowledgements.markdown */,
-				DEB3A0B707B0256E7C1131E7A2FAB670 /* Pods-SquareFitTests-acknowledgements.plist */,
-				6D3C266ABBF530436C9CC884D0323433 /* Pods-SquareFitTests-dummy.m */,
-				124F8BE60F8975054230D895E7D046E0 /* Pods-SquareFitTests-Info.plist */,
-				0B6A40391B72EC3C3646DE3EA6ED51BB /* Pods-SquareFitTests-umbrella.h */,
-				ED58EBA0A2E0A8E138D432D5FE8713FD /* Pods-SquareFitTests.debug.xcconfig */,
-				AE46F5AAB920C1BA2ABB1ECB89BE766B /* Pods-SquareFitTests.release.xcconfig */,
-			);
-			name = "Pods-SquareFitTests";
-			path = "Target Support Files/Pods-SquareFitTests";
 			sourceTree = "<group>";
 		};
 		8D758B6DB6CEA12C7951E85671424DB6 /* Pods */ = {
@@ -337,6 +339,39 @@
 				9D86A2654D3814C4AC698A42E93179CE /* Mantis */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		946FF1631421410248280B22060E5AD4 /* Pods-SquareFitTests */ = {
+			isa = PBXGroup;
+			children = (
+				40F0D20982A38AE71E798719AFAC078B /* Pods-SquareFitTests.modulemap */,
+				5D7EFC4A319E17E0BF71B5BEE2DA78FE /* Pods-SquareFitTests-acknowledgements.markdown */,
+				CCD9204ABD2CE15AC3650C8F1E78999D /* Pods-SquareFitTests-acknowledgements.plist */,
+				E0EC6AA542FE68D6DA08E9610C74C2E8 /* Pods-SquareFitTests-dummy.m */,
+				7A14B214200A1809924D0C84A514D9E2 /* Pods-SquareFitTests-Info.plist */,
+				E1E8E64C9F5F0C6789EC31F9B1A8EFDA /* Pods-SquareFitTests-umbrella.h */,
+				67F49349791A7DC1E88F11C7FF109787 /* Pods-SquareFitTests.debug.xcconfig */,
+				611336A6AFE67FD33E63087B6E4C027F /* Pods-SquareFitTests.release.xcconfig */,
+			);
+			name = "Pods-SquareFitTests";
+			path = "Target Support Files/Pods-SquareFitTests";
+			sourceTree = "<group>";
+		};
+		96824B8068F2F382157E6C08EC9ED58E /* Pods-SquareFit-SquareFitUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D67C6FD0376CA92EA5D2D28069E93645 /* Pods-SquareFit-SquareFitUITests.modulemap */,
+				4FB622EFCBE3DB4D63AB7649AE284C46 /* Pods-SquareFit-SquareFitUITests-acknowledgements.markdown */,
+				B43FC87022FA7BC9AECAA7653472CC69 /* Pods-SquareFit-SquareFitUITests-acknowledgements.plist */,
+				55E537CB9D1445AEE2E8525092D9569C /* Pods-SquareFit-SquareFitUITests-dummy.m */,
+				F77F61EC5ABC360052961FBA01137308 /* Pods-SquareFit-SquareFitUITests-frameworks.sh */,
+				8ECA3E0B3285ADC8FF8D015E31039E44 /* Pods-SquareFit-SquareFitUITests-Info.plist */,
+				30713E5D17DA8C1D8A929B631885A887 /* Pods-SquareFit-SquareFitUITests-umbrella.h */,
+				3A41F9EA0E2B5D2A1AEEBDB5D36A1FA3 /* Pods-SquareFit-SquareFitUITests.debug.xcconfig */,
+				0B9AB9CE3A770D4FDC3AF3A9EA9EBB41 /* Pods-SquareFit-SquareFitUITests.release.xcconfig */,
+			);
+			name = "Pods-SquareFit-SquareFitUITests";
+			path = "Target Support Files/Pods-SquareFit-SquareFitUITests";
 			sourceTree = "<group>";
 		};
 		9D86A2654D3814C4AC698A42E93179CE /* Mantis */ = {
@@ -403,34 +438,8 @@
 				64CA72FDB6D84C90B5A70003D779D848 /* Resources */,
 				2B75EBABF5AAD02CF7113B624FDD7243 /* Support Files */,
 			);
+			name = Mantis;
 			path = Mantis;
-			sourceTree = "<group>";
-		};
-		B326699AE7E0D04B0F35308F2FFE4B68 /* Pods-SquareFit */ = {
-			isa = PBXGroup;
-			children = (
-				890B1DF4714C4A18F6E361A1F621A334 /* Pods-SquareFit.modulemap */,
-				D2414947384916F88C332E8769DECB6D /* Pods-SquareFit-acknowledgements.markdown */,
-				DA87E2B212B7504BB2FC095B88E6197D /* Pods-SquareFit-acknowledgements.plist */,
-				20B7DDD34E2C8295DFDE972495D32B68 /* Pods-SquareFit-dummy.m */,
-				49454A30468C6A49549AB795BAD4EC71 /* Pods-SquareFit-frameworks.sh */,
-				4E8E2435B256066049028F30BF7A97E2 /* Pods-SquareFit-Info.plist */,
-				A8C87AAE5A6C18350CE73C6FD9AC208B /* Pods-SquareFit-umbrella.h */,
-				914F2CFDB1094AD2A16D1959514654A4 /* Pods-SquareFit.debug.xcconfig */,
-				E0083332120C00520AC824E06557A48F /* Pods-SquareFit.release.xcconfig */,
-			);
-			name = "Pods-SquareFit";
-			path = "Target Support Files/Pods-SquareFit";
-			sourceTree = "<group>";
-		};
-		CA995DCEFE7499D677C28DF4C663D030 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B326699AE7E0D04B0F35308F2FFE4B68 /* Pods-SquareFit */,
-				EA81CF686681F844C4469DB1329C1A62 /* Pods-SquareFit-SquareFitUITests */,
-				8237822341E4823E90F987FB78B98B8F /* Pods-SquareFitTests */,
-			);
-			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -440,7 +449,7 @@
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				8D758B6DB6CEA12C7951E85671424DB6 /* Pods */,
 				6EB188D5543CE1A592652520EA17C89B /* Products */,
-				CA995DCEFE7499D677C28DF4C663D030 /* Targets Support Files */,
+				12574158FEFED9FDBB5242AB2B7F46EF /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -452,23 +461,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EA81CF686681F844C4469DB1329C1A62 /* Pods-SquareFit-SquareFitUITests */ = {
-			isa = PBXGroup;
-			children = (
-				0D83C255C660E2141B9D686D9F402311 /* Pods-SquareFit-SquareFitUITests.modulemap */,
-				EB3AFBA16E77E9EEEDDFC31431C47D39 /* Pods-SquareFit-SquareFitUITests-acknowledgements.markdown */,
-				851ECB654DA28F861500782B9E311A7E /* Pods-SquareFit-SquareFitUITests-acknowledgements.plist */,
-				A50EB5345701DF475D6F6F014FBA3A4C /* Pods-SquareFit-SquareFitUITests-dummy.m */,
-				E1621B94C24D3436F3C1A0451E6BD1B6 /* Pods-SquareFit-SquareFitUITests-frameworks.sh */,
-				C63F84BA8A213482643380F9EB2ACC37 /* Pods-SquareFit-SquareFitUITests-Info.plist */,
-				AC8D46D52D221C4B4F7661C59DF5790A /* Pods-SquareFit-SquareFitUITests-umbrella.h */,
-				4EE4D19FBC20E99DBE642533EE645FFC /* Pods-SquareFit-SquareFitUITests.debug.xcconfig */,
-				AC5FDABB8FAC809EF8832AD84293EC82 /* Pods-SquareFit-SquareFitUITests.release.xcconfig */,
-			);
-			name = "Pods-SquareFit-SquareFitUITests";
-			path = "Target Support Files/Pods-SquareFit-SquareFitUITests";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -477,6 +469,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				04CCFB24558ED81C3155DE0CAD64BD40 /* Pods-SquareFitTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5508BE54C57B4C796E36DFAE88AF3823 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4B81C3AA9B63DA02A79488D565B2BC6 /* Pods-SquareFit-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,14 +497,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DE1F23A484208D03C7F2757342E13D15 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F063C6012B22B57BC1432428F8017329 /* Pods-SquareFit-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -522,7 +514,7 @@
 			);
 			name = "Mantis-MantisResources";
 			productName = MantisResources;
-			productReference = E50395ED50F3D5D97E3957A2ED43921F /* MantisResources.bundle */;
+			productReference = E50395ED50F3D5D97E3957A2ED43921F /* Mantis-MantisResources */;
 			productType = "com.apple.product-type.bundle";
 		};
 		8F30D034B1446497E0DEB2E4857F7FDE /* Pods-SquareFitTests */ = {
@@ -565,17 +557,16 @@
 		};
 		C308118BA90714CE52DE78992699425E /* Pods-SquareFit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E0A3B7FB88DEE3894DA8147A9F61AA85 /* Build configuration list for PBXNativeTarget "Pods-SquareFit" */;
+			buildConfigurationList = F41D72D9E806E3008F8E631750C000CB /* Build configuration list for PBXNativeTarget "Pods-SquareFit" */;
 			buildPhases = (
-				DE1F23A484208D03C7F2757342E13D15 /* Headers */,
-				12E107AA84F8308173F107662F43240F /* Sources */,
-				51C1D946380C27BF7C8E482D50CBF397 /* Frameworks */,
-				CFCBC3D471E0B9D6E49A24948CD9BC8B /* Resources */,
+				5508BE54C57B4C796E36DFAE88AF3823 /* Headers */,
+				7A261CFE909367F7427244061497D804 /* Sources */,
+				D7331C43252181D146090DE03FDC810C /* Frameworks */,
+				2CD4623401A458F4406C07E87951010C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CE74D847DF6FD2E1E5B25AD9428CA39A /* PBXTargetDependency */,
 			);
 			name = "Pods-SquareFit";
 			productName = Pods_SquareFit;
@@ -646,6 +637,13 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2CD4623401A458F4406C07E87951010C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2E07A2A9CE7A23926324071C4237EDCE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -658,7 +656,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE1C3482C85228AAD354083F31D19AC5 /* MantisResources.bundle in Resources */,
+				FE1C3482C85228AAD354083F31D19AC5 /* Mantis-MantisResources in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -676,21 +674,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CFCBC3D471E0B9D6E49A24948CD9BC8B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		12E107AA84F8308173F107662F43240F /* Sources */ = {
+		7A261CFE909367F7427244061497D804 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76CA5D36F44700E00429B342D2C39C4C /* Pods-SquareFit-dummy.m in Sources */,
+				C0653290D8140CB11E15007935CF4FBF /* Pods-SquareFit-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -803,12 +794,6 @@
 			target = 2FE76CFB815F0D65B5A0962A62EB8E05 /* Mantis-MantisResources */;
 			targetProxy = 95319A6ADF313362F806A7B204A2F034 /* PBXContainerItemProxy */;
 		};
-		CE74D847DF6FD2E1E5B25AD9428CA39A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Mantis;
-			target = B765AE885D71986CD6D5EC0726D8ED31 /* Mantis */;
-			targetProxy = AA98A107F56F1E7153F06EE682BA9A3A /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -837,6 +822,43 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0B85A2BDDCD6C0FC6B2777CBE0AB56B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DFBE4179E9AFE2893096FD4A14633EE /* Pods-SquareFit.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SquareFit/Pods-SquareFit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SquareFit/Pods-SquareFit.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		0E843E49E86F645601799AA833021D7D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C0C46AE9FACA781DBC3EF2D102B81114 /* Mantis.debug.xcconfig */;
@@ -970,9 +992,41 @@
 			};
 			name = Release;
 		};
-		402F0A138B88C0760DF67DAB5D938025 /* Release */ = {
+		5FE17C637F417D7396A3C6573F0F97D5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E0083332120C00520AC824E06557A48F /* Pods-SquareFit.release.xcconfig */;
+			baseConfigurationReference = 161766C879A40075FD7FD33A93DF401E /* Mantis.release.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Mantis";
+				IBSC_MODULE = Mantis;
+				INFOPLIST_FILE = "Target Support Files/Mantis/ResourceBundle-MantisResources-Mantis-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = MantisResources;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		97DF2D345D8627E91F8922BB7BE627AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0C46AE9FACA781DBC3EF2D102B81114 /* Mantis.debug.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Mantis";
+				IBSC_MODULE = Mantis;
+				INFOPLIST_FILE = "Target Support Files/Mantis/ResourceBundle-MantisResources-Mantis-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = MantisResources;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		AA5168DD90B317EF1E3D14F40B86B2BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84FC4D839C2CB45FD90E5CDF5CA6AA55 /* Pods-SquareFit.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1008,43 +1062,9 @@
 			};
 			name = Release;
 		};
-		5FE17C637F417D7396A3C6573F0F97D5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 161766C879A40075FD7FD33A93DF401E /* Mantis.release.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Mantis";
-				DEVELOPMENT_TEAM = 7T4SDWZ6VK;
-				IBSC_MODULE = Mantis;
-				INFOPLIST_FILE = "Target Support Files/Mantis/ResourceBundle-MantisResources-Mantis-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_NAME = MantisResources;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		97DF2D345D8627E91F8922BB7BE627AD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C0C46AE9FACA781DBC3EF2D102B81114 /* Mantis.debug.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Mantis";
-				DEVELOPMENT_TEAM = 7T4SDWZ6VK;
-				IBSC_MODULE = Mantis;
-				INFOPLIST_FILE = "Target Support Files/Mantis/ResourceBundle-MantisResources-Mantis-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_NAME = MantisResources;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
 		B6D60A23E632E4EE0BDF03E5C69ABA43 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE46F5AAB920C1BA2ABB1ECB89BE766B /* Pods-SquareFitTests.release.xcconfig */;
+			baseConfigurationReference = 611336A6AFE67FD33E63087B6E4C027F /* Pods-SquareFitTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1080,46 +1100,9 @@
 			};
 			name = Release;
 		};
-		B6DDC667B38C18F744E23F38343E17A3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 914F2CFDB1094AD2A16D1959514654A4 /* Pods-SquareFit.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SquareFit/Pods-SquareFit-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SquareFit/Pods-SquareFit.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		DBDDA857969ABDCBAFA749F6D054E670 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AC5FDABB8FAC809EF8832AD84293EC82 /* Pods-SquareFit-SquareFitUITests.release.xcconfig */;
+			baseConfigurationReference = 0B9AB9CE3A770D4FDC3AF3A9EA9EBB41 /* Pods-SquareFit-SquareFitUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1223,7 +1206,7 @@
 		};
 		FAD7D46394536EBA23AFE8B0FD170F4F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4EE4D19FBC20E99DBE642533EE645FFC /* Pods-SquareFit-SquareFitUITests.debug.xcconfig */;
+			baseConfigurationReference = 3A41F9EA0E2B5D2A1AEEBDB5D36A1FA3 /* Pods-SquareFit-SquareFitUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1260,7 +1243,7 @@
 		};
 		FD734940B574C90B2AFA27022B8F0334 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED58EBA0A2E0A8E138D432D5FE8713FD /* Pods-SquareFitTests.debug.xcconfig */;
+			baseConfigurationReference = 67F49349791A7DC1E88F11C7FF109787 /* Pods-SquareFitTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1334,11 +1317,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E0A3B7FB88DEE3894DA8147A9F61AA85 /* Build configuration list for PBXNativeTarget "Pods-SquareFit" */ = {
+		F41D72D9E806E3008F8E631750C000CB /* Build configuration list for PBXNativeTarget "Pods-SquareFit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B6DDC667B38C18F744E23F38343E17A3 /* Debug */,
-				402F0A138B88C0760DF67DAB5D938025 /* Release */,
+				0B85A2BDDCD6C0FC6B2777CBE0AB56B6 /* Debug */,
+				AA5168DD90B317EF1E3D14F40B86B2BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

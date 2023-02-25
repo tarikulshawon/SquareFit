@@ -1,16 +1,16 @@
 PODS:
-  - Mantis (2.6.2)
+  - Mantis (2.8.0)
 
 DEPENDENCIES:
-  - Mantis (~> 2.6.1)
+  - Mantis (~> 2.8.0)
 
 SPEC REPOS:
   trunk:
     - Mantis
 
 SPEC CHECKSUMS:
-  Mantis: 52186c9987d34e739b10fa2bee6958fbebd004ab
+  Mantis: 9d048431a9c4f4296c0d5b9c109c7e5dc392e7cd
 
-PODFILE CHECKSUM: 9cef7f3ab9d531e808467547d55857963a9b58f3
+PODFILE CHECKSUM: 9a7f16b417b782597feeabd9925c342b90f47077
 
 COCOAPODS: 1.11.3

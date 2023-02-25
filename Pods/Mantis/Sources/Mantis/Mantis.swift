@@ -34,6 +34,15 @@ public func cropViewController(image: UIImage,
     return cropViewController
 }
 
+public func cropViewController<T: CropViewController>(image: UIImage,
+                                                      config: Mantis.Config = Mantis.Config(),
+                                                      cropToolbar: CropToolbarProtocol = CropToolbar(frame: .zero)) -> T {
+    let cropViewController = T(config: config)
+    cropViewController.cropView = buildCropView(with: image, and: config.cropViewConfig)
+    cropViewController.cropToolbar = cropToolbar
+    return cropViewController
+}
+
 public func setupCropViewController(_ cropViewController: Mantis.CropViewController,
                                     with image: UIImage,
                                     and config: Mantis.Config = Mantis.Config(),
@@ -49,6 +58,22 @@ public func locateResourceBundle(by hostClass: AnyClass) {
 
 public func crop(image: UIImage, by cropInfo: CropInfo) -> UIImage? {
     return image.crop(by: cropInfo)
+}
+
+public struct Language {
+    var code: String
+    
+    public init(code: String) {
+        self.code = code
+    }
+}
+
+public func chooseLanguage(_ language: Language) {
+    Mantis.Config.language = language
+}
+
+public func resetLanguage() {
+    Mantis.Config.language = nil
 }
 
 // MARK: - internal section
